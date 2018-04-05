@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import MicturitionCheck
+@testable import PeeCheck
 
 class MicturitionCheckTests: XCTestCase {
     

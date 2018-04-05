@@ -8,7 +8,7 @@
 
 import XCTest
 
-class MicturitionCheckUITests: XCTestCase {
+class PeeCheckUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

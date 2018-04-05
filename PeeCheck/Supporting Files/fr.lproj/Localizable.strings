@@ -1,0 +1,14 @@
+/* 
+  Localization.strings
+  MicturitionCheck
+
+  Created by Martin Lukacs on 06/03/2018.
+  Copyright © 2018 Martin Lukacs. All rights reserved.
+*/
+
+// MARK: - Tab Bar Controllers name
+
+"tab_home"="Enregistrement";
+"tab_charts"="Statistiques";
+"tab_account"="Votre compte";
+"tab_picto"="picto_tab";
