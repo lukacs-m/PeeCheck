@@ -793,7 +793,6 @@
 			baseConfigurationReference = E8866187AD011ECD8BA008CA /* Pods-PeeCheckTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
 				INFOPLIST_FILE = MicturitionCheckTests/Info.plist;
@@ -811,7 +810,6 @@
 			baseConfigurationReference = DB513A455CBC4C7DAAD7F622 /* Pods-PeeCheckTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
 				INFOPLIST_FILE = MicturitionCheckTests/Info.plist;
@@ -835,9 +833,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.martin.MicturitionCheckUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MicturitionCheck;
+				TEST_TARGET_NAME = PeeCheck;
 			};
 			name = Debug;
 		};
@@ -852,9 +851,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.martin.MicturitionCheckUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MicturitionCheck;
+				TEST_TARGET_NAME = PeeCheck;
 			};
 			name = Release;
 		};
