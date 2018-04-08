@@ -13,6 +13,7 @@ before_install:
   - brew outdated xctool || brew upgrade xctool
 script:
   - set -o pipefail
-  - xctool test -workspace PeeCheck.xcworkspace -scheme PeeCheck -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  - xctool -workspace PeeCheck.xcworkspace -scheme PeeCheck -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  - xctool test -workspace PeeCheck.xcworkspace -scheme PeeCheckTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
   #- xcodebuild clean test -workspace PeeCheck.xcworkspace -scheme PeeCheck -destination "platform=iOS Simulator,name=iPhone 7,OS=10.3" -quiet CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO | xcpretty -c
   - swiftlint
