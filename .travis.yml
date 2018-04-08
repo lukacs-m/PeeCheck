@@ -11,5 +11,5 @@ before_install:
   - brew install swiftlint || true
 script:
   - set -o pipefail
-  - xcodebuild -workspace PeeCheck.xcworkspace -scheme PeeCHeck -quiet -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  - xcodebuild clean test -workspace PeeCheck.xcworkspace -scheme PeeCHeck -quiet -sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO | xcpretty -c
   - swiftlint
