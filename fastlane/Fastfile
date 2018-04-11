@@ -12,10 +12,10 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Run unit tests"
-  lane :unit_test do
+  desc "Run unit & ui tests"
+  lane :tests do
     scan(
-	scheme: "PeeCheckTests",
+	scheme: "PeeCheck",
 	workspace: "PeeCheck.xcworkspace",
 	clean: true,
 	code_coverage: true,
@@ -40,7 +40,7 @@ platform :ios do
 
    desc "Calculate test code coverage and send it to email. Need to run test before this"
   lane :report_test_coverage do
-    scan(
+    xcov(
 	scheme: "PeeCheckTests",
 	workspace: "PeeCheck.xcworkspace",
 	output_directory: "xcov_output",

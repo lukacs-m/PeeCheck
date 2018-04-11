@@ -10,8 +10,7 @@ before_install:
   - pod install --repo-update
   - gem install xcov --no-ri --no-rdoc --no-document
   - gem install fastlane --no-ri --no-rdoc --no-document
-  - chmod +x travis/unit_test_script.sh
-  - chmod +x travis/ui_test_script.sh
+  - chmod +x travis/tests_script.sh
   - chmod +x travis/report_test_coverage.sh
 
 jobs:
@@ -22,11 +21,7 @@ jobs:
 
     - stage: XCTest
       script:
-        - travis/unit_test_script.sh
-
-    - stage: XCTest
-      script:
-        - travis/ui_test_script.sh
+        - travis/tests_script.sh
 
     - stage: Coverage
       script:
