@@ -8,10 +8,10 @@ osx_image: xcode9
 before_install:
   - gem install cocoapods
   - pod install --repo-update
-  - gem install xcov --no-ri --no-rdoc --no-document
+  - gem install danger-xcov --no-ri --no-rdoc --no-document
   - gem install fastlane --no-ri --no-rdoc --no-document
   - chmod +x travis/tests_script.sh
-  - chmod +x travis/report_test_coverage.sh
+  #- chmod +x travis/report_test_coverage.sh
 
 jobs:
   include:
@@ -22,7 +22,9 @@ jobs:
     - stage: XCTest
       script:
         - travis/tests_script.sh
+        #- bundle exec danger
 
     - stage: Coverage
       script:
-        - travis/report_test_coverage.sh
+        #- travis/report_test_coverage.sh
+        - bundle exec danger
