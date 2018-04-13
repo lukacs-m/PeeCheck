@@ -17,6 +17,5 @@ swiftlint.lint_files
 xcov.report(
    scheme: 'PeeCheck',
    workspace: 'PeeCheck.xcworkspace',
-   minimum_coverage_percentage: 30.0,
-   derived_data_path: ${DERRIVED_DATA_DIR}
+   minimum_coverage_percentage: 0.0,
 )

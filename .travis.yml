@@ -7,10 +7,12 @@ osx_image: xcode9
 
 before_install:
   - gem install cocoapods
-  - pod install --repo-update
+  #- pod install --repo-update
   - gem install danger-xcov --no-ri --no-rdoc --no-document
   - gem install fastlane --no-ri --no-rdoc --no-document
   - chmod +x travis/tests_script.sh
+  - pod outdated | awk '{ if ( $1 ~ /^-/ ) { print $0 } }' | awk '{ if ( $3 != $5 ) { pod update $2 } else { print "No updated needed it for" $2 } }'
+
   #- chmod +x travis/report_test_coverage.sh
 
 jobs:
