@@ -20,13 +20,13 @@ jobs:
         - ./Pods/SwiftLint/swiftlint --reporter junit
 
     - stage: XCTest
-      before_script: 
-        - bundle exec danger
+     # before_script: 
+       # - bundle exec danger
       script:
         - travis/tests_script.sh
         #- bundle exec danger
 
-   # - stage: Coverage
-   #   script:
+    - stage: Coverage
+      script:
         #- travis/report_test_coverage.sh
-    #    - bundle exec danger
+        - bundle exec danger
