@@ -15,7 +15,8 @@ warn("Big PR") if git.lines_of_code > 500
 swiftlint.lint_files 
 
 xcov.report(
-   scheme: 'PeeCheckTests',
+   scheme: 'PeeCheck',
    workspace: 'PeeCheck.xcworkspace',
    minimum_coverage_percentage: 30.0
+   derived_data_path: ${DERRIVED_DATA_DIR}
 )
