@@ -8,14 +8,25 @@ warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
 # Warn when there is a big PR
 warn("Big PR") if git.lines_of_code > 500
 
+message("Test Comment on PR")
+
 # Don't let testing shortcuts get into master by accident
 #fail("fdescribe left in tests") if `grep -r fdescribe specs/ `.length > 1
 #fail("fit left in tests") if `grep -r fit specs/ `.length > 1
 
 swiftlint.lint_files 
 
-xcov.report(
-   scheme: 'PeeCheck',
-   workspace: 'PeeCheck.xcworkspace',
-   minimum_coverage_percentage: 0.0,
-)
+# Slater config
+slather.configure("PeeCheck.xcodeproj", "PeeCheck", options: {
+  workspace: 'PeeCheck.xcworkspace',
+  output_directory: "coverage",
+  ignore_list: [
+    "**/Storyboard.swift",
+  ],
+  ci_service: :travis,
+  coverage_service: :terminal,
+})
+
+slather.notify_if_coverage_is_less_than(minimum_coverage: 0)
+slather.notify_if_modified_file_is_less_than(minimum_coverage: 60)
+slather.show_coverage
