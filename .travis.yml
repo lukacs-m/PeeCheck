@@ -24,7 +24,7 @@ jobs:
        # - bundle exec danger
       script:
         - travis/tests_script.sh
-        #- bundle exec danger
+        - bundle exec danger
 
     - stage: Coverage
       script:
