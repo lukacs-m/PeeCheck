@@ -15,7 +15,7 @@
 		5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FAA2076E1E60063EA25 /* RecordingViewController.swift */; };
 		5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FAB2076E1E60063EA25 /* RecordingInteractor.swift */; };
 		5B201FB32076E22A0063EA25 /* RecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B201FB22076E22A0063EA25 /* RecordingViewController.xib */; };
-		5B201FB52076E9580063EA25 /* UIImage + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FB42076E9580063EA25 /* UIImage + Extensions.swift */; };
+		5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */; };
 		5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8BE204EE3D200C5ADA1 /* AppDelegate.swift */; };
 		5BB9D8C4204EE3D200C5ADA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8C2204EE3D200C5ADA1 /* Main.storyboard */; };
 		5BB9D8C6204EE3D200C5ADA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8C5204EE3D200C5ADA1 /* Assets.xcassets */; };
@@ -25,7 +25,7 @@
 		5BB9D8F5204EE82700C5ADA1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8F7204EE82700C5ADA1 /* Localizable.strings */; };
 		5BB9D8FA204EE8CF00C5ADA1 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8F9204EE8CF00C5ADA1 /* MainTabBarViewController.swift */; };
 		5BB9D8FE204EEB9900C5ADA1 /* TabBarControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8FD204EEB9900C5ADA1 /* TabBarControllers.swift */; };
-		5BB9D900204EEBC800C5ADA1 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8FF204EEBC800C5ADA1 /* String + Extensions.swift */; };
+		5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */; };
 		77E06EAFC71377BC461131F3 /* Pods_PeeCheckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CF96DD458CDE4EFA8B382 /* Pods_PeeCheckUITests.framework */; };
 		9549CE34E9014B4205D25413 /* Pods_PeeCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 444058EC6B292B8FF016DB99 /* Pods_PeeCheck.framework */; };
 /* End PBXBuildFile section */
@@ -58,7 +58,7 @@
 		5B201FAA2076E1E60063EA25 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		5B201FAB2076E1E60063EA25 /* RecordingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingInteractor.swift; sourceTree = "<group>"; };
 		5B201FB22076E22A0063EA25 /* RecordingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
-		5B201FB42076E9580063EA25 /* UIImage + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extensions.swift"; sourceTree = "<group>"; };
+		5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		5BB9D8BB204EE3D200C5ADA1 /* PeeCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeeCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB9D8BE204EE3D200C5ADA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BB9D8C3204EE3D200C5ADA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		5BB9D8F8204EE83D00C5ADA1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BB9D8F9204EE8CF00C5ADA1 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		5BB9D8FD204EEB9900C5ADA1 /* TabBarControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllers.swift; sourceTree = "<group>"; };
-		5BB9D8FF204EEBC800C5ADA1 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
+		5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		901DC64AB7C572D4E62F276D /* Pods-PeeCheckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeeCheckUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9E21308C9B2077CCC24EEB1F /* Pods-PeeCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeeCheck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeeCheck/Pods-PeeCheck.debug.xcconfig"; sourceTree = "<group>"; };
 		BA2CF96DD458CDE4EFA8B382 /* Pods_PeeCheckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeeCheckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,8 +257,8 @@
 		5BB9D8FC204EE92100C5ADA1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5BB9D8FF204EEBC800C5ADA1 /* String + Extensions.swift */,
-				5B201FB42076E9580063EA25 /* UIImage + Extensions.swift */,
+				5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */,
+				5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -483,9 +483,9 @@
 				5B201FAD2076E1E60063EA25 /* RecordingWorker.swift in Sources */,
 				5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */,
 				5B201FAE2076E1E60063EA25 /* RecordingRouter.swift in Sources */,
-				5B201FB52076E9580063EA25 /* UIImage + Extensions.swift in Sources */,
+				5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */,
 				5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */,
-				5BB9D900204EEBC800C5ADA1 /* String + Extensions.swift in Sources */,
+				5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

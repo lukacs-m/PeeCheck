@@ -1,16 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 <head>
-<title>String + Extensions.swift - Slather</title>
+<title>UIImage+Extensions.swift - Slather</title>
 <link href="slather.css" media="all" rel="stylesheet">
 </head>
 <body>
 <header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
 <h2 class="cov_title">
-<span>Coverage for "String + Extensions.swift" : </span><span class="cov_high">100.00%</span>
+<span>Coverage for "UIImage+Extensions.swift" : </span><span class="cov_high">100.00%</span>
 </h2>
-<h4 class="cov_subtitle">(3 of 3 relevant lines covered)</h4>
-<h4 class="cov_filepath">PeeCheck/Common/Extensions/String + Extensions.swift</h4>
+<h4 class="cov_subtitle">(9 of 9 relevant lines covered)</h4>
+<h4 class="cov_filepath">PeeCheck/Common/Extensions/UIImage+Extensions.swift</h4>
 <table class="source_code">
 <tr class="never">
 <td class="num">1</td>
@@ -19,12 +19,12 @@
 </tr>
 <tr class="never">
 <td class="num">2</td>
-<td class="src"><pre><code class="objc">//  String + Extensions.swift</code></pre></td>
+<td class="src"><pre><code class="objc">//  UIImage + Extensions.swift</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
 <td class="num">3</td>
-<td class="src"><pre><code class="objc">//  MicturitionCheck</code></pre></td>
+<td class="src"><pre><code class="objc">//  PeeCheck</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -34,7 +34,7 @@
 </tr>
 <tr class="never">
 <td class="num">5</td>
-<td class="src"><pre><code class="objc">//  Created by Martin Lukacs on 06/03/2018.</code></pre></td>
+<td class="src"><pre><code class="objc">//  Created by Martin Lukacs on 06/04/2018.</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -54,7 +54,7 @@
 </tr>
 <tr class="never">
 <td class="num">9</td>
-<td class="src"><pre><code class="objc">import Foundation</code></pre></td>
+<td class="src"><pre><code class="objc">import UIKit</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -64,53 +64,53 @@
 </tr>
 <tr class="never">
 <td class="num">11</td>
-<td class="src"><pre><code class="objc">extension String {</code></pre></td>
+<td class="src"><pre><code class="objc">extension UIImage {</code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="never">
+<tr class="covered">
 <td class="num">12</td>
-<td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">    class func imageWithColor(color: UIColor) -&gt; UIImage {</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="never">
+<tr class="covered">
 <td class="num">13</td>
-<td class="src"><pre><code class="objc">    ///</code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">        let rect: CGRect = CGRect(x: 0, y: 0, width: 1, height: 1)</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="never">
+<tr class="covered">
 <td class="num">14</td>
-<td class="src"><pre><code class="objc">    /// Get Localized string with comment</code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">        UIGraphicsBeginImageContextWithOptions(CGSize(width: 1, height: 1), false, 0)</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="never">
+<tr class="covered">
 <td class="num">15</td>
-<td class="src"><pre><code class="objc">    /// - parameter comment: comment's NSLocalizedString</code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">        color.setFill()</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="never">
+<tr class="covered">
 <td class="num">16</td>
-<td class="src"><pre><code class="objc">    /// - returns: Localized string</code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">        UIRectFill(rect)</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="never">
+<tr class="covered">
 <td class="num">17</td>
-<td class="src"><pre><code class="objc">    ///</code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">18</td>
-<td class="src"><pre><code class="objc">    public func localized(_ comment: String = "", _ tableName: String? = nil, bundle: Bundle = Bundle.main, value: String = "") -&gt; String {</code></pre></td>
-<td class="coverage">7x</td>
+<td class="src"><pre><code class="objc">        UIGraphicsEndImageContext()</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">19</td>
-<td class="src"><pre><code class="objc">        return NSLocalizedString(self, tableName: nil, bundle: bundle, value: value, comment: comment)</code></pre></td>
-<td class="coverage">7x</td>
+<td class="src"><pre><code class="objc">        return image</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">20</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">7x</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="never">
 <td class="num">21</td>

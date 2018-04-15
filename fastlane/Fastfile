@@ -37,6 +37,9 @@ platform :ios do
         "**/Storyboard.swift",
       ]
     )
+    jazzy(
+    config:".jazzy.yaml"
+    )
   end
 
    desc "Run ui tests"
