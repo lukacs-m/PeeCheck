@@ -58,7 +58,7 @@ enum TabBarControllers: String {
 extension TabBarControllers {
     static var array: [TabBarControllers] {
         var tabControllers: [TabBarControllers] = []
-        switch TabBarControllers.record {
+        switch self.record {
         case .record:
             tabControllers.append(.record)
             fallthrough
