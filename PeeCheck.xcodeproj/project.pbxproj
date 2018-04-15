@@ -293,6 +293,7 @@
 				5BB9D8CB204EE3D200C5ADA1 /* Sources */,
 				5BB9D8CC204EE3D200C5ADA1 /* Frameworks */,
 				5BB9D8CD204EE3D200C5ADA1 /* Resources */,
+				F43249976AB80C4BEA5EF024 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -312,6 +313,7 @@
 				5BB9D8D6204EE3D200C5ADA1 /* Sources */,
 				5BB9D8D7204EE3D200C5ADA1 /* Frameworks */,
 				5BB9D8D8204EE3D200C5ADA1 /* Resources */,
+				0AE287631AF251D87BEE02F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,6 +402,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0AE287631AF251D87BEE02F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4C1424EFFCE41CD44BEF2847 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -448,6 +474,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F43249976AB80C4BEA5EF024 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckTests/Pods-PeeCheckTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckTests/Pods-PeeCheckTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FC31DFCB839909CB8BA9ACE0 /* [CP] Check Pods Manifest.lock */ = {
@@ -666,6 +716,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E21308C9B2077CCC24EEB1F /* Pods-PeeCheck.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
@@ -683,6 +734,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EC244CE0A01483D2764F3FEA /* Pods-PeeCheck.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
@@ -700,7 +752,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8866187AD011ECD8BA008CA /* Pods-PeeCheckTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
 				INFOPLIST_FILE = PeeCheckTests/Info.plist;
@@ -717,7 +769,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB513A455CBC4C7DAAD7F622 /* Pods-PeeCheckTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
 				INFOPLIST_FILE = PeeCheckTests/Info.plist;
@@ -734,7 +786,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 065C21D8CE50B8801D890CCB /* Pods-PeeCheckUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
 				INFOPLIST_FILE = PeeCheckUITests/Info.plist;
@@ -752,7 +804,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 901DC64AB7C572D4E62F276D /* Pods-PeeCheckUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
 				INFOPLIST_FILE = PeeCheckUITests/Info.plist;

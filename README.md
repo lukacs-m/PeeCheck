@@ -22,8 +22,8 @@ This command starts execution of the tests in the project, then trigger the slat
 
 ## Documentation
 
-To review PeeCheck documentation [Documentation](https://github.com/lukacs-m/PeeCheck/blob/develop/Docs/output/index.html).
+To review PeeCheck documentation [Documentation](https://github.com/lukacs-m/PeeCheck/blob/develop/Docs/output/).
 
 ## Code Coverage
 
-To review PeeCheck code coverage [Code coverage](https://github.com/lukacs-m/PeeCheck/blob/develop/coverage/index.html).
+To review PeeCheck code coverage [Code coverage](https://github.com/lukacs-m/PeeCheck/blob/develop/coverage/).
