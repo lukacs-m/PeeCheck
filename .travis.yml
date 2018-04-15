@@ -10,7 +10,8 @@ cache:
 
 before_install:
   - bundle install
-  - pod install --repo-update
+ # - pod install --repo-update
+   - pod repo update
   - chmod +x travis/tests_script.sh
 
 script:
@@ -18,3 +19,5 @@ script:
 - travis/tests_script.sh
 - bundle exec danger
 
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
