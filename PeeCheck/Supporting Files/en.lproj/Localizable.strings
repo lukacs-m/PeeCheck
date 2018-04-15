@@ -8,7 +8,7 @@
 
 // MARK: - Tab Bar Controllers name
 
-"tab_home"="Reccord";
+"tab_record"="Reccord";
 "tab_charts"="Charts";
 "tab_account"="Account";
 "tab_picto"="picto_tab";

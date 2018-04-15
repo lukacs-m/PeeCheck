@@ -9,7 +9,7 @@
 import XCTest
 @testable import PeeCheck
 
-class MicturitionCheckTests: XCTestCase {
+class PeeCheckTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

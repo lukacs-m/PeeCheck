@@ -26,14 +26,20 @@ xcuserdata/
 *.xcuserstate
 
 ## Documentation
-MTVSharedDocumentation/
-MediciDocumentation/
+
 
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
 *.dSYM.zip
 *.dSYM
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+.build/
+
 
 # CocoaPods
 #
@@ -42,6 +48,7 @@ MediciDocumentation/
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 Pods/
+**/PeeCheck.xcworkspace/
 
 # Carthage
 #
@@ -57,8 +64,10 @@ Carthage/Build
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
 
-fastlane/report.xml
-fastlane/screenshots
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
 
 #Code Injection
 #

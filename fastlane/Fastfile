@@ -1,0 +1,65 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+ before_all do
+    cocoapods
+  end
+
+platform :ios do
+  desc "Run unit & ui tests"
+  lane :tests do
+    scan(
+	scheme: "PeeCheck",
+	workspace: "PeeCheck.xcworkspace",
+	clean: true,
+	code_coverage: true,
+	skip_slack: true,
+	sdk: "iphonesimulator",
+	destination: "name=iPhone 7"
+    )
+    slather(
+      output_directory: "coverage",
+      workspace: "PeeCheck.xcworkspace",
+      scheme: "PeeCheck",
+      proj: "PeeCheck.xcodeproj",
+      html: true,
+      ignore: [
+        "**/Storyboard.swift",
+      ]
+    )
+  end
+
+   desc "Run ui tests"
+  lane :ui_test do
+    scan(
+	scheme: "PeeCheckUITests",
+	workspace: "PeeCheck.xcworkspace",
+	clean: true,
+	code_coverage: true,
+	skip_slack: true,
+	sdk: "iphonesimulator",
+	destination: "name=iPhone 7"
+    )
+  end
+
+   desc "Calculate test code coverage and send it to email. Need to run test before this"
+  lane :report_test_coverage do
+    xcov(
+	scheme: "PeeCheckTests",
+	workspace: "PeeCheck.xcworkspace",
+	output_directory: "xcov_output",
+    )
+  end
+
+
+end

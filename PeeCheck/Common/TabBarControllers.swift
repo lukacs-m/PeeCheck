@@ -15,14 +15,14 @@ import UIKit
 /// - chart: User charts
 /// - account: User account controller
 enum TabBarControllers: String {
-    case home
+    case record
     case chart
     case account
     
     func localized() -> String {
         switch self {
-        case .home:
-            return "tab_home".localized()
+        case .record:
+            return "tab_record".localized()
         case .chart:
             return "tab_charts".localized()
         case .account:
@@ -32,7 +32,7 @@ enum TabBarControllers: String {
     
     func getImageName() -> String {
         switch self {
-        case .home:
+        case .record:
             return "picto_record"
         case .chart:
             return "tab_picto".localized()
@@ -43,7 +43,7 @@ enum TabBarControllers: String {
     
     func getViewController() -> UIViewController {
         switch self {
-        case .home:
+        case .record:
             return RecordingViewController()
         case .chart:
             return UIViewController()
@@ -58,9 +58,9 @@ enum TabBarControllers: String {
 extension TabBarControllers {
     static var array: [TabBarControllers] {
         var tabControllers: [TabBarControllers] = []
-        switch TabBarControllers.home {
-        case .home:
-            tabControllers.append(.home)
+        switch self.record {
+        case .record:
+            tabControllers.append(.record)
             fallthrough
         case .chart:
             tabControllers.append(.chart)
