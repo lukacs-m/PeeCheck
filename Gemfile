@@ -6,3 +6,4 @@ gem "fastlane"
 gem 'danger'
 gem "danger-slather"
 gem 'danger-swiftlint'
+gem "jazzy"

@@ -1,0 +1,14 @@
+module: PeeCheck
+author: Martin
+github_url: https://github.com/lukacs-m/PeeCheck
+
+theme: fullwidth
+clean: true
+readme: README.md
+skip_undocumented: false
+hide_documentation_coverage: false
+min_acl: private
+use_safe_filenames: true
+output: "Docs/output"
+documentation: Docs/*.md
+abstract: Docs/*.md

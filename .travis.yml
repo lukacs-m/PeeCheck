@@ -11,11 +11,12 @@ cache:
 before_install:
   - bundle update
   - bundle install
- # - pod install --repo-update
+  - gem install xcpretty
   - pod repo update
   - chmod +x travis/tests_script.sh
 
 script:
+- set -o pipefail
 - ./Pods/SwiftLint/swiftlint --reporter junit
 - travis/tests_script.sh
 - bundle exec danger
