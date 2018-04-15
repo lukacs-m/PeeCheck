@@ -19,6 +19,7 @@ swiftlint.lint_files
 # Slater config
 slather.configure("PeeCheck.xcodeproj", "PeeCheck", options: {
   workspace: 'PeeCheck.xcworkspace',
+  scheme: 'PeeCheck',
   output_directory: "coverage",
   ignore_list: [
     "**/Storyboard.swift",
