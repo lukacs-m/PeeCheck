@@ -9,7 +9,7 @@
 import UIKit
 
 /// Main TabBar controller
-class MainTabBarController: UITabBarController {
+class MainTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +18,11 @@ class MainTabBarController: UITabBarController {
     
     /// Sets up the tabbar controller view and controllers
     private func setUpUI() {
-//        for controller in TabBarControllers.array {
-//            addController(controller.getViewController(), name: controller.localized(),
-//                          image: UIImage(named: "\(controller.getImageName())"),
-//                          selectedImage: UIImage(named: "\(controller.getImageName())_selected"))
-//        }
+        for controller in TabBarControllers.array {
+            addController(controller.getViewController(), name: controller.localized(),
+                          image: UIImage(named: "\(controller.getImageName())"),
+                          selectedImage: UIImage(named: "\(controller.getImageName())_selected"))
+        }
         
         tabBar.backgroundImage = UIImage.imageWithColor(color: .clear)
         let frost = UIVisualEffectView(effect: UIBlurEffect(style: .light))
@@ -31,7 +31,7 @@ class MainTabBarController: UITabBarController {
     }
 }
 
-extension MainTabBarController {
+extension MainTabBarViewController {
 
     ///
     /// add controller to tabbar

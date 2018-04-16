@@ -18,12 +18,17 @@
 		5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
+		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
+		5BB8650620855A8B002EBB5F /* RecordingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650220855A8B002EBB5F /* RecordingViewControllerTests.swift */; };
+		5BB8650720855A8B002EBB5F /* RecordingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650320855A8B002EBB5F /* RecordingInteractorTests.swift */; };
+		5BB8650820855A8B002EBB5F /* RecordingWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650420855A8B002EBB5F /* RecordingWorkerTests.swift */; };
+		5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650520855A8B002EBB5F /* RecordingPresenterTests.swift */; };
+		5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8F9204EE8CF00C5ADA1 /* MainTabBarViewController.swift */; };
 		5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8BE204EE3D200C5ADA1 /* AppDelegate.swift */; };
 		5BB9D8C4204EE3D200C5ADA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8C2204EE3D200C5ADA1 /* Main.storyboard */; };
 		5BB9D8C6204EE3D200C5ADA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8C5204EE3D200C5ADA1 /* Assets.xcassets */; };
 		5BB9D8C9204EE3D200C5ADA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8C7204EE3D200C5ADA1 /* LaunchScreen.storyboard */; };
 		5BB9D8F5204EE82700C5ADA1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8F7204EE82700C5ADA1 /* Localizable.strings */; };
-		5BB9D8FA204EE8CF00C5ADA1 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8F9204EE8CF00C5ADA1 /* MainTabBarViewController.swift */; };
 		5BB9D8FE204EEB9900C5ADA1 /* TabBarControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8FD204EEB9900C5ADA1 /* TabBarControllers.swift */; };
 		5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */; };
 		7E828030DE0A63143A66E166 /* Pods_PeeCheckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CF96DD458CDE4EFA8B382 /* Pods_PeeCheckUITests.framework */; };
@@ -65,6 +70,11 @@
 		5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeeCheckUITests.swift; sourceTree = "<group>"; };
 		5BB864F32084252B002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllersTests.swift; sourceTree = "<group>"; };
+		5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewControllerTests.swift; sourceTree = "<group>"; };
+		5BB8650220855A8B002EBB5F /* RecordingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewControllerTests.swift; sourceTree = "<group>"; };
+		5BB8650320855A8B002EBB5F /* RecordingInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingInteractorTests.swift; sourceTree = "<group>"; };
+		5BB8650420855A8B002EBB5F /* RecordingWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingWorkerTests.swift; sourceTree = "<group>"; };
+		5BB8650520855A8B002EBB5F /* RecordingPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingPresenterTests.swift; sourceTree = "<group>"; };
 		5BB9D8BB204EE3D200C5ADA1 /* PeeCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeeCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB9D8BE204EE3D200C5ADA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BB9D8C3204EE3D200C5ADA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -152,6 +162,7 @@
 		5BB864E2208417D7002EBB5F /* PeeCheckTests */ = {
 			isa = PBXGroup;
 			children = (
+				5BB864FD208559B9002EBB5F /* Scenes */,
 				5BB864F920842532002EBB5F /* Common */,
 				5BB864E5208417D7002EBB5F /* Info.plist */,
 			);
@@ -182,6 +193,34 @@
 				5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		5BB864FD208559B9002EBB5F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5BB8650120855A36002EBB5F /* RecordingViewController */,
+				5BB864FE208559D5002EBB5F /* MainTabBarViewController */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5BB864FE208559D5002EBB5F /* MainTabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */,
+			);
+			path = MainTabBarViewController;
+			sourceTree = "<group>";
+		};
+		5BB8650120855A36002EBB5F /* RecordingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5BB8650220855A8B002EBB5F /* RecordingViewControllerTests.swift */,
+				5BB8650320855A8B002EBB5F /* RecordingInteractorTests.swift */,
+				5BB8650420855A8B002EBB5F /* RecordingWorkerTests.swift */,
+				5BB8650520855A8B002EBB5F /* RecordingPresenterTests.swift */,
+			);
+			path = RecordingViewController;
 			sourceTree = "<group>";
 		};
 		5BB9D8B2204EE3D200C5ADA1 = {
@@ -542,7 +581,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */,
+				5BB8650820855A8B002EBB5F /* RecordingWorkerTests.swift in Sources */,
+				5BB8650720855A8B002EBB5F /* RecordingInteractorTests.swift in Sources */,
 				5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */,
+				5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */,
+				5BB8650620855A8B002EBB5F /* RecordingViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,10 +602,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB9D8FA204EE8CF00C5ADA1 /* MainTabBarViewController.swift in Sources */,
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
 				5B201FAF2076E1E60063EA25 /* RecordingModels.swift in Sources */,
 				5BB9D8FE204EEB9900C5ADA1 /* TabBarControllers.swift in Sources */,
+				5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */,
 				5B201FAC2076E1E60063EA25 /* RecordingPresenter.swift in Sources */,
 				5B201FAD2076E1E60063EA25 /* RecordingWorker.swift in Sources */,
 				5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */,

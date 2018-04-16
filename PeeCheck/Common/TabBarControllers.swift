@@ -16,7 +16,7 @@ import UIKit
 /// - account: User account controller
 enum TabBarControllers: String {
     case record
-    case chart
+    case charts
     case account
     
     /// Return the localized name associated with the current value of TabBarControllers
@@ -26,7 +26,7 @@ enum TabBarControllers: String {
         switch self {
         case .record:
             return "tab_record".localized()
-        case .chart:
+        case .charts:
             return "tab_charts".localized()
         case .account:
             return "tab_account".localized()
@@ -40,7 +40,7 @@ enum TabBarControllers: String {
         switch self {
         case .record:
             return "picto_record"
-        case .chart:
+        case .charts:
             return "tab_picto".localized()
         case .account:
             return "tab_picto".localized()
@@ -54,7 +54,7 @@ enum TabBarControllers: String {
         switch self {
         case .record:
             return RecordingViewController()
-        case .chart:
+        case .charts:
             return UIViewController()
         case .account:
             return UIViewController()
@@ -71,8 +71,8 @@ extension TabBarControllers {
         case .record:
             tabControllers.append(.record)
             fallthrough
-        case .chart:
-            tabControllers.append(.chart)
+        case .charts:
+            tabControllers.append(.charts)
             fallthrough
         case .account:
             tabControllers.append(.account)

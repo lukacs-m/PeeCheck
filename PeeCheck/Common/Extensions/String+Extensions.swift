@@ -9,12 +9,15 @@
 import Foundation
 
 extension String {
-
-    ///
+    
     /// Get Localized string with comment
-    /// - parameter comment: comment's NSLocalizedString
-    /// - returns: Localized string
     ///
+    /// - Parameters:
+    ///   - comment: comment's String
+    ///   - tableName: The name of the string's localized table
+    ///   - bundle: bundle to focus on
+    ///   - value: value to apply to NSLocalizedString
+    /// - Returns: Localized string
     public func localized(_ comment: String = "", _ tableName: String? = nil, bundle: Bundle = Bundle.main, value: String = "") -> String {
         return NSLocalizedString(self, tableName: nil, bundle: bundle, value: value, comment: comment)
     }

@@ -7,9 +7,9 @@
 <body>
 <header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
 <h2 class="cov_title">
-<span>Coverage for "MainTabBarViewController.swift" : </span><span class="cov_low">45.71%</span>
+<span>Coverage for "MainTabBarViewController.swift" : </span><span class="cov_high">100.00%</span>
 </h2>
-<h4 class="cov_subtitle">(16 of 35 relevant lines covered)</h4>
+<h4 class="cov_subtitle">(35 of 35 relevant lines covered)</h4>
 <h4 class="cov_filepath">PeeCheck/MainViewController/MainTabBarViewController.swift</h4>
 <table class="source_code">
 <tr class="never">
@@ -69,7 +69,7 @@
 </tr>
 <tr class="never">
 <td class="num">12</td>
-<td class="src"><pre><code class="objc">class MainTabBarController: UITabBarController {</code></pre></td>
+<td class="src"><pre><code class="objc">class MainTabBarViewController: UITabBarController {</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -80,22 +80,22 @@
 <tr class="covered">
 <td class="num">14</td>
 <td class="src"><pre><code class="objc">    override func viewDidLoad() {</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">15</td>
 <td class="src"><pre><code class="objc">        super.viewDidLoad()</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">16</td>
 <td class="src"><pre><code class="objc">        setUpUI()</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">17</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="never">
 <td class="num">18</td>
@@ -110,62 +110,62 @@
 <tr class="covered">
 <td class="num">20</td>
 <td class="src"><pre><code class="objc">    private func setUpUI() {</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">21</td>
-<td class="src"><pre><code class="objc">//        for controller in TabBarControllers.array {</code></pre></td>
-<td class="coverage">1x</td>
+<td class="src"><pre><code class="objc">        for controller in TabBarControllers.array {</code></pre></td>
+<td class="coverage">6x</td>
 </tr>
 <tr class="covered">
 <td class="num">22</td>
-<td class="src"><pre><code class="objc">//            addController(controller.getViewController(), name: controller.localized(),</code></pre></td>
-<td class="coverage">1x</td>
+<td class="src"><pre><code class="objc">            addController(controller.getViewController(), name: controller.localized(),</code></pre></td>
+<td class="coverage">6x</td>
 </tr>
 <tr class="covered">
 <td class="num">23</td>
-<td class="src"><pre><code class="objc">//                          image: UIImage(named: "\(controller.getImageName())"),</code></pre></td>
-<td class="coverage">1x</td>
+<td class="src"><pre><code class="objc">                          image: UIImage(named: "\(controller.getImageName())"),</code></pre></td>
+<td class="coverage">6x</td>
 </tr>
 <tr class="covered">
 <td class="num">24</td>
-<td class="src"><pre><code class="objc">//                          selectedImage: UIImage(named: "\(controller.getImageName())_selected"))</code></pre></td>
-<td class="coverage">1x</td>
+<td class="src"><pre><code class="objc">                          selectedImage: UIImage(named: "\(controller.getImageName())_selected"))</code></pre></td>
+<td class="coverage">6x</td>
 </tr>
 <tr class="covered">
 <td class="num">25</td>
-<td class="src"><pre><code class="objc">//        }</code></pre></td>
-<td class="coverage">1x</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">6x</td>
 </tr>
 <tr class="covered">
 <td class="num">26</td>
 <td class="src"><pre><code class="objc">        </code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">27</td>
 <td class="src"><pre><code class="objc">        tabBar.backgroundImage = UIImage.imageWithColor(color: .clear)</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">28</td>
 <td class="src"><pre><code class="objc">        let frost = UIVisualEffectView(effect: UIBlurEffect(style: .light))</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">29</td>
 <td class="src"><pre><code class="objc">        frost.frame = tabBar.bounds</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">30</td>
 <td class="src"><pre><code class="objc">        tabBar.insertSubview(frost, at: 0)</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">31</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">1x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="never">
 <td class="num">32</td>
@@ -179,7 +179,7 @@
 </tr>
 <tr class="never">
 <td class="num">34</td>
-<td class="src"><pre><code class="objc">extension MainTabBarController {</code></pre></td>
+<td class="src"><pre><code class="objc">extension MainTabBarViewController {</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -227,100 +227,100 @@
 <td class="src"><pre><code class="objc">    ///</code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">44</td>
 <td class="src"><pre><code class="objc">    private func addController(_ controller: UIViewController, name: String, image: UIImage?, selectedImage: UIImage?, insideNavController: Bool = true, tag: Int = 0) {</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">45</td>
 <td class="src"><pre><code class="objc">        var newController = controller</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">46</td>
 <td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">47</td>
 <td class="src"><pre><code class="objc">        // create navbar if need</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">48</td>
 <td class="src"><pre><code class="objc">        if insideNavController {</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">49</td>
 <td class="src"><pre><code class="objc">            let nav = UINavigationController(rootViewController: controller)</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">50</td>
 <td class="src"><pre><code class="objc">            newController = nav</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">51</td>
 <td class="src"><pre><code class="objc">        }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">52</td>
 <td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">53</td>
 <td class="src"><pre><code class="objc">        self.viewControllers == nil ? self.viewControllers = [newController] : self.viewControllers?.append(newController)</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">54</td>
 <td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">55</td>
 <td class="src"><pre><code class="objc">        //create tabar item</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">56</td>
 <td class="src"><pre><code class="objc">        newController.tabBarItem = UITabBarItem(</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">57</td>
 <td class="src"><pre><code class="objc">            title: name,</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">58</td>
 <td class="src"><pre><code class="objc">            image: image?.withRenderingMode(.alwaysOriginal),</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">59</td>
 <td class="src"><pre><code class="objc">            selectedImage: selectedImage?.withRenderingMode(.alwaysOriginal)</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">60</td>
 <td class="src"><pre><code class="objc">        )</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">61</td>
 <td class="src"><pre><code class="objc">        newController.tabBarItem.tag = tag</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">62</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">6x</td>
 </tr>
 <tr class="never">
 <td class="num">63</td>
