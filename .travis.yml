@@ -20,4 +20,5 @@ script:
 - ./Pods/SwiftLint/swiftlint --reporter junit
 - travis/tests_script.sh
 - bundle exec danger
-
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
