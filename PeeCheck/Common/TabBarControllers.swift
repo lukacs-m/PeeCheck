@@ -19,6 +19,9 @@ enum TabBarControllers: String {
     case chart
     case account
     
+    /// Return the localized name associated with the current value of TabBarControllers
+    ///
+    /// - Returns: A string containing the localized name associated with the current value of TabBarControllers
     func localized() -> String {
         switch self {
         case .record:
@@ -30,6 +33,9 @@ enum TabBarControllers: String {
         }
     }
     
+    /// Return the image name associated with the current value of TabBarControllers
+    ///
+    /// - Returns: The name of the image to display in the tabbar
     func getImageName() -> String {
         switch self {
         case .record:
@@ -41,6 +47,9 @@ enum TabBarControllers: String {
         }
     }
     
+    /// Return a viewController associated with the current value of TabBarControllers
+    ///
+    /// - Returns: ViewController to display in tabbar
     func getViewController() -> UIViewController {
         switch self {
         case .record:

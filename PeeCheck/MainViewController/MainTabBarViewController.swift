@@ -8,29 +8,21 @@
 
 import UIKit
 
+/// Main TabBar controller
 class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUp()
+        setUpUI()
     }
     
-    override open var shouldAutorotate: Bool {
-        return false
-    }
-
-    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-            return .portrait
-    }
-    
-    private func setUp() {
-        
-        for controller in TabBarControllers.array {
-            
-            addController(controller.getViewController(), name: controller.localized(),
-                          image: UIImage(named: "\(controller.getImageName())"),
-                          selectedImage: UIImage(named: "\(controller.getImageName())_selected"))
-        }
+    /// Sets up the tabbar controller view and controllers
+    private func setUpUI() {
+//        for controller in TabBarControllers.array {
+//            addController(controller.getViewController(), name: controller.localized(),
+//                          image: UIImage(named: "\(controller.getImageName())"),
+//                          selectedImage: UIImage(named: "\(controller.getImageName())_selected"))
+//        }
         
         tabBar.backgroundImage = UIImage.imageWithColor(color: .clear)
         let frost = UIVisualEffectView(effect: UIBlurEffect(style: .light))
@@ -61,7 +53,7 @@ extension MainTabBarController {
         self.viewControllers == nil ? self.viewControllers = [newController] : self.viewControllers?.append(newController)
 
         //create tabar item
-        newController.tabBarItem =  UITabBarItem(
+        newController.tabBarItem = UITabBarItem(
             title: name,
             image: image?.withRenderingMode(.alwaysOriginal),
             selectedImage: selectedImage?.withRenderingMode(.alwaysOriginal)
