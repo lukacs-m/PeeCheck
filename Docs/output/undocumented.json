@@ -349,6 +349,13 @@
       "symbol": "RecordingWorker.doSomeWork()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Supporting Files/main.swift",
+      "line": 11,
+      "symbol": "appDelegateClass",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/martin/Projects/PeeCheck"

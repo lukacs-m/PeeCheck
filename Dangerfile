@@ -29,5 +29,5 @@ slather.configure("PeeCheck.xcodeproj", "PeeCheck", options: {
 })
 
 slather.notify_if_coverage_is_less_than(minimum_coverage: 0)
-slather.notify_if_modified_file_is_less_than(minimum_coverage: 60)
+slather.notify_if_modified_file_is_less_than(minimum_coverage: 30)
 slather.show_coverage

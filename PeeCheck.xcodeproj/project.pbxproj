@@ -16,6 +16,7 @@
 		5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FAB2076E1E60063EA25 /* RecordingInteractor.swift */; };
 		5B201FB32076E22A0063EA25 /* RecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B201FB22076E22A0063EA25 /* RecordingViewController.xib */; };
 		5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */; };
+		5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
 		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
@@ -24,6 +25,7 @@
 		5BB8650820855A8B002EBB5F /* RecordingWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650420855A8B002EBB5F /* RecordingWorkerTests.swift */; };
 		5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650520855A8B002EBB5F /* RecordingPresenterTests.swift */; };
 		5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8F9204EE8CF00C5ADA1 /* MainTabBarViewController.swift */; };
+		5BB8650C2085E528002EBB5F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650B2085E528002EBB5F /* main.swift */; };
 		5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8BE204EE3D200C5ADA1 /* AppDelegate.swift */; };
 		5BB9D8C4204EE3D200C5ADA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8C2204EE3D200C5ADA1 /* Main.storyboard */; };
 		5BB9D8C6204EE3D200C5ADA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8C5204EE3D200C5ADA1 /* Assets.xcassets */; };
@@ -64,6 +66,7 @@
 		5B201FAB2076E1E60063EA25 /* RecordingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingInteractor.swift; sourceTree = "<group>"; };
 		5B201FB22076E22A0063EA25 /* RecordingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
 		5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +78,7 @@
 		5BB8650320855A8B002EBB5F /* RecordingInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingInteractorTests.swift; sourceTree = "<group>"; };
 		5BB8650420855A8B002EBB5F /* RecordingWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingWorkerTests.swift; sourceTree = "<group>"; };
 		5BB8650520855A8B002EBB5F /* RecordingPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingPresenterTests.swift; sourceTree = "<group>"; };
+		5BB8650B2085E528002EBB5F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5BB9D8BB204EE3D200C5ADA1 /* PeeCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeeCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB9D8BE204EE3D200C5ADA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BB9D8C3204EE3D200C5ADA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			children = (
 				5BB864FD208559B9002EBB5F /* Scenes */,
 				5BB864F920842532002EBB5F /* Common */,
+				5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */,
 				5BB864E5208417D7002EBB5F /* Info.plist */,
 			);
 			path = PeeCheckTests;
@@ -272,6 +277,7 @@
 				5BB9D8C2204EE3D200C5ADA1 /* Main.storyboard */,
 				5BB9D8CA204EE3D200C5ADA1 /* Info.plist */,
 				5BB9D8F7204EE82700C5ADA1 /* Localizable.strings */,
+				5BB8650B2085E528002EBB5F /* main.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -581,6 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */,
 				5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */,
 				5BB8650820855A8B002EBB5F /* RecordingWorkerTests.swift in Sources */,
 				5BB8650720855A8B002EBB5F /* RecordingInteractorTests.swift in Sources */,
@@ -604,6 +611,7 @@
 			files = (
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
 				5B201FAF2076E1E60063EA25 /* RecordingModels.swift in Sources */,
+				5BB8650C2085E528002EBB5F /* main.swift in Sources */,
 				5BB9D8FE204EEB9900C5ADA1 /* TabBarControllers.swift in Sources */,
 				5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */,
 				5B201FAC2076E1E60063EA25 /* RecordingPresenter.swift in Sources */,
