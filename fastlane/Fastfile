@@ -35,6 +35,8 @@ platform :ios do
       html: true,
       ignore: [
         "**/Storyboard.swift",
+        "**/main.swift",
+        "**/AppDelegate.swift",
       ]
     )
     jazzy(

@@ -1,8 +1,8 @@
 //
-//  MicturitionCheckUITests.swift
-//  MicturitionCheckUITests
+//  PeeCheckUITests.swift
+//  PeeCheckUITests
 //
-//  Created by Martin Lukacs on 06/03/2018.
+//  Created by Martin Lukacs on 16/04/2018.
 //  Copyright © 2018 Martin Lukacs. All rights reserved.
 //
 

@@ -1,5 +1,7 @@
 # PeeCheck
 
+[![Build Status](https://img.shields.io/travis/lukacs-m/PeeCheck/develop.svg?style=flat-square)](https://travis-ci.org/lukacs-m/PeeCheck) [![Code coverage status](https://img.shields.io/codecov/c/github/lukacs-m/PeeCheck.svg?style=flat-square)](http://codecov.io/github/lukacs-m/PeeCheck) [![Platform support](https://img.shields.io/badge/platform-ios%20%7C%20watchos-lightgrey.svg?style=flat-square)](https://github.com/lukacs-m/PeeCheck) 
+
 ## installation
 
 ```git@github.com:lukacs-m/PeeCheck.git```
@@ -22,8 +24,8 @@ This command starts execution of the tests in the project, then trigger the slat
 
 ## Documentation
 
-To review PeeCheck documentation [Documentation](https://github.com/lukacs-m/PeeCheck/blob/develop/Docs/output/index.html).
+To review PeeCheck documentation [Documentation](https://github.com/lukacs-m/PeeCheck/blob/develop/Docs/output/).
 
 ## Code Coverage
 
-To review PeeCheck code coverage [Code coverage](https://github.com/lukacs-m/PeeCheck/blob/develop/coverage/index.html).
+To review PeeCheck code coverage [Code coverage](https://github.com/lukacs-m/PeeCheck/blob/develop/coverage/).

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BF408D0FB15E53859472373 /* Pods_PeeCheckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADE343B534A7A04EF6FC676 /* Pods_PeeCheckTests.framework */; };
+		3E19DC1752CBB840C9B934F9 /* Pods_PeeCheckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADE343B534A7A04EF6FC676 /* Pods_PeeCheckTests.framework */; };
 		5B201FAC2076E1E60063EA25 /* RecordingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FA62076E1E60063EA25 /* RecordingPresenter.swift */; };
 		5B201FAD2076E1E60063EA25 /* RecordingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FA72076E1E60063EA25 /* RecordingWorker.swift */; };
 		5B201FAE2076E1E60063EA25 /* RecordingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FA82076E1E60063EA25 /* RecordingRouter.swift */; };
@@ -16,34 +16,41 @@
 		5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FAB2076E1E60063EA25 /* RecordingInteractor.swift */; };
 		5B201FB32076E22A0063EA25 /* RecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B201FB22076E22A0063EA25 /* RecordingViewController.xib */; };
 		5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */; };
+		5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */; };
+		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
+		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
+		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
+		5BB8650620855A8B002EBB5F /* RecordingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650220855A8B002EBB5F /* RecordingViewControllerTests.swift */; };
+		5BB8650720855A8B002EBB5F /* RecordingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650320855A8B002EBB5F /* RecordingInteractorTests.swift */; };
+		5BB8650820855A8B002EBB5F /* RecordingWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650420855A8B002EBB5F /* RecordingWorkerTests.swift */; };
+		5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650520855A8B002EBB5F /* RecordingPresenterTests.swift */; };
+		5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8F9204EE8CF00C5ADA1 /* MainTabBarViewController.swift */; };
+		5BB8650C2085E528002EBB5F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8650B2085E528002EBB5F /* main.swift */; };
 		5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8BE204EE3D200C5ADA1 /* AppDelegate.swift */; };
 		5BB9D8C4204EE3D200C5ADA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8C2204EE3D200C5ADA1 /* Main.storyboard */; };
 		5BB9D8C6204EE3D200C5ADA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8C5204EE3D200C5ADA1 /* Assets.xcassets */; };
 		5BB9D8C9204EE3D200C5ADA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8C7204EE3D200C5ADA1 /* LaunchScreen.storyboard */; };
-		5BB9D8D4204EE3D200C5ADA1 /* PeeCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8D3204EE3D200C5ADA1 /* PeeCheckTests.swift */; };
-		5BB9D8DF204EE3D200C5ADA1 /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8DE204EE3D200C5ADA1 /* PeeCheckUITests.swift */; };
 		5BB9D8F5204EE82700C5ADA1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8F7204EE82700C5ADA1 /* Localizable.strings */; };
-		5BB9D8FA204EE8CF00C5ADA1 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8F9204EE8CF00C5ADA1 /* MainTabBarViewController.swift */; };
 		5BB9D8FE204EEB9900C5ADA1 /* TabBarControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8FD204EEB9900C5ADA1 /* TabBarControllers.swift */; };
 		5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */; };
-		77E06EAFC71377BC461131F3 /* Pods_PeeCheckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CF96DD458CDE4EFA8B382 /* Pods_PeeCheckUITests.framework */; };
+		7E828030DE0A63143A66E166 /* Pods_PeeCheckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CF96DD458CDE4EFA8B382 /* Pods_PeeCheckUITests.framework */; };
 		9549CE34E9014B4205D25413 /* Pods_PeeCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 444058EC6B292B8FF016DB99 /* Pods_PeeCheck.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5BB9D8D0204EE3D200C5ADA1 /* PBXContainerItemProxy */ = {
+		5BB864E6208417D7002EBB5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5BB9D8B3204EE3D200C5ADA1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5BB9D8BA204EE3D200C5ADA1;
-			remoteInfo = MicturitionCheck;
+			remoteInfo = PeeCheck;
 		};
-		5BB9D8DB204EE3D200C5ADA1 /* PBXContainerItemProxy */ = {
+		5BB864F42084252B002EBB5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5BB9D8B3204EE3D200C5ADA1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5BB9D8BA204EE3D200C5ADA1;
-			remoteInfo = MicturitionCheck;
+			remoteInfo = PeeCheck;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -59,18 +66,25 @@
 		5B201FAB2076E1E60063EA25 /* RecordingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingInteractor.swift; sourceTree = "<group>"; };
 		5B201FB22076E22A0063EA25 /* RecordingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
 		5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
+		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeeCheckUITests.swift; sourceTree = "<group>"; };
+		5BB864F32084252B002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllersTests.swift; sourceTree = "<group>"; };
+		5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewControllerTests.swift; sourceTree = "<group>"; };
+		5BB8650220855A8B002EBB5F /* RecordingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewControllerTests.swift; sourceTree = "<group>"; };
+		5BB8650320855A8B002EBB5F /* RecordingInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingInteractorTests.swift; sourceTree = "<group>"; };
+		5BB8650420855A8B002EBB5F /* RecordingWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingWorkerTests.swift; sourceTree = "<group>"; };
+		5BB8650520855A8B002EBB5F /* RecordingPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingPresenterTests.swift; sourceTree = "<group>"; };
+		5BB8650B2085E528002EBB5F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5BB9D8BB204EE3D200C5ADA1 /* PeeCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeeCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB9D8BE204EE3D200C5ADA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BB9D8C3204EE3D200C5ADA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BB9D8C5204EE3D200C5ADA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BB9D8C8204EE3D200C5ADA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BB9D8CA204EE3D200C5ADA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BB9D8CF204EE3D200C5ADA1 /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BB9D8D3204EE3D200C5ADA1 /* PeeCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeeCheckTests.swift; sourceTree = "<group>"; };
-		5BB9D8D5204EE3D200C5ADA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BB9D8DA204EE3D200C5ADA1 /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BB9D8DE204EE3D200C5ADA1 /* PeeCheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeeCheckUITests.swift; sourceTree = "<group>"; };
-		5BB9D8E0204EE3D200C5ADA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB9D8F6204EE82700C5ADA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BB9D8F8204EE83D00C5ADA1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BB9D8F9204EE8CF00C5ADA1 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -85,27 +99,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5BB864DE208417D6002EBB5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E19DC1752CBB840C9B934F9 /* Pods_PeeCheckTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BB864EC2084252A002EBB5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E828030DE0A63143A66E166 /* Pods_PeeCheckUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BB9D8B8204EE3D200C5ADA1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9549CE34E9014B4205D25413 /* Pods_PeeCheck.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BB9D8CC204EE3D200C5ADA1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BF408D0FB15E53859472373 /* Pods_PeeCheckTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BB9D8D7204EE3D200C5ADA1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				77E06EAFC71377BC461131F3 /* Pods_PeeCheckUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,12 +163,77 @@
 			path = RecordingViewController;
 			sourceTree = "<group>";
 		};
+		5BB864E2208417D7002EBB5F /* PeeCheckTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BB864FD208559B9002EBB5F /* Scenes */,
+				5BB864F920842532002EBB5F /* Common */,
+				5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */,
+				5BB864E5208417D7002EBB5F /* Info.plist */,
+			);
+			path = PeeCheckTests;
+			sourceTree = "<group>";
+		};
+		5BB864F02084252A002EBB5F /* PeeCheckUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */,
+				5BB864F32084252B002EBB5F /* Info.plist */,
+			);
+			path = PeeCheckUITests;
+			sourceTree = "<group>";
+		};
+		5BB864F920842532002EBB5F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5BB864FA20842549002EBB5F /* Enum */,
+			);
+			name = Common;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		5BB864FA20842549002EBB5F /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		5BB864FD208559B9002EBB5F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5BB8650120855A36002EBB5F /* RecordingViewController */,
+				5BB864FE208559D5002EBB5F /* MainTabBarViewController */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5BB864FE208559D5002EBB5F /* MainTabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */,
+			);
+			path = MainTabBarViewController;
+			sourceTree = "<group>";
+		};
+		5BB8650120855A36002EBB5F /* RecordingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5BB8650220855A8B002EBB5F /* RecordingViewControllerTests.swift */,
+				5BB8650320855A8B002EBB5F /* RecordingInteractorTests.swift */,
+				5BB8650420855A8B002EBB5F /* RecordingWorkerTests.swift */,
+				5BB8650520855A8B002EBB5F /* RecordingPresenterTests.swift */,
+			);
+			path = RecordingViewController;
+			sourceTree = "<group>";
+		};
 		5BB9D8B2204EE3D200C5ADA1 = {
 			isa = PBXGroup;
 			children = (
 				5BB9D8BD204EE3D200C5ADA1 /* PeeCheck */,
-				5BB9D8D2204EE3D200C5ADA1 /* PeeCheckTests */,
-				5BB9D8DD204EE3D200C5ADA1 /* PeeCheckUITests */,
+				5BB864E2208417D7002EBB5F /* PeeCheckTests */,
+				5BB864F02084252A002EBB5F /* PeeCheckUITests */,
 				5BB9D8BC204EE3D200C5ADA1 /* Products */,
 				50A08D651192411E97B09029 /* Pods */,
 				592237B06A63C643F3324AC7 /* Frameworks */,
@@ -165,8 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				5BB9D8BB204EE3D200C5ADA1 /* PeeCheck.app */,
-				5BB9D8CF204EE3D200C5ADA1 /* PeeCheckTests.xctest */,
-				5BB9D8DA204EE3D200C5ADA1 /* PeeCheckUITests.xctest */,
+				5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */,
+				5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,24 +260,6 @@
 				5BB9D8ED204EE70400C5ADA1 /* Supporting Files */,
 			);
 			path = PeeCheck;
-			sourceTree = "<group>";
-		};
-		5BB9D8D2204EE3D200C5ADA1 /* PeeCheckTests */ = {
-			isa = PBXGroup;
-			children = (
-				5BB9D8D3204EE3D200C5ADA1 /* PeeCheckTests.swift */,
-				5BB9D8D5204EE3D200C5ADA1 /* Info.plist */,
-			);
-			path = PeeCheckTests;
-			sourceTree = "<group>";
-		};
-		5BB9D8DD204EE3D200C5ADA1 /* PeeCheckUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5BB9D8DE204EE3D200C5ADA1 /* PeeCheckUITests.swift */,
-				5BB9D8E0204EE3D200C5ADA1 /* Info.plist */,
-			);
-			path = PeeCheckUITests;
 			sourceTree = "<group>";
 		};
 		5BB9D8EC204EE6E700C5ADA1 /* Ressources */ = {
@@ -216,6 +277,7 @@
 				5BB9D8C2204EE3D200C5ADA1 /* Main.storyboard */,
 				5BB9D8CA204EE3D200C5ADA1 /* Info.plist */,
 				5BB9D8F7204EE82700C5ADA1 /* Localizable.strings */,
+				5BB8650B2085E528002EBB5F /* main.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -266,6 +328,46 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5BB864E0208417D6002EBB5F /* PeeCheckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BB864E8208417D7002EBB5F /* Build configuration list for PBXNativeTarget "PeeCheckTests" */;
+			buildPhases = (
+				B516C55102201A00BFA23DCC /* [CP] Check Pods Manifest.lock */,
+				5BB864DD208417D6002EBB5F /* Sources */,
+				5BB864DE208417D6002EBB5F /* Frameworks */,
+				5BB864DF208417D6002EBB5F /* Resources */,
+				871422BF7B8E3A623B56A158 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BB864E7208417D7002EBB5F /* PBXTargetDependency */,
+			);
+			name = PeeCheckTests;
+			productName = PeeCheckTests;
+			productReference = 5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5BB864EE2084252A002EBB5F /* PeeCheckUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BB864F62084252B002EBB5F /* Build configuration list for PBXNativeTarget "PeeCheckUITests" */;
+			buildPhases = (
+				D61F8DE14C372E68DC227A55 /* [CP] Check Pods Manifest.lock */,
+				5BB864EB2084252A002EBB5F /* Sources */,
+				5BB864EC2084252A002EBB5F /* Frameworks */,
+				5BB864ED2084252A002EBB5F /* Resources */,
+				456647B8D08F272D667E2344 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BB864F52084252B002EBB5F /* PBXTargetDependency */,
+			);
+			name = PeeCheckUITests;
+			productName = PeeCheckUITests;
+			productReference = 5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		5BB9D8BA204EE3D200C5ADA1 /* PeeCheck */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BB9D8E3204EE3D200C5ADA1 /* Build configuration list for PBXNativeTarget "PeeCheck" */;
@@ -285,67 +387,29 @@
 			productReference = 5BB9D8BB204EE3D200C5ADA1 /* PeeCheck.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5BB9D8CE204EE3D200C5ADA1 /* PeeCheckTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5BB9D8E6204EE3D200C5ADA1 /* Build configuration list for PBXNativeTarget "PeeCheckTests" */;
-			buildPhases = (
-				FC31DFCB839909CB8BA9ACE0 /* [CP] Check Pods Manifest.lock */,
-				5BB9D8CB204EE3D200C5ADA1 /* Sources */,
-				5BB9D8CC204EE3D200C5ADA1 /* Frameworks */,
-				5BB9D8CD204EE3D200C5ADA1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5BB9D8D1204EE3D200C5ADA1 /* PBXTargetDependency */,
-			);
-			name = PeeCheckTests;
-			productName = MicturitionCheckTests;
-			productReference = 5BB9D8CF204EE3D200C5ADA1 /* PeeCheckTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5BB9D8D9204EE3D200C5ADA1 /* PeeCheckUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5BB9D8E9204EE3D200C5ADA1 /* Build configuration list for PBXNativeTarget "PeeCheckUITests" */;
-			buildPhases = (
-				9F55E6B8237B1EEF663524DA /* [CP] Check Pods Manifest.lock */,
-				5BB9D8D6204EE3D200C5ADA1 /* Sources */,
-				5BB9D8D7204EE3D200C5ADA1 /* Frameworks */,
-				5BB9D8D8204EE3D200C5ADA1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5BB9D8DC204EE3D200C5ADA1 /* PBXTargetDependency */,
-			);
-			name = PeeCheckUITests;
-			productName = MicturitionCheckUITests;
-			productReference = 5BB9D8DA204EE3D200C5ADA1 /* PeeCheckUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		5BB9D8B3204EE3D200C5ADA1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Martin Lukacs";
 				TargetAttributes = {
+					5BB864E0208417D6002EBB5F = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5BB9D8BA204EE3D200C5ADA1;
+					};
+					5BB864EE2084252A002EBB5F = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5BB9D8BA204EE3D200C5ADA1;
+					};
 					5BB9D8BA204EE3D200C5ADA1 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-					};
-					5BB9D8CE204EE3D200C5ADA1 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 5BB9D8BA204EE3D200C5ADA1;
-					};
-					5BB9D8D9204EE3D200C5ADA1 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 5BB9D8BA204EE3D200C5ADA1;
 					};
 				};
 			};
@@ -364,13 +428,27 @@
 			projectRoot = "";
 			targets = (
 				5BB9D8BA204EE3D200C5ADA1 /* PeeCheck */,
-				5BB9D8CE204EE3D200C5ADA1 /* PeeCheckTests */,
-				5BB9D8D9204EE3D200C5ADA1 /* PeeCheckUITests */,
+				5BB864E0208417D6002EBB5F /* PeeCheckTests */,
+				5BB864EE2084252A002EBB5F /* PeeCheckUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5BB864DF208417D6002EBB5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BB864ED2084252A002EBB5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BB9D8B9204EE3D200C5ADA1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,23 +461,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BB9D8CD204EE3D200C5ADA1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BB9D8D8204EE3D200C5ADA1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		456647B8D08F272D667E2344 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4C1424EFFCE41CD44BEF2847 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,25 +520,31 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
-		9F55E6B8237B1EEF663524DA /* [CP] Check Pods Manifest.lock */ = {
+		871422BF7B8E3A623B56A158 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckTests/Pods-PeeCheckTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PeeCheckUITests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckTests/Pods-PeeCheckTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FC31DFCB839909CB8BA9ACE0 /* [CP] Check Pods Manifest.lock */ = {
+		B516C55102201A00BFA23DCC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -468,17 +562,58 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D61F8DE14C372E68DC227A55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeeCheckUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5BB864DD208417D6002EBB5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */,
+				5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */,
+				5BB8650820855A8B002EBB5F /* RecordingWorkerTests.swift in Sources */,
+				5BB8650720855A8B002EBB5F /* RecordingInteractorTests.swift in Sources */,
+				5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */,
+				5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */,
+				5BB8650620855A8B002EBB5F /* RecordingViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BB864EB2084252A002EBB5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BB9D8B7204EE3D200C5ADA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB9D8FA204EE8CF00C5ADA1 /* MainTabBarViewController.swift in Sources */,
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
 				5B201FAF2076E1E60063EA25 /* RecordingModels.swift in Sources */,
+				5BB8650C2085E528002EBB5F /* main.swift in Sources */,
 				5BB9D8FE204EEB9900C5ADA1 /* TabBarControllers.swift in Sources */,
+				5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */,
 				5B201FAC2076E1E60063EA25 /* RecordingPresenter.swift in Sources */,
 				5B201FAD2076E1E60063EA25 /* RecordingWorker.swift in Sources */,
 				5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */,
@@ -489,34 +624,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BB9D8CB204EE3D200C5ADA1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5BB9D8D4204EE3D200C5ADA1 /* PeeCheckTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BB9D8D6204EE3D200C5ADA1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5BB9D8DF204EE3D200C5ADA1 /* PeeCheckUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5BB9D8D1204EE3D200C5ADA1 /* PBXTargetDependency */ = {
+		5BB864E7208417D7002EBB5F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5BB9D8BA204EE3D200C5ADA1 /* PeeCheck */;
-			targetProxy = 5BB9D8D0204EE3D200C5ADA1 /* PBXContainerItemProxy */;
+			targetProxy = 5BB864E6208417D7002EBB5F /* PBXContainerItemProxy */;
 		};
-		5BB9D8DC204EE3D200C5ADA1 /* PBXTargetDependency */ = {
+		5BB864F52084252B002EBB5F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5BB9D8BA204EE3D200C5ADA1 /* PeeCheck */;
-			targetProxy = 5BB9D8DB204EE3D200C5ADA1 /* PBXContainerItemProxy */;
+			targetProxy = 5BB864F42084252B002EBB5F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -549,6 +668,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5BB864E9208417D7002EBB5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8866187AD011ECD8BA008CA /* Pods-PeeCheckTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
+				INFOPLIST_FILE = PeeCheckTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeeCheck.app/PeeCheck";
+			};
+			name = Debug;
+		};
+		5BB864EA208417D7002EBB5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB513A455CBC4C7DAAD7F622 /* Pods-PeeCheckTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
+				INFOPLIST_FILE = PeeCheckTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeeCheck.app/PeeCheck";
+			};
+			name = Release;
+		};
+		5BB864F72084252B002EBB5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 065C21D8CE50B8801D890CCB /* Pods-PeeCheckUITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
+				INFOPLIST_FILE = PeeCheckUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheckUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PeeCheck;
+			};
+			name = Debug;
+		};
+		5BB864F82084252B002EBB5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 901DC64AB7C572D4E62F276D /* Pods-PeeCheckUITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
+				INFOPLIST_FILE = PeeCheckUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheckUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PeeCheck;
+			};
+			name = Release;
+		};
 		5BB9D8E1204EE3D200C5ADA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -666,12 +859,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E21308C9B2077CCC24EEB1F /* Pods-PeeCheck.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
 				INFOPLIST_FILE = "$(SRCROOT)/PeeCheck/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -683,12 +882,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EC244CE0A01483D2764F3FEA /* Pods-PeeCheck.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
 				INFOPLIST_FILE = "$(SRCROOT)/PeeCheck/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -696,79 +900,27 @@
 			};
 			name = Release;
 		};
-		5BB9D8E7204EE3D200C5ADA1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8866187AD011ECD8BA008CA /* Pods-PeeCheckTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
-				INFOPLIST_FILE = PeeCheckTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheckTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeeCheck.app/PeeCheck";
-			};
-			name = Debug;
-		};
-		5BB9D8E8204EE3D200C5ADA1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB513A455CBC4C7DAAD7F622 /* Pods-PeeCheckTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
-				INFOPLIST_FILE = PeeCheckTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheckTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeeCheck.app/PeeCheck";
-			};
-			name = Release;
-		};
-		5BB9D8EA204EE3D200C5ADA1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 065C21D8CE50B8801D890CCB /* Pods-PeeCheckUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
-				INFOPLIST_FILE = PeeCheckUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheckUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PeeCheck;
-			};
-			name = Debug;
-		};
-		5BB9D8EB204EE3D200C5ADA1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 901DC64AB7C572D4E62F276D /* Pods-PeeCheckUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
-				INFOPLIST_FILE = PeeCheckUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheckUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PeeCheck;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5BB864E8208417D7002EBB5F /* Build configuration list for PBXNativeTarget "PeeCheckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BB864E9208417D7002EBB5F /* Debug */,
+				5BB864EA208417D7002EBB5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BB864F62084252B002EBB5F /* Build configuration list for PBXNativeTarget "PeeCheckUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BB864F72084252B002EBB5F /* Debug */,
+				5BB864F82084252B002EBB5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5BB9D8B6204EE3D200C5ADA1 /* Build configuration list for PBXProject "PeeCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -783,24 +935,6 @@
 			buildConfigurations = (
 				5BB9D8E4204EE3D200C5ADA1 /* Debug */,
 				5BB9D8E5204EE3D200C5ADA1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5BB9D8E6204EE3D200C5ADA1 /* Build configuration list for PBXNativeTarget "PeeCheckTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5BB9D8E7204EE3D200C5ADA1 /* Debug */,
-				5BB9D8E8204EE3D200C5ADA1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5BB9D8E9204EE3D200C5ADA1 /* Build configuration list for PBXNativeTarget "PeeCheckUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5BB9D8EA204EE3D200C5ADA1 /* Debug */,
-				5BB9D8EB204EE3D200C5ADA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

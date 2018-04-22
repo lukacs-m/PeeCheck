@@ -57,13 +57,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/Extensions/UIImage+Extensions.swift",
-      "line": 12,
-      "symbol": "UIImage.imageWithColor(color:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/TabBarControllers.swift",
       "line": 18,
       "symbol": "TabBarControllers.record",
@@ -73,7 +66,7 @@
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/TabBarControllers.swift",
       "line": 19,
-      "symbol": "TabBarControllers.chart",
+      "symbol": "TabBarControllers.charts",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
@@ -86,71 +79,15 @@
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/TabBarControllers.swift",
-      "line": 22,
-      "symbol": "TabBarControllers.localized()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/TabBarControllers.swift",
-      "line": 33,
-      "symbol": "TabBarControllers.getImageName()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/TabBarControllers.swift",
-      "line": 44,
-      "symbol": "TabBarControllers.getViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/TabBarControllers.swift",
-      "line": 59,
+      "line": 68,
       "symbol": "TabBarControllers.array",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/MainViewController/MainTabBarViewController.swift",
-      "line": null,
-      "symbol": "MainTabBarController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/MainViewController/MainTabBarViewController.swift",
-      "line": 11,
-      "symbol": "MainTabBarController",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/MainViewController/MainTabBarViewController.swift",
-      "line": 13,
-      "symbol": "MainTabBarController.viewDidLoad()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/MainViewController/MainTabBarViewController.swift",
-      "line": 18,
-      "symbol": "MainTabBarController.shouldAutorotate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/MainViewController/MainTabBarViewController.swift",
-      "line": 22,
-      "symbol": "MainTabBarController.supportedInterfaceOrientations",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/MainViewController/MainTabBarViewController.swift",
-      "line": 26,
-      "symbol": "MainTabBarController.setUp()",
+      "line": 14,
+      "symbol": "MainTabBarViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -411,6 +348,13 @@
       "line": 16,
       "symbol": "RecordingWorker.doSomeWork()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Supporting Files/main.swift",
+      "line": 11,
+      "symbol": "appDelegateClass",
+      "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     }
   ],
