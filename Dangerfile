@@ -23,6 +23,8 @@ slather.configure("PeeCheck.xcodeproj", "PeeCheck", options: {
   output_directory: "coverage",
   ignore_list: [
     "**/Storyboard.swift",
+    "**/main.swift",
+    "**/AppDelegate.swift",
   ],
   ci_service: :travis,
   coverage_service: :terminal,
