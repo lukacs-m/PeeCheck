@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordingViewController" customModule="PeeCheck" customModuleProvider="target">
             <connections>
+                <outlet property="btnRecord" destination="ooF-hV-IIb" id="7tI-H3-6A8"/>
+                <outlet property="lblHelpDescription" destination="jHm-Ns-z7G" id="T09-vZ-W0u"/>
+                <outlet property="lblTitle" destination="XaH-j0-dWd" id="QPu-sr-9Cp"/>
                 <outlet property="view" destination="iN0-l3-epB" id="osg-cH-fmZ"/>
             </connections>
         </placeholder>
@@ -20,17 +23,47 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tB-fC-FT4">
-                    <rect key="frame" x="166.5" y="323" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaH-j0-dWd">
+                    <rect key="frame" x="0.0" y="55" width="375" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHm-Ns-z7G">
+                    <rect key="frame" x="0.0" y="106.5" width="375" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooF-hV-IIb" customClass="RoundButton" customModule="PeeCheck" customModuleProvider="target">
+                    <rect key="frame" x="137" y="283.5" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.89461263020833337" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="5Wd-eG-N7d"/>
+                        <constraint firstAttribute="height" constant="100" id="Yqh-t5-zyh"/>
+                    </constraints>
+                    <state key="normal" title="Record">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="recordingAction:" destination="-1" eventType="touchUpInside" id="CHm-6l-gpm"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="2tB-fC-FT4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GJq-0o-bWQ"/>
-                <constraint firstItem="2tB-fC-FT4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oA6-ST-nv1"/>
+                <constraint firstItem="ooF-hV-IIb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jHm-Ns-z7G" secondAttribute="bottom" id="Irb-Pq-MXF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jHm-Ns-z7G" secondAttribute="trailing" id="JWu-97-UfT"/>
+                <constraint firstItem="ooF-hV-IIb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PuA-CQ-i6j"/>
+                <constraint firstItem="ooF-hV-IIb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="WfC-38-lFY"/>
+                <constraint firstItem="jHm-Ns-z7G" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qJg-bW-9Xh"/>
+                <constraint firstItem="XaH-j0-dWd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sBA-WS-6o4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XaH-j0-dWd" secondAttribute="trailing" id="un2-eW-LC3"/>
+                <constraint firstItem="XaH-j0-dWd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="35" id="uzy-25-juE"/>
+                <constraint firstItem="jHm-Ns-z7G" firstAttribute="top" secondItem="XaH-j0-dWd" secondAttribute="bottom" constant="25" id="wBn-C0-WHk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>

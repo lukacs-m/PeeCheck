@@ -20,6 +20,10 @@ class RecordingViewController: UIViewController, RecordingDisplayLogic {
   var interactor: RecordingBusinessLogic?
   var router: (NSObjectProtocol & RecordingRoutingLogic & RecordingDataPassing)?
 
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblHelpDescription: UILabel!
+    @IBOutlet weak var btnRecord: RoundButton!
+    
   // MARK: Object lifecycle
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -46,6 +50,13 @@ class RecordingViewController: UIViewController, RecordingDisplayLogic {
     router.viewController = viewController
     router.dataStore = interactor
   }
+    
+    private func setUpUI() {
+        lblTitle.text = "".localized()
+        lblHelpDescription.text = "".localized()
+        btnRecord.setTitle("".localized(), for: .normal)
+        
+    }
   
   // MARK: Routing
   
@@ -65,11 +76,15 @@ class RecordingViewController: UIViewController, RecordingDisplayLogic {
     doSomething()
   }
   
-  // MARK: Do something
+  // MARK: Start recording micturition
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething() {
+    @IBAction func recordingAction(_ sender: Any) {
+        
+    }
+    
+    func doSomething() {
     let request = Recording.Something.Request()
     interactor?.doSomething(request: request)
   }

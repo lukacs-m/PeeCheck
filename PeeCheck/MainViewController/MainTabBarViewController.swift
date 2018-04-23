@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 /// Main TabBar controller
 class MainTabBarViewController: UITabBarController {
@@ -20,10 +21,12 @@ class MainTabBarViewController: UITabBarController {
     private func setUpUI() {
         for controller in TabBarControllers.array {
             addController(controller.getViewController(), name: controller.localized(),
-                          image: UIImage(named: "\(controller.getImageName())"),
-                          selectedImage: UIImage(named: "\(controller.getImageName())_selected"))
+                          image: controller.getImage(),
+                          selectedImage: controller.getImage(selected: true))
         }
         
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : FlatGreen()], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : FlatSkyBlue()], for: .selected)
         tabBar.backgroundImage = UIImage.imageWithColor(color: .clear)
         let frost = UIVisualEffectView(effect: UIBlurEffect(style: .light))
         frost.frame = tabBar.bounds
@@ -58,6 +61,7 @@ extension MainTabBarViewController {
             image: image?.withRenderingMode(.alwaysOriginal),
             selectedImage: selectedImage?.withRenderingMode(.alwaysOriginal)
         )
+
         newController.tabBarItem.tag = tag
     }
 }
