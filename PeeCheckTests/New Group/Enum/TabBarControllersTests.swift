@@ -26,8 +26,8 @@ class TabBarControllerTests: QuickSpec {
                     expect(TabBarControllers.record.getViewController()).to(beAKindOf(RecordingViewController.self))
                 }
                 
-                it("Should have the good record image name") {
-                    expect(TabBarControllers.record.getImageName()) == "picto_record"
+                it("Should have the good recording image") {
+                    expect(TabBarControllers.record.getImage()).to(beAKindOf(UIImage.self))
                 }
                 
                 it("Should have the good localized record name") {
@@ -35,17 +35,17 @@ class TabBarControllerTests: QuickSpec {
                 }
             }
             
-            //MARK: - Test of .account enum value
+            //MARK: - Test of .charts enum value
             context("It should validate .charts value functions") {
                 it("Should be a UIViewController") {
                     expect(TabBarControllers.charts.getViewController()).to(beAKindOf(UIViewController.self))
                 }
                 
-                it("Should have the good chart image name") {
-                    expect(TabBarControllers.charts.getImageName()) == "picto_tab"
+                it("Should have the good charts image") {
+                    expect(TabBarControllers.charts.getImage()).to(beAKindOf(UIImage.self))
                 }
                 
-                it("Should have the good localized record name") {
+                it("Should have the good localized charts name") {
                     expect(TabBarControllers.charts.localized()) == "tab_charts".localized()
                 }
             }
@@ -56,11 +56,11 @@ class TabBarControllerTests: QuickSpec {
                     expect(TabBarControllers.account.getViewController()).to(beAKindOf(UIViewController.self))
                 }
                 
-                it("Should have the good record image name") {
-                    expect(TabBarControllers.account.getImageName()) == "picto_tab"
+                it("Should have the good account image") {
+                    expect(TabBarControllers.account.getImage()).to(beAKindOf(UIImage.self))
                 }
                 
-                it("Should have the good localized record name") {
+                it("Should have the good localized account name") {
                     expect(TabBarControllers.account.localized()) == "tab_account".localized()
                 }
             }

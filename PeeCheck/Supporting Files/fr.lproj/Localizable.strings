@@ -12,3 +12,9 @@
 "tab_charts"="Statistiques";
 "tab_account"="Votre compte";
 "tab_picto"="picto_tab";
+
+// MARK: - Recording View Controller
+
+"recording_page_title"="Record";
+"recording_page_help"="";
+"recording_button_title_inactive"="Débuter l'enregistrement";

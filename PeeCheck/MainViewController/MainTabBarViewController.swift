@@ -25,8 +25,8 @@ class MainTabBarViewController: UITabBarController {
                           selectedImage: controller.getImage(selected: true))
         }
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : FlatGreen()], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : FlatSkyBlue()], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: FlatGreen()], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: FlatSkyBlue()], for: .selected)
         tabBar.backgroundImage = UIImage.imageWithColor(color: .clear)
         let frost = UIVisualEffectView(effect: UIBlurEffect(style: .light))
         frost.frame = tabBar.bounds

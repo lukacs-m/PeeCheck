@@ -11,85 +11,91 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 protocol RecordingDisplayLogic: class {
-  func displaySomething(viewModel: Recording.Something.ViewModel)
+    func displaySomething(viewModel: Recording.Something.ViewModel)
 }
 
 class RecordingViewController: UIViewController, RecordingDisplayLogic {
-  var interactor: RecordingBusinessLogic?
-  var router: (NSObjectProtocol & RecordingRoutingLogic & RecordingDataPassing)?
-
+    var interactor: RecordingBusinessLogic?
+    var router: (NSObjectProtocol & RecordingRoutingLogic & RecordingDataPassing)?
+    
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblHelpDescription: UILabel!
     @IBOutlet weak var btnRecord: RoundButton!
     
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup() {
-    let viewController = self
-    let interactor = RecordingInteractor()
-    let presenter = RecordingPresenter()
-    let router = RecordingRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup() {
+        let viewController = self
+        let interactor = RecordingInteractor()
+        let presenter = RecordingPresenter()
+        let router = RecordingRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
     
     private func setUpUI() {
-        lblTitle.text = "".localized()
-        lblHelpDescription.text = "".localized()
-        btnRecord.setTitle("".localized(), for: .normal)
-        
+        lblTitle.text = "recording_page_title".localized()
+        lblHelpDescription.text = "recording_page_help".localized()
+        btnRecord.setTitle("recording_button_title_inactive".localized(), for: .normal)
+        btnRecord.backgroundColor = FlatSkyBlue()
     }
-  
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+    
+    // MARK: Routing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let scene = segue.identifier {
+            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+            if let router = router, router.responds(to: selector) {
+                router.perform(selector, with: segue)
+            }
+        }
     }
-  }
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Start recording micturition
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        doSomething()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setUpUI()
+    }
+    
+    // MARK: Start recording micturition
+    
+    //@IBOutlet weak var nameTextField: UITextField!
+    
     @IBAction func recordingAction(_ sender: Any) {
         
     }
     
     func doSomething() {
-    let request = Recording.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: Recording.Something.ViewModel) {
-    //nameTextField.text = viewModel.name
-  }
+        let request = Recording.Something.Request()
+        interactor?.doSomething(request: request)
+    }
+    
+    func displaySomething(viewModel: Recording.Something.ViewModel) {
+        //nameTextField.text = viewModel.name
+    }
 }
