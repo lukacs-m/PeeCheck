@@ -19,6 +19,7 @@
 		5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */; };
 		5B21DAF7208D3C3F005321EC /* TabBarControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21DAF6208D3C3E005321EC /* TabBarControllers.swift */; };
 		5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21DAF8208D3C67005321EC /* RoundButton.swift */; };
+		5B91379A208FEBD40041CED2 /* RoundButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B913799208FEBD40041CED2 /* RoundButtonTests.swift */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
 		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
@@ -70,6 +71,7 @@
 		5B21DAF6208D3C3E005321EC /* TabBarControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllers.swift; sourceTree = "<group>"; };
 		5B21DAF8208D3C67005321EC /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
+		5B913799208FEBD40041CED2 /* RoundButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonTests.swift; sourceTree = "<group>"; };
 		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +183,14 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		5B913798208FEBA30041CED2 /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+				5B913799208FEBD40041CED2 /* RoundButtonTests.swift */,
+			);
+			path = Designables;
+			sourceTree = "<group>";
+		};
 		5BB864E2208417D7002EBB5F /* PeeCheckTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +214,7 @@
 		5BB864F920842532002EBB5F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5B913798208FEBA30041CED2 /* Designables */,
 				5BB864FA20842549002EBB5F /* Enum */,
 			);
 			name = Common;
@@ -619,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B91379A208FEBD40041CED2 /* RoundButtonTests.swift in Sources */,
 				5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */,
 				5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */,
 				5BB8650820855A8B002EBB5F /* RecordingWorkerTests.swift in Sources */,
