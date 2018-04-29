@@ -13,16 +13,24 @@
 import UIKit
 
 protocol RecordingPresentationLogic {
-  func presentSomething(response: Recording.Something.Response)
+    func presentSetSwitch(response: Recording.SetSwitch.Response)
+    func presentRecordMicturition(response: Recording.RecordMicturition.Response)
 }
 
 class RecordingPresenter: RecordingPresentationLogic {
-  weak var viewController: RecordingDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: Recording.Something.Response) {
-    let viewModel = Recording.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    weak var viewController: RecordingDisplayLogic?
+    
+    // MARK: Set Switch viewmodel information
+    
+    func presentSetSwitch(response: Recording.SetSwitch.Response) {
+        let viewModel = Recording.SetSwitch.ViewModel(isNight: response.isNight)
+        viewController?.displaySetSwitch(viewModel: viewModel)
+    }
+    
+    // MARK: Set recording button viewmodel information
+    
+    func presentRecordMicturition(response: Recording.RecordMicturition.Response) {
+        let viewModel = Recording.RecordMicturition.ViewModel(isRecording: response.isRecording)
+        viewController?.updateRecordBtnDisplay(viewModel: viewModel)
+    }
 }

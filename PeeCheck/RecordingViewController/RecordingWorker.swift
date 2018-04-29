@@ -13,6 +13,60 @@
 import UIKit
 
 class RecordingWorker {
-  func doSomeWork() {
-  }
+    
+    private var timer: Timer?
+    private var seconds = 0
+    
+    /// Determines if it is night time
+    ///
+    /// - Returns: True if local device time is beteen 1 am and 6 am else return false
+    func isNightTime() -> Bool {
+        let time = Calendar.current.component(.hour, from: Date())
+        return time >= 1 && time < 6
+    }
+    
+    /// Start recording timer and saves micturition recording once recording stops
+    ///
+    /// - Parameter isRecording: The recording status
+    /// - Returns: Return nil while recording and a bolean once recording is finished. true if recording went well false otherwise
+    func saveMicturitionTime(_ isRecording: Bool) -> Bool? {
+        if isRecording {
+            runTimer()
+        } else {
+           return saveMiction()
+        }
+        return nil
+    }
+
+}
+
+  // MARK: - Helper functions
+
+extension RecordingWorker {
+    
+    /// Create and start time
+    private func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    /// Reset the timer
+    private func resetTimer() {
+        timer?.invalidate()
+        seconds = 0
+    }
+    
+    /// Update the time of the timer
+    @objc private func updateTimer() {
+        seconds += 1
+    }
+    
+    /// Saves the micturition to database
+    ///
+    /// - Returns: A boolean depending on the success of the saving process. True if it worked or else false.
+    private func saveMiction() -> Bool {
+        //TODO: add realm to save micturition
+        
+        resetTimer()
+        return true
+    }
 }

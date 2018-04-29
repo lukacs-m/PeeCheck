@@ -76,3 +76,6 @@ Carthage/Build
 
 iOSInjectionProject/
 
+#Docs
+Docs/
+coverage/

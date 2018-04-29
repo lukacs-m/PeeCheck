@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import SwiftIcons
+import ChameleonFramework
 
 /// Enum containing the tabbar controllers
 ///
@@ -33,17 +35,18 @@ enum TabBarControllers: String {
         }
     }
     
-    /// Return the image name associated with the current value of TabBarControllers
+    /// Return the image associated with the current value of TabBarControllers
     ///
-    /// - Returns: The name of the image to display in the tabbar
-    func getImageName() -> String {
+    /// - Parameter selected: Boolean taht determinates the state of image
+    /// - Returns: The  image to display in the tabbar
+    func getImage(selected: Bool = false) -> UIImage {
         switch self {
         case .record:
-            return "picto_record"
+            return UIImage.init(icon: .fontAwesome(.microphone), size: CGSize(width: 22, height: 22), textColor: selected ? FlatSkyBlue() : FlatGreen())
         case .charts:
-            return "tab_picto".localized()
+            return UIImage.init(icon: .fontAwesome(.barChart), size: CGSize(width: 22, height: 22), textColor: selected ? FlatSkyBlue() : FlatGreen())
         case .account:
-            return "tab_picto".localized()
+            return UIImage.init(icon: .fontAwesome(.user), size: CGSize(width: 22, height: 22), textColor: selected ? FlatSkyBlue() : FlatGreen())
         }
     }
     
@@ -58,6 +61,17 @@ enum TabBarControllers: String {
             return UIViewController()
         case .account:
             return UIViewController()
+        }
+    }
+    
+    func shouldBeInNavigation() -> Bool {
+        switch self {
+        case .record:
+            return false
+        case .charts:
+            return false
+        case .account:
+            return true
         }
     }
 }

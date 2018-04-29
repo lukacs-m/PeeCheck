@@ -13,14 +13,29 @@
 import UIKit
 
 enum Recording {
-  // MARK: Use cases
-  
-  enum Something {
-    struct Request {
+    
+    // MARK: Use cases
+    
+    enum SetSwitch {
+        struct Request {
+        }
+        struct Response {
+           var isNight: Bool
+        }
+        struct ViewModel {
+            var isNight: Bool
+        }
     }
-    struct Response {
+    
+    enum RecordMicturition {
+        struct Request {
+        }
+        struct Response {
+            var isRecording: Bool
+            var savedMicturition: Bool?
+        }
+        struct ViewModel {
+            var isRecording: Bool
+        }
     }
-    struct ViewModel {
-    }
-  }
 }

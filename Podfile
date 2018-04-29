@@ -4,6 +4,9 @@
 # Pods for PeeCheck
 def common_pods
     pod 'SwiftLint'
+    pod 'SwiftIcons'
+    pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+    pod 'SwiftDate'
 end
 
 # Pods for PeeCheck Testing

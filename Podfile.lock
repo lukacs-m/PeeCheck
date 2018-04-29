@@ -1,4 +1,7 @@
 PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - iOSSnapshotTestCase (3.0.0):
     - iOSSnapshotTestCase/SwiftSupport (= 3.0.0)
   - iOSSnapshotTestCase/Core (3.0.0)
@@ -11,12 +14,17 @@ PODS:
     - iOSSnapshotTestCase (~> 3.0)
     - Nimble (~> 7.0)
   - Quick (1.2.0)
+  - SwiftDate (4.5.1)
+  - SwiftIcons (2.0.1)
   - SwiftLint (0.25.0)
 
 DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Nimble
   - Nimble-Snapshots
   - Quick
+  - SwiftDate
+  - SwiftIcons
   - SwiftLint
 
 SPEC REPOS:
@@ -25,15 +33,29 @@ SPEC REPOS:
     - Nimble
     - Nimble-Snapshots
     - Quick
+    - SwiftDate
+    - SwiftIcons
     - SwiftLint
 
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   iOSSnapshotTestCase: 23984ffe05289728d646cbb6a7a10b4fb1c93440
   Nimble: 9c6651c3021af6de54c3ed90a4a0a87d548f7359
   Nimble-Snapshots: 33e94958e964dd5751dd387bc3204e43fe7b5d7b
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+  SwiftIcons: e475a56ae2c2da40672dbf16061ca5dd5cee7dbb
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
 
-PODFILE CHECKSUM: ac063d92ad308c98248b1617ff746dbae22de82b
+PODFILE CHECKSUM: 36f4cb9adb7225ea37362a99e56880a9e99e2067
 
 COCOAPODS: 1.5.0

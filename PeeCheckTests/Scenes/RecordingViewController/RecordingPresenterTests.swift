@@ -10,60 +10,69 @@
 //  see http://clean-swift.com
 //
 
+import Quick
+import Nimble
 @testable import PeeCheck
-import XCTest
 
-class RecordingPresenterTests: XCTestCase
-{
-  // MARK: Subject under test
-  
-  var sut: RecordingPresenter!
-  
-  // MARK: Test lifecycle
-  
-  override func setUp()
-  {
-    super.setUp()
-    setupRecordingPresenter()
-  }
-  
-  override func tearDown()
-  {
-    super.tearDown()
-  }
-  
-  // MARK: Test setup
-  
-  func setupRecordingPresenter()
-  {
-    sut = RecordingPresenter()
-  }
-  
-  // MARK: Test doubles
-  
-  class RecordingDisplayLogicSpy: RecordingDisplayLogic
-  {
-    var displaySomethingCalled = false
+class RecordingPresenterTests: QuickSpec {
     
-    func displaySomething(viewModel: Recording.Something.ViewModel)
-    {
-      displaySomethingCalled = true
+    override func spec() {
+        describe("RecordingPresenter tests") {
+            
+            // MARK: Subject under test
+            
+            var sut: RecordingPresenter!
+            
+            beforeSuite {
+                setupRecordingPresenter()
+            }
+            
+            // MARK: Test setup
+            
+            func setupRecordingPresenter()
+            {
+                sut = RecordingPresenter()
+            }
+            
+            // MARK: Test doubles
+            
+            class RecordingDisplayLogicSpy: RecordingDisplayLogic
+            {
+                var displaySetSwitchCalled = false
+                var updateRecordBtnDisplayCalled = false
+                
+                func displaySetSwitch(viewModel: Recording.SetSwitch.ViewModel) {
+                    displaySetSwitchCalled = true
+                }
+                
+                func updateRecordBtnDisplay(viewModel: Recording.RecordMicturition.ViewModel) {
+                     updateRecordBtnDisplayCalled = true
+                }
+            }
+            
+            // MARK: Tests
+            
+            context("Check time") {
+                it("Sould return bool depending on time of day") {
+                        let spy = RecordingDisplayLogicSpy()
+                        sut.viewController = spy
+                        let response = Recording.SetSwitch.Response(isNight: true)
+                    
+                    sut.presentSetSwitch(response: response)
+                    expect(spy.displaySetSwitchCalled).to(beTrue())
+                }
+            }
+            
+            context("Record micturition") {
+                it("Sould return bool after saving micturition") {
+                    let spy = RecordingDisplayLogicSpy()
+                    sut.viewController = spy
+                    let response = Recording.RecordMicturition.Response(isRecording: true, savedMicturition: nil)
+                    
+                    sut.presentRecordMicturition(response: response)
+                    expect(spy.updateRecordBtnDisplayCalled).to(beTrue())
+                }
+            }
+        }
     }
-  }
-  
-  // MARK: Tests
-  
-  func testPresentSomething()
-  {
-    // Given
-    let spy = RecordingDisplayLogicSpy()
-    sut.viewController = spy
-    let response = Recording.Something.Response()
-    
-    // When
-    sut.presentSomething(response: response)
-    
-    // Then
-    XCTAssertTrue(spy.displaySomethingCalled, "presentSomething(response:) should ask the view controller to display the result")
-  }
 }

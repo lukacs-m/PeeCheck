@@ -57,87 +57,129 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/TabBarControllers.swift",
-      "line": 18,
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/Designables/RoundButton.swift",
+      "line": 12,
+      "symbol": "RoundButton",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/Designables/RoundButton.swift",
+      "line": 14,
+      "symbol": "RoundButton.roundButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/Designables/RoundButton.swift",
+      "line": 22,
+      "symbol": "RoundButton.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/Enums/TabBarControllers.swift",
+      "line": 20,
       "symbol": "TabBarControllers.record",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/TabBarControllers.swift",
-      "line": 19,
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/Enums/TabBarControllers.swift",
+      "line": 21,
       "symbol": "TabBarControllers.charts",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/TabBarControllers.swift",
-      "line": 20,
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/Enums/TabBarControllers.swift",
+      "line": 22,
       "symbol": "TabBarControllers.account",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/TabBarControllers.swift",
-      "line": 68,
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/Enums/TabBarControllers.swift",
+      "line": 67,
+      "symbol": "TabBarControllers.shouldBeInNavigation()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/Enums/TabBarControllers.swift",
+      "line": 82,
       "symbol": "TabBarControllers.array",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/Common/Extensions/UIView+Extensions.swift",
+      "line": 13,
+      "symbol": "UIView.blink(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/MainViewController/MainTabBarViewController.swift",
-      "line": 14,
+      "line": 15,
       "symbol": "MainTabBarViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingInteractor.swift",
-      "line": 15,
+      "line": 16,
       "symbol": "RecordingBusinessLogic",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingInteractor.swift",
-      "line": 16,
-      "symbol": "RecordingBusinessLogic.doSomething(request:)",
+      "line": 17,
+      "symbol": "RecordingBusinessLogic.checkTime(request:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingInteractor.swift",
-      "line": 19,
+      "line": 18,
+      "symbol": "RecordingBusinessLogic.recordMicturition(request:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingInteractor.swift",
+      "line": 21,
       "symbol": "RecordingDataStore",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingInteractor.swift",
-      "line": 23,
+      "line": 25,
       "symbol": "RecordingInteractor",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingInteractor.swift",
-      "line": 24,
+      "line": 26,
       "symbol": "RecordingInteractor.presenter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingInteractor.swift",
-      "line": 25,
+      "line": 27,
       "symbol": "RecordingInteractor.worker",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingInteractor.swift",
-      "line": 30,
-      "symbol": "RecordingInteractor.doSomething(request:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "line": 28,
+      "symbol": "RecordingInteractor.isRecording",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -149,30 +191,93 @@
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
-      "line": 18,
-      "symbol": "Recording.Something",
+      "line": 19,
+      "symbol": "Recording.SetSwitch",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
-      "line": 19,
-      "symbol": "Recording.Something.Request",
+      "line": 20,
+      "symbol": "Recording.SetSwitch.Request",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
-      "line": 21,
-      "symbol": "Recording.Something.Response",
+      "line": 22,
+      "symbol": "Recording.SetSwitch.Response",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
       "line": 23,
-      "symbol": "Recording.Something.ViewModel",
+      "symbol": "Recording.SetSwitch.Response.isNight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
+      "line": 25,
+      "symbol": "Recording.SetSwitch.ViewModel",
       "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
+      "line": 26,
+      "symbol": "Recording.SetSwitch.ViewModel.isNight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
+      "line": 30,
+      "symbol": "Recording.RecordMicturition",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
+      "line": 31,
+      "symbol": "Recording.RecordMicturition.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
+      "line": 33,
+      "symbol": "Recording.RecordMicturition.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
+      "line": 34,
+      "symbol": "Recording.RecordMicturition.Response.isRecording",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
+      "line": 35,
+      "symbol": "Recording.RecordMicturition.Response.savedMicturition",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
+      "line": 37,
+      "symbol": "Recording.RecordMicturition.ViewModel",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingModels.swift",
+      "line": 38,
+      "symbol": "Recording.RecordMicturition.ViewModel.isRecording",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -185,28 +290,42 @@
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingPresenter.swift",
       "line": 16,
-      "symbol": "RecordingPresentationLogic.presentSomething(response:)",
+      "symbol": "RecordingPresentationLogic.presentSetSwitch(response:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingPresenter.swift",
-      "line": 19,
+      "line": 17,
+      "symbol": "RecordingPresentationLogic.presentRecordMicturition(response:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingPresenter.swift",
+      "line": 20,
       "symbol": "RecordingPresenter",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingPresenter.swift",
-      "line": 20,
+      "line": 21,
       "symbol": "RecordingPresenter.viewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingPresenter.swift",
-      "line": 24,
-      "symbol": "RecordingPresenter.presentSomething(response:)",
+      "line": 25,
+      "symbol": "RecordingPresenter.presentSetSwitch(response:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingPresenter.swift",
+      "line": 32,
+      "symbol": "RecordingPresenter.presentRecordMicturition(response:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -254,86 +373,163 @@
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 15,
+      "line": null,
+      "symbol": "RecordingViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
+      "line": null,
+      "symbol": "RecordingViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
+      "line": 16,
       "symbol": "RecordingDisplayLogic",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 16,
-      "symbol": "RecordingDisplayLogic.displaySomething(viewModel:)",
+      "line": 17,
+      "symbol": "RecordingDisplayLogic.displaySetSwitch(viewModel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 19,
+      "line": 18,
+      "symbol": "RecordingDisplayLogic.updateRecordBtnDisplay(viewModel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
+      "line": 21,
       "symbol": "RecordingViewController",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 20,
+      "line": 22,
       "symbol": "RecordingViewController.interactor",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 21,
+      "line": 23,
       "symbol": "RecordingViewController.router",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 25,
+      "line": 26,
+      "symbol": "RecordingViewController.lblTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
+      "line": 27,
+      "symbol": "RecordingViewController.lblHelpDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
+      "line": 28,
+      "symbol": "RecordingViewController.btnRecord",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
+      "line": 29,
+      "symbol": "RecordingViewController.switchNightAwake",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
+      "line": 30,
+      "symbol": "RecordingViewController.lblDidAwake",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
+      "line": 31,
+      "symbol": "RecordingViewController.lblDidNotAwake",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
+      "line": 32,
+      "symbol": "RecordingViewController.lblAwakeTitleDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
+      "line": 36,
       "symbol": "RecordingViewController.init(nibName:bundle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 30,
+      "line": 41,
       "symbol": "RecordingViewController.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 37,
+      "line": 48,
       "symbol": "RecordingViewController.setup()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 52,
-      "symbol": "RecordingViewController.prepare(for:sender:)",
+      "line": 61,
+      "symbol": "RecordingViewController.setUpUI()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 63,
+      "line": 73,
       "symbol": "RecordingViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 72,
-      "symbol": "RecordingViewController.doSomething()",
+      "line": 78,
+      "symbol": "RecordingViewController.viewWillAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingViewController.swift",
-      "line": 77,
-      "symbol": "RecordingViewController.displaySomething(viewModel:)",
+      "line": 105,
+      "symbol": "RecordingViewController.recordingAction(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingWorker.swift",
+      "line": null,
+      "symbol": "RecordingWorker",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -345,9 +541,16 @@
     },
     {
       "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingWorker.swift",
-      "line": 16,
-      "symbol": "RecordingWorker.doSomeWork()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "line": 17,
+      "symbol": "RecordingWorker.timer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projects/PeeCheck/PeeCheck/RecordingViewController/RecordingWorker.swift",
+      "line": 18,
+      "symbol": "RecordingWorker.seconds",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {

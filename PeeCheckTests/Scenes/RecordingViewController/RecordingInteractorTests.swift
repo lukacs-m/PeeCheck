@@ -10,60 +10,71 @@
 //  see http://clean-swift.com
 //
 
+import Quick
+import Nimble
 @testable import PeeCheck
-import XCTest
 
-class RecordingInteractorTests: XCTestCase
-{
-  // MARK: Subject under test
-  
-  var sut: RecordingInteractor!
-  
-  // MARK: Test lifecycle
-  
-  override func setUp()
-  {
-    super.setUp()
-    setupRecordingInteractor()
-  }
-  
-  override func tearDown()
-  {
-    super.tearDown()
-  }
-  
-  // MARK: Test setup
-  
-  func setupRecordingInteractor()
-  {
-    sut = RecordingInteractor()
-  }
-  
-  // MARK: Test doubles
-  
-  class RecordingPresentationLogicSpy: RecordingPresentationLogic
-  {
-    var presentSomethingCalled = false
+class RecordingInteractorTests: QuickSpec {
     
-    func presentSomething(response: Recording.Something.Response)
-    {
-      presentSomethingCalled = true
+    override func spec() {
+        describe("RecordingInteractor tests") {
+            
+            // MARK: Subject under test
+            
+            var sut: RecordingInteractor!
+            
+            beforeSuite {
+                setupRecordingInteractor()
+            }
+            
+            // MARK: Test setup
+            
+            func setupRecordingInteractor()
+            {
+                sut = RecordingInteractor()
+            }
+            
+            // MARK: Test doubles
+            
+            class RecordingPresentationLogicSpy: RecordingPresentationLogic
+            {
+                var presentSetSwitchCalled = false
+                var presentRecordMicturitionCalled = false
+                
+                func presentSetSwitch(response: Recording.SetSwitch.Response) {
+                    presentSetSwitchCalled = true
+                }
+                
+                func presentRecordMicturition(response: Recording.RecordMicturition.Response) {
+                    presentRecordMicturitionCalled = true
+                }
+            }
+            
+            
+            // MARK: Tests
+            
+            context("Check time") {
+                it("Sould call the present switch function") {
+                    let spy = RecordingPresentationLogicSpy()
+                    sut.presenter = spy
+                    let request = Recording.SetSwitch.Request()
+                    
+                    sut.checkTime(request: request)
+                    expect(spy.presentSetSwitchCalled).to(beTrue())
+                }
+            }
+            
+            context("Check recording") {
+                it("Sould call the present recording function") {
+                    let spy = RecordingPresentationLogicSpy()
+                    sut.presenter = spy
+                    let request = Recording.RecordMicturition.Request()
+                    
+                    sut.recordMicturition(request: request)
+                    expect(spy.presentRecordMicturitionCalled).to(beTrue())
+                }
+            }
+
+        }
     }
-  }
-  
-  // MARK: Tests
-  
-  func testDoSomething()
-  {
-    // Given
-    let spy = RecordingPresentationLogicSpy()
-    sut.presenter = spy
-    let request = Recording.Something.Request()
-    
-    // When
-    sut.doSomething(request: request)
-    
-    // Then
-    XCTAssertTrue(spy.presentSomethingCalled, "doSomething(request:) should ask the presenter to format the result")
-  }
 }
