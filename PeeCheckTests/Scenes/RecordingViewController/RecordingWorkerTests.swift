@@ -29,8 +29,7 @@ class RecordingWorkerTests: QuickSpec {
             
             // MARK: Test setup
             
-            func setupRecordingWorker()
-            {
+            func setupRecordingWorker() {
                 sut = RecordingWorker()
             }
             
@@ -44,6 +43,17 @@ class RecordingWorkerTests: QuickSpec {
                     } else {
                         expect(sut.isNightTime()).to(beFalse())
                     }
+                }
+            }
+            
+            context("Record micturition") {
+                it("Sould return bool after saving micturition") {
+                    _ = sut.saveMicturitionTime(true)
+                    expect(sut.saveMicturitionTime(false)).to(beTrue())
+                }
+                
+                it("Sould return nil at start of timer recording") {
+                    expect(sut.saveMicturitionTime(true)).to(beNil())
                 }
             }
         }

@@ -14,7 +14,7 @@ import UIKit
 
 class RecordingWorker {
     
-    private var timer: Timer!
+    private var timer: Timer?
     private var seconds = 0
     
     /// Determines if it is night time
@@ -51,7 +51,7 @@ extension RecordingWorker {
     
     /// Reset the timer
     private func resetTimer() {
-        timer.invalidate()
+        timer?.invalidate()
         seconds = 0
     }
     
