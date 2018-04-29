@@ -18,14 +18,12 @@ Run the following command:
 
 ## For testing
 
-We use fastlane to test the poject and generate the test coverage and documentation generation
-You can run ```fastlane tests```. 
-This command starts execution of the tests in the project, then trigger the slather tools for the test coverage and finaly executes jazzy to generate documentation
+We use fastlane to test the poject, generate the test coverage and documentation
+You can run ```fastlane tests``` to execute the tests.
 
-## Documentation
+You can run ```fastlane tests_coverage``` to execute the tests and generate the test coverage. The coverage report can beb found in the coverage folder at the root of the project .
 
-To review PeeCheck documentation [Documentation](https://github.com/lukacs-m/PeeCheck/blob/develop/Docs/output/).
+You can run ```fastlane tests_documentation``` to execute the tests and generate the documentation. The documentation can be found in the Docs folder at the root of the project.
 
-## Code Coverage
+These commands starts execution of the tests in the project, then can trigger the slather tools for the test coverage or executes jazzy to generate the documentation
 
-To review PeeCheck code coverage [Code coverage](https://github.com/lukacs-m/PeeCheck/blob/develop/coverage/).
