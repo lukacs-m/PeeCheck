@@ -15,6 +15,10 @@
 
 // MARK: - Recording View Controller
 
-"recording_page_title"="Record";
+"recording_page_title"="Enregistrement des mictions";
 "recording_page_help"="";
 "recording_button_title_inactive"="Débuter l'enregistrement";
+"recording_button_title_active"="En cour d'enregistrement";
+"did_awake_true_label"="Oui";
+"did_awake_false_label"="Non";
+"did_awake_label_title"="Vous etes vous réveillé pour aller au toilet?";

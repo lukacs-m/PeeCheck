@@ -47,7 +47,7 @@ class MainTabBarViewControllerTests: QuickSpec {
             }
             
             it("Should have recordViewController as first and selected item") {
-                expect(sut.viewControllers![0].childViewControllers[0]).to(beAKindOf(RecordingViewController.self))
+                expect(sut.viewControllers![0]).to(beAKindOf(RecordingViewController.self))
                 expect(sut.tabBar.selectedItem?.title) == "tab_record".localized()
             }
         }

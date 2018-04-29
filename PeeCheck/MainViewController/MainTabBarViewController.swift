@@ -22,7 +22,8 @@ class MainTabBarViewController: UITabBarController {
         for controller in TabBarControllers.array {
             addController(controller.getViewController(), name: controller.localized(),
                           image: controller.getImage(),
-                          selectedImage: controller.getImage(selected: true))
+                          selectedImage: controller.getImage(selected: true),
+                          insideNavController: controller.shouldBeInNavigation())
         }
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: FlatGreen()], for: .normal)

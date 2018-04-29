@@ -15,6 +15,10 @@
 
 // MARK: - Recording View Controller
 
-"recording_page_title"="Record";
-"recording_page_help"="";
+"recording_page_title"="Record your micturition";
+"recording_page_help"="Please press the recording button when you start your micturition and press it again when you stop.";
 "recording_button_title_inactive"="Start recording";
+"recording_button_title_active"="Currently recording";
+"did_awake_true_label"="Yes";
+"did_awake_false_label"="No";
+"did_awake_label_title"="Did you wake up to go and pee?";

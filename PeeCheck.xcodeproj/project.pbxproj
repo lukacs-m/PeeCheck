@@ -20,6 +20,7 @@
 		5B21DAF7208D3C3F005321EC /* TabBarControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21DAF6208D3C3E005321EC /* TabBarControllers.swift */; };
 		5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21DAF8208D3C67005321EC /* RoundButton.swift */; };
 		5B91379A208FEBD40041CED2 /* RoundButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B913799208FEBD40041CED2 /* RoundButtonTests.swift */; };
+		5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A5209490300041CED2 /* UIView+Extensions.swift */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
 		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
@@ -72,6 +73,7 @@
 		5B21DAF8208D3C67005321EC /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		5B913799208FEBD40041CED2 /* RoundButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonTests.swift; sourceTree = "<group>"; };
+		5B9137A5209490300041CED2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -343,6 +345,7 @@
 			children = (
 				5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */,
 				5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */,
+				5B9137A5209490300041CED2 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -551,11 +554,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheck/Pods-PeeCheck-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIcons.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */,
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
 				5B21DAF7208D3C3F005321EC /* TabBarControllers.swift in Sources */,
 				5B201FAF2076E1E60063EA25 /* RecordingModels.swift in Sources */,

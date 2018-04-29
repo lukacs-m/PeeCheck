@@ -14,16 +14,22 @@ import UIKit
 import ChameleonFramework
 
 protocol RecordingDisplayLogic: class {
-    func displaySomething(viewModel: Recording.Something.ViewModel)
+    func displaySetSwitch(viewModel: Recording.SetSwitch.ViewModel)
+    func updateRecordBtnDisplay(viewModel: Recording.RecordMicturition.ViewModel) 
 }
 
 class RecordingViewController: UIViewController, RecordingDisplayLogic {
     var interactor: RecordingBusinessLogic?
     var router: (NSObjectProtocol & RecordingRoutingLogic & RecordingDataPassing)?
     
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblHelpDescription: UILabel!
+    // MARK: - Outlets
+    @IBOutlet private weak var lblTitle: UILabel!
+    @IBOutlet private weak var lblHelpDescription: UILabel!
     @IBOutlet weak var btnRecord: RoundButton!
+    @IBOutlet weak var switchNightAwake: UISwitch!
+    @IBOutlet private weak var lblDidAwake: UILabel!
+    @IBOutlet private weak var lblDidNotAwake: UILabel!
+    @IBOutlet private weak var lblAwakeTitleDescription: UILabel!
     
     // MARK: Object lifecycle
     
@@ -56,46 +62,57 @@ class RecordingViewController: UIViewController, RecordingDisplayLogic {
         lblTitle.text = "recording_page_title".localized()
         lblHelpDescription.text = "recording_page_help".localized()
         btnRecord.setTitle("recording_button_title_inactive".localized(), for: .normal)
+        lblDidAwake.text = "did_awake_true_label".localized()
+        lblDidNotAwake.text = "did_awake_false_label".localized()
+        lblAwakeTitleDescription.text = "did_awake_label_title".localized()
         btnRecord.backgroundColor = FlatSkyBlue()
-    }
-    
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
     }
     
     // MARK: View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        checkTime()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpUI()
     }
+}
+
+// MARK: Set switch depending on local time
+
+extension RecordingViewController {
     
-    // MARK: Start recording micturition
+    /// Check what time of day it is
+    func checkTime() {
+        let request = Recording.SetSwitch.Request()
+        interactor?.checkTime(request: request)
+    }
     
-    //@IBOutlet weak var nameTextField: UITextField!
-    
+    /// Automatically set the awake switch depending on time of day
+    ///
+    /// - Parameter viewModel: The ViewModel containing the time of day status
+    func displaySetSwitch(viewModel: Recording.SetSwitch.ViewModel) {
+        switchNightAwake.isOn = viewModel.isNight
+    }
+}
+
+// MARK: Start recording micturition
+
+extension RecordingViewController {
     @IBAction func recordingAction(_ sender: Any) {
-        
+        let request = Recording.RecordMicturition.Request()
+        interactor?.recordMicturition(request: request)
     }
     
-    func doSomething() {
-        let request = Recording.Something.Request()
-        interactor?.doSomething(request: request)
-    }
-    
-    func displaySomething(viewModel: Recording.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    /// Update the recording button status & display
+    ///
+    /// - Parameter viewModel: The ViewModel containing the recording status
+    func updateRecordBtnDisplay(viewModel: Recording.RecordMicturition.ViewModel) {
+        btnRecord.setTitle(viewModel.isRecording ? "recording_button_title_active".localized() : "recording_button_title_inactive".localized(), for: .normal)
+        btnRecord.backgroundColor = viewModel.isRecording ? FlatGreen() : FlatSkyBlue()
+        btnRecord.blink(viewModel.isRecording)
     }
 }

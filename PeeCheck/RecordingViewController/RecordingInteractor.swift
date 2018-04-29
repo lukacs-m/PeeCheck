@@ -11,27 +11,40 @@
 //
 
 import UIKit
+import SwiftDate
 
 protocol RecordingBusinessLogic {
-  func doSomething(request: Recording.Something.Request)
+    func checkTime(request: Recording.SetSwitch.Request)
+    func recordMicturition(request: Recording.RecordMicturition.Request)
 }
 
 protocol RecordingDataStore {
-  //var name: String { get set }
+    //var name: String { get set }
 }
 
 class RecordingInteractor: RecordingBusinessLogic, RecordingDataStore {
-  var presenter: RecordingPresentationLogic?
-  var worker: RecordingWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: Recording.Something.Request) {
-    worker = RecordingWorker()
-    worker?.doSomeWork()
+    var presenter: RecordingPresentationLogic?
+    var worker = RecordingWorker()
+    private var isRecording = true
     
-    let response = Recording.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    // MARK: Check local time
+    
+    /// Check with worker if it is night or day and passes the information to the presenter
+    ///
+    /// - Parameter request: The request sent to check the time of day
+    func checkTime(request: Recording.SetSwitch.Request) {
+        let response = Recording.SetSwitch.Response(isNight: worker.isNightTime())
+        presenter?.presentSetSwitch(response: response)
+    }
+    
+    // MARK: Record Micturition
+    
+    /// Start recording & saving of micturition
+    ///
+    /// - Parameter request: The request sent to start & stop the recording
+    func recordMicturition(request: Recording.RecordMicturition.Request) {
+        let response = Recording.RecordMicturition.Response(isRecording: isRecording, savedMicturition: worker.saveMicturitionTime(isRecording))
+        presenter?.presentRecordMicturition(response: response)
+        isRecording = !isRecording
+    }
 }

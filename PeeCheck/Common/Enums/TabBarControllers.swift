@@ -63,6 +63,17 @@ enum TabBarControllers: String {
             return UIViewController()
         }
     }
+    
+    func shouldBeInNavigation() -> Bool {
+        switch self {
+        case .record:
+            return false
+        case .charts:
+            return false
+        case .account:
+            return true
+        }
+    }
 }
 
 // MARK: - Extension to generate arry containing enum information
