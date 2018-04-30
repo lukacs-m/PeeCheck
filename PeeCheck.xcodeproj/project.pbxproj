@@ -21,6 +21,14 @@
 		5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21DAF8208D3C67005321EC /* RoundButton.swift */; };
 		5B91379A208FEBD40041CED2 /* RoundButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B913799208FEBD40041CED2 /* RoundButtonTests.swift */; };
 		5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A5209490300041CED2 /* UIView+Extensions.swift */; };
+		5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A8209682140041CED2 /* AccountPresenter.swift */; };
+		5B9137AF209682140041CED2 /* AccountWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A9209682140041CED2 /* AccountWorker.swift */; };
+		5B9137B0209682140041CED2 /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137AA209682140041CED2 /* AccountRouter.swift */; };
+		5B9137B1209682140041CED2 /* AccountModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137AB209682140041CED2 /* AccountModels.swift */; };
+		5B9137B2209682140041CED2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137AC209682140041CED2 /* AccountViewController.swift */; };
+		5B9137B3209682140041CED2 /* AccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137AD209682140041CED2 /* AccountInteractor.swift */; };
+		5B9137B52096823A0041CED2 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9137B42096823A0041CED2 /* AccountViewController.xib */; };
+		5B9137B82097DB110041CED2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137B72097DB110041CED2 /* User.swift */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
 		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
@@ -74,6 +82,14 @@
 		5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		5B913799208FEBD40041CED2 /* RoundButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonTests.swift; sourceTree = "<group>"; };
 		5B9137A5209490300041CED2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		5B9137A8209682140041CED2 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
+		5B9137A9209682140041CED2 /* AccountWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWorker.swift; sourceTree = "<group>"; };
+		5B9137AA209682140041CED2 /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
+		5B9137AB209682140041CED2 /* AccountModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModels.swift; sourceTree = "<group>"; };
+		5B9137AC209682140041CED2 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		5B9137AD209682140041CED2 /* AccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractor.swift; sourceTree = "<group>"; };
+		5B9137B42096823A0041CED2 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		5B9137B72097DB110041CED2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +207,28 @@
 				5B913799208FEBD40041CED2 /* RoundButtonTests.swift */,
 			);
 			path = Designables;
+			sourceTree = "<group>";
+		};
+		5B9137A7209681EA0041CED2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				5B9137A8209682140041CED2 /* AccountPresenter.swift */,
+				5B9137A9209682140041CED2 /* AccountWorker.swift */,
+				5B9137AA209682140041CED2 /* AccountRouter.swift */,
+				5B9137AB209682140041CED2 /* AccountModels.swift */,
+				5B9137AC209682140041CED2 /* AccountViewController.swift */,
+				5B9137AD209682140041CED2 /* AccountInteractor.swift */,
+				5B9137B42096823A0041CED2 /* AccountViewController.xib */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		5B9137B62097DAFC0041CED2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B9137B72097DB110041CED2 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5BB864E2208417D7002EBB5F /* PeeCheckTests */ = {
@@ -316,6 +354,7 @@
 		5BB9D8EE204EE72E00C5ADA1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5B9137A7209681EA0041CED2 /* Account */,
 				5B201FA52076E18E0063EA25 /* RecordingViewController */,
 				5BB9D8EF204EE73C00C5ADA1 /* MainViewController */,
 			);
@@ -333,6 +372,7 @@
 		5BB9D8F0204EE75900C5ADA1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5B9137B62097DAFC0041CED2 /* Models */,
 				5B21DAF5208D3C3E005321EC /* Enums */,
 				5B21DAF4208D3BF2005321EC /* Designables */,
 				5BB9D8FC204EE92100C5ADA1 /* Extensions */,
@@ -483,6 +523,7 @@
 				5BB9D8F5204EE82700C5ADA1 /* Localizable.strings in Resources */,
 				5B201FB32076E22A0063EA25 /* RecordingViewController.xib in Resources */,
 				5BB9D8C6204EE3D200C5ADA1 /* Assets.xcassets in Resources */,
+				5B9137B52096823A0041CED2 /* AccountViewController.xib in Resources */,
 				5BB9D8C4204EE3D200C5ADA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,19 +700,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */,
+				5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */,
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
 				5B21DAF7208D3C3F005321EC /* TabBarControllers.swift in Sources */,
 				5B201FAF2076E1E60063EA25 /* RecordingModels.swift in Sources */,
+				5B9137B1209682140041CED2 /* AccountModels.swift in Sources */,
+				5B9137B0209682140041CED2 /* AccountRouter.swift in Sources */,
+				5B9137AF209682140041CED2 /* AccountWorker.swift in Sources */,
 				5BB8650C2085E528002EBB5F /* main.swift in Sources */,
 				5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */,
 				5B201FAC2076E1E60063EA25 /* RecordingPresenter.swift in Sources */,
 				5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */,
+				5B9137B2209682140041CED2 /* AccountViewController.swift in Sources */,
 				5B201FAD2076E1E60063EA25 /* RecordingWorker.swift in Sources */,
 				5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */,
 				5B201FAE2076E1E60063EA25 /* RecordingRouter.swift in Sources */,
 				5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */,
 				5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */,
+				5B9137B3209682140041CED2 /* AccountInteractor.swift in Sources */,
 				5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */,
+				5B9137B82097DB110041CED2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
