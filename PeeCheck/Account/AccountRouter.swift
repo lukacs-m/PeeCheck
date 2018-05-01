@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol AccountRoutingLogic {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToCreateUser()
 }
 
 protocol AccountDataPassing {
@@ -26,6 +26,31 @@ class AccountRouter: NSObject, AccountRoutingLogic, AccountDataPassing {
   
   // MARK: Routing
   
+    
+    func routeToCreateUser() {
+        
+        //        let presenting = self.presentingViewController
+        //        if let presenting = presenting, presenting.isKind(of: UIRegisterViewController.self) {
+        //            dismiss(animated: true, completion: nil)
+        //        } else {
+        //            self.present(UIRegisterViewController.fromStoryBoard("Account"), animated: true)
+        //        }
+        
+//        guard let destinationVC = viewController?.navigationController?.viewControllers.first(where: { $0 is CreateUserViewController }) as? CreateUserViewController
+//            else {
+//                // Show order not in stack so push fresh
+//                return (viewController!.navigationController?.pushViewController(CreateUserViewController(nibName: "CreateUserViewController", bundle: nil), animated: true))!
+//        }
+        let destination = CreateUserViewController(nibName: "CreateUserViewController", bundle: nil)
+        
+//          return (viewController!.navigationController?.pushViewController(CreateUserViewController(nibName: "CreateUserViewController", bundle: .main), animated: true))!
+        
+        viewController!.navigationController?.pushViewController(destination, animated: true)
+//        navigateToRegisterUser(source: viewController!, destination: destinationVC)
+    }
+    
+    
+    
   //func routeToSomewhere(segue: UIStoryboardSegue?)
   //{
   //  if let segue = segue {
@@ -55,3 +80,66 @@ class AccountRouter: NSObject, AccountRoutingLogic, AccountDataPassing {
   //  destination.name = source.name
   //}
 }
+
+
+//import UIKit
+//
+//@objc protocol LoginSceneRoutingLogic {
+//    func routeToForgottenPassword()
+//    func routeToRegisterUser()
+//    func routeToLoginUser()
+//}
+//
+//protocol LoginSceneDataPassing {
+//    var dataStore: LoginSceneDataStore? { get }
+//}
+//
+//class LoginSceneRouter: NSObject, LoginSceneRoutingLogic, LoginSceneDataPassing {
+//    weak var viewController: LoginSceneViewController?
+//    var dataStore: LoginSceneDataStore?
+//    
+//    // MARK: Routing
+//    
+//    func routeToForgottenPassword() {
+//        let destinationVC = UIForgotPasswordViewController.fromStoryBoard("Account")
+//        destinationVC.modalPresentationStyle = .formSheet
+//        navigateToForgottenPassword(source: viewController!, destination: destinationVC)
+//    }
+//    
+//    func routeToRegisterUser() {
+//        
+//        //        let presenting = self.presentingViewController
+//        //        if let presenting = presenting, presenting.isKind(of: UIRegisterViewController.self) {
+//        //            dismiss(animated: true, completion: nil)
+//        //        } else {
+//        //            self.present(UIRegisterViewController.fromStoryBoard("Account"), animated: true)
+//        //        }
+//        
+//        guard let destinationVC = viewController?.navigationController?.viewControllers.first(where: { $0 is UIRegisterViewController }) as? UIRegisterViewController
+//            else {
+//                // Show order not in stack so push fresh
+//                return viewController!.present(UIRegisterViewController.fromStoryBoard("Account"), animated: true)
+//        }
+//        
+//        navigateToRegisterUser(source: viewController!, destination: destinationVC)
+//    }
+//    
+//    func routeToLoginUser() {
+//        viewController!.view.window?.rootViewController?.dismiss(animated: true, completion: {
+//            if SRV.User.getWantToSubscribe() && SRV.User.getCurrentUser()?.subscription == nil {
+//                SRV.User.setWantToSubscribe(!SRV.User.getWantToSubscribe())
+//                UIViewController.getToppestViewController()?.present(SubscriptionPageViewController(nibName: "SubscriptionPageViewController", bundle: nil), animated: true)
+//            }
+//        })
+//    }
+//    
+//    // MARK: Navigation
+//    
+//    func navigateToForgottenPassword(source: LoginSceneViewController, destination: UIForgotPasswordViewController) {
+//        source.present(destination, animated: true, completion: nil)
+//    }
+//    
+//    func navigateToRegisterUser(source: LoginSceneViewController, destination: UIRegisterViewController) {
+//        source.navigationController?.popToViewController(destination, animated: true)
+//    }
+//}

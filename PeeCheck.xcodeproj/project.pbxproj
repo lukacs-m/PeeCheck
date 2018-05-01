@@ -36,6 +36,13 @@
 		5B9137C52098C70B0041CED2 /* AccountWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137C12098C70B0041CED2 /* AccountWorkerTests.swift */; };
 		5B9137C62098C70B0041CED2 /* AccountPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137C22098C70B0041CED2 /* AccountPresenterTests.swift */; };
 		5B9137C82098D7780041CED2 /* RoundedCornerButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137C72098D7780041CED2 /* RoundedCornerButtonTests.swift */; };
+		5B9137D02098E8240041CED2 /* CreateUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137CA2098E8240041CED2 /* CreateUserPresenter.swift */; };
+		5B9137D12098E8240041CED2 /* CreateUserWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137CB2098E8240041CED2 /* CreateUserWorker.swift */; };
+		5B9137D22098E8240041CED2 /* CreateUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137CC2098E8240041CED2 /* CreateUserRouter.swift */; };
+		5B9137D32098E8240041CED2 /* CreateUserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137CD2098E8240041CED2 /* CreateUserModels.swift */; };
+		5B9137D42098E8240041CED2 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137CE2098E8240041CED2 /* CreateUserViewController.swift */; };
+		5B9137D52098E8240041CED2 /* CreateUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137CF2098E8240041CED2 /* CreateUserInteractor.swift */; };
+		5B9137D82099239F0041CED2 /* CreateUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9137D62098E84C0041CED2 /* CreateUserViewController.xib */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
 		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
@@ -104,6 +111,13 @@
 		5B9137C12098C70B0041CED2 /* AccountWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWorkerTests.swift; sourceTree = "<group>"; };
 		5B9137C22098C70B0041CED2 /* AccountPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenterTests.swift; sourceTree = "<group>"; };
 		5B9137C72098D7780041CED2 /* RoundedCornerButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButtonTests.swift; sourceTree = "<group>"; };
+		5B9137CA2098E8240041CED2 /* CreateUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserPresenter.swift; sourceTree = "<group>"; };
+		5B9137CB2098E8240041CED2 /* CreateUserWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserWorker.swift; sourceTree = "<group>"; };
+		5B9137CC2098E8240041CED2 /* CreateUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserRouter.swift; sourceTree = "<group>"; };
+		5B9137CD2098E8240041CED2 /* CreateUserModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserModels.swift; sourceTree = "<group>"; };
+		5B9137CE2098E8240041CED2 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		5B9137CF2098E8240041CED2 /* CreateUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserInteractor.swift; sourceTree = "<group>"; };
+		5B9137D62098E84C0041CED2 /* CreateUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateUserViewController.xib; sourceTree = "<group>"; };
 		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +280,20 @@
 			path = Account;
 			sourceTree = "<group>";
 		};
+		5B9137C92098E7BA0041CED2 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				5B9137CA2098E8240041CED2 /* CreateUserPresenter.swift */,
+				5B9137CB2098E8240041CED2 /* CreateUserWorker.swift */,
+				5B9137CC2098E8240041CED2 /* CreateUserRouter.swift */,
+				5B9137CD2098E8240041CED2 /* CreateUserModels.swift */,
+				5B9137CE2098E8240041CED2 /* CreateUserViewController.swift */,
+				5B9137CF2098E8240041CED2 /* CreateUserInteractor.swift */,
+				5B9137D62098E84C0041CED2 /* CreateUserViewController.xib */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
 		5BB864E2208417D7002EBB5F /* PeeCheckTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +418,7 @@
 		5BB9D8EE204EE72E00C5ADA1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5B9137C92098E7BA0041CED2 /* CreateUser */,
 				5B9137A7209681EA0041CED2 /* Account */,
 				5B201FA52076E18E0063EA25 /* Recording */,
 				5BB9D8EF204EE73C00C5ADA1 /* MainViewController */,
@@ -556,6 +585,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9137D82099239F0041CED2 /* CreateUserViewController.xib in Resources */,
 				5BB9D8C9204EE3D200C5ADA1 /* LaunchScreen.storyboard in Resources */,
 				5BB9D8F5204EE82700C5ADA1 /* Localizable.strings in Resources */,
 				5B201FB32076E22A0063EA25 /* RecordingViewController.xib in Resources */,
@@ -744,11 +774,14 @@
 				5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */,
 				5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */,
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
+				5B9137D42098E8240041CED2 /* CreateUserViewController.swift in Sources */,
 				5B21DAF7208D3C3F005321EC /* TabBarControllers.swift in Sources */,
 				5B9137BA2098BFF50041CED2 /* RoundedCornerButton.swift in Sources */,
 				5B9137BD2098C4A20041CED2 /* Style.swift in Sources */,
 				5B201FAF2076E1E60063EA25 /* RecordingModels.swift in Sources */,
+				5B9137D02098E8240041CED2 /* CreateUserPresenter.swift in Sources */,
 				5B9137B1209682140041CED2 /* AccountModels.swift in Sources */,
+				5B9137D52098E8240041CED2 /* CreateUserInteractor.swift in Sources */,
 				5B9137B0209682140041CED2 /* AccountRouter.swift in Sources */,
 				5B9137AF209682140041CED2 /* AccountWorker.swift in Sources */,
 				5BB8650C2085E528002EBB5F /* main.swift in Sources */,
@@ -759,11 +792,14 @@
 				5B201FAD2076E1E60063EA25 /* RecordingWorker.swift in Sources */,
 				5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */,
 				5B201FAE2076E1E60063EA25 /* RecordingRouter.swift in Sources */,
+				5B9137D12098E8240041CED2 /* CreateUserWorker.swift in Sources */,
 				5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */,
 				5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */,
 				5B9137B3209682140041CED2 /* AccountInteractor.swift in Sources */,
 				5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */,
 				5B9137B82097DB110041CED2 /* User.swift in Sources */,
+				5B9137D22098E8240041CED2 /* CreateUserRouter.swift in Sources */,
+				5B9137D32098E8240041CED2 /* CreateUserModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

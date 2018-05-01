@@ -72,6 +72,7 @@ class AccountViewController: UIViewController, AccountDisplayLogic {
         btnDeleteData.setTitle("account_btn_delete".localized(), for: .normal)
         btnDeleteData.backgroundColor = Style.Color.MainBlue
         btnDeleteData.contentEdgeInsets = Style.Size.ButtonInsets
+        btnDeleteData.setTitleColor(.white, for: .normal)
     }
     
     // MARK: View lifecycle
@@ -135,5 +136,6 @@ extension AccountViewController {
 extension AccountViewController {
     
     @IBAction func goToEditAction(_ sender: Any) {
+        router?.routeToCreateUser()
     }
 }
