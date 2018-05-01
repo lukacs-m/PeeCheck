@@ -33,6 +33,7 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.html
 
 # Swift Package Manager
 #
@@ -77,5 +78,5 @@ Carthage/Build
 iOSInjectionProject/
 
 #Docs
-Docs/
-coverage/
+**/Docs/
+**/coverage/
