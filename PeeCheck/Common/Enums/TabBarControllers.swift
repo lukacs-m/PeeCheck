@@ -60,7 +60,7 @@ enum TabBarControllers: String {
         case .charts:
             return UIViewController()
         case .account:
-            return UIViewController()
+            return AccountViewController()
         }
     }
     

@@ -11,7 +11,6 @@
 //
 
 import UIKit
-import ChameleonFramework
 
 protocol RecordingDisplayLogic: class {
     func displaySetSwitch(viewModel: Recording.SetSwitch.ViewModel)
@@ -65,7 +64,7 @@ class RecordingViewController: UIViewController, RecordingDisplayLogic {
         lblDidAwake.text = "did_awake_true_label".localized()
         lblDidNotAwake.text = "did_awake_false_label".localized()
         lblAwakeTitleDescription.text = "did_awake_label_title".localized()
-        btnRecord.backgroundColor = FlatSkyBlue()
+        btnRecord.backgroundColor = Style.Color.MainBlue
     }
     
     // MARK: View lifecycle
@@ -112,7 +111,7 @@ extension RecordingViewController {
     /// - Parameter viewModel: The ViewModel containing the recording status
     func updateRecordBtnDisplay(viewModel: Recording.RecordMicturition.ViewModel) {
         btnRecord.setTitle(viewModel.isRecording ? "recording_button_title_active".localized() : "recording_button_title_inactive".localized(), for: .normal)
-        btnRecord.backgroundColor = viewModel.isRecording ? FlatGreen() : FlatSkyBlue()
+        btnRecord.backgroundColor = viewModel.isRecording ? Style.Color.MainGreen : Style.Color.MainBlue
         btnRecord.blink(viewModel.isRecording)
     }
 }

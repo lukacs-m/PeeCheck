@@ -22,3 +22,13 @@
 "did_awake_true_label"="Yes";
 "did_awake_false_label"="No";
 "did_awake_label_title"="Did you wake up to go and pee?";
+
+// MARK: - Account View Controller
+
+"account_title"="Account information";
+"account_lbl_age_title"="Age: ";
+"account_lbl_gender_title"="Gender: ";
+"account_btn_edit"="Edit Information";
+"account_btn_delete"="Delete all information";
+"account_navbar_title"="Account";
+"account_lbl_user_data_missing"="Unavailable";

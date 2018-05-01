@@ -21,6 +21,21 @@
 		5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21DAF8208D3C67005321EC /* RoundButton.swift */; };
 		5B91379A208FEBD40041CED2 /* RoundButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B913799208FEBD40041CED2 /* RoundButtonTests.swift */; };
 		5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A5209490300041CED2 /* UIView+Extensions.swift */; };
+		5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A8209682140041CED2 /* AccountPresenter.swift */; };
+		5B9137AF209682140041CED2 /* AccountWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A9209682140041CED2 /* AccountWorker.swift */; };
+		5B9137B0209682140041CED2 /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137AA209682140041CED2 /* AccountRouter.swift */; };
+		5B9137B1209682140041CED2 /* AccountModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137AB209682140041CED2 /* AccountModels.swift */; };
+		5B9137B2209682140041CED2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137AC209682140041CED2 /* AccountViewController.swift */; };
+		5B9137B3209682140041CED2 /* AccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137AD209682140041CED2 /* AccountInteractor.swift */; };
+		5B9137B52096823A0041CED2 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9137B42096823A0041CED2 /* AccountViewController.xib */; };
+		5B9137B82097DB110041CED2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137B72097DB110041CED2 /* User.swift */; };
+		5B9137BA2098BFF50041CED2 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137B92098BFF50041CED2 /* RoundedCornerButton.swift */; };
+		5B9137BD2098C4A20041CED2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137BC2098C4A20041CED2 /* Style.swift */; };
+		5B9137C32098C70B0041CED2 /* AccountViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137BF2098C70B0041CED2 /* AccountViewControllerTests.swift */; };
+		5B9137C42098C70B0041CED2 /* AccountInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137C02098C70B0041CED2 /* AccountInteractorTests.swift */; };
+		5B9137C52098C70B0041CED2 /* AccountWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137C12098C70B0041CED2 /* AccountWorkerTests.swift */; };
+		5B9137C62098C70B0041CED2 /* AccountPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137C22098C70B0041CED2 /* AccountPresenterTests.swift */; };
+		5B9137C82098D7780041CED2 /* RoundedCornerButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137C72098D7780041CED2 /* RoundedCornerButtonTests.swift */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
 		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
@@ -74,6 +89,21 @@
 		5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		5B913799208FEBD40041CED2 /* RoundButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonTests.swift; sourceTree = "<group>"; };
 		5B9137A5209490300041CED2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		5B9137A8209682140041CED2 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
+		5B9137A9209682140041CED2 /* AccountWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWorker.swift; sourceTree = "<group>"; };
+		5B9137AA209682140041CED2 /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
+		5B9137AB209682140041CED2 /* AccountModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModels.swift; sourceTree = "<group>"; };
+		5B9137AC209682140041CED2 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		5B9137AD209682140041CED2 /* AccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractor.swift; sourceTree = "<group>"; };
+		5B9137B42096823A0041CED2 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		5B9137B72097DB110041CED2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5B9137B92098BFF50041CED2 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
+		5B9137BC2098C4A20041CED2 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		5B9137BF2098C70B0041CED2 /* AccountViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewControllerTests.swift; sourceTree = "<group>"; };
+		5B9137C02098C70B0041CED2 /* AccountInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractorTests.swift; sourceTree = "<group>"; };
+		5B9137C12098C70B0041CED2 /* AccountWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWorkerTests.swift; sourceTree = "<group>"; };
+		5B9137C22098C70B0041CED2 /* AccountPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenterTests.swift; sourceTree = "<group>"; };
+		5B9137C72098D7780041CED2 /* RoundedCornerButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButtonTests.swift; sourceTree = "<group>"; };
 		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +185,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5B201FA52076E18E0063EA25 /* RecordingViewController */ = {
+		5B201FA52076E18E0063EA25 /* Recording */ = {
 			isa = PBXGroup;
 			children = (
 				5B201FA62076E1E60063EA25 /* RecordingPresenter.swift */,
@@ -166,13 +196,14 @@
 				5B201FB22076E22A0063EA25 /* RecordingViewController.xib */,
 				5B201FAB2076E1E60063EA25 /* RecordingInteractor.swift */,
 			);
-			path = RecordingViewController;
+			path = Recording;
 			sourceTree = "<group>";
 		};
 		5B21DAF4208D3BF2005321EC /* Designables */ = {
 			isa = PBXGroup;
 			children = (
 				5B21DAF8208D3C67005321EC /* RoundButton.swift */,
+				5B9137B92098BFF50041CED2 /* RoundedCornerButton.swift */,
 			);
 			path = Designables;
 			sourceTree = "<group>";
@@ -189,8 +220,50 @@
 			isa = PBXGroup;
 			children = (
 				5B913799208FEBD40041CED2 /* RoundButtonTests.swift */,
+				5B9137C72098D7780041CED2 /* RoundedCornerButtonTests.swift */,
 			);
 			path = Designables;
+			sourceTree = "<group>";
+		};
+		5B9137A7209681EA0041CED2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				5B9137A8209682140041CED2 /* AccountPresenter.swift */,
+				5B9137A9209682140041CED2 /* AccountWorker.swift */,
+				5B9137AA209682140041CED2 /* AccountRouter.swift */,
+				5B9137AB209682140041CED2 /* AccountModels.swift */,
+				5B9137AC209682140041CED2 /* AccountViewController.swift */,
+				5B9137AD209682140041CED2 /* AccountInteractor.swift */,
+				5B9137B42096823A0041CED2 /* AccountViewController.xib */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		5B9137B62097DAFC0041CED2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B9137B72097DB110041CED2 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5B9137BB2098C4940041CED2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B9137BC2098C4A20041CED2 /* Style.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5B9137BE2098C68E0041CED2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				5B9137BF2098C70B0041CED2 /* AccountViewControllerTests.swift */,
+				5B9137C02098C70B0041CED2 /* AccountInteractorTests.swift */,
+				5B9137C12098C70B0041CED2 /* AccountWorkerTests.swift */,
+				5B9137C22098C70B0041CED2 /* AccountPresenterTests.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		5BB864E2208417D7002EBB5F /* PeeCheckTests */ = {
@@ -234,7 +307,8 @@
 		5BB864FD208559B9002EBB5F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				5BB8650120855A36002EBB5F /* RecordingViewController */,
+				5B9137BE2098C68E0041CED2 /* Account */,
+				5BB8650120855A36002EBB5F /* Recording */,
 				5BB864FE208559D5002EBB5F /* MainTabBarViewController */,
 			);
 			path = Scenes;
@@ -248,7 +322,7 @@
 			path = MainTabBarViewController;
 			sourceTree = "<group>";
 		};
-		5BB8650120855A36002EBB5F /* RecordingViewController */ = {
+		5BB8650120855A36002EBB5F /* Recording */ = {
 			isa = PBXGroup;
 			children = (
 				5BB8650220855A8B002EBB5F /* RecordingViewControllerTests.swift */,
@@ -256,7 +330,7 @@
 				5BB8650420855A8B002EBB5F /* RecordingWorkerTests.swift */,
 				5BB8650520855A8B002EBB5F /* RecordingPresenterTests.swift */,
 			);
-			path = RecordingViewController;
+			path = Recording;
 			sourceTree = "<group>";
 		};
 		5BB9D8B2204EE3D200C5ADA1 = {
@@ -316,7 +390,8 @@
 		5BB9D8EE204EE72E00C5ADA1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				5B201FA52076E18E0063EA25 /* RecordingViewController */,
+				5B9137A7209681EA0041CED2 /* Account */,
+				5B201FA52076E18E0063EA25 /* Recording */,
 				5BB9D8EF204EE73C00C5ADA1 /* MainViewController */,
 			);
 			name = Scenes;
@@ -333,6 +408,8 @@
 		5BB9D8F0204EE75900C5ADA1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5B9137BB2098C4940041CED2 /* Utils */,
+				5B9137B62097DAFC0041CED2 /* Models */,
 				5B21DAF5208D3C3E005321EC /* Enums */,
 				5B21DAF4208D3BF2005321EC /* Designables */,
 				5BB9D8FC204EE92100C5ADA1 /* Extensions */,
@@ -483,6 +560,7 @@
 				5BB9D8F5204EE82700C5ADA1 /* Localizable.strings in Resources */,
 				5B201FB32076E22A0063EA25 /* RecordingViewController.xib in Resources */,
 				5BB9D8C6204EE3D200C5ADA1 /* Assets.xcassets in Resources */,
+				5B9137B52096823A0041CED2 /* AccountViewController.xib in Resources */,
 				5BB9D8C4204EE3D200C5ADA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,7 +717,12 @@
 				5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */,
 				5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */,
 				5BB8650820855A8B002EBB5F /* RecordingWorkerTests.swift in Sources */,
+				5B9137C42098C70B0041CED2 /* AccountInteractorTests.swift in Sources */,
+				5B9137C32098C70B0041CED2 /* AccountViewControllerTests.swift in Sources */,
+				5B9137C62098C70B0041CED2 /* AccountPresenterTests.swift in Sources */,
 				5BB8650720855A8B002EBB5F /* RecordingInteractorTests.swift in Sources */,
+				5B9137C82098D7780041CED2 /* RoundedCornerButtonTests.swift in Sources */,
+				5B9137C52098C70B0041CED2 /* AccountWorkerTests.swift in Sources */,
 				5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */,
 				5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */,
 				5BB8650620855A8B002EBB5F /* RecordingViewControllerTests.swift in Sources */,
@@ -659,19 +742,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */,
+				5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */,
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
 				5B21DAF7208D3C3F005321EC /* TabBarControllers.swift in Sources */,
+				5B9137BA2098BFF50041CED2 /* RoundedCornerButton.swift in Sources */,
+				5B9137BD2098C4A20041CED2 /* Style.swift in Sources */,
 				5B201FAF2076E1E60063EA25 /* RecordingModels.swift in Sources */,
+				5B9137B1209682140041CED2 /* AccountModels.swift in Sources */,
+				5B9137B0209682140041CED2 /* AccountRouter.swift in Sources */,
+				5B9137AF209682140041CED2 /* AccountWorker.swift in Sources */,
 				5BB8650C2085E528002EBB5F /* main.swift in Sources */,
 				5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */,
 				5B201FAC2076E1E60063EA25 /* RecordingPresenter.swift in Sources */,
 				5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */,
+				5B9137B2209682140041CED2 /* AccountViewController.swift in Sources */,
 				5B201FAD2076E1E60063EA25 /* RecordingWorker.swift in Sources */,
 				5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */,
 				5B201FAE2076E1E60063EA25 /* RecordingRouter.swift in Sources */,
 				5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */,
 				5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */,
+				5B9137B3209682140041CED2 /* AccountInteractor.swift in Sources */,
 				5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */,
+				5B9137B82097DB110041CED2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

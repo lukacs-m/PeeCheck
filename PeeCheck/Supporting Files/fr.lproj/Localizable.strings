@@ -22,3 +22,13 @@
 "did_awake_true_label"="Oui";
 "did_awake_false_label"="Non";
 "did_awake_label_title"="Vous etes vous réveillé pour aller au toilet?";
+
+// MARK: - Account View Controller
+
+"account_title"="Informations du compte";
+"account_lbl_age_title"="Age: ";
+"account_lbl_gender_title"="Sex: ";
+"account_btn_edit"="Éditer les informations";
+"account_btn_delete"="Supprimer toutes les informations";
+"account_navbar_title"="Votre compte";
+"account_lbl_user_data_missing"="Indisponible";
