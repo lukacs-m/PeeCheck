@@ -12,7 +12,6 @@
 
 import Quick
 import Nimble
-import ChameleonFramework
 @testable import PeeCheck
 
 class RecordingViewControllerTests: QuickSpec {
@@ -113,7 +112,7 @@ class RecordingViewControllerTests: QuickSpec {
                     let viewModel = Recording.RecordMicturition.ViewModel(isRecording: false)
                     sut.updateRecordBtnDisplay(viewModel: viewModel)
                     
-                    expect(sut.btnRecord.backgroundColor) == FlatSkyBlue()
+                    expect(sut.btnRecord.backgroundColor) == Style.Color.MainBlue
                     expect(sut.btnRecord.titleLabel?.text) == "recording_button_title_inactive".localized()
                     expect(sut.btnRecord.layer.animationKeys()).to(beNil())
                 }
@@ -123,7 +122,7 @@ class RecordingViewControllerTests: QuickSpec {
                     let viewModel = Recording.RecordMicturition.ViewModel(isRecording: true)
                     sut.updateRecordBtnDisplay(viewModel: viewModel)
                     
-                    expect(sut.btnRecord.backgroundColor) == FlatGreen()
+                    expect(sut.btnRecord.backgroundColor) == Style.Color.MainGreen
                     expect(sut.btnRecord.titleLabel?.text) == "recording_button_title_active".localized()
                     expect(sut.btnRecord.layer.animationKeys()).toNot(beNil())
                 }

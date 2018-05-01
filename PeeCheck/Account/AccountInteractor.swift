@@ -13,24 +13,26 @@
 import UIKit
 
 protocol AccountBusinessLogic {
-  func fetchUser(request: Account.FetchUser.Request)
+    func fetchUser(request: Account.FetchUser.Request)
     func deleteUser(request: Account.DeleteUser.Request)
 }
 
 protocol AccountDataStore {
-  //var name: String { get set }
+    //var name: String { get set }
 }
 
 class AccountInteractor: AccountBusinessLogic, AccountDataStore {
-  var presenter: AccountPresentationLogic?
-  var worker = AccountWorker()
-  
-  // MARK: Do something
-  
-  func fetchUser(request: Account.FetchUser.Request) {
-    let response = Account.FetchUser.Response(user: worker.getUser())
-    presenter?.presentUser(response: response)
-  }
+    var presenter: AccountPresentationLogic?
+    var worker = AccountWorker()
+    
+    // MARK: Fetch user
+    
+    func fetchUser(request: Account.FetchUser.Request) {
+        let response = Account.FetchUser.Response(user: worker.getUser())
+        presenter?.presentUser(response: response)
+    }
+    
+    // MARK: Delete user information
     
     func deleteUser(request: Account.DeleteUser.Request) {
         let response = Account.DeleteUser.Response(error: worker.deleteUser())

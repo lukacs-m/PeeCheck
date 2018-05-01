@@ -31,3 +31,4 @@
 "account_btn_edit"="Edit Information";
 "account_btn_delete"="Delete all information";
 "account_navbar_title"="Account";
+"account_lbl_user_data_missing"="Unavailable";

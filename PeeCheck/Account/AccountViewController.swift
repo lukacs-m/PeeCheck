@@ -23,13 +23,13 @@ class AccountViewController: UIViewController, AccountDisplayLogic {
     
     // MARK: Outlets
     
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblAgeTitle: UILabel!
+    @IBOutlet private weak var lblTitle: UILabel!
+    @IBOutlet private weak var lblAgeTitle: UILabel!
     @IBOutlet weak var lblAgeData: UILabel!
-    @IBOutlet weak var lblGenderTitle: UILabel!
+    @IBOutlet private weak var lblGenderTitle: UILabel!
     @IBOutlet weak var lblGenderData: UILabel!
-    @IBOutlet weak var btnEdit: UIButton!
-    @IBOutlet weak var btnDeleteData: UIButton!
+    @IBOutlet private weak var btnEdit: UIButton!
+    @IBOutlet private weak var btnDeleteData: UIButton!
     
     // MARK: Object lifecycle
     
@@ -62,22 +62,16 @@ class AccountViewController: UIViewController, AccountDisplayLogic {
         self.title = "account_navbar_title".localized()
         lblTitle.text = "account_title".localized()
         lblAgeTitle.text = "account_lbl_age_title".localized()
-        lblAgeData.text = "dqs"
+        lblAgeData.text = "account_lbl_user_data_missing".localized()
         lblGenderTitle.text = "account_lbl_gender_title".localized()
-        lblGenderData.text = "qsd"
+        lblGenderData.text = "account_lbl_user_data_missing".localized()
         btnEdit.setTitle("account_btn_edit".localized(), for: .normal)
+        btnEdit.backgroundColor = Style.Color.MainBlue
+        btnEdit.contentEdgeInsets =  Style.Size.ButtonInsets
+        btnEdit.setTitleColor(.white, for: .normal)
         btnDeleteData.setTitle("account_btn_delete".localized(), for: .normal)
-    }
-    
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
+        btnDeleteData.backgroundColor = Style.Color.MainBlue
+        btnDeleteData.contentEdgeInsets = Style.Size.ButtonInsets
     }
     
     // MARK: View lifecycle
@@ -91,27 +85,30 @@ class AccountViewController: UIViewController, AccountDisplayLogic {
         super.viewWillAppear(animated)
         setUpUI()
     }
-
 }
 
 // MARK: Fetch User information
 
 extension AccountViewController {
+    /// Gets user information
     func fetchUser() {
         let request = Account.FetchUser.Request()
         interactor?.fetchUser(request: request)
     }
     
+    /// Displays user information if found
+    ///
+    /// - Parameter viewModel: viewModel containing information to display
     func displayUserInformation(viewModel: Account.FetchUser.ViewModel) {
         guard let user = viewModel.user else {
             DispatchQueue.main.async {
-                self.lblGenderData.text = "None"
-                self.lblAgeData.text = "None "
+                self.lblGenderData.text = "account_lbl_user_data_missing".localized()
+                self.lblAgeData.text = "account_lbl_user_data_missing".localized()
             }
             return
         }
-        lblGenderData.text = user.gender != nil ? user.gender?.localized() ?? "" : "None"
-        lblAgeData.text = user.age != nil ? "\(user.age ?? 0)" : "None"
+        lblGenderData.text = user.gender != nil ? user.gender?.localized() ?? "account_lbl_user_data_missing".localized() : "account_lbl_user_data_missing".localized()
+        lblAgeData.text = user.age != nil ? "\(user.age ?? 0)" : "account_lbl_user_data_missing".localized()
     }
 }
 
@@ -124,8 +121,19 @@ extension AccountViewController {
         interactor?.deleteUser(request: request)
     }
     
+    /// Display generic missing information text
+    ///
+    /// - Parameter viewModel: viewModel containing nil of information was deleted or error otherwise
     func displayDeletedUserInformation(viewModel: Account.DeleteUser.ViewModel) {
-        lblGenderData.text = "None"
-        lblAgeData.text = "None"
+        lblGenderData.text = "account_lbl_user_data_missing".localized()
+        lblAgeData.text = "account_lbl_user_data_missing".localized()
+    }
+}
+
+// MARK: Go to edit user information page
+
+extension AccountViewController {
+    
+    @IBAction func goToEditAction(_ sender: Any) {
     }
 }

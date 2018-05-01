@@ -13,7 +13,7 @@ import Nimble
 class RoundButtonTests: QuickSpec {
     
     override func spec() {
-        describe("TabBarControllers enum Test") {
+        describe("RoundButton Test") {
             
             it("should have corner radius equal to half frame height") {
                 let roundButton = RoundButton()

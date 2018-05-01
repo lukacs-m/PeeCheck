@@ -13,10 +13,16 @@
 import UIKit
 
 class AccountWorker {
+    /// Fetch user in database
+    ///
+    /// - Returns: return a user if found else nil
     func getUser() -> User? {
         return nil
     }
     
+    /// Delete all database information
+    ///
+    /// - Returns: nil if everything when well or and error otherwise
     func deleteUser() -> Error? {
         return nil
     }

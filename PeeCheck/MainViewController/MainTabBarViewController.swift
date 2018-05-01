@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ChameleonFramework
 
 /// Main TabBar controller
 class MainTabBarViewController: UITabBarController {
@@ -26,8 +25,8 @@ class MainTabBarViewController: UITabBarController {
                           insideNavController: controller.shouldBeInNavigation())
         }
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: FlatGreen()], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: FlatSkyBlue()], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: Style.Color.MainGreen], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: Style.Color.MainBlue], for: .selected)
         tabBar.backgroundImage = UIImage.imageWithColor(color: .clear)
         let frost = UIVisualEffectView(effect: UIBlurEffect(style: .light))
         frost.frame = tabBar.bounds
