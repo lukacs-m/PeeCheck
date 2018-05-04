@@ -13,16 +13,36 @@
 import UIKit
 
 protocol CreateUserPresentationLogic {
-  func presentSomething(response: CreateUser.Something.Response)
+    func presentUserToEdit(response: CreateUser.EditUser.Response)
+    func presentUserAge(response: CreateUser.UserAge.Response)
+    func presentCreateUser(response: CreateUser.CreateUser.Response)
 }
 
 class CreateUserPresenter: CreateUserPresentationLogic {
-  weak var viewController: CreateUserDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: CreateUser.Something.Response) {
-    let viewModel = CreateUser.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    weak var viewController: CreateUserDisplayLogic?
+    
+    // MARK: Present User to edit
+    
+    func presentUserToEdit(response: CreateUser.EditUser.Response) {
+        let userToEdit = response.user
+        let viewModel = CreateUser.EditUser.ViewModel(
+            userFields: CreateUser.UserFields(
+                age: userToEdit.age,
+                gender: userToEdit.gender
+            )
+        )
+        viewController?.displayUserToEdit(viewModel: viewModel)
+    }
+    
+    // MARK: Present Age of user
+    
+    func presentUserAge(response: CreateUser.UserAge.Response) {
+        let viewModel = CreateUser.UserAge.ViewModel(age: response.age, valide: response.valide)
+        viewController?.displayUserAge(viewModel: viewModel)
+    }
+    
+    func presentCreateUser(response: CreateUser.CreateUser.Response) {
+        let viewModel = CreateUser.CreateUser.ViewModel(user: response.user)
+        viewController?.displayCreateUser(viewModel: viewModel)
+    }
 }
