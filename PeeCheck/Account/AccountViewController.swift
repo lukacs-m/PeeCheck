@@ -66,13 +66,9 @@ class AccountViewController: UIViewController, AccountDisplayLogic {
         lblGenderTitle.text = "account_lbl_gender_title".localized()
         lblGenderData.text = "account_lbl_user_data_missing".localized()
         btnEdit.setTitle("account_btn_edit".localized(), for: .normal)
-        btnEdit.backgroundColor = Style.Color.MainBlue
-        btnEdit.contentEdgeInsets =  Style.Size.ButtonInsets
-        btnEdit.setTitleColor(.white, for: .normal)
+        btnEdit.setUpMainButtonUI()
         btnDeleteData.setTitle("account_btn_delete".localized(), for: .normal)
-        btnDeleteData.backgroundColor = Style.Color.MainBlue
-        btnDeleteData.contentEdgeInsets = Style.Size.ButtonInsets
-        btnDeleteData.setTitleColor(.white, for: .normal)
+        btnDeleteData.setUpMainButtonUI()
     }
     
     // MARK: View lifecycle

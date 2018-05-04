@@ -15,7 +15,9 @@ import UIKit
 protocol CreateUserBusinessLogic {
     var genderTypes: [String] { get }
     var userToEdit: User? { get set }
-    func doSomething(request: CreateUser.Something.Request)
+    func showUserToEdit(request: CreateUser.EditUser.Request)
+    func checkUserAge(request: CreateUser.UserAge.Request)
+    func createUser(request: CreateUser.CreateUser.Request)
 }
 
 protocol CreateUserDataStore {
@@ -29,20 +31,37 @@ protocol CreateOrderDataStore {
 
 class CreateUserInteractor: CreateUserBusinessLogic, CreateUserDataStore {
     var presenter: CreateUserPresentationLogic?
-    var worker: CreateUserWorker?
+    var worker = CreateUserWorker()
     var userToEdit: User?
     var genderTypes = [
         Gender.men.localized(),
         Gender.woman.localized()
     ]
     
-    // MARK: Do something
+    // MARK: validate user to edit
     
-    func doSomething(request: CreateUser.Something.Request) {
-        worker = CreateUserWorker()
-        worker?.doSomeWork()
-        
-        let response = CreateUser.Something.Response()
-        presenter?.presentSomething(response: response)
+    func showUserToEdit(request: CreateUser.EditUser.Request) {
+        if let userToEdit = userToEdit {
+            let response = CreateUser.EditUser.Response(user: userToEdit)
+            presenter?.presentUserToEdit(response: response)
+        }
+    }
+    
+    // MARK: Validate User age
+    func checkUserAge(request: CreateUser.UserAge.Request) {
+        var valide = false
+        if let age = request.age, age > 10, age < 140 {
+            valide = true
+        }
+        let response = CreateUser.UserAge.Response(age: request.age, valide: valide)
+        presenter?.presentUserAge(response: response)
+    }
+    
+    // MARK: Validate User age
+    func createUser(request: CreateUser.CreateUser.Request) {
+        let user = worker.createUser(request.userFormFields)
+        let response = CreateUser.CreateUser.Response(user: user)
+        presenter?.presentCreateUser(response: response)
     }
 }
+

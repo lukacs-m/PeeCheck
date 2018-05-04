@@ -17,129 +17,39 @@ import UIKit
 }
 
 protocol AccountDataPassing {
-  var dataStore: AccountDataStore? { get }
+    var dataStore: AccountDataStore? { get }
 }
 
 class AccountRouter: NSObject, AccountRoutingLogic, AccountDataPassing {
-  weak var viewController: AccountViewController?
-  var dataStore: AccountDataStore?
-  
-  // MARK: Routing
-  
+    weak var viewController: AccountViewController?
+    var dataStore: AccountDataStore?
+    
+    // MARK: Routing
     
     func routeToCreateUser() {
-        
-        //        let presenting = self.presentingViewController
-        //        if let presenting = presenting, presenting.isKind(of: UIRegisterViewController.self) {
-        //            dismiss(animated: true, completion: nil)
-        //        } else {
-        //            self.present(UIRegisterViewController.fromStoryBoard("Account"), animated: true)
-        //        }
-        
-//        guard let destinationVC = viewController?.navigationController?.viewControllers.first(where: { $0 is CreateUserViewController }) as? CreateUserViewController
-//            else {
-//                // Show order not in stack so push fresh
-//                return (viewController!.navigationController?.pushViewController(CreateUserViewController(nibName: "CreateUserViewController", bundle: nil), animated: true))!
-//        }
-        let destination = CreateUserViewController(nibName: "CreateUserViewController", bundle: nil)
-        
-//          return (viewController!.navigationController?.pushViewController(CreateUserViewController(nibName: "CreateUserViewController", bundle: .main), animated: true))!
-        
-        viewController!.navigationController?.pushViewController(destination, animated: true)
-//        navigateToRegisterUser(source: viewController!, destination: destinationVC)
+        guard let destinationVC = viewController?.navigationController?.viewControllers.first(where: { $0 is CreateUserViewController }) as? CreateUserViewController
+            else {
+                // Show order not in stack so push fresh
+                let destinationVC = CreateUserViewController(nibName: "CreateUserViewController", bundle: nil)
+                var destinationDS = destinationVC.router!.dataStore!
+                self.passDataToCreateUser(source: self.dataStore!, destination: &destinationDS)
+                viewController!.navigationController?.pushViewController(destinationVC, animated: true)
+                return
+        }
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToCreateUser(source: dataStore!, destination: &destinationDS)
+        navigateToCreateUser(source: viewController!, destination: destinationVC)
     }
     
+    // MARK: Navigation
     
+    func navigateToCreateUser(source: AccountViewController, destination: CreateUserViewController) {
+        source.navigationController?.popToViewController(destination, animated: true)
+    }
     
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: AccountViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: AccountDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    // MARK: Passing data
+    func passDataToCreateUser(source: AccountDataStore, destination: inout CreateUserDataStore) {
+        destination.userToEdit = source.user
+    }
 }
 
-
-//import UIKit
-//
-//@objc protocol LoginSceneRoutingLogic {
-//    func routeToForgottenPassword()
-//    func routeToRegisterUser()
-//    func routeToLoginUser()
-//}
-//
-//protocol LoginSceneDataPassing {
-//    var dataStore: LoginSceneDataStore? { get }
-//}
-//
-//class LoginSceneRouter: NSObject, LoginSceneRoutingLogic, LoginSceneDataPassing {
-//    weak var viewController: LoginSceneViewController?
-//    var dataStore: LoginSceneDataStore?
-//    
-//    // MARK: Routing
-//    
-//    func routeToForgottenPassword() {
-//        let destinationVC = UIForgotPasswordViewController.fromStoryBoard("Account")
-//        destinationVC.modalPresentationStyle = .formSheet
-//        navigateToForgottenPassword(source: viewController!, destination: destinationVC)
-//    }
-//    
-//    func routeToRegisterUser() {
-//        
-//        //        let presenting = self.presentingViewController
-//        //        if let presenting = presenting, presenting.isKind(of: UIRegisterViewController.self) {
-//        //            dismiss(animated: true, completion: nil)
-//        //        } else {
-//        //            self.present(UIRegisterViewController.fromStoryBoard("Account"), animated: true)
-//        //        }
-//        
-//        guard let destinationVC = viewController?.navigationController?.viewControllers.first(where: { $0 is UIRegisterViewController }) as? UIRegisterViewController
-//            else {
-//                // Show order not in stack so push fresh
-//                return viewController!.present(UIRegisterViewController.fromStoryBoard("Account"), animated: true)
-//        }
-//        
-//        navigateToRegisterUser(source: viewController!, destination: destinationVC)
-//    }
-//    
-//    func routeToLoginUser() {
-//        viewController!.view.window?.rootViewController?.dismiss(animated: true, completion: {
-//            if SRV.User.getWantToSubscribe() && SRV.User.getCurrentUser()?.subscription == nil {
-//                SRV.User.setWantToSubscribe(!SRV.User.getWantToSubscribe())
-//                UIViewController.getToppestViewController()?.present(SubscriptionPageViewController(nibName: "SubscriptionPageViewController", bundle: nil), animated: true)
-//            }
-//        })
-//    }
-//    
-//    // MARK: Navigation
-//    
-//    func navigateToForgottenPassword(source: LoginSceneViewController, destination: UIForgotPasswordViewController) {
-//        source.present(destination, animated: true, completion: nil)
-//    }
-//    
-//    func navigateToRegisterUser(source: LoginSceneViewController, destination: UIRegisterViewController) {
-//        source.navigationController?.popToViewController(destination, animated: true)
-//    }
-//}

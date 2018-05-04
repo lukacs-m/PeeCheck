@@ -19,6 +19,7 @@
 		5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */; };
 		5B21DAF7208D3C3F005321EC /* TabBarControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21DAF6208D3C3E005321EC /* TabBarControllers.swift */; };
 		5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21DAF8208D3C67005321EC /* RoundButton.swift */; };
+		5B74AE17209A7DF100FAAC0F /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74AE16209A7DF100FAAC0F /* UIButton+Extensions.swift */; };
 		5B91379A208FEBD40041CED2 /* RoundButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B913799208FEBD40041CED2 /* RoundButtonTests.swift */; };
 		5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A5209490300041CED2 /* UIView+Extensions.swift */; };
 		5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A8209682140041CED2 /* AccountPresenter.swift */; };
@@ -94,6 +95,7 @@
 		5B21DAF6208D3C3E005321EC /* TabBarControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllers.swift; sourceTree = "<group>"; };
 		5B21DAF8208D3C67005321EC /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
+		5B74AE16209A7DF100FAAC0F /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		5B913799208FEBD40041CED2 /* RoundButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonTests.swift; sourceTree = "<group>"; };
 		5B9137A5209490300041CED2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		5B9137A8209682140041CED2 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
@@ -452,6 +454,7 @@
 				5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */,
 				5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */,
 				5B9137A5209490300041CED2 /* UIView+Extensions.swift */,
+				5B74AE16209A7DF100FAAC0F /* UIButton+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -784,6 +787,7 @@
 				5B9137D52098E8240041CED2 /* CreateUserInteractor.swift in Sources */,
 				5B9137B0209682140041CED2 /* AccountRouter.swift in Sources */,
 				5B9137AF209682140041CED2 /* AccountWorker.swift in Sources */,
+				5B74AE17209A7DF100FAAC0F /* UIButton+Extensions.swift in Sources */,
 				5BB8650C2085E528002EBB5F /* main.swift in Sources */,
 				5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */,
 				5B201FAC2076E1E60063EA25 /* RecordingPresenter.swift in Sources */,

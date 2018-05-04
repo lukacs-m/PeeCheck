@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol CreateUserRoutingLogic {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToAccount()
 }
 
 protocol CreateUserDataPassing {
@@ -21,9 +21,13 @@ protocol CreateUserDataPassing {
 }
 
 class CreateUserRouter: NSObject, CreateUserRoutingLogic, CreateUserDataPassing {
+
   weak var viewController: CreateUserViewController?
   var dataStore: CreateUserDataStore?
   
+    func routeToAccount() {
+        
+    }
   // MARK: Routing
   
   //func routeToSomewhere(segue: UIStoryboardSegue?)

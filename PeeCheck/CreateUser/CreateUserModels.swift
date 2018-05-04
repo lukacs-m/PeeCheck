@@ -13,14 +13,48 @@
 import UIKit
 
 enum CreateUser {
-  // MARK: Use cases
-  
-  enum Something {
-    struct Request {
+    
+    struct UserFields {
+        var age: Int?
+        var gender: Gender?
     }
-    struct Response {
+    
+    // MARK: Use cases
+    
+    enum EditUser {
+        struct Request {
+        }
+        struct Response {
+            var user: User
+        }
+        struct ViewModel {
+            var userFields: UserFields
+        }
     }
-    struct ViewModel {
+    
+    enum UserAge {
+        struct Request {
+            var age: Int?
+        }
+        struct Response {
+            var age: Int?
+            var valide: Bool
+        }
+        struct ViewModel {
+            var age: Int?
+            var valide: Bool
+        }
     }
-  }
+    
+    enum CreateUser {
+        struct Request {
+            var userFormFields: UserFields
+        }
+        struct Response {
+            var user: User?
+        }
+        struct ViewModel {
+            var user: User?
+        }
+    }
 }

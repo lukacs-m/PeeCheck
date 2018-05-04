@@ -65,6 +65,9 @@
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <connections>
+                                                <action selector="checkAgeAction:" destination="-1" eventType="editingDidEnd" id="lk2-6C-kWo"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,7 +111,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDI-C8-AuE">
                                     <rect key="frame" x="0.0" y="449" width="150" height="148"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcr-sW-o7F" customClass="RoundedCornerButton" customModule="PeeCheck" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wcr-sW-o7F" customClass="RoundedCornerButton" customModule="PeeCheck" customModuleProvider="target">
                                             <rect key="frame" x="52" y="59" width="46" height="30"/>
                                             <state key="normal" title="Button"/>
                                             <userDefinedRuntimeAttributes>
@@ -116,6 +119,9 @@
                                                     <real key="value" value="5"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="saveUser:" destination="-1" eventType="touchUpInside" id="Ir8-DC-zV9"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,7 +153,7 @@
                 <constraint firstItem="GEs-Xy-bhC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KKD-SL-wHK"/>
                 <constraint firstItem="GEs-Xy-bhC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hAZ-XX-V8f"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GEs-Xy-bhC" secondAttribute="bottom" constant="15" id="sB3-NA-fmA"/>
-                <constraint firstItem="GEs-Xy-bhC" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.4" id="sTs-oS-3AZ"/>
+                <constraint firstItem="GEs-Xy-bhC" firstAttribute="width" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.4" id="sTs-oS-3AZ"/>
                 <constraint firstItem="GEs-Xy-bhC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="twI-mI-mPz"/>
                 <constraint firstItem="GEs-Xy-bhC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="y8S-da-UTY"/>
             </constraints>

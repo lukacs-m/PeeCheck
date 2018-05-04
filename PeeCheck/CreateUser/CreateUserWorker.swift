@@ -13,6 +13,8 @@
 import UIKit
 
 class CreateUserWorker {
-  func doSomeWork() {
-  }
+    
+    func createUser(_ userInfo: CreateUser.UserFields) -> User? {
+        return User(userInfo.age, userInfo.gender)
+    }
 }

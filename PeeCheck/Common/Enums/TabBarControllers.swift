@@ -64,6 +64,9 @@ enum TabBarControllers: String {
         }
     }
     
+    /// Explain if controller should be in controller
+    ///
+    /// - Returns: Returna boolean indicating if controller should be embeded in navigation
     func shouldBeInNavigation() -> Bool {
         switch self {
         case .record:

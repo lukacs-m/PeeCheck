@@ -13,7 +13,9 @@
 import UIKit
 
 protocol CreateUserDisplayLogic: class {
-    func displaySomething(viewModel: CreateUser.Something.ViewModel)
+    func displayUserToEdit(viewModel: CreateUser.EditUser.ViewModel)
+    func displayUserAge(viewModel: CreateUser.UserAge.ViewModel)
+    func displayCreateUser(viewModel: CreateUser.CreateUser.ViewModel)
 }
 
 class CreateUserViewController: UIViewController, CreateUserDisplayLogic {
@@ -60,10 +62,10 @@ class CreateUserViewController: UIViewController, CreateUserDisplayLogic {
     private func setUpUI() {
         genderMethodPicker.dataSource = self
         genderMethodPicker.delegate = self
-        btnCreateUser.setTitle("account_btn_delete".localized(), for: .normal)
-        btnCreateUser.backgroundColor = Style.Color.MainBlue
-        btnCreateUser.contentEdgeInsets = Style.Size.ButtonInsets
-        btnCreateUser.setTitleColor(.white, for: .normal)
+        btnCreateUser.setTitle("save_user_information".localized(), for: .normal)
+        btnCreateUser.setUpMainButtonUI()
+        txtAge.layer.borderColor = Style.Color.MainBlue.cgColor
+        txtAge.layer.borderWidth = 1.0
         txtGender.delegate = self
     }
     
@@ -72,24 +74,72 @@ class CreateUserViewController: UIViewController, CreateUserDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePicker()
-        doSomething()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpUI()
+        showUserToEdit()
+    }
+}
+
+// MARK: Check if should edit existing user
+
+extension CreateUserViewController {
+    func showUserToEdit() {
+        let request = CreateUser.EditUser.Request()
+        interactor?.showUserToEdit(request: request)
     }
     
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    func doSomething() {
-        let request = CreateUser.Something.Request()
-        interactor?.doSomething(request: request)
+    func displayUserToEdit(viewModel: CreateUser.EditUser.ViewModel) {
+        if let age = viewModel.userFields.age {
+            txtAge.text = "\(age)"
+        }
+        txtGender.text = viewModel.userFields.gender?.localized() ?? ""
+        
     }
+}
+
+// MARK: Check if age entered is valide
+
+extension CreateUserViewController {
     
-    func displaySomething(viewModel: CreateUser.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    @IBAction func checkAgeAction(_ sender: Any) {
+        let age = txtAge.text != nil ? Int(txtAge.text!) : nil
+        let request = CreateUser.UserAge.Request(age: age)
+        interactor?.checkUserAge(request: request)
+    }
+
+    func displayUserAge(viewModel: CreateUser.UserAge.ViewModel) {
+        txtAge.layer.borderColor = viewModel.valide == true ? Style.Color.MainGreen.cgColor : UIColor.red.cgColor
+        if let age = viewModel.age {
+            txtAge.text = "\(age)"
+        }
+    }
+}
+
+// MARK: Create User
+
+extension CreateUserViewController {
+    
+    @IBAction func saveUser(_ sender: Any) {
+        let age = txtAge.text != nil ? Int(txtAge.text!) : nil
+        let gender = txtGender.text == "men" ? Gender.men : Gender.woman
+        
+        if let userToEdit = interactor?.userToEdit {
+            return
+        } else {
+            let request = CreateUser.CreateUser.Request(userFormFields: CreateUser.UserFields(age: age, gender: gender))
+            interactor?.createUser(request: request)
+        }
+    }
+
+    func displayCreateUser(viewModel: CreateUser.CreateUser.ViewModel) {
+        if viewModel.user != nil {
+            router?.routeToAccount()
+        } else {
+            // TODO DISPLAY ERROR
+        }
     }
 }
 
