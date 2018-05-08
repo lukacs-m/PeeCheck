@@ -40,16 +40,20 @@ class AccountRouter: NSObject, AccountRoutingLogic, AccountDataPassing {
         passDataToCreateUser(source: dataStore!, destination: &destinationDS)
         navigateToCreateUser(source: viewController!, destination: destinationVC)
     }
-    
-    // MARK: Navigation
-    
+}
+
+  // MARK: Navigation
+
+extension AccountRouter {
     func navigateToCreateUser(source: AccountViewController, destination: CreateUserViewController) {
         source.navigationController?.popToViewController(destination, animated: true)
     }
-    
-    // MARK: Passing data
+}
+
+// MARK: Passing data
+
+extension AccountRouter {
     func passDataToCreateUser(source: AccountDataStore, destination: inout CreateUserDataStore) {
         destination.userToEdit = source.user
     }
 }
-

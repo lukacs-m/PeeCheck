@@ -44,6 +44,10 @@
 		5B9137D42098E8240041CED2 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137CE2098E8240041CED2 /* CreateUserViewController.swift */; };
 		5B9137D52098E8240041CED2 /* CreateUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137CF2098E8240041CED2 /* CreateUserInteractor.swift */; };
 		5B9137D82099239F0041CED2 /* CreateUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9137D62098E84C0041CED2 /* CreateUserViewController.xib */; };
+		5B9724B520A1C3DC00D4C7E5 /* CreateUserViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9724B120A1C3DC00D4C7E5 /* CreateUserViewControllerTests.swift */; };
+		5B9724B620A1C3DC00D4C7E5 /* CreateUserInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9724B220A1C3DC00D4C7E5 /* CreateUserInteractorTests.swift */; };
+		5B9724B720A1C3DC00D4C7E5 /* CreateUserWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9724B320A1C3DC00D4C7E5 /* CreateUserWorkerTests.swift */; };
+		5B9724B820A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9724B420A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
 		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
@@ -120,6 +124,10 @@
 		5B9137CE2098E8240041CED2 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		5B9137CF2098E8240041CED2 /* CreateUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserInteractor.swift; sourceTree = "<group>"; };
 		5B9137D62098E84C0041CED2 /* CreateUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateUserViewController.xib; sourceTree = "<group>"; };
+		5B9724B120A1C3DC00D4C7E5 /* CreateUserViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewControllerTests.swift; sourceTree = "<group>"; };
+		5B9724B220A1C3DC00D4C7E5 /* CreateUserInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserInteractorTests.swift; sourceTree = "<group>"; };
+		5B9724B320A1C3DC00D4C7E5 /* CreateUserWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserWorkerTests.swift; sourceTree = "<group>"; };
+		5B9724B420A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserPresenterTests.swift; sourceTree = "<group>"; };
 		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,6 +304,17 @@
 			path = CreateUser;
 			sourceTree = "<group>";
 		};
+		5B9724B020A1C3B400D4C7E5 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				5B9724B120A1C3DC00D4C7E5 /* CreateUserViewControllerTests.swift */,
+				5B9724B220A1C3DC00D4C7E5 /* CreateUserInteractorTests.swift */,
+				5B9724B320A1C3DC00D4C7E5 /* CreateUserWorkerTests.swift */,
+				5B9724B420A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
 		5BB864E2208417D7002EBB5F /* PeeCheckTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +356,7 @@
 		5BB864FD208559B9002EBB5F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5B9724B020A1C3B400D4C7E5 /* CreateUser */,
 				5B9137BE2098C68E0041CED2 /* Account */,
 				5BB8650120855A36002EBB5F /* Recording */,
 				5BB864FE208559D5002EBB5F /* MainTabBarViewController */,
@@ -748,16 +768,20 @@
 			files = (
 				5B91379A208FEBD40041CED2 /* RoundButtonTests.swift in Sources */,
 				5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */,
+				5B9724B620A1C3DC00D4C7E5 /* CreateUserInteractorTests.swift in Sources */,
 				5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */,
 				5BB8650820855A8B002EBB5F /* RecordingWorkerTests.swift in Sources */,
 				5B9137C42098C70B0041CED2 /* AccountInteractorTests.swift in Sources */,
+				5B9724B720A1C3DC00D4C7E5 /* CreateUserWorkerTests.swift in Sources */,
 				5B9137C32098C70B0041CED2 /* AccountViewControllerTests.swift in Sources */,
 				5B9137C62098C70B0041CED2 /* AccountPresenterTests.swift in Sources */,
+				5B9724B520A1C3DC00D4C7E5 /* CreateUserViewControllerTests.swift in Sources */,
 				5BB8650720855A8B002EBB5F /* RecordingInteractorTests.swift in Sources */,
 				5B9137C82098D7780041CED2 /* RoundedCornerButtonTests.swift in Sources */,
 				5B9137C52098C70B0041CED2 /* AccountWorkerTests.swift in Sources */,
 				5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */,
 				5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */,
+				5B9724B820A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift in Sources */,
 				5BB8650620855A8B002EBB5F /* RecordingViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

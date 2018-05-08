@@ -66,7 +66,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <connections>
-                                                <action selector="checkAgeAction:" destination="-1" eventType="editingDidEnd" id="lk2-6C-kWo"/>
+                                                <action selector="checkAgeAction:" destination="-1" eventType="editingChanged" id="SME-su-J44"/>
                                             </connections>
                                         </textField>
                                     </subviews>

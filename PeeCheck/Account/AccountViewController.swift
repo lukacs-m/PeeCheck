@@ -75,12 +75,12 @@ class AccountViewController: UIViewController, AccountDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchUser()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpUI()
+        fetchUser()
     }
 }
 

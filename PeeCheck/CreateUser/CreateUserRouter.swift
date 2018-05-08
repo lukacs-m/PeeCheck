@@ -17,45 +17,42 @@ import UIKit
 }
 
 protocol CreateUserDataPassing {
-  var dataStore: CreateUserDataStore? { get }
+    var dataStore: CreateUserDataStore? { get }
 }
 
 class CreateUserRouter: NSObject, CreateUserRoutingLogic, CreateUserDataPassing {
-
-  weak var viewController: CreateUserViewController?
-  var dataStore: CreateUserDataStore?
-  
+    
+    weak var viewController: CreateUserViewController?
+    var dataStore: CreateUserDataStore?
+    
     func routeToAccount() {
-        
+        guard let destinationVC = viewController?.navigationController?.viewControllers.first(where: { $0 is AccountViewController }) as? AccountViewController
+            else {
+                // Show order not in stack so push fresh
+                let destinationVC = AccountViewController(nibName: "AccountViewController", bundle: nil)
+                var destinationDS = destinationVC.router!.dataStore!
+                self.passDataToAccount(source: self.dataStore!, destination: &destinationDS)
+                viewController!.navigationController?.pushViewController(destinationVC, animated: true)
+                return
+        }
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToAccount(source: dataStore!, destination: &destinationDS)
+        navigateToAccount(source: viewController!, destination: destinationVC)
     }
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+}
 
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: CreateUserViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: CreateUserDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+// MARK: Navigation
+
+extension  CreateUserRouter {
+    func navigateToAccount(source: CreateUserViewController, destination: AccountViewController) {
+        source.navigationController?.popToViewController(destination, animated: true)
+    }
+}
+
+// MARK: Passing data
+
+extension  CreateUserRouter {
+    func passDataToAccount(source: CreateUserDataStore, destination: inout AccountDataStore) {
+        destination.user = source.userToEdit
+    }
 }

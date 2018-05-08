@@ -34,7 +34,7 @@ enum CreateUser {
     
     enum UserAge {
         struct Request {
-            var age: Int?
+            var age: String?
         }
         struct Response {
             var age: Int?

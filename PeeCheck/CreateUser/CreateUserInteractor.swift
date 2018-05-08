@@ -50,17 +50,19 @@ class CreateUserInteractor: CreateUserBusinessLogic, CreateUserDataStore {
     // MARK: Validate User age
     func checkUserAge(request: CreateUser.UserAge.Request) {
         var valide = false
-        if let age = request.age, age > 10, age < 140 {
+        var age: Int? = nil
+        if let value = request.age, let valideAge = Int(value), valideAge  > 10, valideAge  < 140 {
+            age = valideAge
             valide = true
         }
-        let response = CreateUser.UserAge.Response(age: request.age, valide: valide)
+        let response = CreateUser.UserAge.Response(age: age, valide: valide)
         presenter?.presentUserAge(response: response)
     }
     
     // MARK: Validate User age
     func createUser(request: CreateUser.CreateUser.Request) {
-        let user = worker.createUser(request.userFormFields)
-        let response = CreateUser.CreateUser.Response(user: user)
+        userToEdit = worker.createUser(request.userFormFields)
+        let response = CreateUser.CreateUser.Response(user: userToEdit)
         presenter?.presentCreateUser(response: response)
     }
 }

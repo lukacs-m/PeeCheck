@@ -96,7 +96,6 @@ extension CreateUserViewController {
             txtAge.text = "\(age)"
         }
         txtGender.text = viewModel.userFields.gender?.localized() ?? ""
-        
     }
 }
 
@@ -105,7 +104,7 @@ extension CreateUserViewController {
 extension CreateUserViewController {
     
     @IBAction func checkAgeAction(_ sender: Any) {
-        let age = txtAge.text != nil ? Int(txtAge.text!) : nil
+        let age = txtAge.text
         let request = CreateUser.UserAge.Request(age: age)
         interactor?.checkUserAge(request: request)
     }
