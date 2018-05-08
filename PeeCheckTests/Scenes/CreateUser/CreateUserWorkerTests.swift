@@ -10,45 +10,41 @@
 //  see http://clean-swift.com
 //
 
-//@testable import PeeCheck
-//import XCTest
-//
-//class CreateUserWorkerTests: XCTestCase
-//{
-//  // MARK: Subject under test
-//  
-//  var sut: CreateUserWorker!
-//  
-//  // MARK: Test lifecycle
-//  
-//  override func setUp()
-//  {
-//    super.setUp()
-//    setupCreateUserWorker()
-//  }
-//  
-//  override func tearDown()
-//  {
-//    super.tearDown()
-//  }
-//  
-//  // MARK: Test setup
-//  
-//  func setupCreateUserWorker()
-//  {
-//    sut = CreateUserWorker()
-//  }
-//  
-//  // MARK: Test doubles
-//  
-//  // MARK: Tests
-//  
-//  func testSomething()
-//  {
-//    // Given
-//    
-//    // When
-//    
-//    // Then
-//  }
-//}
+import Quick
+import Nimble
+@testable import PeeCheck
+
+class CreateUserWorkerTests: QuickSpec {
+    
+    override func spec() {
+        describe("CreateUserWorker tests") {
+            
+            // MARK: Subject under test
+            
+            var sut: CreateUserWorker!
+            
+            beforeSuite {
+                setupCreateUserWorker()
+            }
+            
+            // MARK: Test setup
+            
+            func setupCreateUserWorker() {
+                sut = CreateUserWorker()
+            }
+            
+            // MARK: Tests
+            
+            context("User creation") {
+                it("Sould return a user if no error occured") {
+                    let userFields = CreateUser.UserFields(age: 24, gender: .woman)
+                    let user = sut.createUser(userFields)
+                    expect(user).to(beAKindOf(User.self))
+                    expect(user?.age) == 24
+                    expect(user?.gender) == .woman
+                }
+            }
+        }
+    }
+}
+

@@ -59,9 +59,20 @@ class CreateUserInteractorTests: QuickSpec {
             // MARK: Tests
             
             context("Check User Edit") {
+                
                 it("Sould call the presentUserToEdit function") {
                     let spy = CreateUserPresentationLogicSpy()
                     sut.presenter = spy
+                    let request = CreateUser.EditUser.Request()
+                    
+                    sut.showUserToEdit(request: request)
+                    expect(spy.presentUserToEditCalled).to(beFalse())
+                }
+                
+                it("Sould call the presentUserToEdit function") {
+                    let spy = CreateUserPresentationLogicSpy()
+                    sut.presenter = spy
+                    sut.userToEdit = User(25, .men)
                     let request = CreateUser.EditUser.Request()
                     
                     sut.showUserToEdit(request: request)

@@ -41,6 +41,8 @@ class CreateUserPresenter: CreateUserPresentationLogic {
         viewController?.displayUserAge(viewModel: viewModel)
     }
     
+     // MARK: Present user creation
+    
     func presentCreateUser(response: CreateUser.CreateUser.Response) {
         let viewModel = CreateUser.CreateUser.ViewModel(user: response.user)
         viewController?.displayCreateUser(viewModel: viewModel)

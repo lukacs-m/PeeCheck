@@ -10,60 +10,84 @@
 //  see http://clean-swift.com
 //
 
-//@testable import PeeCheck
-//import XCTest
-//
-//class CreateUserPresenterTests: XCTestCase
-//{
-//  // MARK: Subject under test
-//  
-//  var sut: CreateUserPresenter!
-//  
-//  // MARK: Test lifecycle
-//  
-//  override func setUp()
-//  {
-//    super.setUp()
-//    setupCreateUserPresenter()
-//  }
-//  
-//  override func tearDown()
-//  {
-//    super.tearDown()
-//  }
-//  
-//  // MARK: Test setup
-//  
-//  func setupCreateUserPresenter()
-//  {
-//    sut = CreateUserPresenter()
-//  }
-//  
-//  // MARK: Test doubles
-//  
-//  class CreateUserDisplayLogicSpy: CreateUserDisplayLogic
-//  {
-//    var displaySomethingCalled = false
-//    
-//    func displaySomething(viewModel: CreateUser.Something.ViewModel)
-//    {
-//      displaySomethingCalled = true
-//    }
-//  }
-//  
-//  // MARK: Tests
-//  
-//  func testPresentSomething()
-//  {
-//    // Given
-//    let spy = CreateUserDisplayLogicSpy()
-//    sut.viewController = spy
-//    let response = CreateUser.Something.Response()
-//    
-//    // When
-//    sut.presentSomething(response: response)
-//    
-//    // Then
-//    XCTAssertTrue(spy.displaySomethingCalled, "presentSomething(response:) should ask the view controller to display the result")
-//  }
-//}
+import Quick
+import Nimble
+@testable import PeeCheck
+
+class CreateUserPresenterTests: QuickSpec {
+    
+    override func spec() {
+        describe("CreateUserPresenter tests") {
+            
+            // MARK: Subject under test
+            
+            var sut: CreateUserPresenter!
+            let user = User(25, .men)
+            
+            beforeSuite {
+                setupCreateUserPresenter()
+            }
+            
+            // MARK: Test setup
+            
+            func setupCreateUserPresenter() {
+                sut = CreateUserPresenter()
+            }
+            
+            // MARK: Test doubles
+            
+            class CreateUserDisplayLogicSpy: CreateUserDisplayLogic {
+                var displayUserToEditCalled = false
+                var displayUserAgeCalled = false
+                var displayCreateUserCalled = false
+                
+                func displayUserToEdit(viewModel: CreateUser.EditUser.ViewModel) {
+                    displayUserToEditCalled = true
+                }
+                
+                func displayUserAge(viewModel: CreateUser.UserAge.ViewModel) {
+                    displayUserAgeCalled = true
+                }
+                
+                func displayCreateUser(viewModel: CreateUser.CreateUser.ViewModel) {
+                    displayCreateUserCalled = true
+                }
+            }
+            
+            // MARK: Tests
+            
+            context("Display user edit") {
+                it("Sould call display user to edit function") {
+                    let spy = CreateUserDisplayLogicSpy()
+                    sut.viewController = spy
+                    let response = CreateUser.EditUser.Response(user: user)
+                    
+                    sut.presentUserToEdit(response: response)
+                    expect(spy.displayUserToEditCalled).to(beTrue())
+                }
+            }
+            
+            context("Display user age") {
+                it("Sould call display user age function") {
+                    let spy = CreateUserDisplayLogicSpy()
+                    sut.viewController = spy
+                    let response = CreateUser.UserAge.Response(age: user.age, valide: true)
+                    
+                    sut.presentUserAge(response: response)
+                    expect(spy.displayUserAgeCalled).to(beTrue())
+                }
+            }
+            
+            context("Display user creation") {
+                it("Sould call display user creation function") {
+                    let spy = CreateUserDisplayLogicSpy()
+                    sut.viewController = spy
+                    let response = CreateUser.CreateUser.Response(user: user)
+                    
+                    sut.presentCreateUser(response: response)
+                    expect(spy.displayCreateUserCalled).to(beTrue())
+                }
+            }
+        }
+    }
+}
