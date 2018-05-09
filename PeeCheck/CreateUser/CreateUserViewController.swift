@@ -108,7 +108,7 @@ extension CreateUserViewController {
         let request = CreateUser.UserAge.Request(age: age)
         interactor?.checkUserAge(request: request)
     }
-
+    
     func displayUserAge(viewModel: CreateUser.UserAge.ViewModel) {
         txtAge.layer.borderColor = viewModel.valide == true ? Style.Color.MainGreen.cgColor : UIColor.red.cgColor
         if let age = viewModel.age {
@@ -132,12 +132,12 @@ extension CreateUserViewController {
             interactor?.createUser(request: request)
         }
     }
-
+    
     func displayCreateUser(viewModel: CreateUser.CreateUser.ViewModel) {
         if viewModel.user != nil {
             router?.routeToAccount()
         } else {
-            // TODO DISPLAY ERROR
+            self.showAlert("create_user_error_title".localized(), message: "create_user_error_message".localized())
         }
     }
 }
