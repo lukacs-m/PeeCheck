@@ -14,18 +14,18 @@ PODS:
     - iOSSnapshotTestCase (~> 3.0)
     - Nimble (~> 7.0)
   - Quick (1.2.0)
-  - SwiftDate (4.5.1)
   - SwiftIcons (2.0.1)
   - SwiftLint (0.25.0)
+  - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Nimble
   - Nimble-Snapshots
   - Quick
-  - SwiftDate
   - SwiftIcons
   - SwiftLint
+  - Toast-Swift
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -33,9 +33,9 @@ SPEC REPOS:
     - Nimble
     - Nimble-Snapshots
     - Quick
-    - SwiftDate
     - SwiftIcons
     - SwiftLint
+    - Toast-Swift
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -52,10 +52,10 @@ SPEC CHECKSUMS:
   Nimble: 9c6651c3021af6de54c3ed90a4a0a87d548f7359
   Nimble-Snapshots: 33e94958e964dd5751dd387bc3204e43fe7b5d7b
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
   SwiftIcons: e475a56ae2c2da40672dbf16061ca5dd5cee7dbb
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
+  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 36f4cb9adb7225ea37362a99e56880a9e99e2067
+PODFILE CHECKSUM: 1962981eee3d148f52536aca688bada55ccb74ef
 
 COCOAPODS: 1.5.0

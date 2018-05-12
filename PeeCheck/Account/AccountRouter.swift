@@ -13,45 +13,47 @@
 import UIKit
 
 @objc protocol AccountRoutingLogic {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToCreateUser()
 }
 
 protocol AccountDataPassing {
-  var dataStore: AccountDataStore? { get }
+    var dataStore: AccountDataStore? { get }
 }
 
 class AccountRouter: NSObject, AccountRoutingLogic, AccountDataPassing {
-  weak var viewController: AccountViewController?
-  var dataStore: AccountDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+    weak var viewController: AccountViewController?
+    var dataStore: AccountDataStore?
+    
+    // MARK: Routing
+    
+    func routeToCreateUser() {
+        guard let destinationVC = viewController?.navigationController?.viewControllers.first(where: { $0 is CreateUserViewController }) as? CreateUserViewController
+            else {
+                // Show order not in stack so push fresh
+                let destinationVC = CreateUserViewController(nibName: "CreateUserViewController", bundle: nil)
+                var destinationDS = destinationVC.router!.dataStore!
+                self.passDataToCreateUser(source: self.dataStore!, destination: &destinationDS)
+                viewController!.navigationController?.pushViewController(destinationVC, animated: true)
+                return
+        }
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToCreateUser(source: dataStore!, destination: &destinationDS)
+        navigateToCreateUser(source: viewController!, destination: destinationVC)
+    }
+}
 
   // MARK: Navigation
-  
-  //func navigateToSomewhere(source: AccountViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: AccountDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+
+extension AccountRouter {
+    func navigateToCreateUser(source: AccountViewController, destination: CreateUserViewController) {
+        source.navigationController?.popToViewController(destination, animated: true)
+    }
+}
+
+// MARK: Passing data
+
+extension AccountRouter {
+    func passDataToCreateUser(source: AccountDataStore, destination: inout CreateUserDataStore) {
+        destination.userToEdit = source.user
+    }
 }

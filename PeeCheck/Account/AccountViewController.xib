@@ -135,7 +135,7 @@
                                     <rect key="frame" x="0.0" y="482.5" width="345" height="114.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tov-aS-d6P" customClass="RoundedCornerButton" customModule="PeeCheck" customModuleProvider="target">
-                                            <rect key="frame" x="149.5" y="42.5" width="46" height="30"/>
+                                            <rect key="frame" x="149.5" y="84.5" width="46" height="30"/>
                                             <state key="normal" title="Button"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="radius">

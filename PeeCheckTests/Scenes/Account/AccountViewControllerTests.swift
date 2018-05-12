@@ -10,7 +10,6 @@
 //  see http://clean-swift.com
 //
 
-
 import Quick
 import Nimble
 import ChameleonFramework
@@ -62,6 +61,17 @@ class AccountViewControllerTests: QuickSpec {
                 }
             }
             
+            class AccountRouterSpy: AccountRouter {
+                // MARK: Method call expectations
+                
+                var routeToCreateUserCalled = false
+                
+                // MARK: Spied methods
+                override func routeToCreateUser() {
+                    routeToCreateUserCalled = true
+                }
+            }
+            
             //MARK: - Test
             
             context("When view if loaded") {
@@ -88,10 +98,21 @@ class AccountViewControllerTests: QuickSpec {
                     
                     expect(accountBusinessLogicSpy.deleteUserCalled).to(beTrue())
                 }
+                
+                it("Should erase user information being displayed") {
+                    loadview()
+                    let viewModel = Account.FetchUser.ViewModel(user: User(24, .men))
+                    sut.displayUserInformation(viewModel: viewModel)
+                    
+                    sut.deleteUserInformationAction(UIButton())
+                    
+                    expect(sut.lblAgeData.text) == "account_lbl_user_data_missing".localized()
+                    expect(sut.lblGenderData.text) == "account_lbl_user_data_missing".localized()
+                }
             }
             
             context("When user information are displayed") {
-                it("Shoul not have any user information displayede") {
+                it("Shoul not have any user information displayed") {
                     loadview()
                     let viewModel = Account.FetchUser.ViewModel(user: nil)
                     sut.displayUserInformation(viewModel: viewModel)
@@ -111,16 +132,16 @@ class AccountViewControllerTests: QuickSpec {
                 }
             }
             
-            context("When user information are being deleted") {
-                it("Should erase user information being displayed") {
+            context("When need to be edited") {
+                it("Should call create user router function") {
+                    let spy = AccountRouterSpy()
+                    sut.router = spy
+                    
                     loadview()
-                    let viewModel = Account.FetchUser.ViewModel(user: User(24, .men))
-                    sut.displayUserInformation(viewModel: viewModel)
                     
-                    sut.deleteUserInformationAction(UIButton())
+                    sut.goToEditAction(UIButton())
                     
-                    expect(sut.lblAgeData.text) == "account_lbl_user_data_missing".localized()
-                    expect(sut.lblGenderData.text) == "account_lbl_user_data_missing".localized()
+                    expect(spy.routeToCreateUserCalled).to(beTrue())
                 }
             }
         }

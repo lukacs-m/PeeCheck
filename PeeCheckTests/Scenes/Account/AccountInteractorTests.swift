@@ -10,7 +10,6 @@
 //  see http://clean-swift.com
 //
 
-
 import Quick
 import Nimble
 @testable import PeeCheck

@@ -18,17 +18,18 @@ protocol AccountBusinessLogic {
 }
 
 protocol AccountDataStore {
-    //var name: String { get set }
+    var user: User? { get set }
 }
 
 class AccountInteractor: AccountBusinessLogic, AccountDataStore {
+    var user: User?
     var presenter: AccountPresentationLogic?
     var worker = AccountWorker()
     
     // MARK: Fetch user
     
     func fetchUser(request: Account.FetchUser.Request) {
-        let response = Account.FetchUser.Response(user: worker.getUser())
+        let response = Account.FetchUser.Response(user: user != nil ? user : worker.getUser())
         presenter?.presentUser(response: response)
     }
     

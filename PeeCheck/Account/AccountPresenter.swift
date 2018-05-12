@@ -31,5 +31,4 @@ class AccountPresenter: AccountPresentationLogic {
         let viewModel = Account.DeleteUser.ViewModel(error: response.error)
         viewController?.displayDeletedUserInformation(viewModel: viewModel)
     }
-    
 }
