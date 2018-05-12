@@ -49,6 +49,8 @@
 		5B9724B720A1C3DC00D4C7E5 /* CreateUserWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9724B320A1C3DC00D4C7E5 /* CreateUserWorkerTests.swift */; };
 		5B9724B820A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9724B420A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift */; };
 		5B9724BA20A26B0D00D4C7E5 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9724B920A26B0D00D4C7E5 /* UIViewController+Extensions.swift */; };
+		5BA6A96A20A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A96920A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift */; };
+		5BA6A96C20A7928D005BCA63 /* AccountRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A96B20A7928D005BCA63 /* AccountRouterTests.swift */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
 		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
@@ -130,6 +132,8 @@
 		5B9724B320A1C3DC00D4C7E5 /* CreateUserWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserWorkerTests.swift; sourceTree = "<group>"; };
 		5B9724B420A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserPresenterTests.swift; sourceTree = "<group>"; };
 		5B9724B920A26B0D00D4C7E5 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		5BA6A96920A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		5BA6A96B20A7928D005BCA63 /* AccountRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouterTests.swift; sourceTree = "<group>"; };
 		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +292,7 @@
 				5B9137C02098C70B0041CED2 /* AccountInteractorTests.swift */,
 				5B9137C12098C70B0041CED2 /* AccountWorkerTests.swift */,
 				5B9137C22098C70B0041CED2 /* AccountPresenterTests.swift */,
+				5BA6A96B20A7928D005BCA63 /* AccountRouterTests.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -317,6 +322,14 @@
 			path = CreateUser;
 			sourceTree = "<group>";
 		};
+		5BA6A96820A78D6F005BCA63 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6A96920A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5BB864E2208417D7002EBB5F /* PeeCheckTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +353,7 @@
 		5BB864F920842532002EBB5F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5BA6A96820A78D6F005BCA63 /* Extensions */,
 				5B913798208FEBA30041CED2 /* Designables */,
 				5BB864FA20842549002EBB5F /* Enum */,
 			);
@@ -779,6 +793,7 @@
 				5B9137C32098C70B0041CED2 /* AccountViewControllerTests.swift in Sources */,
 				5B9137C62098C70B0041CED2 /* AccountPresenterTests.swift in Sources */,
 				5B9724B520A1C3DC00D4C7E5 /* CreateUserViewControllerTests.swift in Sources */,
+				5BA6A96A20A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift in Sources */,
 				5BB8650720855A8B002EBB5F /* RecordingInteractorTests.swift in Sources */,
 				5B9137C82098D7780041CED2 /* RoundedCornerButtonTests.swift in Sources */,
 				5B9137C52098C70B0041CED2 /* AccountWorkerTests.swift in Sources */,
@@ -786,6 +801,7 @@
 				5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */,
 				5B9724B820A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift in Sources */,
 				5BB8650620855A8B002EBB5F /* RecordingViewControllerTests.swift in Sources */,
+				5BA6A96C20A7928D005BCA63 /* AccountRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
