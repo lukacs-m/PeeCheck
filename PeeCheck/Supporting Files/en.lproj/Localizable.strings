@@ -22,6 +22,7 @@
 "did_awake_true_label"="Yes";
 "did_awake_false_label"="No";
 "did_awake_label_title"="Did you wake up to go and pee?";
+"did_save_micturition_label"="Your micturition was saved";
 
 // MARK: - Account View Controller
 
@@ -29,6 +30,14 @@
 "account_lbl_age_title"="Age: ";
 "account_lbl_gender_title"="Gender: ";
 "account_btn_edit"="Edit Information";
+"account_btn_create"="Create User";
 "account_btn_delete"="Delete all information";
 "account_navbar_title"="Account";
 "account_lbl_user_data_missing"="Unavailable";
+
+// MARK: - Create User Controller
+"save_user_information"="Save your informations";
+
+// MARK: - Recording Errors
+"could_not_save_micturition_error"="An error occured while saving your micturition.";
+

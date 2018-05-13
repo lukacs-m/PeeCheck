@@ -13,11 +13,17 @@
 import UIKit
 
 class AccountWorker {
+    private var dataManager: DataManager
+    
+    init(dataManager: DataManager) {
+        self.dataManager = dataManager
+    }
+    
     /// Fetch user in database
     ///
     /// - Returns: return a user if found else nil
-    func getUser() -> User? {
-        return nil
+    func getUser() -> (user: User?, error: AccountErrors?) {
+        return dataManager.getUser()
     }
     
     /// Delete all database information

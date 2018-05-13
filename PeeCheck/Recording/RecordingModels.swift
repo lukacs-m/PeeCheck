@@ -32,10 +32,11 @@ enum Recording {
         }
         struct Response {
             var isRecording: Bool
-            var savedMicturition: Bool?
+            var savedMicturition: RecordingErrors?
         }
         struct ViewModel {
             var isRecording: Bool
+            var error: RecordingErrors?
         }
     }
 }

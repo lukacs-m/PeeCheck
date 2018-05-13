@@ -13,8 +13,17 @@
 import UIKit
 
 class CreateUserWorker {
+    private var dataManager: DataManager
     
-    func createUser(_ userInfo: CreateUser.UserFields) -> User? {
-        return User(userInfo.age, userInfo.gender)
+    init(dataManager: DataManager) {
+        self.dataManager = dataManager
+    }
+    
+    func createUser(_ age: Int, _ gender: Gender) -> (user: User?, error: CreateUserErrors?) {
+        return dataManager.saveUser(age, gender)
+    }
+    
+    func updateUser(_ age: Int, _ gender: Gender) -> (user: User?, error: CreateUserErrors?) {
+        return dataManager.updateUser(age, gender)
     }
 }

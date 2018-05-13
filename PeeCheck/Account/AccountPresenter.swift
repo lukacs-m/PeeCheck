@@ -23,7 +23,7 @@ class AccountPresenter: AccountPresentationLogic {
     // MARK: Present user information
     
     func presentUser(response: Account.FetchUser.Response) {
-        let viewModel = Account.FetchUser.ViewModel(user: response.user)
+        let viewModel = Account.FetchUser.ViewModel(user: response.user, error: response.error)
         viewController?.displayUserInformation(viewModel: viewModel)
     }
     

@@ -16,6 +16,11 @@ class RecordingWorker {
     
     private var timer: Timer?
     private var seconds = 0
+    private var dataManager: DataManager
+    
+    init(dataManager: DataManager) {
+        self.dataManager = dataManager
+    }
     
     /// Determines if it is night time
     ///
@@ -29,7 +34,7 @@ class RecordingWorker {
     ///
     /// - Parameter isRecording: The recording status
     /// - Returns: Return nil while recording and a bolean once recording is finished. true if recording went well false otherwise
-    func saveMicturitionTime(_ isRecording: Bool) -> Bool? {
+    func saveMicturitionTime(_ isRecording: Bool) -> RecordingErrors? {
         if isRecording {
             runTimer()
         } else {
@@ -63,10 +68,9 @@ extension RecordingWorker {
     /// Saves the micturition to database
     ///
     /// - Returns: A boolean depending on the success of the saving process. True if it worked or else false.
-    private func saveMiction() -> Bool {
-        //TODO: add realm to save micturition
-        
+    private func saveMiction() -> RecordingErrors? {        
+        let newMicturition = Micturition(duration: seconds)
         resetTimer()
-        return true
+        return dataManager.saveMicturition(micturition: newMicturition)
     }
 }

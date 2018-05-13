@@ -16,6 +16,8 @@ protocol CreateUserDisplayLogic: class {
     func displayUserToEdit(viewModel: CreateUser.EditUser.ViewModel)
     func displayUserAge(viewModel: CreateUser.UserAge.ViewModel)
     func displayCreateUser(viewModel: CreateUser.CreateUser.ViewModel)
+    func displayUpdateUser(viewModel: CreateUser.UpdateUser.ViewModel)
+    func activateSaveUserButton(viewModel: CreateUser.ActivateSaveButton.ViewModel)
 }
 
 class CreateUserViewController: UIViewController, CreateUserDisplayLogic {
@@ -92,10 +94,8 @@ extension CreateUserViewController {
     }
     
     func displayUserToEdit(viewModel: CreateUser.EditUser.ViewModel) {
-        if let age = viewModel.userFields.age {
-            txtAge.text = "\(age)"
-        }
-        txtGender.text = viewModel.userFields.gender?.localized() ?? ""
+        txtAge.text = "\(viewModel.userFields.age)"
+        txtGender.text = viewModel.userFields.gender.localized()
     }
 }
 
@@ -114,26 +114,59 @@ extension CreateUserViewController {
         if let age = viewModel.age {
             txtAge.text = "\(age)"
         }
+        checkFormFields()
     }
 }
 
+// MARK: - Check if valide form to activate button
+extension CreateUserViewController {
+    func checkFormFields() {
+        let request = CreateUser.ActivateSaveButton.Request(ageField: txtAge.text, genderField: txtGender.text)
+        interactor?.checkFormFields(request: request)
+    }
+    
+    func activateSaveUserButton(viewModel: CreateUser.ActivateSaveButton.ViewModel) {
+        btnCreateUser.isUserInteractionEnabled = viewModel.valide
+    }
+}
 // MARK: Create User
 
 extension CreateUserViewController {
     
     @IBAction func saveUser(_ sender: Any) {
-        let age = txtAge.text != nil ? Int(txtAge.text!) : nil
+        let age = txtAge.text != nil ? Int(txtAge.text!) : 0
         let gender = txtGender.text == "men" ? Gender.men : Gender.woman
         
         if let userToEdit = interactor?.userToEdit {
-            return
+            let request = CreateUser.UpdateUser.Request(age: age ?? 0, gender: gender)
+            interactor?.updateUser(request: request)
         } else {
-            let request = CreateUser.CreateUser.Request(userFormFields: CreateUser.UserFields(age: age, gender: gender))
+            let request = CreateUser.CreateUser.Request(userFormFields: CreateUser.UserFields(age: age ?? 0, gender: gender))
             interactor?.createUser(request: request)
         }
     }
     
     func displayCreateUser(viewModel: CreateUser.CreateUser.ViewModel) {
+        guard viewModel.error == nil else {
+            DispatchQueue.main.async {
+                self.showAlert("create_user_error_title".localized(), message: "create_user_error_message".localized())
+            }
+            return
+        }
+        if viewModel.user != nil {
+            router?.routeToAccount()
+        } else {
+            self.showAlert("create_user_error_title".localized(), message: "create_user_error_message".localized())
+        }
+    }
+    
+    func displayUpdateUser(viewModel: CreateUser.UpdateUser.ViewModel) {
+        guard viewModel.error == nil else {
+            DispatchQueue.main.async {
+                self.showAlert("create_user_error_title".localized(), message: "create_user_error_message".localized())
+            }
+            return
+        }
         if viewModel.user != nil {
             router?.routeToAccount()
         } else {
@@ -163,11 +196,13 @@ extension CreateUserViewController: UITextFieldDelegate, UIPickerViewDataSource,
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         txtGender.text = interactor?.genderTypes[row]
+        checkFormFields()
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == txtGender, textField.text == "" {
             textField.text = interactor?.genderTypes[0]
+            checkFormFields()
         }
     }
     

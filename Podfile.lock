@@ -14,6 +14,11 @@ PODS:
     - iOSSnapshotTestCase (~> 3.0)
     - Nimble (~> 7.0)
   - Quick (1.2.0)
+  - Realm (3.5.0):
+    - Realm/Headers (= 3.5.0)
+  - Realm/Headers (3.5.0)
+  - RealmSwift (3.5.0):
+    - Realm (= 3.5.0)
   - SwiftIcons (2.0.1)
   - SwiftLint (0.25.0)
   - Toast-Swift (3.0.1)
@@ -23,6 +28,7 @@ DEPENDENCIES:
   - Nimble
   - Nimble-Snapshots
   - Quick
+  - RealmSwift
   - SwiftIcons
   - SwiftLint
   - Toast-Swift
@@ -33,6 +39,8 @@ SPEC REPOS:
     - Nimble
     - Nimble-Snapshots
     - Quick
+    - Realm
+    - RealmSwift
     - SwiftIcons
     - SwiftLint
     - Toast-Swift
@@ -52,10 +60,12 @@ SPEC CHECKSUMS:
   Nimble: 9c6651c3021af6de54c3ed90a4a0a87d548f7359
   Nimble-Snapshots: 33e94958e964dd5751dd387bc3204e43fe7b5d7b
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
+  RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
   SwiftIcons: e475a56ae2c2da40672dbf16061ca5dd5cee7dbb
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 1962981eee3d148f52536aca688bada55ccb74ef
+PODFILE CHECKSUM: 883a0c808ca4fb2e5b46e1e1eb75dcfbe9cf4325
 
 COCOAPODS: 1.5.0

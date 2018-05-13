@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 protocol RecordingDisplayLogic: class {
     func displaySetSwitch(viewModel: Recording.SetSwitch.ViewModel)
@@ -20,6 +21,7 @@ protocol RecordingDisplayLogic: class {
 class RecordingViewController: UIViewController, RecordingDisplayLogic {
     var interactor: RecordingBusinessLogic?
     var router: (NSObjectProtocol & RecordingRoutingLogic & RecordingDataPassing)?
+    private var style = ToastStyle()
     
     // MARK: - Outlets
     @IBOutlet private weak var lblTitle: UILabel!
@@ -65,8 +67,15 @@ class RecordingViewController: UIViewController, RecordingDisplayLogic {
         lblDidNotAwake.text = "did_awake_false_label".localized()
         lblAwakeTitleDescription.text = "did_awake_label_title".localized()
         btnRecord.backgroundColor = Style.Color.MainBlue
+        setUpToast()
     }
     
+    private func setUpToast(error: Bool = false) {
+        style.messageColor = .white
+        style.backgroundColor = !error ? Style.Color.MainBlue : Style.Color.MainRed
+        ToastManager.shared.style = style
+        ToastManager.shared.isTapToDismissEnabled = true
+    }
     // MARK: View lifecycle
     
     override func viewDidLoad() {
@@ -113,5 +122,9 @@ extension RecordingViewController {
         btnRecord.setTitle(viewModel.isRecording ? "recording_button_title_active".localized() : "recording_button_title_inactive".localized(), for: .normal)
         btnRecord.backgroundColor = viewModel.isRecording ? Style.Color.MainGreen : Style.Color.MainBlue
         btnRecord.blink(viewModel.isRecording)
+        if !viewModel.isRecording {
+            setUpToast(error: viewModel.error == nil ? false : true)
+            self.view.makeToast(viewModel.error == nil ? "did_save_micturition_label".localized() : viewModel.error?.localized()) // now uses the shared style
+        }
     }
 }

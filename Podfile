@@ -7,6 +7,7 @@ def common_pods
     pod 'SwiftIcons'
     pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
     pod 'Toast-Swift'
+    pod 'RealmSwift'
 end
 
 # Pods for PeeCheck Testing

@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-enum Gender {
+enum Gender: String {
     case men
     case woman
     
@@ -22,11 +23,16 @@ enum Gender {
     }
 }
 
-struct User {
-    var age: Int?
-    var gender: Gender?
-    
-    init(_ age: Int?, _ gender: Gender?) {
+class User: Object {
+    @objc dynamic var age = 0
+    @objc private dynamic var privateGender = Gender.men.rawValue
+    var gender: Gender {
+        get { return Gender(rawValue: privateGender) ?? Gender.men }
+        set { privateGender = newValue.rawValue }
+    }
+    // MARK: - Init
+    convenience init(_ age: Int, _ gender: Gender) {
+        self.init()
         self.age = age
         self.gender = gender
     }

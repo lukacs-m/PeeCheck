@@ -51,6 +51,12 @@
 		5B9724BA20A26B0D00D4C7E5 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9724B920A26B0D00D4C7E5 /* UIViewController+Extensions.swift */; };
 		5BA6A96A20A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A96920A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift */; };
 		5BA6A96C20A7928D005BCA63 /* AccountRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A96B20A7928D005BCA63 /* AccountRouterTests.swift */; };
+		5BA6A96E20A7ABDB005BCA63 /* Micturition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A96D20A7ABDB005BCA63 /* Micturition.swift */; };
+		5BA6A97120A7AE93005BCA63 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97020A7AE93005BCA63 /* RealmManager.swift */; };
+		5BA6A97420A7B1BF005BCA63 /* RecordingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97320A7B1BF005BCA63 /* RecordingErrors.swift */; };
+		5BA6A97620A7B564005BCA63 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97520A7B564005BCA63 /* RealmConfig.swift */; };
+		5BA6A97820A862F9005BCA63 /* AccountErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97720A862F9005BCA63 /* AccountErrors.swift */; };
+		5BA6A97A20A86AB7005BCA63 /* CreateUserErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97920A86AB7005BCA63 /* CreateUserErrors.swift */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
 		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
@@ -134,6 +140,12 @@
 		5B9724B920A26B0D00D4C7E5 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		5BA6A96920A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		5BA6A96B20A7928D005BCA63 /* AccountRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouterTests.swift; sourceTree = "<group>"; };
+		5BA6A96D20A7ABDB005BCA63 /* Micturition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Micturition.swift; sourceTree = "<group>"; };
+		5BA6A97020A7AE93005BCA63 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		5BA6A97320A7B1BF005BCA63 /* RecordingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingErrors.swift; sourceTree = "<group>"; };
+		5BA6A97520A7B564005BCA63 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
+		5BA6A97720A862F9005BCA63 /* AccountErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountErrors.swift; sourceTree = "<group>"; };
+		5BA6A97920A86AB7005BCA63 /* CreateUserErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserErrors.swift; sourceTree = "<group>"; };
 		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9137B72097DB110041CED2 /* User.swift */,
+				5BA6A96D20A7ABDB005BCA63 /* Micturition.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -328,6 +341,25 @@
 				5BA6A96920A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5BA6A96F20A7AE75005BCA63 /* RealmManager */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6A97020A7AE93005BCA63 /* RealmManager.swift */,
+				5BA6A97520A7B564005BCA63 /* RealmConfig.swift */,
+			);
+			path = RealmManager;
+			sourceTree = "<group>";
+		};
+		5BA6A97220A7B18B005BCA63 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6A97320A7B1BF005BCA63 /* RecordingErrors.swift */,
+				5BA6A97720A862F9005BCA63 /* AccountErrors.swift */,
+				5BA6A97920A86AB7005BCA63 /* CreateUserErrors.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		5BB864E2208417D7002EBB5F /* PeeCheckTests */ = {
@@ -475,6 +507,8 @@
 		5BB9D8F0204EE75900C5ADA1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5BA6A97220A7B18B005BCA63 /* Errors */,
+				5BA6A96F20A7AE75005BCA63 /* RealmManager */,
 				5B9137BB2098C4940041CED2 /* Utils */,
 				5B9137B62097DAFC0041CED2 /* Models */,
 				5B21DAF5208D3C3E005321EC /* Enums */,
@@ -702,12 +736,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheck/Pods-PeeCheck-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIcons.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
@@ -819,8 +857,12 @@
 			files = (
 				5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */,
 				5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */,
+				5BA6A97120A7AE93005BCA63 /* RealmManager.swift in Sources */,
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
+				5BA6A97420A7B1BF005BCA63 /* RecordingErrors.swift in Sources */,
+				5BA6A96E20A7ABDB005BCA63 /* Micturition.swift in Sources */,
 				5B9137D42098E8240041CED2 /* CreateUserViewController.swift in Sources */,
+				5BA6A97620A7B564005BCA63 /* RealmConfig.swift in Sources */,
 				5B9724BA20A26B0D00D4C7E5 /* UIViewController+Extensions.swift in Sources */,
 				5B21DAF7208D3C3F005321EC /* TabBarControllers.swift in Sources */,
 				5B9137BA2098BFF50041CED2 /* RoundedCornerButton.swift in Sources */,
@@ -833,6 +875,7 @@
 				5B9137AF209682140041CED2 /* AccountWorker.swift in Sources */,
 				5B74AE17209A7DF100FAAC0F /* UIButton+Extensions.swift in Sources */,
 				5BB8650C2085E528002EBB5F /* main.swift in Sources */,
+				5BA6A97820A862F9005BCA63 /* AccountErrors.swift in Sources */,
 				5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */,
 				5B201FAC2076E1E60063EA25 /* RecordingPresenter.swift in Sources */,
 				5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */,
@@ -840,6 +883,7 @@
 				5B201FAD2076E1E60063EA25 /* RecordingWorker.swift in Sources */,
 				5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */,
 				5B201FAE2076E1E60063EA25 /* RecordingRouter.swift in Sources */,
+				5BA6A97A20A86AB7005BCA63 /* CreateUserErrors.swift in Sources */,
 				5B9137D12098E8240041CED2 /* CreateUserWorker.swift in Sources */,
 				5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */,
 				5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */,

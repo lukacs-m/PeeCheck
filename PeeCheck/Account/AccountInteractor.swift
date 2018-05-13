@@ -24,12 +24,17 @@ protocol AccountDataStore {
 class AccountInteractor: AccountBusinessLogic, AccountDataStore {
     var user: User?
     var presenter: AccountPresentationLogic?
-    var worker = AccountWorker()
+    var worker = AccountWorker(dataManager: RealmManager())
     
     // MARK: Fetch user
     
     func fetchUser(request: Account.FetchUser.Request) {
-        let response = Account.FetchUser.Response(user: user != nil ? user : worker.getUser())
+        var results: (user: User?, error: AccountErrors?)? = nil
+        if user == nil {
+            results = worker.getUser()
+            user = results?.user
+        }
+        let response = Account.FetchUser.Response(user: user != nil ? user : results?.user, error: results?.error)
         presenter?.presentUser(response: response)
     }
     

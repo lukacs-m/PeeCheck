@@ -20,9 +20,11 @@ enum Account {
         }
         struct Response {
             var user: User?
+            var error: AccountErrors?
         }
         struct ViewModel {
             var user: User?
+            var error: AccountErrors?
         }
     }
     
