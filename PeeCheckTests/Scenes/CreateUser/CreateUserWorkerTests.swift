@@ -29,6 +29,10 @@ class CreateUserWorkerTests: QuickSpec {
             
             // MARK: Test setup
             
+            beforeEach {
+                sut.userDataManager = UserRealmManager()
+            }
+            
             func setupCreateUserWorker() {
                 sut = CreateUserWorker()
             }
@@ -38,10 +42,36 @@ class CreateUserWorkerTests: QuickSpec {
             context("User creation") {
                 it("Sould return a user if no error occured") {
                     let userFields = CreateUser.UserFields(age: 24, gender: .woman)
-                    let user = sut.createUser(userFields)
-                    expect(user).to(beAKindOf(User.self))
-                    expect(user?.age) == 24
-                    expect(user?.gender) == .woman
+                    let results = sut.createUser(userFields.age, userFields.gender)
+                    expect(results.user).to(beAKindOf(User.self))
+                    expect(results.user?.age) == 24
+                    expect(results.user?.gender) == .woman
+                }
+                
+                it("Sould return a error ") {
+                    sut.userDataManager = UserRealmManagerMockError()
+                    let userFields = CreateUser.UserFields(age: 24, gender: .woman)
+                    let results = sut.createUser(userFields.age, userFields.gender)
+                    expect(results.error).toNot(beNil())
+                     expect(results.error) == PersistenceErrors.couldNotSaveUser
+                }
+            }
+            
+            context("User update") {
+                it("Sould return a user if no error occured") {
+                    let userFields = CreateUser.UserFields(age: 46, gender: .men)
+                    _ = sut.createUser(24, .woman)
+                    let results = sut.updateUser(userFields.age, userFields.gender)
+                    expect(results.user).to(beAKindOf(User.self))
+                    expect(results.user?.age) == 46
+                    expect(results.user?.gender) == .men
+                }
+                
+                it("Sould return a error ") {
+                    sut.userDataManager = UserRealmManagerMockError()
+                    let results = sut.updateUser(45, .woman)
+                    expect(results.error).toNot(beNil())
+                    expect(results.error) == PersistenceErrors.couldNotSaveUser
                 }
             }
         }

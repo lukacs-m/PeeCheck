@@ -16,9 +16,17 @@
 		5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FAB2076E1E60063EA25 /* RecordingInteractor.swift */; };
 		5B201FB32076E22A0063EA25 /* RecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B201FB22076E22A0063EA25 /* RecordingViewController.xib */; };
 		5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */; };
+		5B21131020B03AE400B49536 /* UserRealmManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21130F20B03AE400B49536 /* UserRealmManagerTests.swift */; };
+		5B21131220B1D14200B49536 /* MicturitionRealmManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21131120B1D14200B49536 /* MicturitionRealmManagerTests.swift */; };
+		5B21131420B1D16C00B49536 /* GeneralRealmManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21131320B1D16C00B49536 /* GeneralRealmManagerTests.swift */; };
+		5B21131620B1DC2D00B49536 /* MicturitionRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21131520B1DC2D00B49536 /* MicturitionRealmManager.swift */; };
+		5B21131820B1DC3C00B49536 /* GeneralRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21131720B1DC3C00B49536 /* GeneralRealmManager.swift */; };
 		5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */; };
 		5B21DAF7208D3C3F005321EC /* TabBarControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21DAF6208D3C3E005321EC /* TabBarControllers.swift */; };
 		5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21DAF8208D3C67005321EC /* RoundButton.swift */; };
+		5B3F38BD20AB9598006E573C /* PersistenceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F38BC20AB9598006E573C /* PersistenceErrors.swift */; };
+		5B3F38C020AB9F42006E573C /* PersistenceErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F38BF20AB9F42006E573C /* PersistenceErrorTests.swift */; };
+		5B3F38C520ABAB37006E573C /* RealmManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F38C420ABAB37006E573C /* RealmManagerMock.swift */; };
 		5B74AE17209A7DF100FAAC0F /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74AE16209A7DF100FAAC0F /* UIButton+Extensions.swift */; };
 		5B91379A208FEBD40041CED2 /* RoundButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B913799208FEBD40041CED2 /* RoundButtonTests.swift */; };
 		5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A5209490300041CED2 /* UIView+Extensions.swift */; };
@@ -52,11 +60,8 @@
 		5BA6A96A20A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A96920A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift */; };
 		5BA6A96C20A7928D005BCA63 /* AccountRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A96B20A7928D005BCA63 /* AccountRouterTests.swift */; };
 		5BA6A96E20A7ABDB005BCA63 /* Micturition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A96D20A7ABDB005BCA63 /* Micturition.swift */; };
-		5BA6A97120A7AE93005BCA63 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97020A7AE93005BCA63 /* RealmManager.swift */; };
-		5BA6A97420A7B1BF005BCA63 /* RecordingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97320A7B1BF005BCA63 /* RecordingErrors.swift */; };
+		5BA6A97120A7AE93005BCA63 /* UserRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97020A7AE93005BCA63 /* UserRealmManager.swift */; };
 		5BA6A97620A7B564005BCA63 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97520A7B564005BCA63 /* RealmConfig.swift */; };
-		5BA6A97820A862F9005BCA63 /* AccountErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97720A862F9005BCA63 /* AccountErrors.swift */; };
-		5BA6A97A20A86AB7005BCA63 /* CreateUserErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97920A86AB7005BCA63 /* CreateUserErrors.swift */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
 		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
@@ -105,8 +110,16 @@
 		5B201FAB2076E1E60063EA25 /* RecordingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingInteractor.swift; sourceTree = "<group>"; };
 		5B201FB22076E22A0063EA25 /* RecordingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
 		5B201FB42076E9580063EA25 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		5B21130F20B03AE400B49536 /* UserRealmManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmManagerTests.swift; sourceTree = "<group>"; };
+		5B21131120B1D14200B49536 /* MicturitionRealmManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicturitionRealmManagerTests.swift; sourceTree = "<group>"; };
+		5B21131320B1D16C00B49536 /* GeneralRealmManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRealmManagerTests.swift; sourceTree = "<group>"; };
+		5B21131520B1DC2D00B49536 /* MicturitionRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicturitionRealmManager.swift; sourceTree = "<group>"; };
+		5B21131720B1DC3C00B49536 /* GeneralRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRealmManager.swift; sourceTree = "<group>"; };
 		5B21DAF6208D3C3E005321EC /* TabBarControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllers.swift; sourceTree = "<group>"; };
 		5B21DAF8208D3C67005321EC /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		5B3F38BC20AB9598006E573C /* PersistenceErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceErrors.swift; sourceTree = "<group>"; };
+		5B3F38BF20AB9F42006E573C /* PersistenceErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceErrorTests.swift; sourceTree = "<group>"; };
+		5B3F38C420ABAB37006E573C /* RealmManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerMock.swift; sourceTree = "<group>"; };
 		5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		5B74AE16209A7DF100FAAC0F /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		5B913799208FEBD40041CED2 /* RoundButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonTests.swift; sourceTree = "<group>"; };
@@ -141,11 +154,8 @@
 		5BA6A96920A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		5BA6A96B20A7928D005BCA63 /* AccountRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouterTests.swift; sourceTree = "<group>"; };
 		5BA6A96D20A7ABDB005BCA63 /* Micturition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Micturition.swift; sourceTree = "<group>"; };
-		5BA6A97020A7AE93005BCA63 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		5BA6A97320A7B1BF005BCA63 /* RecordingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingErrors.swift; sourceTree = "<group>"; };
+		5BA6A97020A7AE93005BCA63 /* UserRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmManager.swift; sourceTree = "<group>"; };
 		5BA6A97520A7B564005BCA63 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
-		5BA6A97720A862F9005BCA63 /* AccountErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountErrors.swift; sourceTree = "<group>"; };
-		5BA6A97920A86AB7005BCA63 /* CreateUserErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserErrors.swift; sourceTree = "<group>"; };
 		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +251,16 @@
 			path = Recording;
 			sourceTree = "<group>";
 		};
+		5B21130E20B03AC800B49536 /* RealmManager */ = {
+			isa = PBXGroup;
+			children = (
+				5B21130F20B03AE400B49536 /* UserRealmManagerTests.swift */,
+				5B21131120B1D14200B49536 /* MicturitionRealmManagerTests.swift */,
+				5B21131320B1D16C00B49536 /* GeneralRealmManagerTests.swift */,
+			);
+			path = RealmManager;
+			sourceTree = "<group>";
+		};
 		5B21DAF4208D3BF2005321EC /* Designables */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +276,38 @@
 				5B21DAF6208D3C3E005321EC /* TabBarControllers.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		5B3F38BE20AB9F1D006E573C /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				5B3F38BF20AB9F42006E573C /* PersistenceErrorTests.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		5B3F38C120ABAAF9006E573C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B3F38C220ABAB08006E573C /* Stubs */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5B3F38C220ABAB08006E573C /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				5B3F38C320ABAB22006E573C /* RealmManager */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		5B3F38C320ABAB22006E573C /* RealmManager */ = {
+			isa = PBXGroup;
+			children = (
+				5B3F38C420ABAB37006E573C /* RealmManagerMock.swift */,
+			);
+			path = RealmManager;
 			sourceTree = "<group>";
 		};
 		5B913798208FEBA30041CED2 /* Designables */ = {
@@ -346,8 +398,10 @@
 		5BA6A96F20A7AE75005BCA63 /* RealmManager */ = {
 			isa = PBXGroup;
 			children = (
-				5BA6A97020A7AE93005BCA63 /* RealmManager.swift */,
+				5BA6A97020A7AE93005BCA63 /* UserRealmManager.swift */,
 				5BA6A97520A7B564005BCA63 /* RealmConfig.swift */,
+				5B21131520B1DC2D00B49536 /* MicturitionRealmManager.swift */,
+				5B21131720B1DC3C00B49536 /* GeneralRealmManager.swift */,
 			);
 			path = RealmManager;
 			sourceTree = "<group>";
@@ -355,9 +409,7 @@
 		5BA6A97220A7B18B005BCA63 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				5BA6A97320A7B1BF005BCA63 /* RecordingErrors.swift */,
-				5BA6A97720A862F9005BCA63 /* AccountErrors.swift */,
-				5BA6A97920A86AB7005BCA63 /* CreateUserErrors.swift */,
+				5B3F38BC20AB9598006E573C /* PersistenceErrors.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -365,6 +417,7 @@
 		5BB864E2208417D7002EBB5F /* PeeCheckTests */ = {
 			isa = PBXGroup;
 			children = (
+				5B3F38C120ABAAF9006E573C /* Utils */,
 				5BB864FD208559B9002EBB5F /* Scenes */,
 				5BB864F920842532002EBB5F /* Common */,
 				5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */,
@@ -385,6 +438,8 @@
 		5BB864F920842532002EBB5F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5B21130E20B03AC800B49536 /* RealmManager */,
+				5B3F38BE20AB9F1D006E573C /* Errors */,
 				5BA6A96820A78D6F005BCA63 /* Extensions */,
 				5B913798208FEBA30041CED2 /* Designables */,
 				5BB864FA20842549002EBB5F /* Enum */,
@@ -822,6 +877,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B91379A208FEBD40041CED2 /* RoundButtonTests.swift in Sources */,
+				5B3F38C520ABAB37006E573C /* RealmManagerMock.swift in Sources */,
 				5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */,
 				5B9724B620A1C3DC00D4C7E5 /* CreateUserInteractorTests.swift in Sources */,
 				5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */,
@@ -829,13 +885,17 @@
 				5B9137C42098C70B0041CED2 /* AccountInteractorTests.swift in Sources */,
 				5B9724B720A1C3DC00D4C7E5 /* CreateUserWorkerTests.swift in Sources */,
 				5B9137C32098C70B0041CED2 /* AccountViewControllerTests.swift in Sources */,
+				5B3F38C020AB9F42006E573C /* PersistenceErrorTests.swift in Sources */,
 				5B9137C62098C70B0041CED2 /* AccountPresenterTests.swift in Sources */,
 				5B9724B520A1C3DC00D4C7E5 /* CreateUserViewControllerTests.swift in Sources */,
 				5BA6A96A20A78DA3005BCA63 /* UIViewController+ExtensionsTests.swift in Sources */,
 				5BB8650720855A8B002EBB5F /* RecordingInteractorTests.swift in Sources */,
+				5B21131420B1D16C00B49536 /* GeneralRealmManagerTests.swift in Sources */,
 				5B9137C82098D7780041CED2 /* RoundedCornerButtonTests.swift in Sources */,
+				5B21131220B1D14200B49536 /* MicturitionRealmManagerTests.swift in Sources */,
 				5B9137C52098C70B0041CED2 /* AccountWorkerTests.swift in Sources */,
 				5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */,
+				5B21131020B03AE400B49536 /* UserRealmManagerTests.swift in Sources */,
 				5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */,
 				5B9724B820A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift in Sources */,
 				5BB8650620855A8B002EBB5F /* RecordingViewControllerTests.swift in Sources */,
@@ -857,9 +917,8 @@
 			files = (
 				5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */,
 				5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */,
-				5BA6A97120A7AE93005BCA63 /* RealmManager.swift in Sources */,
+				5BA6A97120A7AE93005BCA63 /* UserRealmManager.swift in Sources */,
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
-				5BA6A97420A7B1BF005BCA63 /* RecordingErrors.swift in Sources */,
 				5BA6A96E20A7ABDB005BCA63 /* Micturition.swift in Sources */,
 				5B9137D42098E8240041CED2 /* CreateUserViewController.swift in Sources */,
 				5BA6A97620A7B564005BCA63 /* RealmConfig.swift in Sources */,
@@ -871,11 +930,11 @@
 				5B9137D02098E8240041CED2 /* CreateUserPresenter.swift in Sources */,
 				5B9137B1209682140041CED2 /* AccountModels.swift in Sources */,
 				5B9137D52098E8240041CED2 /* CreateUserInteractor.swift in Sources */,
+				5B21131620B1DC2D00B49536 /* MicturitionRealmManager.swift in Sources */,
 				5B9137B0209682140041CED2 /* AccountRouter.swift in Sources */,
 				5B9137AF209682140041CED2 /* AccountWorker.swift in Sources */,
 				5B74AE17209A7DF100FAAC0F /* UIButton+Extensions.swift in Sources */,
 				5BB8650C2085E528002EBB5F /* main.swift in Sources */,
-				5BA6A97820A862F9005BCA63 /* AccountErrors.swift in Sources */,
 				5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */,
 				5B201FAC2076E1E60063EA25 /* RecordingPresenter.swift in Sources */,
 				5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */,
@@ -883,12 +942,13 @@
 				5B201FAD2076E1E60063EA25 /* RecordingWorker.swift in Sources */,
 				5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */,
 				5B201FAE2076E1E60063EA25 /* RecordingRouter.swift in Sources */,
-				5BA6A97A20A86AB7005BCA63 /* CreateUserErrors.swift in Sources */,
 				5B9137D12098E8240041CED2 /* CreateUserWorker.swift in Sources */,
 				5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */,
+				5B21131820B1DC3C00B49536 /* GeneralRealmManager.swift in Sources */,
 				5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */,
 				5B9137B3209682140041CED2 /* AccountInteractor.swift in Sources */,
 				5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */,
+				5B3F38BD20AB9598006E573C /* PersistenceErrors.swift in Sources */,
 				5B9137B82097DB110041CED2 /* User.swift in Sources */,
 				5B9137D22098E8240041CED2 /* CreateUserRouter.swift in Sources */,
 				5B9137D32098E8240041CED2 /* CreateUserModels.swift in Sources */,

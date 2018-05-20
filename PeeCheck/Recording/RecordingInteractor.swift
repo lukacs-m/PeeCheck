@@ -23,7 +23,7 @@ protocol RecordingDataStore {
 
 class RecordingInteractor: RecordingBusinessLogic, RecordingDataStore {
     var presenter: RecordingPresentationLogic?
-    var worker = RecordingWorker(dataManager: RealmManager())
+    var worker = RecordingWorker()
     private var isRecording = true
     
     // MARK: Check local time

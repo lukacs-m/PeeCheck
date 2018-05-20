@@ -41,11 +41,11 @@ enum CreateUser {
         }
         struct Response {
             var user: User?
-            var error: CreateUserErrors?
+            var error: PersistenceErrors?
         }
         struct ViewModel {
             var user: User?
-            var error: CreateUserErrors?
+            var error: PersistenceErrors?
         }
     }
     
@@ -69,11 +69,11 @@ enum CreateUser {
         }
         struct Response {
             var user: User?
-            var error: CreateUserErrors?
+            var error: PersistenceErrors?
         }
         struct ViewModel {
             var user: User?
-            var error: CreateUserErrors?
+            var error: PersistenceErrors?
         }
     }
     

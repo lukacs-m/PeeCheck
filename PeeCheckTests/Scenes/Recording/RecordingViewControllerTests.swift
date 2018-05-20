@@ -109,7 +109,7 @@ class RecordingViewControllerTests: QuickSpec {
             context("When the recording button is set depending on recording status") {
                 it("Shoul be blue color & not have animation") {
                     loadview()
-                    let viewModel = Recording.RecordMicturition.ViewModel(isRecording: false)
+                    let viewModel = Recording.RecordMicturition.ViewModel(isRecording: false, error: nil)
                     sut.updateRecordBtnDisplay(viewModel: viewModel)
                     
                     expect(sut.btnRecord.backgroundColor) == Style.Color.MainBlue
@@ -119,7 +119,7 @@ class RecordingViewControllerTests: QuickSpec {
                 
                 it("Should be green & have animation") {
                     loadview()
-                    let viewModel = Recording.RecordMicturition.ViewModel(isRecording: true)
+                    let viewModel = Recording.RecordMicturition.ViewModel(isRecording: true, error: nil)
                     sut.updateRecordBtnDisplay(viewModel: viewModel)
                     
                     expect(sut.btnRecord.backgroundColor) == Style.Color.MainGreen

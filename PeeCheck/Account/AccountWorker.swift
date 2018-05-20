@@ -12,24 +12,19 @@
 
 import UIKit
 
-class AccountWorker {
-    private var dataManager: DataManager
-    
-    init(dataManager: DataManager) {
-        self.dataManager = dataManager
-    }
+class AccountWorker: UserPersistenceInjected, GeneralPersistenceInjected {
     
     /// Fetch user in database
     ///
     /// - Returns: return a user if found else nil
-    func getUser() -> (user: User?, error: AccountErrors?) {
-        return dataManager.getUser()
+    func getUser() -> (user: User?, error: PersistenceErrors?) {
+        return userDataManager.getUser()
     }
     
     /// Delete all database information
     ///
     /// - Returns: nil if everything when well or and error otherwise
-    func deleteUser() -> Error? {
-        return nil
+    func deleteUser() -> PersistenceErrors? {
+        return generalDataManager.deleteData()
     }
 }

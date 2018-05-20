@@ -10,7 +10,6 @@
 //  see http://clean-swift.com
 //
 
-
 import Quick
 import Nimble
 @testable import PeeCheck
@@ -37,11 +36,13 @@ class CreateUserInteractorTests: QuickSpec {
             
             // MARK: Test doubles
             
-            class CreateUserPresentationLogicSpy: CreateUserPresentationLogic
-            {
+            class CreateUserPresentationLogicSpy: CreateUserPresentationLogic {
+  
                 var presentUserToEditCalled = false
                 var presentUserAgeCalled = false
                 var presentCreateUserCalled = false
+                var presentUpdateUserCalled = false
+                var presentCheckFormFieldsCalled = false
 
                 func presentUserToEdit(response: CreateUser.EditUser.Response) {
                     presentUserToEditCalled = true
@@ -53,6 +54,14 @@ class CreateUserInteractorTests: QuickSpec {
                 
                 func presentCreateUser(response: CreateUser.CreateUser.Response) {
                     presentCreateUserCalled = true
+                }
+                
+                func presentUpdateUser(response: CreateUser.UpdateUser.Response) {
+                    presentUpdateUserCalled = true
+                }
+                
+                func presentCheckFormFields(response: CreateUser.ActivateSaveButton.Response) {
+                    presentCheckFormFieldsCalled = true
                 }
             }
             

@@ -137,7 +137,7 @@ extension CreateUserViewController {
         let age = txtAge.text != nil ? Int(txtAge.text!) : 0
         let gender = txtGender.text == "men" ? Gender.men : Gender.woman
         
-        if let userToEdit = interactor?.userToEdit {
+        if interactor?.userToEdit != nil {
             let request = CreateUser.UpdateUser.Request(age: age ?? 0, gender: gender)
             interactor?.updateUser(request: request)
         } else {

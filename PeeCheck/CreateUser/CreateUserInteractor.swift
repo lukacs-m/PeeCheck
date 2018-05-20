@@ -33,7 +33,7 @@ protocol CreateOrderDataStore {
 
 class CreateUserInteractor: CreateUserBusinessLogic, CreateUserDataStore {
     var presenter: CreateUserPresentationLogic?
-    var worker = CreateUserWorker(dataManager: RealmManager())
+    var worker = CreateUserWorker()
     var userToEdit: User?
     var genderTypes = [
         Gender.men.localized(),

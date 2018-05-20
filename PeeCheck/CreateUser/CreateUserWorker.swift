@@ -12,18 +12,13 @@
 
 import UIKit
 
-class CreateUserWorker {
-    private var dataManager: DataManager
+class CreateUserWorker: UserPersistenceInjected {
     
-    init(dataManager: DataManager) {
-        self.dataManager = dataManager
+    func createUser(_ age: Int, _ gender: Gender) -> (user: User?, error: PersistenceErrors?) {
+        return userDataManager.saveUser(age, gender)
     }
     
-    func createUser(_ age: Int, _ gender: Gender) -> (user: User?, error: CreateUserErrors?) {
-        return dataManager.saveUser(age, gender)
-    }
-    
-    func updateUser(_ age: Int, _ gender: Gender) -> (user: User?, error: CreateUserErrors?) {
-        return dataManager.updateUser(age, gender)
+    func updateUser(_ age: Int, _ gender: Gender) -> (user: User?, error: PersistenceErrors?) {
+        return userDataManager.updateUser(age, gender)
     }
 }

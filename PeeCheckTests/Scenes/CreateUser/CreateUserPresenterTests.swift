@@ -37,9 +37,12 @@ class CreateUserPresenterTests: QuickSpec {
             // MARK: Test doubles
             
             class CreateUserDisplayLogicSpy: CreateUserDisplayLogic {
+          
                 var displayUserToEditCalled = false
                 var displayUserAgeCalled = false
                 var displayCreateUserCalled = false
+                var displayUpdateUserCalled = false
+                var activateSaveUserButtonCalled = false
                 
                 func displayUserToEdit(viewModel: CreateUser.EditUser.ViewModel) {
                     displayUserToEditCalled = true
@@ -51,6 +54,14 @@ class CreateUserPresenterTests: QuickSpec {
                 
                 func displayCreateUser(viewModel: CreateUser.CreateUser.ViewModel) {
                     displayCreateUserCalled = true
+                }
+                
+                func displayUpdateUser(viewModel: CreateUser.UpdateUser.ViewModel) {
+                    displayUpdateUserCalled = true
+                }
+                
+                func activateSaveUserButton(viewModel: CreateUser.ActivateSaveButton.ViewModel) {
+                    activateSaveUserButtonCalled = true
                 }
             }
             
@@ -82,7 +93,7 @@ class CreateUserPresenterTests: QuickSpec {
                 it("Sould call display user creation function") {
                     let spy = CreateUserDisplayLogicSpy()
                     sut.viewController = spy
-                    let response = CreateUser.CreateUser.Response(user: user)
+                    let response = CreateUser.CreateUser.Response(user: user, error: nil)
                     
                     sut.presentCreateUser(response: response)
                     expect(spy.displayCreateUserCalled).to(beTrue())

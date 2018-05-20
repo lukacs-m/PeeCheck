@@ -49,7 +49,7 @@ class RecordingWorkerTests: QuickSpec {
             context("Record micturition") {
                 it("Sould return bool after saving micturition") {
                     _ = sut.saveMicturitionTime(true)
-                    expect(sut.saveMicturitionTime(false)).to(beTrue())
+                    expect(sut.saveMicturitionTime(false)).to(beNil())
                 }
                 
                 it("Sould return nil at start of timer recording") {

@@ -40,3 +40,7 @@
 
 // MARK: - Recording Errors
 "could_not_save_micturition_error"="Une erreur est survenue pendant la sauvegarde de votre miction";
+"could_not_save_user_error"="Une erreur est survenue pendant la sauvegarde de vos informations";
+"could_not_fetch_user_error"="Une erreur est survenue pendant la récupération de vos informations";
+"could_not_delete_data_error"="Une erreur est survenue pendant la suppression de vos informations.";
+"could_not_fetch_micturition_error"="Une erreur est survenue pendant la récupération de vos mictions";

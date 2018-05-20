@@ -16,15 +16,29 @@ enum RealmConfig {
         schemaVersion: 1
     )
     
+    private static var testConfig = Realm.Configuration(
+        // Get the URL to the bundled file
+        fileURL: Realm.Configuration().fileURL!.deletingLastPathComponent().appendingPathComponent("test.realm"))
+    
     // MARK: - enum cases
     case main
+    case test
     
     // MARK: - current configuration
-    var configuration: Realm.Configuration {
+    private var configuration: Realm.Configuration {
         switch self {
         case .main:
             return RealmConfig.mainConfig
+        case .test:
+            return RealmConfig.testConfig
         }
+    }
+    
+   static func getConfig() -> Realm.Configuration {
+        if ProcessInfo.processInfo.environment.keys.contains("XCTestConfigurationFilePath") {
+            return RealmConfig.test.configuration
+        }
+        return RealmConfig.main.configuration
     }
 }
 

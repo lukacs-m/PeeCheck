@@ -139,6 +139,11 @@ extension AccountViewController {
     ///
     /// - Parameter viewModel: viewModel containing nil of information was deleted or error otherwise
     func displayDeletedUserInformation(viewModel: Account.DeleteUser.ViewModel) {
+        guard viewModel.error == nil else {
+            setUpToast(error: true)
+            self.view.makeToast("An error occured while deleting your informations")
+            return
+        }
         lblGenderData.text = "account_lbl_user_data_missing".localized()
         lblAgeData.text = "account_lbl_user_data_missing".localized()
     }

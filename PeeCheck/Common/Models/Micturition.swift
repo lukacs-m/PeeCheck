@@ -18,7 +18,7 @@ class Micturition: Object {
     }
     
     // MARK: - Persisted Properties
-    @objc dynamic var id = UUID().uuidString
+    @objc dynamic var id = UUID().uuidString //swiftlint:disable:this identifier_name
     @objc dynamic var duration = 0
     @objc dynamic var timestamp = Date().timeIntervalSinceReferenceDate
     
