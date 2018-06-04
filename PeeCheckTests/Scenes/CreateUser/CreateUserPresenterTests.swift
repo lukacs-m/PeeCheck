@@ -71,7 +71,7 @@ class CreateUserPresenterTests: QuickSpec {
                 it("Sould call display user to edit function") {
                     let spy = CreateUserDisplayLogicSpy()
                     sut.viewController = spy
-                    let response = CreateUser.EditUser.Response(user: user)
+                    let response = CreateUser.EditUser.Response(user: user, pickerRow: user.gender.hashValue)
                     
                     sut.presentUserToEdit(response: response)
                     expect(spy.displayUserToEditCalled).to(beTrue())
@@ -97,6 +97,28 @@ class CreateUserPresenterTests: QuickSpec {
                     
                     sut.presentCreateUser(response: response)
                     expect(spy.displayCreateUserCalled).to(beTrue())
+                }
+            }
+            
+            context("Display user update") {
+                it("Sould call display user update function") {
+                    let spy = CreateUserDisplayLogicSpy()
+                    sut.viewController = spy
+                    let response = CreateUser.UpdateUser.Response(user: user, error: nil)
+                    
+                    sut.presentUpdateUser(response: response)
+                    expect(spy.displayUpdateUserCalled).to(beTrue())
+                }
+            }
+            
+            context("Shuold activate the save button") {
+                it("Sould call display active save button function") {
+                    let spy = CreateUserDisplayLogicSpy()
+                    sut.viewController = spy
+                    let response = CreateUser.ActivateSaveButton.Response(valide: true)
+                    
+                    sut.presentCheckFormFields(response: response)
+                    expect(spy.activateSaveUserButtonCalled).to(beTrue())
                 }
             }
         }

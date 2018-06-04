@@ -31,7 +31,8 @@ class CreateUserPresenter: CreateUserPresentationLogic {
             userFields: CreateUser.UserFields(
                 age: userToEdit.age,
                 gender: userToEdit.gender
-            )
+            ),
+            pickerRow: response.pickerRow
         )
         viewController?.displayUserToEdit(viewModel: viewModel)
     }

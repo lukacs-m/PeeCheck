@@ -96,6 +96,7 @@ extension CreateUserViewController {
     func displayUserToEdit(viewModel: CreateUser.EditUser.ViewModel) {
         txtAge.text = "\(viewModel.userFields.age)"
         txtGender.text = viewModel.userFields.gender.localized()
+        genderMethodPicker.selectRow(viewModel.pickerRow, inComponent: 0, animated: true)
     }
 }
 

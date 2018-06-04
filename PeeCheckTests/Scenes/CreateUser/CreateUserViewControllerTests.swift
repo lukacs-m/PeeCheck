@@ -141,6 +141,16 @@ class CreateUserControllerTests: QuickSpec {
                     
                     expect(sut.txtAge.layer.borderColor).to(be(UIColor.red.cgColor))
                 }
+                
+                it("Should check information passed before asving user") {
+                    let createUserBusinessLogicSpy = CreateUserBusinessLogicSpy()
+                    sut.interactor = createUserBusinessLogicSpy
+                    loadview()
+                    let viewModel = CreateUser.UserAge.ViewModel(age: 25, valide: true)
+                    sut.displayUserAge(viewModel: viewModel)
+
+                    expect(createUserBusinessLogicSpy.checkFormFieldsCalled).to(beTrue())
+                }
             }
             
             context("When user information are displayed") {
@@ -174,6 +184,18 @@ class CreateUserControllerTests: QuickSpec {
                     sut.saveUser(UIButton())
                     
                     expect(createUserBusinessLogicSpy.createUserCalled).to(beTrue())
+                }
+                
+                it("Should call update user function") {
+                    let createUserBusinessLogicSpy = CreateUserBusinessLogicSpy()
+                    sut.interactor = createUserBusinessLogicSpy
+                    sut.interactor?.userToEdit = User(24, .woman)
+
+                    loadview()
+                    
+                    sut.saveUser(UIButton())
+                    
+                    expect(createUserBusinessLogicSpy.updateUserCalled).to(beTrue())
                 }
                 
                 it("Should create a user") {

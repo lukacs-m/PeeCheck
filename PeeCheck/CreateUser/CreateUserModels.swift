@@ -26,9 +26,11 @@ enum CreateUser {
         }
         struct Response {
             var user: User
+            var pickerRow: Int
         }
         struct ViewModel {
             var userFields: UserFields
+            var pickerRow: Int
         }
     }
     

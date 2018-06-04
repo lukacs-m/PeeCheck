@@ -44,7 +44,7 @@ class CreateUserInteractor: CreateUserBusinessLogic, CreateUserDataStore {
     
     func showUserToEdit(request: CreateUser.EditUser.Request) {
         if let userToEdit = userToEdit {
-            let response = CreateUser.EditUser.Response(user: userToEdit)
+            let response = CreateUser.EditUser.Response(user: userToEdit, pickerRow: userToEdit.gender.hashValue)
             presenter?.presentUserToEdit(response: response)
         }
     }
