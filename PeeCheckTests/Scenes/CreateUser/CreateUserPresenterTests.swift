@@ -37,9 +37,12 @@ class CreateUserPresenterTests: QuickSpec {
             // MARK: Test doubles
             
             class CreateUserDisplayLogicSpy: CreateUserDisplayLogic {
+          
                 var displayUserToEditCalled = false
                 var displayUserAgeCalled = false
                 var displayCreateUserCalled = false
+                var displayUpdateUserCalled = false
+                var activateSaveUserButtonCalled = false
                 
                 func displayUserToEdit(viewModel: CreateUser.EditUser.ViewModel) {
                     displayUserToEditCalled = true
@@ -52,6 +55,14 @@ class CreateUserPresenterTests: QuickSpec {
                 func displayCreateUser(viewModel: CreateUser.CreateUser.ViewModel) {
                     displayCreateUserCalled = true
                 }
+                
+                func displayUpdateUser(viewModel: CreateUser.UpdateUser.ViewModel) {
+                    displayUpdateUserCalled = true
+                }
+                
+                func activateSaveUserButton(viewModel: CreateUser.ActivateSaveButton.ViewModel) {
+                    activateSaveUserButtonCalled = true
+                }
             }
             
             // MARK: Tests
@@ -60,7 +71,7 @@ class CreateUserPresenterTests: QuickSpec {
                 it("Sould call display user to edit function") {
                     let spy = CreateUserDisplayLogicSpy()
                     sut.viewController = spy
-                    let response = CreateUser.EditUser.Response(user: user)
+                    let response = CreateUser.EditUser.Response(user: user, pickerRow: user.gender.hashValue)
                     
                     sut.presentUserToEdit(response: response)
                     expect(spy.displayUserToEditCalled).to(beTrue())
@@ -82,10 +93,32 @@ class CreateUserPresenterTests: QuickSpec {
                 it("Sould call display user creation function") {
                     let spy = CreateUserDisplayLogicSpy()
                     sut.viewController = spy
-                    let response = CreateUser.CreateUser.Response(user: user)
+                    let response = CreateUser.CreateUser.Response(user: user, error: nil)
                     
                     sut.presentCreateUser(response: response)
                     expect(spy.displayCreateUserCalled).to(beTrue())
+                }
+            }
+            
+            context("Display user update") {
+                it("Sould call display user update function") {
+                    let spy = CreateUserDisplayLogicSpy()
+                    sut.viewController = spy
+                    let response = CreateUser.UpdateUser.Response(user: user, error: nil)
+                    
+                    sut.presentUpdateUser(response: response)
+                    expect(spy.displayUpdateUserCalled).to(beTrue())
+                }
+            }
+            
+            context("Shuold activate the save button") {
+                it("Sould call display active save button function") {
+                    let spy = CreateUserDisplayLogicSpy()
+                    sut.viewController = spy
+                    let response = CreateUser.ActivateSaveButton.Response(valide: true)
+                    
+                    sut.presentCheckFormFields(response: response)
+                    expect(spy.activateSaveUserButtonCalled).to(beTrue())
                 }
             }
         }

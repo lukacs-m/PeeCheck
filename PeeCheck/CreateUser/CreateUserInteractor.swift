@@ -18,6 +18,8 @@ protocol CreateUserBusinessLogic {
     func showUserToEdit(request: CreateUser.EditUser.Request)
     func checkUserAge(request: CreateUser.UserAge.Request)
     func createUser(request: CreateUser.CreateUser.Request)
+    func updateUser(request: CreateUser.UpdateUser.Request)
+    func checkFormFields(request: CreateUser.ActivateSaveButton.Request)
 }
 
 protocol CreateUserDataStore {
@@ -42,7 +44,7 @@ class CreateUserInteractor: CreateUserBusinessLogic, CreateUserDataStore {
     
     func showUserToEdit(request: CreateUser.EditUser.Request) {
         if let userToEdit = userToEdit {
-            let response = CreateUser.EditUser.Response(user: userToEdit)
+            let response = CreateUser.EditUser.Response(user: userToEdit, pickerRow: userToEdit.gender.hashValue)
             presenter?.presentUserToEdit(response: response)
         }
     }
@@ -59,11 +61,30 @@ class CreateUserInteractor: CreateUserBusinessLogic, CreateUserDataStore {
         presenter?.presentUserAge(response: response)
     }
     
-    // MARK: Validate User age
+    // MARK: Validate form fields
+    func checkFormFields(request: CreateUser.ActivateSaveButton.Request) {
+        var valide = false
+        if let value = request.ageField, let valideAge = Int(value), valideAge  > 10, valideAge  < 140, request.genderField != nil {
+            valide = true
+        }
+        let response = CreateUser.ActivateSaveButton.Response(valide: valide)
+        presenter?.presentCheckFormFields(response: response)
+    }
+    
+    // MARK: Create new user
     func createUser(request: CreateUser.CreateUser.Request) {
-        userToEdit = worker.createUser(request.userFormFields)
-        let response = CreateUser.CreateUser.Response(user: userToEdit)
+        let results = worker.createUser(request.userFormFields.age, request.userFormFields.gender)
+        userToEdit = results.user
+        let response = CreateUser.CreateUser.Response(user: userToEdit, error: results.error)
         presenter?.presentCreateUser(response: response)
+    }
+    
+    // MARK: Edit existing user
+    func updateUser(request: CreateUser.UpdateUser.Request) {
+        let results = worker.updateUser(request.age, request.gender)
+        userToEdit = results.user
+        let response = CreateUser.UpdateUser.Response(user: userToEdit, error: results.error)
+        presenter?.presentUpdateUser(response: response)
     }
 }
 

@@ -12,7 +12,7 @@
 
 import UIKit
 
-class RecordingWorker {
+class RecordingWorker: MicturitionPersistenceInjected {
     
     private var timer: Timer?
     private var seconds = 0
@@ -29,7 +29,7 @@ class RecordingWorker {
     ///
     /// - Parameter isRecording: The recording status
     /// - Returns: Return nil while recording and a bolean once recording is finished. true if recording went well false otherwise
-    func saveMicturitionTime(_ isRecording: Bool) -> Bool? {
+    func saveMicturitionTime(_ isRecording: Bool) -> PersistenceErrors? {
         if isRecording {
             runTimer()
         } else {
@@ -63,10 +63,9 @@ extension RecordingWorker {
     /// Saves the micturition to database
     ///
     /// - Returns: A boolean depending on the success of the saving process. True if it worked or else false.
-    private func saveMiction() -> Bool {
-        //TODO: add realm to save micturition
-        
+    private func saveMiction() -> PersistenceErrors? {        
+        let newMicturition = Micturition(duration: seconds)
         resetTimer()
-        return true
+        return micturitionDataManager.saveMicturition(micturition: newMicturition)
     }
 }

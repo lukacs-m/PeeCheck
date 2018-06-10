@@ -16,6 +16,8 @@ protocol CreateUserPresentationLogic {
     func presentUserToEdit(response: CreateUser.EditUser.Response)
     func presentUserAge(response: CreateUser.UserAge.Response)
     func presentCreateUser(response: CreateUser.CreateUser.Response)
+    func presentUpdateUser(response: CreateUser.UpdateUser.Response)
+    func presentCheckFormFields(response: CreateUser.ActivateSaveButton.Response)
 }
 
 class CreateUserPresenter: CreateUserPresentationLogic {
@@ -29,7 +31,8 @@ class CreateUserPresenter: CreateUserPresentationLogic {
             userFields: CreateUser.UserFields(
                 age: userToEdit.age,
                 gender: userToEdit.gender
-            )
+            ),
+            pickerRow: response.pickerRow
         )
         viewController?.displayUserToEdit(viewModel: viewModel)
     }
@@ -44,7 +47,19 @@ class CreateUserPresenter: CreateUserPresentationLogic {
      // MARK: Present user creation
     
     func presentCreateUser(response: CreateUser.CreateUser.Response) {
-        let viewModel = CreateUser.CreateUser.ViewModel(user: response.user)
+        let viewModel = CreateUser.CreateUser.ViewModel(user: response.user, error: response.error)
         viewController?.displayCreateUser(viewModel: viewModel)
+    }
+    
+    // MARK: Present user update
+    
+    func presentUpdateUser(response: CreateUser.UpdateUser.Response) {
+        let viewModel = CreateUser.UpdateUser.ViewModel(user: response.user, error: response.error)
+        viewController?.displayUpdateUser(viewModel: viewModel)
+    }
+    
+    func presentCheckFormFields(response: CreateUser.ActivateSaveButton.Response) {
+        let viewModel = CreateUser.ActivateSaveButton.ViewModel(valide: response.valide)
+        viewController?.activateSaveUserButton(viewModel: viewModel)
     }
 }

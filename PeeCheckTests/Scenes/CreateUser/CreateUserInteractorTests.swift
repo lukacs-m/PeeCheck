@@ -10,7 +10,6 @@
 //  see http://clean-swift.com
 //
 
-
 import Quick
 import Nimble
 @testable import PeeCheck
@@ -37,11 +36,13 @@ class CreateUserInteractorTests: QuickSpec {
             
             // MARK: Test doubles
             
-            class CreateUserPresentationLogicSpy: CreateUserPresentationLogic
-            {
+            class CreateUserPresentationLogicSpy: CreateUserPresentationLogic {
+  
                 var presentUserToEditCalled = false
                 var presentUserAgeCalled = false
                 var presentCreateUserCalled = false
+                var presentUpdateUserCalled = false
+                var presentCheckFormFieldsCalled = false
 
                 func presentUserToEdit(response: CreateUser.EditUser.Response) {
                     presentUserToEditCalled = true
@@ -54,6 +55,14 @@ class CreateUserInteractorTests: QuickSpec {
                 func presentCreateUser(response: CreateUser.CreateUser.Response) {
                     presentCreateUserCalled = true
                 }
+                
+                func presentUpdateUser(response: CreateUser.UpdateUser.Response) {
+                    presentUpdateUserCalled = true
+                }
+                
+                func presentCheckFormFields(response: CreateUser.ActivateSaveButton.Response) {
+                    presentCheckFormFieldsCalled = true
+                }
             }
             
             // MARK: Tests
@@ -64,6 +73,7 @@ class CreateUserInteractorTests: QuickSpec {
                     let spy = CreateUserPresentationLogicSpy()
                     sut.presenter = spy
                     let request = CreateUser.EditUser.Request()
+                    sut.userToEdit = nil
                     
                     sut.showUserToEdit(request: request)
                     expect(spy.presentUserToEditCalled).to(beFalse())
@@ -80,7 +90,7 @@ class CreateUserInteractorTests: QuickSpec {
                 }
             }
             
-            context("Check user age") {
+            context("Check user information before saving") {
                 it("Sould call the present user age function") {
                     let spy = CreateUserPresentationLogicSpy()
                     sut.presenter = spy
@@ -89,16 +99,34 @@ class CreateUserInteractorTests: QuickSpec {
                     sut.checkUserAge(request: request)
                     expect(spy.presentUserAgeCalled).to(beTrue())
                 }
+                
+                it("Sould call the present user age function") {
+                    let spy = CreateUserPresentationLogicSpy()
+                    sut.presenter = spy
+                    let request = CreateUser.ActivateSaveButton.Request(ageField: "25", genderField: "women")
+                    
+                    sut.checkFormFields(request: request)
+                    expect(spy.presentCheckFormFieldsCalled).to(beTrue())
+                }
             }
             
-            context("Check user age") {
-                it("Sould call the present user age function") {
+            context("Create or update user") {
+                it("Sould call the present create user function") {
                     let spy = CreateUserPresentationLogicSpy()
                     sut.presenter = spy
                     let request = CreateUser.CreateUser.Request(userFormFields: userFields)
                     
                     sut.createUser(request: request)
                     expect(spy.presentCreateUserCalled).to(beTrue())
+                }
+                
+                it("Sould call the present update user function") {
+                    let spy = CreateUserPresentationLogicSpy()
+                    sut.presenter = spy
+                    let request = CreateUser.UpdateUser.Request(age: 25, gender: .woman)
+                    
+                    sut.updateUser(request: request)
+                    expect(spy.presentUpdateUserCalled).to(beTrue())
                 }
                 
                 it("Sould fill up user to edit") {

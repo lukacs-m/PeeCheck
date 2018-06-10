@@ -37,7 +37,8 @@ class AccountWorkerTests: QuickSpec {
             
             context("Get user information") {
                 it("Sould return nil when no user was found") {
-                    expect(sut.getUser()).to(beNil())
+                    let results = sut.getUser()
+                    expect(results.user).to(beNil())
                 }
             }
             

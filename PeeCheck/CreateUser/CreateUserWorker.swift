@@ -12,9 +12,13 @@
 
 import UIKit
 
-class CreateUserWorker {
+class CreateUserWorker: UserPersistenceInjected {
     
-    func createUser(_ userInfo: CreateUser.UserFields) -> User? {
-        return User(userInfo.age, userInfo.gender)
+    func createUser(_ age: Int, _ gender: Gender) -> (user: User?, error: PersistenceErrors?) {
+        return userDataManager.saveUser(age, gender)
+    }
+    
+    func updateUser(_ age: Int, _ gender: Gender) -> (user: User?, error: PersistenceErrors?) {
+        return userDataManager.updateUser(age, gender)
     }
 }

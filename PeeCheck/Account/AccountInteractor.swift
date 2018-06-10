@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol AccountBusinessLogic {
     func fetchUser(request: Account.FetchUser.Request)
@@ -29,7 +30,12 @@ class AccountInteractor: AccountBusinessLogic, AccountDataStore {
     // MARK: Fetch user
     
     func fetchUser(request: Account.FetchUser.Request) {
-        let response = Account.FetchUser.Response(user: user != nil ? user : worker.getUser())
+        var results: (user: User?, error: PersistenceErrors?)? = nil
+        if user == nil {
+            results = worker.getUser()
+            user = results?.user
+        }
+        let response = Account.FetchUser.Response(user: user != nil ? user : results?.user, error: results?.error)
         presenter?.presentUser(response: response)
     }
     
@@ -37,6 +43,7 @@ class AccountInteractor: AccountBusinessLogic, AccountDataStore {
     
     func deleteUser(request: Account.DeleteUser.Request) {
         let response = Account.DeleteUser.Response(error: worker.deleteUser())
+        user = nil
         presenter?.presentDeletedUser(response: response)
     }
 }

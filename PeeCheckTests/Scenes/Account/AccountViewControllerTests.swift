@@ -101,7 +101,7 @@ class AccountViewControllerTests: QuickSpec {
                 
                 it("Should erase user information being displayed") {
                     loadview()
-                    let viewModel = Account.FetchUser.ViewModel(user: User(24, .men))
+                    let viewModel = Account.FetchUser.ViewModel(user: User(24, .men), error: nil)
                     sut.displayUserInformation(viewModel: viewModel)
                     
                     sut.deleteUserInformationAction(UIButton())
@@ -114,7 +114,7 @@ class AccountViewControllerTests: QuickSpec {
             context("When user information are displayed") {
                 it("Shoul not have any user information displayed") {
                     loadview()
-                    let viewModel = Account.FetchUser.ViewModel(user: nil)
+                    let viewModel = Account.FetchUser.ViewModel(user: nil, error: nil)
                     sut.displayUserInformation(viewModel: viewModel)
                     
                     expect(sut.lblAgeData.text) == "account_lbl_user_data_missing".localized()
@@ -124,11 +124,11 @@ class AccountViewControllerTests: QuickSpec {
                 it("Should have user information displayed") {
                     loadview()
                     let user = User(24, .men)
-                    let viewModel = Account.FetchUser.ViewModel(user: user)
+                    let viewModel = Account.FetchUser.ViewModel(user: user, error: nil)
                     sut.displayUserInformation(viewModel: viewModel)
                     
-                    expect(sut.lblAgeData.text) == "\(user.age ?? 24)"
-                    expect(sut.lblGenderData.text) == user.gender?.localized()
+                    expect(sut.lblAgeData.text) == "\(user.age)"
+                    expect(sut.lblGenderData.text) == user.gender.localized()
                 }
             }
             

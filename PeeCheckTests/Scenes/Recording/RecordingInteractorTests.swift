@@ -29,8 +29,7 @@ class RecordingInteractorTests: QuickSpec {
             
             // MARK: Test setup
             
-            func setupRecordingInteractor()
-            {
+            func setupRecordingInteractor() {
                 sut = RecordingInteractor()
             }
             
@@ -49,7 +48,6 @@ class RecordingInteractorTests: QuickSpec {
                     presentRecordMicturitionCalled = true
                 }
             }
-            
             
             // MARK: Tests
             

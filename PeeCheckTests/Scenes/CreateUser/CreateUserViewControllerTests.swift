@@ -10,7 +10,6 @@
 //  see http://clean-swift.com
 //
 
-
 import Quick
 import Nimble
 import ChameleonFramework
@@ -50,12 +49,14 @@ class CreateUserControllerTests: QuickSpec {
             // MARK: Test doubles
             
             class CreateUserBusinessLogicSpy: CreateUserBusinessLogic {
+                
                 var genderTypes = [String]()
                 var userToEdit: User?
                 var showUserToEditCalled = false
                 var checkUserAgeCalled = false
                 var createUserCalled = false
-                
+                var updateUserCalled = false
+                var checkFormFieldsCalled = false
                 
                 func showUserToEdit(request: CreateUser.EditUser.Request) {
                     showUserToEditCalled = true
@@ -67,6 +68,14 @@ class CreateUserControllerTests: QuickSpec {
                 
                 func createUser(request: CreateUser.CreateUser.Request) {
                     createUserCalled = true
+                }
+                
+                func updateUser(request: CreateUser.UpdateUser.Request) {
+                    updateUserCalled = true
+                }
+                
+                func checkFormFields(request: CreateUser.ActivateSaveButton.Request) {
+                    checkFormFieldsCalled = true
                 }
             }
             
@@ -132,6 +141,16 @@ class CreateUserControllerTests: QuickSpec {
                     
                     expect(sut.txtAge.layer.borderColor).to(be(UIColor.red.cgColor))
                 }
+                
+                it("Should check information passed before asving user") {
+                    let createUserBusinessLogicSpy = CreateUserBusinessLogicSpy()
+                    sut.interactor = createUserBusinessLogicSpy
+                    loadview()
+                    let viewModel = CreateUser.UserAge.ViewModel(age: 25, valide: true)
+                    sut.displayUserAge(viewModel: viewModel)
+
+                    expect(createUserBusinessLogicSpy.checkFormFieldsCalled).to(beTrue())
+                }
             }
             
             context("When user information are displayed") {
@@ -148,8 +167,8 @@ class CreateUserControllerTests: QuickSpec {
                     sut.interactor?.userToEdit = user
                     loadview()
                     
-                    expect(sut.txtAge.text) == "\(user.age ?? 24)"
-                    expect(sut.txtGender.text) == user.gender?.localized()
+                    expect(sut.txtAge.text) == "\(user.age)"
+                    expect(sut.txtGender.text) == user.gender.localized()
                 }
             }
             
@@ -167,8 +186,19 @@ class CreateUserControllerTests: QuickSpec {
                     expect(createUserBusinessLogicSpy.createUserCalled).to(beTrue())
                 }
                 
-                it("Should create a user") {
+                it("Should call update user function") {
+                    let createUserBusinessLogicSpy = CreateUserBusinessLogicSpy()
+                    sut.interactor = createUserBusinessLogicSpy
+                    sut.interactor?.userToEdit = User(24, .woman)
 
+                    loadview()
+                    
+                    sut.saveUser(UIButton())
+                    
+                    expect(createUserBusinessLogicSpy.updateUserCalled).to(beTrue())
+                }
+                
+                it("Should create a user") {
                     loadview()
                     sut.txtAge.text = "\(50)"
                     sut.txtGender.text = "woman"
@@ -191,7 +221,6 @@ class CreateUserControllerTests: QuickSpec {
                     sut.saveUser(UIButton())
                     
                     expect(createUserRouterSpy.routeToAccountCalled).to(beTrue())
-    
                 }
             }
         }

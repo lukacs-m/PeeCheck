@@ -30,7 +30,7 @@ class RecordingPresenter: RecordingPresentationLogic {
     // MARK: Set recording button viewmodel information
     
     func presentRecordMicturition(response: Recording.RecordMicturition.Response) {
-        let viewModel = Recording.RecordMicturition.ViewModel(isRecording: response.isRecording)
+        let viewModel = Recording.RecordMicturition.ViewModel(isRecording: response.isRecording, error: response.savedMicturition)
         viewController?.updateRecordBtnDisplay(viewModel: viewModel)
     }
 }

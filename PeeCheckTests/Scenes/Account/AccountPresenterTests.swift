@@ -55,7 +55,7 @@ class AccountPresenterTests: QuickSpec {
                 it("Sould display user information") {
                     let spy = AccountDisplayLogicSpy()
                     sut.viewController = spy
-                    let response = Account.FetchUser.Response(user: nil)
+                    let response = Account.FetchUser.Response(user: nil, error: nil)
                     
                     sut.presentUser(response: response)
                     expect(spy.displayUserInformationCalled).to(beTrue())

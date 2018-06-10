@@ -20,9 +20,11 @@ enum Account {
         }
         struct Response {
             var user: User?
+            var error: PersistenceErrors?
         }
         struct ViewModel {
             var user: User?
+            var error: PersistenceErrors?
         }
     }
     
@@ -31,11 +33,11 @@ enum Account {
         }
         
         struct Response {
-            var error: Error?
+            var error: PersistenceErrors?
         }
         
         struct ViewModel {
-            var error: Error?
+            var error: PersistenceErrors?
         }
     }
 }

@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 protocol AccountDisplayLogic: class {
     func displayUserInformation(viewModel: Account.FetchUser.ViewModel)
@@ -20,6 +21,7 @@ protocol AccountDisplayLogic: class {
 class AccountViewController: UIViewController, AccountDisplayLogic {
     var interactor: AccountBusinessLogic?
     var router: (NSObjectProtocol & AccountRoutingLogic & AccountDataPassing)?
+    private var style = ToastStyle()
     
     // MARK: Outlets
     
@@ -65,10 +67,18 @@ class AccountViewController: UIViewController, AccountDisplayLogic {
         lblAgeData.text = "account_lbl_user_data_missing".localized()
         lblGenderTitle.text = "account_lbl_gender_title".localized()
         lblGenderData.text = "account_lbl_user_data_missing".localized()
-        btnEdit.setTitle("account_btn_edit".localized(), for: .normal)
+        btnEdit.setTitle("account_btn_create".localized(), for: .normal)
         btnEdit.setUpMainButtonUI()
         btnDeleteData.setTitle("account_btn_delete".localized(), for: .normal)
         btnDeleteData.setUpMainButtonUI()
+        setUpToast()
+    }
+    
+    private func setUpToast(error: Bool = false) {
+        style.messageColor = .white
+        style.backgroundColor = !error ? Style.Color.MainBlue : Style.Color.MainRed
+        ToastManager.shared.style = style
+        ToastManager.shared.isTapToDismissEnabled = true
     }
     
     // MARK: View lifecycle
@@ -97,15 +107,22 @@ extension AccountViewController {
     ///
     /// - Parameter viewModel: viewModel containing information to display
     func displayUserInformation(viewModel: Account.FetchUser.ViewModel) {
+        guard viewModel.error == nil else {
+            setUpToast(error: true)
+            self.view.makeToast("An error occured while getting your information")
+            return
+        }
         guard let user = viewModel.user else {
             DispatchQueue.main.async {
                 self.lblGenderData.text = "account_lbl_user_data_missing".localized()
                 self.lblAgeData.text = "account_lbl_user_data_missing".localized()
+                self.btnEdit.setTitle("account_btn_create".localized(), for: .normal)
             }
             return
         }
-        lblGenderData.text = user.gender != nil ? user.gender?.localized() ?? "account_lbl_user_data_missing".localized() : "account_lbl_user_data_missing".localized()
-        lblAgeData.text = user.age != nil ? "\(user.age ?? 0)" : "account_lbl_user_data_missing".localized()
+        lblGenderData.text = user.gender.localized()
+        lblAgeData.text = "\(user.age)"
+        btnEdit.setTitle("account_btn_edit".localized(), for: .normal)
     }
 }
 
@@ -122,6 +139,11 @@ extension AccountViewController {
     ///
     /// - Parameter viewModel: viewModel containing nil of information was deleted or error otherwise
     func displayDeletedUserInformation(viewModel: Account.DeleteUser.ViewModel) {
+        guard viewModel.error == nil else {
+            setUpToast(error: true)
+            self.view.makeToast("An error occured while deleting your informations")
+            return
+        }
         lblGenderData.text = "account_lbl_user_data_missing".localized()
         lblAgeData.text = "account_lbl_user_data_missing".localized()
     }

@@ -17,6 +17,7 @@ public enum Style {
         public static let White = UIColor.white
         public static let MainBlue = FlatSkyBlue()
         public static let MainGreen = FlatGreenDark()
+        public static let MainRed = FlatRedDark()
     }
     
     // MARK: - Size

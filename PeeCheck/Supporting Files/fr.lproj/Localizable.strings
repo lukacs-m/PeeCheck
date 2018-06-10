@@ -22,6 +22,7 @@
 "did_awake_true_label"="Oui";
 "did_awake_false_label"="Non";
 "did_awake_label_title"="Vous etes vous réveillé pour aller au toilet?";
+"did_save_micturition_label"="Votre miction a été sauvegardé";
 
 // MARK: - Account View Controller
 
@@ -29,6 +30,17 @@
 "account_lbl_age_title"="Age: ";
 "account_lbl_gender_title"="Sex: ";
 "account_btn_edit"="Éditer les informations";
+"account_btn_create"="Créer votre compte";
 "account_btn_delete"="Supprimer toutes les informations";
 "account_navbar_title"="Votre compte";
 "account_lbl_user_data_missing"="Indisponible";
+
+// MARK: - Create User Controller
+"save_user_information"="Sauvegardez vos informations";
+
+// MARK: - Recording Errors
+"could_not_save_micturition_error"="Une erreur est survenue pendant la sauvegarde de votre miction";
+"could_not_save_user_error"="Une erreur est survenue pendant la sauvegarde de vos informations";
+"could_not_fetch_user_error"="Une erreur est survenue pendant la récupération de vos informations";
+"could_not_delete_data_error"="Une erreur est survenue pendant la suppression de vos informations.";
+"could_not_fetch_micturition_error"="Une erreur est survenue pendant la récupération de vos mictions";

@@ -15,8 +15,8 @@ import UIKit
 enum CreateUser {
     
     struct UserFields {
-        var age: Int?
-        var gender: Gender?
+        var age: Int
+        var gender: Gender
     }
     
     // MARK: Use cases
@@ -26,9 +26,28 @@ enum CreateUser {
         }
         struct Response {
             var user: User
+            var pickerRow: Int
         }
         struct ViewModel {
             var userFields: UserFields
+            var pickerRow: Int
+        }
+    }
+    
+    // MARK: Use cases
+    
+    enum UpdateUser {
+        struct Request {
+            var age: Int
+            var gender: Gender
+        }
+        struct Response {
+            var user: User?
+            var error: PersistenceErrors?
+        }
+        struct ViewModel {
+            var user: User?
+            var error: PersistenceErrors?
         }
     }
     
@@ -52,9 +71,24 @@ enum CreateUser {
         }
         struct Response {
             var user: User?
+            var error: PersistenceErrors?
         }
         struct ViewModel {
             var user: User?
+            var error: PersistenceErrors?
+        }
+    }
+    
+    enum ActivateSaveButton {
+        struct Request {
+            var ageField: String?
+            var genderField: String?
+        }
+        struct Response {
+            var valide: Bool
+        }
+        struct ViewModel {
+            var valide: Bool
         }
     }
 }
