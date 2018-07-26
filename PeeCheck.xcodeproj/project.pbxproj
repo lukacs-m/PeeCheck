@@ -27,6 +27,14 @@
 		5B3F38BD20AB9598006E573C /* PersistenceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F38BC20AB9598006E573C /* PersistenceErrors.swift */; };
 		5B3F38C020AB9F42006E573C /* PersistenceErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F38BF20AB9F42006E573C /* PersistenceErrorTests.swift */; };
 		5B3F38C520ABAB37006E573C /* RealmManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F38C420ABAB37006E573C /* RealmManagerMock.swift */; };
+		5B40EBB020CD7F9B00EE2AC7 /* ChartsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B40EBAF20CD7F9B00EE2AC7 /* ChartsStoryboard.storyboard */; };
+		5B40EBB320CD800300EE2AC7 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40EBB220CD800300EE2AC7 /* RouterProtocol.swift */; };
+		5B40EBBA20CD883300EE2AC7 /* ChartsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40EBB420CD883300EE2AC7 /* ChartsPresenter.swift */; };
+		5B40EBBB20CD883300EE2AC7 /* ChartsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40EBB520CD883300EE2AC7 /* ChartsWorker.swift */; };
+		5B40EBBC20CD883300EE2AC7 /* ChartsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40EBB620CD883300EE2AC7 /* ChartsRouter.swift */; };
+		5B40EBBD20CD883300EE2AC7 /* ChartsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40EBB720CD883300EE2AC7 /* ChartsModels.swift */; };
+		5B40EBBE20CD883300EE2AC7 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40EBB820CD883300EE2AC7 /* ChartsViewController.swift */; };
+		5B40EBBF20CD883300EE2AC7 /* ChartsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40EBB920CD883300EE2AC7 /* ChartsInteractor.swift */; };
 		5B74AE17209A7DF100FAAC0F /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74AE16209A7DF100FAAC0F /* UIButton+Extensions.swift */; };
 		5B91379A208FEBD40041CED2 /* RoundButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B913799208FEBD40041CED2 /* RoundButtonTests.swift */; };
 		5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A5209490300041CED2 /* UIView+Extensions.swift */; };
@@ -120,6 +128,14 @@
 		5B3F38BC20AB9598006E573C /* PersistenceErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceErrors.swift; sourceTree = "<group>"; };
 		5B3F38BF20AB9F42006E573C /* PersistenceErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceErrorTests.swift; sourceTree = "<group>"; };
 		5B3F38C420ABAB37006E573C /* RealmManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerMock.swift; sourceTree = "<group>"; };
+		5B40EBAF20CD7F9B00EE2AC7 /* ChartsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChartsStoryboard.storyboard; sourceTree = "<group>"; };
+		5B40EBB220CD800300EE2AC7 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		5B40EBB420CD883300EE2AC7 /* ChartsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsPresenter.swift; sourceTree = "<group>"; };
+		5B40EBB520CD883300EE2AC7 /* ChartsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsWorker.swift; sourceTree = "<group>"; };
+		5B40EBB620CD883300EE2AC7 /* ChartsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRouter.swift; sourceTree = "<group>"; };
+		5B40EBB720CD883300EE2AC7 /* ChartsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsModels.swift; sourceTree = "<group>"; };
+		5B40EBB820CD883300EE2AC7 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		5B40EBB920CD883300EE2AC7 /* ChartsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsInteractor.swift; sourceTree = "<group>"; };
 		5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		5B74AE16209A7DF100FAAC0F /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		5B913799208FEBD40041CED2 /* RoundButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonTests.swift; sourceTree = "<group>"; };
@@ -308,6 +324,28 @@
 				5B3F38C420ABAB37006E573C /* RealmManagerMock.swift */,
 			);
 			path = RealmManager;
+			sourceTree = "<group>";
+		};
+		5B40EBA220CD7F4500EE2AC7 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				5B40EBAF20CD7F9B00EE2AC7 /* ChartsStoryboard.storyboard */,
+				5B40EBB420CD883300EE2AC7 /* ChartsPresenter.swift */,
+				5B40EBB520CD883300EE2AC7 /* ChartsWorker.swift */,
+				5B40EBB620CD883300EE2AC7 /* ChartsRouter.swift */,
+				5B40EBB720CD883300EE2AC7 /* ChartsModels.swift */,
+				5B40EBB820CD883300EE2AC7 /* ChartsViewController.swift */,
+				5B40EBB920CD883300EE2AC7 /* ChartsInteractor.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		5B40EBB120CD7FD500EE2AC7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5B40EBB220CD800300EE2AC7 /* RouterProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		5B913798208FEBA30041CED2 /* Designables */ = {
@@ -543,6 +581,7 @@
 		5BB9D8EE204EE72E00C5ADA1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5B40EBA220CD7F4500EE2AC7 /* Charts */,
 				5B9137C92098E7BA0041CED2 /* CreateUser */,
 				5B9137A7209681EA0041CED2 /* Account */,
 				5B201FA52076E18E0063EA25 /* Recording */,
@@ -562,6 +601,7 @@
 		5BB9D8F0204EE75900C5ADA1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5B40EBB120CD7FD500EE2AC7 /* Protocols */,
 				5BA6A97220A7B18B005BCA63 /* Errors */,
 				5BA6A96F20A7AE75005BCA63 /* RealmManager */,
 				5B9137BB2098C4940041CED2 /* Utils */,
@@ -714,6 +754,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B40EBB020CD7F9B00EE2AC7 /* ChartsStoryboard.storyboard in Resources */,
 				5B9137D82099239F0041CED2 /* CreateUserViewController.xib in Resources */,
 				5BB9D8C9204EE3D200C5ADA1 /* LaunchScreen.storyboard in Resources */,
 				5BB9D8F5204EE82700C5ADA1 /* Localizable.strings in Resources */,
@@ -915,15 +956,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B40EBBD20CD883300EE2AC7 /* ChartsModels.swift in Sources */,
 				5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */,
 				5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */,
 				5BA6A97120A7AE93005BCA63 /* UserRealmManager.swift in Sources */,
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
+				5B40EBBF20CD883300EE2AC7 /* ChartsInteractor.swift in Sources */,
 				5BA6A96E20A7ABDB005BCA63 /* Micturition.swift in Sources */,
+				5B40EBBA20CD883300EE2AC7 /* ChartsPresenter.swift in Sources */,
 				5B9137D42098E8240041CED2 /* CreateUserViewController.swift in Sources */,
 				5BA6A97620A7B564005BCA63 /* RealmConfig.swift in Sources */,
 				5B9724BA20A26B0D00D4C7E5 /* UIViewController+Extensions.swift in Sources */,
 				5B21DAF7208D3C3F005321EC /* TabBarControllers.swift in Sources */,
+				5B40EBB320CD800300EE2AC7 /* RouterProtocol.swift in Sources */,
 				5B9137BA2098BFF50041CED2 /* RoundedCornerButton.swift in Sources */,
 				5B9137BD2098C4A20041CED2 /* Style.swift in Sources */,
 				5B201FAF2076E1E60063EA25 /* RecordingModels.swift in Sources */,
@@ -932,9 +977,11 @@
 				5B9137D52098E8240041CED2 /* CreateUserInteractor.swift in Sources */,
 				5B21131620B1DC2D00B49536 /* MicturitionRealmManager.swift in Sources */,
 				5B9137B0209682140041CED2 /* AccountRouter.swift in Sources */,
+				5B40EBBC20CD883300EE2AC7 /* ChartsRouter.swift in Sources */,
 				5B9137AF209682140041CED2 /* AccountWorker.swift in Sources */,
 				5B74AE17209A7DF100FAAC0F /* UIButton+Extensions.swift in Sources */,
 				5BB8650C2085E528002EBB5F /* main.swift in Sources */,
+				5B40EBBE20CD883300EE2AC7 /* ChartsViewController.swift in Sources */,
 				5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */,
 				5B201FAC2076E1E60063EA25 /* RecordingPresenter.swift in Sources */,
 				5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */,
@@ -949,6 +996,7 @@
 				5B9137B3209682140041CED2 /* AccountInteractor.swift in Sources */,
 				5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */,
 				5B3F38BD20AB9598006E573C /* PersistenceErrors.swift in Sources */,
+				5B40EBBB20CD883300EE2AC7 /* ChartsWorker.swift in Sources */,
 				5B9137B82097DB110041CED2 /* User.swift in Sources */,
 				5B9137D22098E8240041CED2 /* CreateUserRouter.swift in Sources */,
 				5B9137D32098E8240041CED2 /* CreateUserModels.swift in Sources */,

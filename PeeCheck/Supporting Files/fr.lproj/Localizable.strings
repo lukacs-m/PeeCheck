@@ -37,6 +37,9 @@
 
 // MARK: - Create User Controller
 "save_user_information"="Sauvegardez vos informations";
+"edit_user_information"="Editez vos informations";
+"age_label"="Veuillez indiquer votre age";
+"gender_label"="Veuillez renseigner votre sexe";
 
 // MARK: - Recording Errors
 "could_not_save_micturition_error"="Une erreur est survenue pendant la sauvegarde de votre miction";
