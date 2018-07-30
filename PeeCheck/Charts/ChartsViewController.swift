@@ -14,14 +14,14 @@ import UIKit
 
 protocol ChartsDisplayLogic: class
 {
-    func displaySomething(viewModel: Charts.Something.ViewModel)
+    func displayChartsView(viewModel: Charts.FetchChartsViews.ViewModel)
 }
 
 class ChartsViewController: UITableViewController, ChartsDisplayLogic
 {
     var interactor: ChartsBusinessLogic?
     var router: (NSObjectProtocol & ChartsRoutingLogic & ChartsDataPassing)?
-    var subviews = [["name": "Record","controler": UIViewController()]]
+    var displayedViewsControllers: [Charts.FetchChartsViews.ViewModel.DisplayedView] = []
     
     // MARK: Object lifecycle
     
@@ -50,28 +50,34 @@ class ChartsViewController: UITableViewController, ChartsDisplayLogic
         router.dataStore = interactor
     }
     
+    private func setUpUI() {
+        self.navigationItem.leftItemsSupplementBackButton = true
+        self.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        tableView.register(UINib(nibName: "ChartsTableViewCell", bundle: nil), forCellReuseIdentifier: "ChartsTableViewCell")
+        
+        self.title = "charts_menu_title".localized()
+    }
+    
     // MARK: View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.leftItemsSupplementBackButton = true
-        self.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-        doSomething()
+        setUpUI()
+        fetchChartsViews()
     }
     
     // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    func doSomething()
-    {
-        let request = Charts.Something.Request()
-        interactor?.doSomething(request: request)
+        
+    func fetchChartsViews() {
+        let request = Charts.FetchChartsViews.Request()
+        interactor?.fetchChartsViews(request: request)
     }
     
-    func displaySomething(viewModel: Charts.Something.ViewModel)
-    {
-        //nameTextField.text = viewModel.name
+    func  displayChartsView(viewModel: Charts.FetchChartsViews.ViewModel) {
+        displayedViewsControllers = viewModel.displayedViewControllers
+        tableView.reloadData()
+        let displayedChartPage = displayedViewsControllers[0]
+        splitViewController?.viewControllers[1] = displayedChartPage.viewController
     }
 }
 
@@ -82,27 +88,23 @@ extension ChartsViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return subviews.count
+        return displayedViewsControllers.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-//        let displayedChartPage = subviews[indexPath.row]
-        var cell = tableView.dequeueReusableCell(withIdentifier: "ChartsTableviewCell")
-        if cell == nil {
-            cell = UITableViewCell(style: .value1, reuseIdentifier: "ChartsTableviewCell")
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let displayedChartPage = displayedViewsControllers[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChartsTableViewCell") as? ChartsTableViewCell else {
+            return UITableViewCell()
         }
-        cell?.textLabel?.text =  "record"
-        return cell!
+
+        cell.updateUI(displayedChartPage.name.uppercased())
+        return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-//        let displayedOrder = displayedOrders[indexPath.row]
-//        router?.routeToShowOrder(for: displayedOrder.id)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let displayedChartPage = displayedViewsControllers[indexPath.row]
 
-        
-        splitViewController?.showDetailViewController(AccountViewController(), sender: nil)
+        splitViewController?.showDetailViewController(displayedChartPage.viewController, sender: nil)
         
     }
 }

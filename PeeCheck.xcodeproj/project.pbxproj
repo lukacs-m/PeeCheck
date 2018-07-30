@@ -85,6 +85,8 @@
 		5BB9D8C9204EE3D200C5ADA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8C7204EE3D200C5ADA1 /* LaunchScreen.storyboard */; };
 		5BB9D8F5204EE82700C5ADA1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9D8F7204EE82700C5ADA1 /* Localizable.strings */; };
 		5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */; };
+		5BC5AEF8210E497A001ABA7F /* ChartsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEF6210E497A001ABA7F /* ChartsTableViewCell.swift */; };
+		5BC5AEF9210E497A001ABA7F /* ChartsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEF7210E497A001ABA7F /* ChartsTableViewCell.xib */; };
 		7E828030DE0A63143A66E166 /* Pods_PeeCheckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CF96DD458CDE4EFA8B382 /* Pods_PeeCheckUITests.framework */; };
 		9549CE34E9014B4205D25413 /* Pods_PeeCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 444058EC6B292B8FF016DB99 /* Pods_PeeCheck.framework */; };
 /* End PBXBuildFile section */
@@ -194,6 +196,8 @@
 		5BB9D8F8204EE83D00C5ADA1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BB9D8F9204EE8CF00C5ADA1 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		5BC5AEF6210E497A001ABA7F /* ChartsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTableViewCell.swift; sourceTree = "<group>"; };
+		5BC5AEF7210E497A001ABA7F /* ChartsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsTableViewCell.xib; sourceTree = "<group>"; };
 		901DC64AB7C572D4E62F276D /* Pods-PeeCheckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeeCheckUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9E21308C9B2077CCC24EEB1F /* Pods-PeeCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeeCheck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeeCheck/Pods-PeeCheck.debug.xcconfig"; sourceTree = "<group>"; };
 		BA2CF96DD458CDE4EFA8B382 /* Pods_PeeCheckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeeCheckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,6 +333,7 @@
 		5B40EBA220CD7F4500EE2AC7 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				5BC5AEF5210E492E001ABA7F /* UI Elements */,
 				5B40EBAF20CD7F9B00EE2AC7 /* ChartsStoryboard.storyboard */,
 				5B40EBB420CD883300EE2AC7 /* ChartsPresenter.swift */,
 				5B40EBB520CD883300EE2AC7 /* ChartsWorker.swift */,
@@ -625,6 +630,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		5BC5AEF5210E492E001ABA7F /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				5BC5AEF6210E497A001ABA7F /* ChartsTableViewCell.swift */,
+				5BC5AEF7210E497A001ABA7F /* ChartsTableViewCell.xib */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -762,6 +776,7 @@
 				5BB9D8C6204EE3D200C5ADA1 /* Assets.xcassets in Resources */,
 				5B9137B52096823A0041CED2 /* AccountViewController.xib in Resources */,
 				5BB9D8C4204EE3D200C5ADA1 /* Main.storyboard in Resources */,
+				5BC5AEF9210E497A001ABA7F /* ChartsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -956,6 +971,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC5AEF8210E497A001ABA7F /* ChartsTableViewCell.swift in Sources */,
 				5B40EBBD20CD883300EE2AC7 /* ChartsModels.swift in Sources */,
 				5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */,
 				5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */,

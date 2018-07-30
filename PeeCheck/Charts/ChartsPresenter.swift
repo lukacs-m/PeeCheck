@@ -14,18 +14,25 @@ import UIKit
 
 protocol ChartsPresentationLogic
 {
-  func presentSomething(response: Charts.Something.Response)
+  func presentFetchChartsViews(response: Charts.FetchChartsViews.Response)
 }
 
-class ChartsPresenter: ChartsPresentationLogic
-{
+class ChartsPresenter: ChartsPresentationLogic {
   weak var viewController: ChartsDisplayLogic?
   
   // MARK: Do something
   
-  func presentSomething(response: Charts.Something.Response)
-  {
-    let viewModel = Charts.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
+  func presentFetchChartsViews(response: Charts.FetchChartsViews.Response) {
+    
+    var displayedViewControllers: [Charts.FetchChartsViews.ViewModel.DisplayedView] = []    
+    for (name, viewC) in response.viewControllers {
+        let name = name
+        let viewC = viewC
+        let displayedViewController = Charts.FetchChartsViews.ViewModel.DisplayedView(name: name, viewController: viewC)
+        displayedViewControllers.append(displayedViewController)
+    }
+
+    let viewModel = Charts.FetchChartsViews.ViewModel(displayedViewControllers: displayedViewControllers)
+    viewController?.displayChartsView(viewModel: viewModel)
   }
 }

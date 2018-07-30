@@ -12,20 +12,23 @@
 
 import UIKit
 
-enum Charts
-{
+enum Charts {
   // MARK: Use cases
   
-  enum Something
-  {
-    struct Request
-    {
+  enum FetchChartsViews {
+    struct Request {
     }
-    struct Response
-    {
+    
+    struct Response {
+        var viewControllers: [String: UIViewController]
     }
-    struct ViewModel
-    {
+    
+    struct ViewModel {
+        struct DisplayedView {
+            var name: String
+            var viewController: UIViewController
+        }
+        var displayedViewControllers: [DisplayedView]
     }
   }
 }

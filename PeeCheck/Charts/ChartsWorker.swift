@@ -12,9 +12,13 @@
 
 import UIKit
 
-class ChartsWorker
-{
-  func doSomeWork()
-  {
-  }
+class ChartsWorker {
+    func getChartsViews() -> [String: UIViewController] {
+        var viewControllers: [String: UIViewController] = [:]
+        
+        viewControllers["main"] = AccountViewController()
+        viewControllers["charts"] = AccountViewController()
+        
+        return viewControllers
+    }    
 }
