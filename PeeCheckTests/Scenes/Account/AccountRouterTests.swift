@@ -61,7 +61,7 @@ class AccountRouterTests: QuickSpec {
             // MARK: Tests
             
             context("Routing to create user") {
-                it("Sould display create user page") {
+                it("Should display create user page") {
                     loadview()
                     let nav = window.rootViewController as? UINavigationController
                    let accountVC = nav?.topViewController as? AccountViewController

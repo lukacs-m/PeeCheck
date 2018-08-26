@@ -12,25 +12,28 @@
 
 import UIKit
 
-protocol ChartsBusinessLogic {
-  func fetchChartsViews(request: Charts.FetchChartsViews.Request)
+protocol ChartsBusinessLogic: class {
+    func fetchChartsViews(request: Charts.FetchChartsViews.Request)
 }
 
 protocol ChartsDataStore {
-  //var name: String { get set }
+    var viewControllers: [String: UIViewController] { get set }
 }
 
-class ChartsInteractor: ChartsBusinessLogic, ChartsDataStore {
-  var presenter: ChartsPresentationLogic?
-  var worker = ChartsWorker()
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func fetchChartsViews(request: Charts.FetchChartsViews.Request) {
-    worker = ChartsWorker()
+final class ChartsInteractor: ChartsBusinessLogic, ChartsDataStore {
+    var viewControllers: [String: UIViewController] = [:]
+    var presenter: ChartsPresentationLogic?
+    var worker = ChartsWorker()
     
-    let response = Charts.FetchChartsViews.Response(viewControllers: worker.getChartsViews())
-    presenter?.presentFetchChartsViews(response: response)
-  }
+    // MARK: Do something
+    
+    func fetchChartsViews(request: Charts.FetchChartsViews.Request) {
+        if viewControllers.isEmpty {
+            viewControllers = worker.getChartsViews()
+        }
+        worker = ChartsWorker()
+        
+        let response = Charts.FetchChartsViews.Response(viewControllers: viewControllers)
+        presenter?.presentFetchChartsViews(response: response)
+    }
 }

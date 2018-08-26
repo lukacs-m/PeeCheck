@@ -18,20 +18,7 @@ class ChartsTableViewCell: UITableViewCell {
         backgroundColor = Style.Color.White
         lblTitle.textColor = Style.Color.MainGreen
         self.selectionStyle = .none
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        if selected {
-        backgroundColor = Style.Color.MainBlue
-        lblTitle.textColor = Style.Color.White
-        } else {
-            backgroundColor = Style.Color.White
-            lblTitle.textColor = Style.Color.MainGreen
-        }
-     }
     
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         super.setHighlighted(highlighted, animated: animated)
@@ -48,5 +35,4 @@ class ChartsTableViewCell: UITableViewCell {
     func updateUI(_ name: String) {
         lblTitle.text = name
     }
-    
 }

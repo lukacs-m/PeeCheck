@@ -36,14 +36,14 @@ class AccountWorkerTests: QuickSpec {
             // MARK: Tests
             
             context("Get user information") {
-                it("Sould return nil when no user was found") {
+                it("Should return nil when no user was found") {
                     let results = sut.getUser()
                     expect(results.user).to(beNil())
                 }
             }
             
             context("Delete user information") {
-                it("Sould return nil if no error occured") {
+                it("Should return nil if no error occured") {
                     expect(sut.deleteUser()).to(beNil())
                 }
             }

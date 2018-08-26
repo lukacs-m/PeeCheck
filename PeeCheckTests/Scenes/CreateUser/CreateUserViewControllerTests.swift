@@ -222,8 +222,23 @@ class CreateUserControllerTests: QuickSpec {
                     
                     expect(createUserRouterSpy.routeToAccountCalled).to(beTrue())
                 }
+                
+                it("Should call account router function") {
+                    let nav = UINavigationController(rootViewController: sut)
+                    window.rootViewController = nav
+
+                    window.addSubview((nav.topViewController?.view)!)
+                    
+                    let window = UIWindow(frame: UIScreen.main.bounds)
+                    window.makeKeyAndVisible()
+                    window.rootViewController = nav
+                    _ = sut.view
+                    
+                   sut.router?.routeToAccount()
+                    
+                    expect(sut.navigationController?.topViewController).toEventually(beAKindOf(AccountViewController.self))
+                }
             }
         }
     }
 }
-

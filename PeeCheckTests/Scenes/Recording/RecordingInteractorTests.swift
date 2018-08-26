@@ -52,7 +52,7 @@ class RecordingInteractorTests: QuickSpec {
             // MARK: Tests
             
             context("Check time") {
-                it("Sould call the present switch function") {
+                it("Should call the present switch function") {
                     let spy = RecordingPresentationLogicSpy()
                     sut.presenter = spy
                     let request = Recording.SetSwitch.Request()
@@ -63,7 +63,7 @@ class RecordingInteractorTests: QuickSpec {
             }
             
             context("Check recording") {
-                it("Sould call the present recording function") {
+                it("Should call the present recording function") {
                     let spy = RecordingPresentationLogicSpy()
                     sut.presenter = spy
                     let request = Recording.RecordMicturition.Request()

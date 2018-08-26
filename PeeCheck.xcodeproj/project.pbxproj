@@ -87,6 +87,10 @@
 		5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */; };
 		5BC5AEF8210E497A001ABA7F /* ChartsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEF6210E497A001ABA7F /* ChartsTableViewCell.swift */; };
 		5BC5AEF9210E497A001ABA7F /* ChartsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEF7210E497A001ABA7F /* ChartsTableViewCell.xib */; };
+		5BF74E9821172E2A00C9AB6A /* ChartsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74E9421172E2A00C9AB6A /* ChartsViewControllerTests.swift */; };
+		5BF74E9921172E2A00C9AB6A /* ChartsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74E9521172E2A00C9AB6A /* ChartsInteractorTests.swift */; };
+		5BF74E9A21172E2A00C9AB6A /* ChartsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74E9621172E2A00C9AB6A /* ChartsWorkerTests.swift */; };
+		5BF74E9B21172E2A00C9AB6A /* ChartsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74E9721172E2A00C9AB6A /* ChartsPresenterTests.swift */; };
 		7E828030DE0A63143A66E166 /* Pods_PeeCheckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CF96DD458CDE4EFA8B382 /* Pods_PeeCheckUITests.framework */; };
 		9549CE34E9014B4205D25413 /* Pods_PeeCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 444058EC6B292B8FF016DB99 /* Pods_PeeCheck.framework */; };
 /* End PBXBuildFile section */
@@ -198,6 +202,10 @@
 		5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		5BC5AEF6210E497A001ABA7F /* ChartsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTableViewCell.swift; sourceTree = "<group>"; };
 		5BC5AEF7210E497A001ABA7F /* ChartsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsTableViewCell.xib; sourceTree = "<group>"; };
+		5BF74E9421172E2A00C9AB6A /* ChartsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewControllerTests.swift; sourceTree = "<group>"; };
+		5BF74E9521172E2A00C9AB6A /* ChartsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsInteractorTests.swift; sourceTree = "<group>"; };
+		5BF74E9621172E2A00C9AB6A /* ChartsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsWorkerTests.swift; sourceTree = "<group>"; };
+		5BF74E9721172E2A00C9AB6A /* ChartsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsPresenterTests.swift; sourceTree = "<group>"; };
 		901DC64AB7C572D4E62F276D /* Pods-PeeCheckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeeCheckUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9E21308C9B2077CCC24EEB1F /* Pods-PeeCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeeCheck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeeCheck/Pods-PeeCheck.debug.xcconfig"; sourceTree = "<group>"; };
 		BA2CF96DD458CDE4EFA8B382 /* Pods_PeeCheckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeeCheckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -502,6 +510,7 @@
 		5BB864FD208559B9002EBB5F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5BF74E9321172E0200C9AB6A /* Charts */,
 				5B9724B020A1C3B400D4C7E5 /* CreateUser */,
 				5B9137BE2098C68E0041CED2 /* Account */,
 				5BB8650120855A36002EBB5F /* Recording */,
@@ -637,6 +646,17 @@
 				5BC5AEF7210E497A001ABA7F /* ChartsTableViewCell.xib */,
 			);
 			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		5BF74E9321172E0200C9AB6A /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				5BF74E9421172E2A00C9AB6A /* ChartsViewControllerTests.swift */,
+				5BF74E9521172E2A00C9AB6A /* ChartsInteractorTests.swift */,
+				5BF74E9621172E2A00C9AB6A /* ChartsWorkerTests.swift */,
+				5BF74E9721172E2A00C9AB6A /* ChartsPresenterTests.swift */,
+			);
+			path = Charts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -939,6 +959,8 @@
 				5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */,
 				5BB8650820855A8B002EBB5F /* RecordingWorkerTests.swift in Sources */,
 				5B9137C42098C70B0041CED2 /* AccountInteractorTests.swift in Sources */,
+				5BF74E9A21172E2A00C9AB6A /* ChartsWorkerTests.swift in Sources */,
+				5BF74E9921172E2A00C9AB6A /* ChartsInteractorTests.swift in Sources */,
 				5B9724B720A1C3DC00D4C7E5 /* CreateUserWorkerTests.swift in Sources */,
 				5B9137C32098C70B0041CED2 /* AccountViewControllerTests.swift in Sources */,
 				5B3F38C020AB9F42006E573C /* PersistenceErrorTests.swift in Sources */,
@@ -950,10 +972,12 @@
 				5B9137C82098D7780041CED2 /* RoundedCornerButtonTests.swift in Sources */,
 				5B21131220B1D14200B49536 /* MicturitionRealmManagerTests.swift in Sources */,
 				5B9137C52098C70B0041CED2 /* AccountWorkerTests.swift in Sources */,
+				5BF74E9821172E2A00C9AB6A /* ChartsViewControllerTests.swift in Sources */,
 				5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */,
 				5B21131020B03AE400B49536 /* UserRealmManagerTests.swift in Sources */,
 				5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */,
 				5B9724B820A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift in Sources */,
+				5BF74E9B21172E2A00C9AB6A /* ChartsPresenterTests.swift in Sources */,
 				5BB8650620855A8B002EBB5F /* RecordingViewControllerTests.swift in Sources */,
 				5BA6A96C20A7928D005BCA63 /* AccountRouterTests.swift in Sources */,
 			);

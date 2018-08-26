@@ -40,7 +40,7 @@ class CreateUserWorkerTests: QuickSpec {
             // MARK: Tests
             
             context("User creation") {
-                it("Sould return a user if no error occured") {
+                it("Should return a user if no error occured") {
                     let userFields = CreateUser.UserFields(age: 24, gender: .woman)
                     let results = sut.createUser(userFields.age, userFields.gender)
                     expect(results.user).to(beAKindOf(User.self))
@@ -48,17 +48,17 @@ class CreateUserWorkerTests: QuickSpec {
                     expect(results.user?.gender) == .woman
                 }
                 
-                it("Sould return a error ") {
+                it("Should return a error ") {
                     sut.userDataManager = UserRealmManagerMockError()
                     let userFields = CreateUser.UserFields(age: 24, gender: .woman)
                     let results = sut.createUser(userFields.age, userFields.gender)
                     expect(results.error).toNot(beNil())
-                     expect(results.error) == PersistenceErrors.couldNotSaveUser
+                    expect(results.error) == PersistenceErrors.couldNotSaveUser
                 }
             }
             
             context("User update") {
-                it("Sould return a user if no error occured") {
+                it("Should return a user if no error occured") {
                     let userFields = CreateUser.UserFields(age: 46, gender: .men)
                     _ = sut.createUser(24, .woman)
                     let results = sut.updateUser(userFields.age, userFields.gender)
@@ -67,7 +67,7 @@ class CreateUserWorkerTests: QuickSpec {
                     expect(results.user?.gender) == .men
                 }
                 
-                it("Sould return a error ") {
+                it("Should return a error ") {
                     sut.userDataManager = UserRealmManagerMockError()
                     let results = sut.updateUser(45, .woman)
                     expect(results.error).toNot(beNil())

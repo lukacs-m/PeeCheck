@@ -53,7 +53,7 @@ class RecordingPresenterTests: QuickSpec {
             // MARK: Tests
             
             context("Check time") {
-                it("Sould return bool depending on time of day") {
+                it("Should return bool depending on time of day") {
                         let spy = RecordingDisplayLogicSpy()
                         sut.viewController = spy
                         let response = Recording.SetSwitch.Response(isNight: true)
@@ -64,7 +64,7 @@ class RecordingPresenterTests: QuickSpec {
             }
             
             context("Record micturition") {
-                it("Sould return bool after saving micturition") {
+                it("Should return bool after saving micturition") {
                     let spy = RecordingDisplayLogicSpy()
                     sut.viewController = spy
                     let response = Recording.RecordMicturition.Response(isRecording: true, savedMicturition: nil)

@@ -52,7 +52,7 @@ class AccountPresenterTests: QuickSpec {
             // MARK: Tests
             
             context("Fetch User") {
-                it("Sould display user information") {
+                it("Should display user information") {
                     let spy = AccountDisplayLogicSpy()
                     sut.viewController = spy
                     let response = Account.FetchUser.Response(user: nil, error: nil)
@@ -63,7 +63,7 @@ class AccountPresenterTests: QuickSpec {
             }
             
             context("Delete User information") {
-                it("Sould call isplay deleted user information") {
+                it("Should call isplay deleted user information") {
                     let spy = AccountDisplayLogicSpy()
                     sut.viewController = spy
                     let response = Account.DeleteUser.Response(error: nil)

@@ -12,16 +12,14 @@
 
 import UIKit
 
-protocol ChartsDisplayLogic: class
-{
+protocol ChartsDisplayLogic: class {
     func displayChartsView(viewModel: Charts.FetchChartsViews.ViewModel)
 }
 
-class ChartsViewController: UITableViewController, ChartsDisplayLogic
-{
+class ChartsViewController: UITableViewController, ChartsDisplayLogic {
     var interactor: ChartsBusinessLogic?
     var router: (NSObjectProtocol & ChartsRoutingLogic & ChartsDataPassing)?
-    var displayedViewsControllers: [Charts.FetchChartsViews.ViewModel.DisplayedView] = []
+    private var displayedViewsControllers: [Charts.FetchChartsViews.ViewModel.DisplayedView] = []
     
     // MARK: Object lifecycle
     
@@ -54,7 +52,7 @@ class ChartsViewController: UITableViewController, ChartsDisplayLogic
         self.navigationItem.leftItemsSupplementBackButton = true
         self.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         tableView.register(UINib(nibName: "ChartsTableViewCell", bundle: nil), forCellReuseIdentifier: "ChartsTableViewCell")
-        
+        tableView.tableFooterView = UIView(frame: .zero)
         self.title = "charts_menu_title".localized()
     }
     
@@ -66,7 +64,7 @@ class ChartsViewController: UITableViewController, ChartsDisplayLogic
         fetchChartsViews()
     }
     
-    // MARK: Do something
+    // MARK: Fetch all the differents subviews for the split view controller
         
     func fetchChartsViews() {
         let request = Charts.FetchChartsViews.Request()
@@ -80,6 +78,8 @@ class ChartsViewController: UITableViewController, ChartsDisplayLogic
         splitViewController?.viewControllers[1] = displayedChartPage.viewController
     }
 }
+
+// MARK: - Table view delegate methods
 
 extension ChartsViewController {
     

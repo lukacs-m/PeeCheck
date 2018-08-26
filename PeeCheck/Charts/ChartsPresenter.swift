@@ -12,12 +12,11 @@
 
 import UIKit
 
-protocol ChartsPresentationLogic
-{
+protocol ChartsPresentationLogic: class {
   func presentFetchChartsViews(response: Charts.FetchChartsViews.Response)
 }
 
-class ChartsPresenter: ChartsPresentationLogic {
+final class ChartsPresenter: ChartsPresentationLogic {
   weak var viewController: ChartsDisplayLogic?
   
   // MARK: Do something
