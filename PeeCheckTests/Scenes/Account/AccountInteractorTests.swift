@@ -52,7 +52,7 @@ class AccountInteractorTests: QuickSpec {
             // MARK: Tests
             
             context("Check User") {
-                it("Sould call the present user") {
+                it("Should call the present user") {
                     let spy = AccountPresentationLogicSpy()
                     sut.presenter = spy
                     let request = Account.FetchUser.Request()
@@ -63,7 +63,7 @@ class AccountInteractorTests: QuickSpec {
             }
             
             context("Check deleting user") {
-                it("Sould call the present delete user") {
+                it("Should call the present delete user") {
                     let spy = AccountPresentationLogicSpy()
                     sut.presenter = spy
                     let request = Account.DeleteUser.Request()

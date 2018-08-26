@@ -69,7 +69,7 @@ class CreateUserInteractorTests: QuickSpec {
             
             context("Check User Edit") {
                 
-                it("Sould call the presentUserToEdit function") {
+                it("Should call the presentUserToEdit function") {
                     let spy = CreateUserPresentationLogicSpy()
                     sut.presenter = spy
                     let request = CreateUser.EditUser.Request()
@@ -79,7 +79,7 @@ class CreateUserInteractorTests: QuickSpec {
                     expect(spy.presentUserToEditCalled).to(beFalse())
                 }
                 
-                it("Sould call the presentUserToEdit function") {
+                it("Should call the presentUserToEdit function") {
                     let spy = CreateUserPresentationLogicSpy()
                     sut.presenter = spy
                     sut.userToEdit = User(25, .men)
@@ -91,7 +91,7 @@ class CreateUserInteractorTests: QuickSpec {
             }
             
             context("Check user information before saving") {
-                it("Sould call the present user age function") {
+                it("Should call the present user age function") {
                     let spy = CreateUserPresentationLogicSpy()
                     sut.presenter = spy
                     let request = CreateUser.UserAge.Request()
@@ -100,7 +100,7 @@ class CreateUserInteractorTests: QuickSpec {
                     expect(spy.presentUserAgeCalled).to(beTrue())
                 }
                 
-                it("Sould call the present user age function") {
+                it("Should call the present user age function") {
                     let spy = CreateUserPresentationLogicSpy()
                     sut.presenter = spy
                     let request = CreateUser.ActivateSaveButton.Request(ageField: "25", genderField: "women")
@@ -111,7 +111,7 @@ class CreateUserInteractorTests: QuickSpec {
             }
             
             context("Create or update user") {
-                it("Sould call the present create user function") {
+                it("Should call the present create user function") {
                     let spy = CreateUserPresentationLogicSpy()
                     sut.presenter = spy
                     let request = CreateUser.CreateUser.Request(userFormFields: userFields)
@@ -120,7 +120,7 @@ class CreateUserInteractorTests: QuickSpec {
                     expect(spy.presentCreateUserCalled).to(beTrue())
                 }
                 
-                it("Sould call the present update user function") {
+                it("Should call the present update user function") {
                     let spy = CreateUserPresentationLogicSpy()
                     sut.presenter = spy
                     let request = CreateUser.UpdateUser.Request(age: 25, gender: .woman)
@@ -129,7 +129,7 @@ class CreateUserInteractorTests: QuickSpec {
                     expect(spy.presentUpdateUserCalled).to(beTrue())
                 }
                 
-                it("Sould fill up user to edit") {
+                it("Should fill up user to edit") {
                     let request = CreateUser.CreateUser.Request(userFormFields: userFields)
                     sut.createUser(request: request)
                     expect(sut.userToEdit).toNot(beNil())

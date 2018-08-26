@@ -37,6 +37,9 @@
 
 // MARK: - Create User Controller
 "save_user_information"="Save your informations";
+"edit_user_information"="Edit your informations";
+"age_label"="Please enter your age";
+"gender_label"="Please indicate your gender";
 
 // MARK: - Persistence Errors
 "could_not_save_micturition_error"="An error occured while saving your micturition.";
@@ -44,3 +47,6 @@
 "could_not_fetch_user_error"="An error occured while getting your information.";
 "could_not_delete_data_error"="An error occured while delete all your data.";
 "could_not_fetch_micturition_error"="An error occured while getting your micturition informations.";
+
+// MARK: - Charts Menu
+"charts_menu_title"="Menu";

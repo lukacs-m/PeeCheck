@@ -36,7 +36,7 @@ class RecordingWorkerTests: QuickSpec {
             // MARK: Tests
             
             context("Check time") {
-                it("Sould return bool depending on time of day") {
+                it("Should return bool depending on time of day") {
                     let time = Calendar.current.component(.hour, from: Date())
                     if time >= 1 && time < 6 {
                         expect(sut.isNightTime()).to(beTrue())
@@ -47,12 +47,12 @@ class RecordingWorkerTests: QuickSpec {
             }
             
             context("Record micturition") {
-                it("Sould return bool after saving micturition") {
+                it("Should return bool after saving micturition") {
                     _ = sut.saveMicturitionTime(true)
                     expect(sut.saveMicturitionTime(false)).to(beNil())
                 }
                 
-                it("Sould return nil at start of timer recording") {
+                it("Should return nil at start of timer recording") {
                     expect(sut.saveMicturitionTime(true)).to(beNil())
                 }
             }

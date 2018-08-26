@@ -58,7 +58,8 @@ enum TabBarControllers: String {
         case .record:
             return RecordingViewController()
         case .charts:
-            return UIViewController()
+            let storyboard = UIStoryboard(name: "ChartsStoryboard")
+            return storyboard.instantiateInitialViewController() ?? UIViewController()
         case .account:
             return AccountViewController()
         }

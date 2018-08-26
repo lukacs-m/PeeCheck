@@ -68,7 +68,7 @@ class CreateUserPresenterTests: QuickSpec {
             // MARK: Tests
             
             context("Display user edit") {
-                it("Sould call display user to edit function") {
+                it("Should call display user to edit function") {
                     let spy = CreateUserDisplayLogicSpy()
                     sut.viewController = spy
                     let response = CreateUser.EditUser.Response(user: user, pickerRow: user.gender.hashValue)
@@ -79,7 +79,7 @@ class CreateUserPresenterTests: QuickSpec {
             }
             
             context("Display user age") {
-                it("Sould call display user age function") {
+                it("Should call display user age function") {
                     let spy = CreateUserDisplayLogicSpy()
                     sut.viewController = spy
                     let response = CreateUser.UserAge.Response(age: user.age, valide: true)
@@ -90,7 +90,7 @@ class CreateUserPresenterTests: QuickSpec {
             }
             
             context("Display user creation") {
-                it("Sould call display user creation function") {
+                it("Should call display user creation function") {
                     let spy = CreateUserDisplayLogicSpy()
                     sut.viewController = spy
                     let response = CreateUser.CreateUser.Response(user: user, error: nil)
@@ -101,7 +101,7 @@ class CreateUserPresenterTests: QuickSpec {
             }
             
             context("Display user update") {
-                it("Sould call display user update function") {
+                it("Should call display user update function") {
                     let spy = CreateUserDisplayLogicSpy()
                     sut.viewController = spy
                     let response = CreateUser.UpdateUser.Response(user: user, error: nil)
@@ -112,7 +112,7 @@ class CreateUserPresenterTests: QuickSpec {
             }
             
             context("Shuold activate the save button") {
-                it("Sould call display active save button function") {
+                it("Should call display active save button function") {
                     let spy = CreateUserDisplayLogicSpy()
                     sut.viewController = spy
                     let response = CreateUser.ActivateSaveButton.Response(valide: true)
