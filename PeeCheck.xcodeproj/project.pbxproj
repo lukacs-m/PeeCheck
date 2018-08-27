@@ -87,6 +87,13 @@
 		5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */; };
 		5BC5AEF8210E497A001ABA7F /* ChartsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEF6210E497A001ABA7F /* ChartsTableViewCell.swift */; };
 		5BC5AEF9210E497A001ABA7F /* ChartsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEF7210E497A001ABA7F /* ChartsTableViewCell.xib */; };
+		5BDB3D372133094600651CB1 /* MainResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D312133094500651CB1 /* MainResultsPresenter.swift */; };
+		5BDB3D382133094600651CB1 /* MainResultsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D322133094500651CB1 /* MainResultsWorker.swift */; };
+		5BDB3D392133094600651CB1 /* MainResultsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D332133094500651CB1 /* MainResultsRouter.swift */; };
+		5BDB3D3A2133094600651CB1 /* MainResultsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D342133094500651CB1 /* MainResultsModels.swift */; };
+		5BDB3D3B2133094600651CB1 /* MainResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D352133094600651CB1 /* MainResultsViewController.swift */; };
+		5BDB3D3C2133094600651CB1 /* MainResultsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D362133094600651CB1 /* MainResultsInteractor.swift */; };
+		5BDB3D3E21330B3300651CB1 /* MainResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BDB3D3D21330B3300651CB1 /* MainResultsViewController.xib */; };
 		5BF74E9821172E2A00C9AB6A /* ChartsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74E9421172E2A00C9AB6A /* ChartsViewControllerTests.swift */; };
 		5BF74E9921172E2A00C9AB6A /* ChartsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74E9521172E2A00C9AB6A /* ChartsInteractorTests.swift */; };
 		5BF74E9A21172E2A00C9AB6A /* ChartsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74E9621172E2A00C9AB6A /* ChartsWorkerTests.swift */; };
@@ -202,6 +209,13 @@
 		5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		5BC5AEF6210E497A001ABA7F /* ChartsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTableViewCell.swift; sourceTree = "<group>"; };
 		5BC5AEF7210E497A001ABA7F /* ChartsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsTableViewCell.xib; sourceTree = "<group>"; };
+		5BDB3D312133094500651CB1 /* MainResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsPresenter.swift; sourceTree = "<group>"; };
+		5BDB3D322133094500651CB1 /* MainResultsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsWorker.swift; sourceTree = "<group>"; };
+		5BDB3D332133094500651CB1 /* MainResultsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsRouter.swift; sourceTree = "<group>"; };
+		5BDB3D342133094500651CB1 /* MainResultsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsModels.swift; sourceTree = "<group>"; };
+		5BDB3D352133094600651CB1 /* MainResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsViewController.swift; sourceTree = "<group>"; };
+		5BDB3D362133094600651CB1 /* MainResultsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsInteractor.swift; sourceTree = "<group>"; };
+		5BDB3D3D21330B3300651CB1 /* MainResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainResultsViewController.xib; sourceTree = "<group>"; };
 		5BF74E9421172E2A00C9AB6A /* ChartsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewControllerTests.swift; sourceTree = "<group>"; };
 		5BF74E9521172E2A00C9AB6A /* ChartsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsInteractorTests.swift; sourceTree = "<group>"; };
 		5BF74E9621172E2A00C9AB6A /* ChartsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsWorkerTests.swift; sourceTree = "<group>"; };
@@ -595,6 +609,7 @@
 		5BB9D8EE204EE72E00C5ADA1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5BDB3D302133090B00651CB1 /* MainResults */,
 				5B40EBA220CD7F4500EE2AC7 /* Charts */,
 				5B9137C92098E7BA0041CED2 /* CreateUser */,
 				5B9137A7209681EA0041CED2 /* Account */,
@@ -646,6 +661,20 @@
 				5BC5AEF7210E497A001ABA7F /* ChartsTableViewCell.xib */,
 			);
 			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		5BDB3D302133090B00651CB1 /* MainResults */ = {
+			isa = PBXGroup;
+			children = (
+				5BDB3D312133094500651CB1 /* MainResultsPresenter.swift */,
+				5BDB3D322133094500651CB1 /* MainResultsWorker.swift */,
+				5BDB3D332133094500651CB1 /* MainResultsRouter.swift */,
+				5BDB3D342133094500651CB1 /* MainResultsModels.swift */,
+				5BDB3D352133094600651CB1 /* MainResultsViewController.swift */,
+				5BDB3D362133094600651CB1 /* MainResultsInteractor.swift */,
+				5BDB3D3D21330B3300651CB1 /* MainResultsViewController.xib */,
+			);
+			path = MainResults;
 			sourceTree = "<group>";
 		};
 		5BF74E9321172E0200C9AB6A /* Charts */ = {
@@ -796,6 +825,7 @@
 				5BB9D8C6204EE3D200C5ADA1 /* Assets.xcassets in Resources */,
 				5B9137B52096823A0041CED2 /* AccountViewController.xib in Resources */,
 				5BB9D8C4204EE3D200C5ADA1 /* Main.storyboard in Resources */,
+				5BDB3D3E21330B3300651CB1 /* MainResultsViewController.xib in Resources */,
 				5BC5AEF9210E497A001ABA7F /* ChartsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -995,14 +1025,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BDB3D382133094600651CB1 /* MainResultsWorker.swift in Sources */,
 				5BC5AEF8210E497A001ABA7F /* ChartsTableViewCell.swift in Sources */,
 				5B40EBBD20CD883300EE2AC7 /* ChartsModels.swift in Sources */,
 				5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */,
 				5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */,
 				5BA6A97120A7AE93005BCA63 /* UserRealmManager.swift in Sources */,
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
+				5BDB3D372133094600651CB1 /* MainResultsPresenter.swift in Sources */,
 				5B40EBBF20CD883300EE2AC7 /* ChartsInteractor.swift in Sources */,
 				5BA6A96E20A7ABDB005BCA63 /* Micturition.swift in Sources */,
+				5BDB3D392133094600651CB1 /* MainResultsRouter.swift in Sources */,
 				5B40EBBA20CD883300EE2AC7 /* ChartsPresenter.swift in Sources */,
 				5B9137D42098E8240041CED2 /* CreateUserViewController.swift in Sources */,
 				5BA6A97620A7B564005BCA63 /* RealmConfig.swift in Sources */,
@@ -1014,6 +1047,7 @@
 				5B201FAF2076E1E60063EA25 /* RecordingModels.swift in Sources */,
 				5B9137D02098E8240041CED2 /* CreateUserPresenter.swift in Sources */,
 				5B9137B1209682140041CED2 /* AccountModels.swift in Sources */,
+				5BDB3D3A2133094600651CB1 /* MainResultsModels.swift in Sources */,
 				5B9137D52098E8240041CED2 /* CreateUserInteractor.swift in Sources */,
 				5B21131620B1DC2D00B49536 /* MicturitionRealmManager.swift in Sources */,
 				5B9137B0209682140041CED2 /* AccountRouter.swift in Sources */,
@@ -1033,10 +1067,12 @@
 				5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */,
 				5B21131820B1DC3C00B49536 /* GeneralRealmManager.swift in Sources */,
 				5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */,
+				5BDB3D3B2133094600651CB1 /* MainResultsViewController.swift in Sources */,
 				5B9137B3209682140041CED2 /* AccountInteractor.swift in Sources */,
 				5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */,
 				5B3F38BD20AB9598006E573C /* PersistenceErrors.swift in Sources */,
 				5B40EBBB20CD883300EE2AC7 /* ChartsWorker.swift in Sources */,
+				5BDB3D3C2133094600651CB1 /* MainResultsInteractor.swift in Sources */,
 				5B9137B82097DB110041CED2 /* User.swift in Sources */,
 				5B9137D22098E8240041CED2 /* CreateUserRouter.swift in Sources */,
 				5B9137D32098E8240041CED2 /* CreateUserModels.swift in Sources */,

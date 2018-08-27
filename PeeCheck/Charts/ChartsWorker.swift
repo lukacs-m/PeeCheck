@@ -16,7 +16,7 @@ class ChartsWorker {
     func getChartsViews() -> [String: UIViewController] {
         var viewControllers: [String: UIViewController] = [:]
         
-        viewControllers["main"] = AccountViewController()
+        viewControllers["main"] = MainResultsViewController()
         viewControllers["charts"] = AccountViewController()
         
         return viewControllers
