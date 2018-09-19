@@ -20,24 +20,25 @@ protocol MainResultsDataStore {
   //var name: String { get set }
 }
 
-class MainResultsInteractor: MainResultsBusinessLogic, MainResultsDataStore {
+final class MainResultsInteractor: MainResultsBusinessLogic, MainResultsDataStore {
   var presenter: MainResultsPresentationLogic?
-  var worker: MainResultsWorker?
-  //var name: String = ""
+  var worker: MainResultsWorker!
   
-  // MARK: Do something
+  // MARK: Get the user's data
   
   func fetchUserData(request: MainResults.FetchUserData.Request) {
     worker = MainResultsWorker()
     
     var response: MainResults.FetchUserData.Response!
     
-    guard let user = worker?.getUser().user else {
-        return
-    }
-//    worker?.doSomeWork()
+    let user = worker.getUser().user
+    let micturitions = worker.getMicturitions().micturitions
+    let enoughDaysOfRecording = worker.getNumberOfDayRecording(micturitions) > 3 ? true : false
     
-    response = MainResults.FetchUserData.Response()
+    
+    response = MainResults.FetchUserData.Response(user: user, enoughDaysRecording: enoughDaysOfRecording, longestMicturition: worker.getLongestMicturition(micturitions), shortestMicturition: worker.getShortesttMicturition(micturitions), averageMicturitionTime: worker.getAverageMicturitionTime(micturitions), totalNumberOfMicturition: worker.getTotalNumberOfMicturition(micturitions), averageNumberOfMicturitionDaily: worker.getAverageNumberOfMicturitionDaily(micturitions), averageNumberOfMicturitionAtNight: worker.getAverageNumberOfMicturitionAtNight(micturitions))
     presenter?.presentFetchUserData(response: response)
   }
+    
+    
 }

@@ -17,6 +17,13 @@ protocol MainResultsDisplayLogic: class {
 }
 
 class MainResultsViewController: UIViewController, MainResultsDisplayLogic {
+    
+    // MARK: - Outlets
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblConclusion: UILabel!
+    @IBOutlet weak var lblTotalNumMiction: UILabel!
+    
+    // MARK: - Variables
   var interactor: MainResultsBusinessLogic?
   var router: (NSObjectProtocol & MainResultsRoutingLogic & MainResultsDataPassing)?
 
@@ -46,16 +53,28 @@ class MainResultsViewController: UIViewController, MainResultsDisplayLogic {
     router.viewController = viewController
     router.dataStore = interactor
   }
+    
+    private func setUpUI() {
+        self.title = "test"
+    }
   
   // MARK: View lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    setUpUI()
   }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        fetchUserData()
+//    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         fetchUserData()
+
     }
   
   // MARK: Do something
@@ -68,6 +87,25 @@ class MainResultsViewController: UIViewController, MainResultsDisplayLogic {
   }
   
   func displayUserData(viewModel: MainResults.FetchUserData.ViewModel) {
-    //nameTextField.text = viewModel.name
+    guard let user = viewModel.user else {
+        showAlert(title: "Missing user", message: "Please register your informations for us to be able to process the data. WOuld you like to go to the account page")
+        return
+    }
+    if !viewModel.enoughDaysRecording {
+        
+    }
   }
+    
+    // MARK: Error handling
+    
+    private func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let alertAction = UIAlertAction(title: "OK", style: .default) { UIAlertAction in
+            self.router?.goToAccountPage()
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(alertAction)
+        self.present(alertController, animated: false, completion: nil)
+    }
 }

@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol MainResultsRoutingLogic {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+   func goToAccountPage()
 }
 
 protocol MainResultsDataPassing {
@@ -23,35 +23,13 @@ protocol MainResultsDataPassing {
 class MainResultsRouter: NSObject, MainResultsRoutingLogic, MainResultsDataPassing {
   weak var viewController: MainResultsViewController?
   var dataStore: MainResultsDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+    
+    func goToAccountPage() {
+        if let tabBarController = UIApplication.shared.keyWindow?.rootViewController as? UITabBarController, let viewControllers = tabBarController.viewControllers {
+            if let index = viewControllers.index(where: { ($0 as? UINavigationController)?.viewControllers.first?.isKind(of: AccountViewController.self) ?? false}) {
+                tabBarController.selectedIndex = index
+            }
+        }
+    }
 
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: MainResultsViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: MainResultsDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
 }

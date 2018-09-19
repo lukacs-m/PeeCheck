@@ -22,7 +22,15 @@ class MainResultsPresenter: MainResultsPresentationLogic {
   // MARK: Do something
   
   func presentFetchUserData(response: MainResults.FetchUserData.Response) {
-    let viewModel = MainResults.FetchUserData.ViewModel()
+    let displayedInformation = MainResults.FetchUserData.ViewModel.DisplayedInformation(
+        longestMicturition: " longest mixtion is: \(response.longestMicturition)",
+        shortestMicturition: " shortes mixtion is: \(response.shortestMicturition)",
+        averageMicturitionTime: "Average micturition time is \(response.averageMicturitionTime)",
+        totalNumberOfMicturition: "Total number of micturitions recorded is \(response.totalNumberOfMicturition)",
+        averageNumberOfMicturitionDaily: "Average daily micturitions is \(response.averageNumberOfMicturitionDaily)",
+        averageNumberOfMicturitionAtNight: "Average night micturition is \(response.averageNumberOfMicturitionAtNight)")
+    
+    let viewModel = MainResults.FetchUserData.ViewModel(user: response.user, enoughDaysRecording: response.enoughDaysRecording, informationToDisplay: displayedInformation)
     viewController?.displayUserData(viewModel: viewModel)
   }
 }

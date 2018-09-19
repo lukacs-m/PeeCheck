@@ -17,9 +17,7 @@ protocol RecordingBusinessLogic {
     func recordMicturition(request: Recording.RecordMicturition.Request)
 }
 
-protocol RecordingDataStore {
-    //var name: String { get set }
-}
+protocol RecordingDataStore {}
 
 class RecordingInteractor: RecordingBusinessLogic, RecordingDataStore {
     var presenter: RecordingPresentationLogic?
@@ -42,6 +40,7 @@ class RecordingInteractor: RecordingBusinessLogic, RecordingDataStore {
     ///
     /// - Parameter request: The request sent to start & stop the recording
     func recordMicturition(request: Recording.RecordMicturition.Request) {
+        //TODO add isnight information
         let response = Recording.RecordMicturition.Response(isRecording: isRecording, savedMicturition: worker.saveMicturitionTime(isRecording))
         presenter?.presentRecordMicturition(response: response)
         isRecording = !isRecording

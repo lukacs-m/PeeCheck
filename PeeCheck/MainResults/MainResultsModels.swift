@@ -11,16 +11,38 @@
 //
 
 import UIKit
+import RealmSwift
 
 enum MainResults {
   // MARK: Use cases
   
   enum FetchUserData {
-    struct Request {
-    }
+    struct Request {}
+    
     struct Response {
+        var user: User?
+        var enoughDaysRecording: Bool
+        var longestMicturition: Int
+        var shortestMicturition: Int
+        var averageMicturitionTime: Double
+        var totalNumberOfMicturition: Int
+        var averageNumberOfMicturitionDaily: Double
+        var averageNumberOfMicturitionAtNight: Double
     }
+    
     struct ViewModel {
+        struct DisplayedInformation {
+            var longestMicturition: String
+            var shortestMicturition: String
+            var averageMicturitionTime: String
+            var totalNumberOfMicturition: String
+            var averageNumberOfMicturitionDaily: String
+            var averageNumberOfMicturitionAtNight: String
+        }
+        
+        var user: User?
+        var enoughDaysRecording: Bool
+        var informationToDisplay: DisplayedInformation
     }
   }
 }
