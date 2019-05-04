@@ -111,7 +111,7 @@ extension RecordingViewController {
 
 extension RecordingViewController {
     @IBAction func recordingAction(_ sender: Any) {
-        let request = Recording.RecordMicturition.Request()
+        let request = Recording.RecordMicturition.Request(isNight: switchNightAwake.isOn)
         interactor?.recordMicturition(request: request)
     }
     

@@ -17,7 +17,7 @@ class TabBarControllerTests: QuickSpec {
         describe("TabBarControllers enum Test") {
             
             it("should contain 3 controllers") {
-                expect(TabBarControllers.array.count) == 3
+                expect(TabBarControllers.allCases.count) == 3
             }
             
             //MARK: - Test of .record enum value

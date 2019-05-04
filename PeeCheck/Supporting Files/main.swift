@@ -10,4 +10,4 @@ import UIKit
 
 let appDelegateClass: AnyClass? = NSClassFromString("PeeCheckTests.TestingAppDelegate") ?? AppDelegate.self
 
-UIApplicationMain(CommandLine.argc, UnsafeMutableRawPointer(CommandLine.unsafeArgv).bindMemory(to: UnsafeMutablePointer<Int8>.self, capacity: Int(CommandLine.argc)), nil, NSStringFromClass(appDelegateClass!))
+UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, NSStringFromClass(AppDelegate.self))

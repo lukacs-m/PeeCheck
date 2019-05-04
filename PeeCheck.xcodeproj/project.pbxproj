@@ -35,6 +35,10 @@
 		5B40EBBD20CD883300EE2AC7 /* ChartsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40EBB720CD883300EE2AC7 /* ChartsModels.swift */; };
 		5B40EBBE20CD883300EE2AC7 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40EBB820CD883300EE2AC7 /* ChartsViewController.swift */; };
 		5B40EBBF20CD883300EE2AC7 /* ChartsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40EBB920CD883300EE2AC7 /* ChartsInteractor.swift */; };
+		5B501E8E2236680400897977 /* MainResultsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B501E8A2236680400897977 /* MainResultsViewControllerTests.swift */; };
+		5B501E8F2236680400897977 /* MainResultsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B501E8B2236680400897977 /* MainResultsInteractorTests.swift */; };
+		5B501E902236680400897977 /* MainResultsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B501E8C2236680400897977 /* MainResultsWorkerTests.swift */; };
+		5B501E912236680400897977 /* MainResultsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B501E8D2236680400897977 /* MainResultsPresenterTests.swift */; };
 		5B74AE17209A7DF100FAAC0F /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74AE16209A7DF100FAAC0F /* UIButton+Extensions.swift */; };
 		5B91379A208FEBD40041CED2 /* RoundButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B913799208FEBD40041CED2 /* RoundButtonTests.swift */; };
 		5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9137A5209490300041CED2 /* UIView+Extensions.swift */; };
@@ -70,6 +74,8 @@
 		5BA6A96E20A7ABDB005BCA63 /* Micturition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A96D20A7ABDB005BCA63 /* Micturition.swift */; };
 		5BA6A97120A7AE93005BCA63 /* UserRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97020A7AE93005BCA63 /* UserRealmManager.swift */; };
 		5BA6A97620A7B564005BCA63 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6A97520A7B564005BCA63 /* RealmConfig.swift */; };
+		5BA8351F2191D0E50014F9E4 /* MainResultsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA8351D2191D0E50014F9E4 /* MainResultsCollectionViewCell.swift */; };
+		5BA835202191D0E50014F9E4 /* MainResultsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA8351E2191D0E50014F9E4 /* MainResultsCollectionViewCell.xib */; };
 		5BB864F22084252B002EBB5F /* PeeCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864F12084252B002EBB5F /* PeeCheckUITests.swift */; };
 		5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FB20842584002EBB5F /* TabBarControllersTests.swift */; };
 		5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB864FF20855A13002EBB5F /* MainTabBarViewControllerTests.swift */; };
@@ -87,10 +93,29 @@
 		5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */; };
 		5BC5AEF8210E497A001ABA7F /* ChartsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5AEF6210E497A001ABA7F /* ChartsTableViewCell.swift */; };
 		5BC5AEF9210E497A001ABA7F /* ChartsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5AEF7210E497A001ABA7F /* ChartsTableViewCell.xib */; };
+		5BD1780022358B0800A46B17 /* MainConclusionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD177FE22358B0800A46B17 /* MainConclusionCollectionViewCell.swift */; };
+		5BD1780122358B0800A46B17 /* MainConclusionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BD177FF22358B0800A46B17 /* MainConclusionCollectionViewCell.xib */; };
+		5BDB3D372133094600651CB1 /* MainResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D312133094500651CB1 /* MainResultsPresenter.swift */; };
+		5BDB3D382133094600651CB1 /* MainResultsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D322133094500651CB1 /* MainResultsWorker.swift */; };
+		5BDB3D392133094600651CB1 /* MainResultsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D332133094500651CB1 /* MainResultsRouter.swift */; };
+		5BDB3D3A2133094600651CB1 /* MainResultsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D342133094500651CB1 /* MainResultsModels.swift */; };
+		5BDB3D3B2133094600651CB1 /* MainResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D352133094600651CB1 /* MainResultsViewController.swift */; };
+		5BDB3D3C2133094600651CB1 /* MainResultsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB3D362133094600651CB1 /* MainResultsInteractor.swift */; };
+		5BDB3D3E21330B3300651CB1 /* MainResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BDB3D3D21330B3300651CB1 /* MainResultsViewController.xib */; };
 		5BF74E9821172E2A00C9AB6A /* ChartsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74E9421172E2A00C9AB6A /* ChartsViewControllerTests.swift */; };
 		5BF74E9921172E2A00C9AB6A /* ChartsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74E9521172E2A00C9AB6A /* ChartsInteractorTests.swift */; };
 		5BF74E9A21172E2A00C9AB6A /* ChartsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74E9621172E2A00C9AB6A /* ChartsWorkerTests.swift */; };
 		5BF74E9B21172E2A00C9AB6A /* ChartsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74E9721172E2A00C9AB6A /* ChartsPresenterTests.swift */; };
+		5BFD53CB226DF74800A3A858 /* ResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD53C5226DF74800A3A858 /* ResultsPresenter.swift */; };
+		5BFD53CC226DF74800A3A858 /* ResultsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD53C6226DF74800A3A858 /* ResultsWorker.swift */; };
+		5BFD53CD226DF74800A3A858 /* ResultsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD53C7226DF74800A3A858 /* ResultsRouter.swift */; };
+		5BFD53CE226DF74800A3A858 /* ResultsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD53C8226DF74800A3A858 /* ResultsModels.swift */; };
+		5BFD53CF226DF74800A3A858 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD53C9226DF74800A3A858 /* ResultsViewController.swift */; };
+		5BFD53D0226DF74800A3A858 /* ResultsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD53CA226DF74800A3A858 /* ResultsInteractor.swift */; };
+		5BFD53D6226F654600A3A858 /* ResultsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD53D4226F654600A3A858 /* ResultsCollectionViewCell.swift */; };
+		5BFD53D7226F654600A3A858 /* ResultsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BFD53D5226F654600A3A858 /* ResultsCollectionViewCell.xib */; };
+		5BFD53D9226F66CB00A3A858 /* UICollectionView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD53D8226F66CB00A3A858 /* UICollectionView+Utils.swift */; };
+		5BFD53DB226F66F400A3A858 /* NSObject+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD53DA226F66F400A3A858 /* NSObject+Utils.swift */; };
 		7E828030DE0A63143A66E166 /* Pods_PeeCheckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CF96DD458CDE4EFA8B382 /* Pods_PeeCheckUITests.framework */; };
 		9549CE34E9014B4205D25413 /* Pods_PeeCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 444058EC6B292B8FF016DB99 /* Pods_PeeCheck.framework */; };
 /* End PBXBuildFile section */
@@ -143,6 +168,10 @@
 		5B40EBB820CD883300EE2AC7 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		5B40EBB920CD883300EE2AC7 /* ChartsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsInteractor.swift; sourceTree = "<group>"; };
 		5B43D0902085EA4C0002E1DF /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
+		5B501E8A2236680400897977 /* MainResultsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsViewControllerTests.swift; sourceTree = "<group>"; };
+		5B501E8B2236680400897977 /* MainResultsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsInteractorTests.swift; sourceTree = "<group>"; };
+		5B501E8C2236680400897977 /* MainResultsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsWorkerTests.swift; sourceTree = "<group>"; };
+		5B501E8D2236680400897977 /* MainResultsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsPresenterTests.swift; sourceTree = "<group>"; };
 		5B74AE16209A7DF100FAAC0F /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		5B913799208FEBD40041CED2 /* RoundButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonTests.swift; sourceTree = "<group>"; };
 		5B9137A5209490300041CED2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -178,6 +207,8 @@
 		5BA6A96D20A7ABDB005BCA63 /* Micturition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Micturition.swift; sourceTree = "<group>"; };
 		5BA6A97020A7AE93005BCA63 /* UserRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmManager.swift; sourceTree = "<group>"; };
 		5BA6A97520A7B564005BCA63 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
+		5BA8351D2191D0E50014F9E4 /* MainResultsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsCollectionViewCell.swift; sourceTree = "<group>"; };
+		5BA8351E2191D0E50014F9E4 /* MainResultsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainResultsCollectionViewCell.xib; sourceTree = "<group>"; };
 		5BB864E1208417D6002EBB5F /* PeeCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB864E5208417D7002EBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB864EF2084252A002EBB5F /* PeeCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,10 +233,29 @@
 		5BB9D8FF204EEBC800C5ADA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		5BC5AEF6210E497A001ABA7F /* ChartsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTableViewCell.swift; sourceTree = "<group>"; };
 		5BC5AEF7210E497A001ABA7F /* ChartsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsTableViewCell.xib; sourceTree = "<group>"; };
+		5BD177FE22358B0800A46B17 /* MainConclusionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConclusionCollectionViewCell.swift; sourceTree = "<group>"; };
+		5BD177FF22358B0800A46B17 /* MainConclusionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainConclusionCollectionViewCell.xib; sourceTree = "<group>"; };
+		5BDB3D312133094500651CB1 /* MainResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsPresenter.swift; sourceTree = "<group>"; };
+		5BDB3D322133094500651CB1 /* MainResultsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsWorker.swift; sourceTree = "<group>"; };
+		5BDB3D332133094500651CB1 /* MainResultsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsRouter.swift; sourceTree = "<group>"; };
+		5BDB3D342133094500651CB1 /* MainResultsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsModels.swift; sourceTree = "<group>"; };
+		5BDB3D352133094600651CB1 /* MainResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsViewController.swift; sourceTree = "<group>"; };
+		5BDB3D362133094600651CB1 /* MainResultsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsInteractor.swift; sourceTree = "<group>"; };
+		5BDB3D3D21330B3300651CB1 /* MainResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainResultsViewController.xib; sourceTree = "<group>"; };
 		5BF74E9421172E2A00C9AB6A /* ChartsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewControllerTests.swift; sourceTree = "<group>"; };
 		5BF74E9521172E2A00C9AB6A /* ChartsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsInteractorTests.swift; sourceTree = "<group>"; };
 		5BF74E9621172E2A00C9AB6A /* ChartsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsWorkerTests.swift; sourceTree = "<group>"; };
 		5BF74E9721172E2A00C9AB6A /* ChartsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsPresenterTests.swift; sourceTree = "<group>"; };
+		5BFD53C5226DF74800A3A858 /* ResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenter.swift; sourceTree = "<group>"; };
+		5BFD53C6226DF74800A3A858 /* ResultsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsWorker.swift; sourceTree = "<group>"; };
+		5BFD53C7226DF74800A3A858 /* ResultsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsRouter.swift; sourceTree = "<group>"; };
+		5BFD53C8226DF74800A3A858 /* ResultsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsModels.swift; sourceTree = "<group>"; };
+		5BFD53C9226DF74800A3A858 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		5BFD53CA226DF74800A3A858 /* ResultsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsInteractor.swift; sourceTree = "<group>"; };
+		5BFD53D4226F654600A3A858 /* ResultsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCollectionViewCell.swift; sourceTree = "<group>"; };
+		5BFD53D5226F654600A3A858 /* ResultsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsCollectionViewCell.xib; sourceTree = "<group>"; };
+		5BFD53D8226F66CB00A3A858 /* UICollectionView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Utils.swift"; sourceTree = "<group>"; };
+		5BFD53DA226F66F400A3A858 /* NSObject+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Utils.swift"; sourceTree = "<group>"; };
 		901DC64AB7C572D4E62F276D /* Pods-PeeCheckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeeCheckUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9E21308C9B2077CCC24EEB1F /* Pods-PeeCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeeCheck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeeCheck/Pods-PeeCheck.debug.xcconfig"; sourceTree = "<group>"; };
 		BA2CF96DD458CDE4EFA8B382 /* Pods_PeeCheckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeeCheckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -361,6 +411,17 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		5B501E89223667D100897977 /* MainResults */ = {
+			isa = PBXGroup;
+			children = (
+				5B501E8A2236680400897977 /* MainResultsViewControllerTests.swift */,
+				5B501E8B2236680400897977 /* MainResultsInteractorTests.swift */,
+				5B501E8C2236680400897977 /* MainResultsWorkerTests.swift */,
+				5B501E8D2236680400897977 /* MainResultsPresenterTests.swift */,
+			);
+			path = MainResults;
+			sourceTree = "<group>";
+		};
 		5B913798208FEBA30041CED2 /* Designables */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +526,17 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		5BA8351C2191CE2C0014F9E4 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				5BA8351D2191D0E50014F9E4 /* MainResultsCollectionViewCell.swift */,
+				5BA8351E2191D0E50014F9E4 /* MainResultsCollectionViewCell.xib */,
+				5BD177FE22358B0800A46B17 /* MainConclusionCollectionViewCell.swift */,
+				5BD177FF22358B0800A46B17 /* MainConclusionCollectionViewCell.xib */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
 		5BB864E2208417D7002EBB5F /* PeeCheckTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,6 +582,7 @@
 		5BB864FD208559B9002EBB5F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5B501E89223667D100897977 /* MainResults */,
 				5BF74E9321172E0200C9AB6A /* Charts */,
 				5B9724B020A1C3B400D4C7E5 /* CreateUser */,
 				5B9137BE2098C68E0041CED2 /* Account */,
@@ -595,6 +668,8 @@
 		5BB9D8EE204EE72E00C5ADA1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5BFD53C4226DF72C00A3A858 /* Results */,
+				5BDB3D302133090B00651CB1 /* MainResults */,
 				5B40EBA220CD7F4500EE2AC7 /* Charts */,
 				5B9137C92098E7BA0041CED2 /* CreateUser */,
 				5B9137A7209681EA0041CED2 /* Account */,
@@ -635,6 +710,8 @@
 				5B9137A5209490300041CED2 /* UIView+Extensions.swift */,
 				5B74AE16209A7DF100FAAC0F /* UIButton+Extensions.swift */,
 				5B9724B920A26B0D00D4C7E5 /* UIViewController+Extensions.swift */,
+				5BFD53D8226F66CB00A3A858 /* UICollectionView+Utils.swift */,
+				5BFD53DA226F66F400A3A858 /* NSObject+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -648,6 +725,21 @@
 			path = "UI Elements";
 			sourceTree = "<group>";
 		};
+		5BDB3D302133090B00651CB1 /* MainResults */ = {
+			isa = PBXGroup;
+			children = (
+				5BA8351C2191CE2C0014F9E4 /* UI Elements */,
+				5BDB3D312133094500651CB1 /* MainResultsPresenter.swift */,
+				5BDB3D322133094500651CB1 /* MainResultsWorker.swift */,
+				5BDB3D332133094500651CB1 /* MainResultsRouter.swift */,
+				5BDB3D342133094500651CB1 /* MainResultsModels.swift */,
+				5BDB3D352133094600651CB1 /* MainResultsViewController.swift */,
+				5BDB3D362133094600651CB1 /* MainResultsInteractor.swift */,
+				5BDB3D3D21330B3300651CB1 /* MainResultsViewController.xib */,
+			);
+			path = MainResults;
+			sourceTree = "<group>";
+		};
 		5BF74E9321172E0200C9AB6A /* Charts */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +749,29 @@
 				5BF74E9721172E2A00C9AB6A /* ChartsPresenterTests.swift */,
 			);
 			path = Charts;
+			sourceTree = "<group>";
+		};
+		5BFD53C4226DF72C00A3A858 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				5BFD53D3226F652E00A3A858 /* UIElements */,
+				5BFD53C5226DF74800A3A858 /* ResultsPresenter.swift */,
+				5BFD53C6226DF74800A3A858 /* ResultsWorker.swift */,
+				5BFD53C7226DF74800A3A858 /* ResultsRouter.swift */,
+				5BFD53C8226DF74800A3A858 /* ResultsModels.swift */,
+				5BFD53C9226DF74800A3A858 /* ResultsViewController.swift */,
+				5BFD53CA226DF74800A3A858 /* ResultsInteractor.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		5BFD53D3226F652E00A3A858 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				5BFD53D4226F654600A3A858 /* ResultsCollectionViewCell.swift */,
+				5BFD53D5226F654600A3A858 /* ResultsCollectionViewCell.xib */,
+			);
+			path = UIElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -795,8 +910,12 @@
 				5B201FB32076E22A0063EA25 /* RecordingViewController.xib in Resources */,
 				5BB9D8C6204EE3D200C5ADA1 /* Assets.xcassets in Resources */,
 				5B9137B52096823A0041CED2 /* AccountViewController.xib in Resources */,
+				5BA835202191D0E50014F9E4 /* MainResultsCollectionViewCell.xib in Resources */,
 				5BB9D8C4204EE3D200C5ADA1 /* Main.storyboard in Resources */,
+				5BDB3D3E21330B3300651CB1 /* MainResultsViewController.xib in Resources */,
+				5BD1780122358B0800A46B17 /* MainConclusionCollectionViewCell.xib in Resources */,
 				5BC5AEF9210E497A001ABA7F /* ChartsTableViewCell.xib in Resources */,
+				5BFD53D7226F654600A3A858 /* ResultsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,7 +928,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
@@ -824,7 +943,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PeeCheckUITests/Pods-PeeCheckUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4C1424EFFCE41CD44BEF2847 /* [CP] Check Pods Manifest.lock */ = {
@@ -857,7 +976,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		7902CE217C5909E11282460E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -865,24 +984,44 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheck/Pods-PeeCheck-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PeeCheck/Pods-PeeCheck-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIcons.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheck/Pods-PeeCheck-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PeeCheck/Pods-PeeCheck-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		871422BF7B8E3A623B56A158 /* [CP] Embed Pods Frameworks */ = {
@@ -891,7 +1030,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckTests/Pods-PeeCheckTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PeeCheckTests/Pods-PeeCheckTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
@@ -906,7 +1045,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeeCheckTests/Pods-PeeCheckTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PeeCheckTests/Pods-PeeCheckTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B516C55102201A00BFA23DCC /* [CP] Check Pods Manifest.lock */ = {
@@ -956,12 +1095,14 @@
 				5B3F38C520ABAB37006E573C /* RealmManagerMock.swift in Sources */,
 				5B21DA772085ECAD005321EC /* TestingAppDelegate.swift in Sources */,
 				5B9724B620A1C3DC00D4C7E5 /* CreateUserInteractorTests.swift in Sources */,
+				5B501E902236680400897977 /* MainResultsWorkerTests.swift in Sources */,
 				5BB8650920855A8B002EBB5F /* RecordingPresenterTests.swift in Sources */,
 				5BB8650820855A8B002EBB5F /* RecordingWorkerTests.swift in Sources */,
 				5B9137C42098C70B0041CED2 /* AccountInteractorTests.swift in Sources */,
 				5BF74E9A21172E2A00C9AB6A /* ChartsWorkerTests.swift in Sources */,
 				5BF74E9921172E2A00C9AB6A /* ChartsInteractorTests.swift in Sources */,
 				5B9724B720A1C3DC00D4C7E5 /* CreateUserWorkerTests.swift in Sources */,
+				5B501E8F2236680400897977 /* MainResultsInteractorTests.swift in Sources */,
 				5B9137C32098C70B0041CED2 /* AccountViewControllerTests.swift in Sources */,
 				5B3F38C020AB9F42006E573C /* PersistenceErrorTests.swift in Sources */,
 				5B9137C62098C70B0041CED2 /* AccountPresenterTests.swift in Sources */,
@@ -976,7 +1117,9 @@
 				5BB864FC20842584002EBB5F /* TabBarControllersTests.swift in Sources */,
 				5B21131020B03AE400B49536 /* UserRealmManagerTests.swift in Sources */,
 				5BB8650020855A13002EBB5F /* MainTabBarViewControllerTests.swift in Sources */,
+				5B501E8E2236680400897977 /* MainResultsViewControllerTests.swift in Sources */,
 				5B9724B820A1C3DC00D4C7E5 /* CreateUserPresenterTests.swift in Sources */,
+				5B501E912236680400897977 /* MainResultsPresenterTests.swift in Sources */,
 				5BF74E9B21172E2A00C9AB6A /* ChartsPresenterTests.swift in Sources */,
 				5BB8650620855A8B002EBB5F /* RecordingViewControllerTests.swift in Sources */,
 				5BA6A96C20A7928D005BCA63 /* AccountRouterTests.swift in Sources */,
@@ -995,25 +1138,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BDB3D382133094600651CB1 /* MainResultsWorker.swift in Sources */,
 				5BC5AEF8210E497A001ABA7F /* ChartsTableViewCell.swift in Sources */,
 				5B40EBBD20CD883300EE2AC7 /* ChartsModels.swift in Sources */,
 				5B9137A6209490300041CED2 /* UIView+Extensions.swift in Sources */,
 				5B9137AE209682140041CED2 /* AccountPresenter.swift in Sources */,
 				5BA6A97120A7AE93005BCA63 /* UserRealmManager.swift in Sources */,
 				5B201FB02076E1E60063EA25 /* RecordingViewController.swift in Sources */,
+				5BFD53CF226DF74800A3A858 /* ResultsViewController.swift in Sources */,
+				5BDB3D372133094600651CB1 /* MainResultsPresenter.swift in Sources */,
+				5BFD53DB226F66F400A3A858 /* NSObject+Utils.swift in Sources */,
+				5BA8351F2191D0E50014F9E4 /* MainResultsCollectionViewCell.swift in Sources */,
 				5B40EBBF20CD883300EE2AC7 /* ChartsInteractor.swift in Sources */,
 				5BA6A96E20A7ABDB005BCA63 /* Micturition.swift in Sources */,
+				5BDB3D392133094600651CB1 /* MainResultsRouter.swift in Sources */,
+				5BFD53D0226DF74800A3A858 /* ResultsInteractor.swift in Sources */,
 				5B40EBBA20CD883300EE2AC7 /* ChartsPresenter.swift in Sources */,
 				5B9137D42098E8240041CED2 /* CreateUserViewController.swift in Sources */,
+				5BFD53CE226DF74800A3A858 /* ResultsModels.swift in Sources */,
 				5BA6A97620A7B564005BCA63 /* RealmConfig.swift in Sources */,
+				5BFD53D9226F66CB00A3A858 /* UICollectionView+Utils.swift in Sources */,
 				5B9724BA20A26B0D00D4C7E5 /* UIViewController+Extensions.swift in Sources */,
 				5B21DAF7208D3C3F005321EC /* TabBarControllers.swift in Sources */,
+				5BD1780022358B0800A46B17 /* MainConclusionCollectionViewCell.swift in Sources */,
+				5BFD53CC226DF74800A3A858 /* ResultsWorker.swift in Sources */,
 				5B40EBB320CD800300EE2AC7 /* RouterProtocol.swift in Sources */,
 				5B9137BA2098BFF50041CED2 /* RoundedCornerButton.swift in Sources */,
 				5B9137BD2098C4A20041CED2 /* Style.swift in Sources */,
 				5B201FAF2076E1E60063EA25 /* RecordingModels.swift in Sources */,
 				5B9137D02098E8240041CED2 /* CreateUserPresenter.swift in Sources */,
 				5B9137B1209682140041CED2 /* AccountModels.swift in Sources */,
+				5BDB3D3A2133094600651CB1 /* MainResultsModels.swift in Sources */,
 				5B9137D52098E8240041CED2 /* CreateUserInteractor.swift in Sources */,
 				5B21131620B1DC2D00B49536 /* MicturitionRealmManager.swift in Sources */,
 				5B9137B0209682140041CED2 /* AccountRouter.swift in Sources */,
@@ -1021,22 +1176,27 @@
 				5B9137AF209682140041CED2 /* AccountWorker.swift in Sources */,
 				5B74AE17209A7DF100FAAC0F /* UIButton+Extensions.swift in Sources */,
 				5BB8650C2085E528002EBB5F /* main.swift in Sources */,
+				5BFD53CD226DF74800A3A858 /* ResultsRouter.swift in Sources */,
 				5B40EBBE20CD883300EE2AC7 /* ChartsViewController.swift in Sources */,
 				5BB8650A20856613002EBB5F /* MainTabBarViewController.swift in Sources */,
 				5B201FAC2076E1E60063EA25 /* RecordingPresenter.swift in Sources */,
 				5B21DAF9208D3C67005321EC /* RoundButton.swift in Sources */,
 				5B9137B2209682140041CED2 /* AccountViewController.swift in Sources */,
 				5B201FAD2076E1E60063EA25 /* RecordingWorker.swift in Sources */,
+				5BFD53D6226F654600A3A858 /* ResultsCollectionViewCell.swift in Sources */,
 				5B201FB12076E1E60063EA25 /* RecordingInteractor.swift in Sources */,
+				5BFD53CB226DF74800A3A858 /* ResultsPresenter.swift in Sources */,
 				5B201FAE2076E1E60063EA25 /* RecordingRouter.swift in Sources */,
 				5B9137D12098E8240041CED2 /* CreateUserWorker.swift in Sources */,
 				5B201FB52076E9580063EA25 /* UIImage+Extensions.swift in Sources */,
 				5B21131820B1DC3C00B49536 /* GeneralRealmManager.swift in Sources */,
 				5BB9D8BF204EE3D200C5ADA1 /* AppDelegate.swift in Sources */,
+				5BDB3D3B2133094600651CB1 /* MainResultsViewController.swift in Sources */,
 				5B9137B3209682140041CED2 /* AccountInteractor.swift in Sources */,
 				5BB9D900204EEBC800C5ADA1 /* String+Extensions.swift in Sources */,
 				5B3F38BD20AB9598006E573C /* PersistenceErrors.swift in Sources */,
 				5B40EBBB20CD883300EE2AC7 /* ChartsWorker.swift in Sources */,
+				5BDB3D3C2133094600651CB1 /* MainResultsInteractor.swift in Sources */,
 				5B9137B82097DB110041CED2 /* User.swift in Sources */,
 				5B9137D22098E8240041CED2 /* CreateUserRouter.swift in Sources */,
 				5B9137D32098E8240041CED2 /* CreateUserModels.swift in Sources */,
@@ -1212,7 +1372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1266,7 +1426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1283,7 +1443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
 				INFOPLIST_FILE = "$(SRCROOT)/PeeCheck/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -1292,7 +1452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1306,7 +1466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99ZMAPWT9Y;
 				INFOPLIST_FILE = "$(SRCROOT)/PeeCheck/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1314,7 +1474,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.martin.PeeCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

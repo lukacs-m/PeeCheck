@@ -73,9 +73,9 @@ class ChartsViewController: UITableViewController, ChartsDisplayLogic {
     
     func  displayChartsView(viewModel: Charts.FetchChartsViews.ViewModel) {
         displayedViewsControllers = viewModel.displayedViewControllers
-        tableView.reloadData()
         let displayedChartPage = displayedViewsControllers[0]
         splitViewController?.viewControllers[1] = displayedChartPage.viewController
+        tableView.reloadData()
     }
 }
 

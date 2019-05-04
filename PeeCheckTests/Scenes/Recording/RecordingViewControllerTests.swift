@@ -79,6 +79,8 @@ class RecordingViewControllerTests: QuickSpec {
             
             context("When recording micturition is called") {
                 it("Should start the recording process") {
+                    loadview()
+
                     let recordingBusinessLogicSpy = RecordingBusinessLogicSpy()
                     sut.interactor = recordingBusinessLogicSpy
                     

@@ -66,7 +66,7 @@ class RecordingInteractorTests: QuickSpec {
                 it("Should call the present recording function") {
                     let spy = RecordingPresentationLogicSpy()
                     sut.presenter = spy
-                    let request = Recording.RecordMicturition.Request()
+                    let request = Recording.RecordMicturition.Request(isNight: false)
                     
                     sut.recordMicturition(request: request)
                     expect(spy.presentRecordMicturitionCalled).to(beTrue())

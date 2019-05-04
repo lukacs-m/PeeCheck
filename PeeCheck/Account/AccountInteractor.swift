@@ -30,7 +30,7 @@ class AccountInteractor: AccountBusinessLogic, AccountDataStore {
     // MARK: Fetch user
     
     func fetchUser(request: Account.FetchUser.Request) {
-        var results: (user: User?, error: PersistenceErrors?)? = nil
+        var results: (user: User?, error: PersistenceErrors?)?
         if user == nil {
             results = worker.getUser()
             user = results?.user

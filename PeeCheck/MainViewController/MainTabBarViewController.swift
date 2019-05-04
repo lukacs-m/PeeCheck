@@ -18,15 +18,15 @@ class MainTabBarViewController: UITabBarController {
     
     /// Sets up the tabbar controller view and controllers
     private func setUpUI() {
-        for controller in TabBarControllers.array {
+        for controller in TabBarControllers.allCases {
             addController(controller.getViewController(), name: controller.localized(),
                           image: controller.getImage(),
                           selectedImage: controller.getImage(selected: true),
                           insideNavController: controller.shouldBeInNavigation())
         }
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: Style.Color.MainGreen], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: Style.Color.MainBlue], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Style.Color.MainGreen], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Style.Color.MainBlue], for: .selected)
         tabBar.backgroundImage = UIImage.imageWithColor(color: .clear)
         let frost = UIVisualEffectView(effect: UIBlurEffect(style: .light))
         frost.frame = tabBar.bounds

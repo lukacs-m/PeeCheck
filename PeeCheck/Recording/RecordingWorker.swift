@@ -29,11 +29,11 @@ class RecordingWorker: MicturitionPersistenceInjected {
     ///
     /// - Parameter isRecording: The recording status
     /// - Returns: Return nil while recording and a bolean once recording is finished. true if recording went well false otherwise
-    func saveMicturitionTime(_ isRecording: Bool) -> PersistenceErrors? {
+    func saveMicturitionTime(_ isRecording: Bool, isNight: Bool) -> PersistenceErrors? {
         if isRecording {
             runTimer()
         } else {
-           return saveMiction()
+           return saveMiction(isNight)
         }
         return nil
     }
@@ -63,8 +63,8 @@ extension RecordingWorker {
     /// Saves the micturition to database
     ///
     /// - Returns: A boolean depending on the success of the saving process. True if it worked or else false.
-    private func saveMiction() -> PersistenceErrors? {        
-        let newMicturition = Micturition(duration: seconds)
+    private func saveMiction(_ isNight: Bool) -> PersistenceErrors? {
+        let newMicturition = Micturition(duration: seconds, isNight: isNight)
         resetTimer()
         return micturitionDataManager.saveMicturition(micturition: newMicturition)
     }

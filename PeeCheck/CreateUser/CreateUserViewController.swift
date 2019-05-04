@@ -68,10 +68,10 @@ class CreateUserViewController: UIViewController, CreateUserDisplayLogic {
         btnCreateUser.setUpMainButtonUI()
         txtAge.layer.borderColor = Style.Color.MainBlue.cgColor
         txtAge.layer.borderWidth = 1.0
+        txtAge.layer.cornerRadius = 3.0
         lblTitle.text = "save_user_information".localized()
         lblAgeTitle.text = "age_label".localized()
         lblGenderTitle.text = "gender_label".localized()
-
         txtGender.delegate = self
     }
     
@@ -101,7 +101,6 @@ extension CreateUserViewController {
         txtAge.text = "\(viewModel.userFields.age)"
         txtGender.text = viewModel.userFields.gender.localized()
         lblTitle.text = "edit_user_information".localized()
-        genderMethodPicker.selectRow(viewModel.pickerRow, inComponent: 0, animated: true)
     }
 }
 

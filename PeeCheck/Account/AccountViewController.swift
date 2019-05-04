@@ -146,6 +146,7 @@ extension AccountViewController {
         }
         lblGenderData.text = "account_lbl_user_data_missing".localized()
         lblAgeData.text = "account_lbl_user_data_missing".localized()
+        btnEdit.setTitle("account_btn_create".localized(), for: .normal)
     }
 }
 

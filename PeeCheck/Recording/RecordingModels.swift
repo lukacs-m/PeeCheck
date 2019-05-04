@@ -29,6 +29,7 @@ enum Recording {
     
     enum RecordMicturition {
         struct Request {
+            var isNight: Bool
         }
         struct Response {
             var isRecording: Bool

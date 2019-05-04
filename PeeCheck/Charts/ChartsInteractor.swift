@@ -31,7 +31,7 @@ final class ChartsInteractor: ChartsBusinessLogic, ChartsDataStore {
         if viewControllers.isEmpty {
             viewControllers = worker.getChartsViews()
         }
-        worker = ChartsWorker()
+//        worker = ChartsWorker()
         
         let response = Charts.FetchChartsViews.Response(viewControllers: viewControllers)
         presenter?.presentFetchChartsViews(response: response)
