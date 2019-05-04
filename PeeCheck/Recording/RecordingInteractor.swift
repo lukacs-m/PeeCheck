@@ -40,8 +40,7 @@ class RecordingInteractor: RecordingBusinessLogic, RecordingDataStore {
     ///
     /// - Parameter request: The request sent to start & stop the recording
     func recordMicturition(request: Recording.RecordMicturition.Request) {
-        //TODO add isnight information
-        let response = Recording.RecordMicturition.Response(isRecording: isRecording, savedMicturition: worker.saveMicturitionTime(isRecording))
+        let response = Recording.RecordMicturition.Response(isRecording: isRecording, savedMicturition: worker.saveMicturitionTime(isRecording, isNight: request.isNight))
         presenter?.presentRecordMicturition(response: response)
         isRecording = !isRecording
     }

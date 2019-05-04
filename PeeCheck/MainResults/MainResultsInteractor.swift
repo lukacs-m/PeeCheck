@@ -10,35 +10,73 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
-protocol MainResultsBusinessLogic {
-  func fetchUserData(request: MainResults.FetchUserData.Request)
-}
-
-protocol MainResultsDataStore {
-  //var name: String { get set }
-}
-
-final class MainResultsInteractor: MainResultsBusinessLogic, MainResultsDataStore {
-  var presenter: MainResultsPresentationLogic?
-  var worker: MainResultsWorker!
-  
-  // MARK: Get the user's data
-  
-  func fetchUserData(request: MainResults.FetchUserData.Request) {
-    worker = MainResultsWorker()
-    
-    var response: MainResults.FetchUserData.Response!
-    
-    let user = worker.getUser().user
-    let micturitions = worker.getMicturitions().micturitions
-    let enoughDaysOfRecording = worker.getNumberOfDayRecording(micturitions) > 3 ? true : false
-    
-    
-    response = MainResults.FetchUserData.Response(user: user, enoughDaysRecording: enoughDaysOfRecording, longestMicturition: worker.getLongestMicturition(micturitions), shortestMicturition: worker.getShortesttMicturition(micturitions), averageMicturitionTime: worker.getAverageMicturitionTime(micturitions), totalNumberOfMicturition: worker.getTotalNumberOfMicturition(micturitions), averageNumberOfMicturitionDaily: worker.getAverageNumberOfMicturitionDaily(micturitions), averageNumberOfMicturitionAtNight: worker.getAverageNumberOfMicturitionAtNight(micturitions))
-    presenter?.presentFetchUserData(response: response)
-  }
-    
-    
-}
+//import UIKit
+//import RealmSwift
+//
+//protocol MainResultsBusinessLogic {
+//  func fetchUserData(request: MainResults.FetchUserData.Request)
+//}
+//
+//protocol MainResultsDataStore {
+//  //var name: String { get set }
+//}
+//
+//final class MainResultsInteractor: MainResultsBusinessLogic, MainResultsDataStore {
+//  var presenter: MainResultsPresentationLogic?
+//  var worker = MainResultsWorker()
+//  
+//  // MARK: Get the user's data
+//  
+//  func fetchUserData(request: MainResults.FetchUserData.Request) {
+//    
+//    var response: MainResults.FetchUserData.Response!
+//    
+//    let user = worker.getUser().user
+//    let micturitions = worker.getMicturitions().micturitions
+//    let enoughDaysOfRecording = worker.getNumberOfDayRecording(micturitions) >= 1 ? true : false
+//    let mainResultsData = createMainResults(micturitions)
+//    let conclusion = createUserConclusion()
+//
+//    response = MainResults.FetchUserData.Response(user: user, enoughDaysRecording: enoughDaysOfRecording, data: mainResultsData, conclusion: conclusion)
+//    presenter?.presentFetchUserData(response: response)
+//  }
+//    
+//}
+//
+//extension MainResultsInteractor {
+//    private func createUserDataResponse(_ micturitions: RealmSwift.Results<Micturition>?, duringNight: Bool = false) -> MainResults.MicturitionResults {
+//        let shortestMicturition = worker.getShortesttMicturition(micturitions, byNight: duringNight)
+//        let longestMicturition = worker.getLongestMicturition(micturitions, byNight: duringNight)
+//        let averageMicturitionTime = worker.getAverageMicturitionTime(micturitions, byNight: duringNight)
+//        let totalNumberOfMicturition = worker.getTotalNumberOfMicturition(micturitions, byNight: duringNight)
+//        let averageNumberOfMicturition = worker.getAverageNumberOfMicturition(micturitions, byNight: duringNight)
+//        let maxNumberOfMicturition = worker.getMaxNumberOfMicturitionForADay(micturitions, byNight: duringNight)
+//        let minNumberOfMicturition = worker.getMinNumberOfMicturitionForADay(micturitions, byNight: duringNight)
+//        
+//        let result = MainResults.MicturitionResults(isNight: duringNight,
+//                                                    shortestMicturition: shortestMicturition,
+//                                                    longestMicturition: longestMicturition,
+//                                                    averageMicturitionTime: averageMicturitionTime,
+//                                                    totalNumberOfMicturition: totalNumberOfMicturition,
+//                                                    averageNumberOfMicturition: averageNumberOfMicturition,
+//                                                    maxNumberOfMicturition: maxNumberOfMicturition,
+//                                                    minNumberOfMicturition: minNumberOfMicturition)
+//        return result
+//    }
+//    
+//    private func createMainResults(_ micturitions: RealmSwift.Results<Micturition>?) -> [MainResults.MicturitionResults] {
+//        var data = [MainResults.MicturitionResults]()
+//        let nightData = createUserDataResponse(micturitions, duringNight: true)
+//        let dayData = createUserDataResponse(micturitions)
+//        data.append(dayData)
+//        data.append(nightData)
+//        return data
+//    }
+//    
+//    private func createUserConclusion() -> [String: String] {
+//        var conclusion: [String: String] = [:]
+//        conclusion.updateValue("you have very few recording lpease record more mucturitions", forKey: "helper")
+//        conclusion.updateValue("you are in good health", forKey: "conclusion")
+//        return conclusion
+//    }
+//}

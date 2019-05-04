@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    func showAlert(_ title: String = "", message: String = "", style: UIAlertControllerStyle = .alert, actions: [UIAlertAction]? = [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)]) {
+    func showAlert(_ title: String = "", message: String = "", style: UIAlertController.Style = .alert, actions: [UIAlertAction]? = [UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)]) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         
         // add the actions (buttons)

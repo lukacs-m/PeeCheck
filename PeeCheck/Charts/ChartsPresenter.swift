@@ -30,6 +30,8 @@ final class ChartsPresenter: ChartsPresentationLogic {
         let displayedViewController = Charts.FetchChartsViews.ViewModel.DisplayedView(name: name, viewController: viewC)
         displayedViewControllers.append(displayedViewController)
     }
+    
+    displayedViewControllers = displayedViewControllers.sorted(by: { $0.name > $1.name })
 
     let viewModel = Charts.FetchChartsViews.ViewModel(displayedViewControllers: displayedViewControllers)
     viewController?.displayChartsView(viewModel: viewModel)

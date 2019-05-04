@@ -12,24 +12,24 @@
 
 import UIKit
 
-@objc protocol MainResultsRoutingLogic {
-   func goToAccountPage()
-}
-
-protocol MainResultsDataPassing {
-  var dataStore: MainResultsDataStore? { get }
-}
-
-class MainResultsRouter: NSObject, MainResultsRoutingLogic, MainResultsDataPassing {
-  weak var viewController: MainResultsViewController?
-  var dataStore: MainResultsDataStore?
-    
-    func goToAccountPage() {
-        if let tabBarController = UIApplication.shared.keyWindow?.rootViewController as? UITabBarController, let viewControllers = tabBarController.viewControllers {
-            if let index = viewControllers.index(where: { ($0 as? UINavigationController)?.viewControllers.first?.isKind(of: AccountViewController.self) ?? false}) {
-                tabBarController.selectedIndex = index
-            }
-        }
-    }
-
-}
+//@objc protocol MainResultsRoutingLogic {
+//   func goToAccountPage()
+//}
+//
+//protocol MainResultsDataPassing {
+//  var dataStore: MainResultsDataStore? { get }
+//}
+//
+//class MainResultsRouter: NSObject, MainResultsRoutingLogic, MainResultsDataPassing {
+//  weak var viewController: MainResultsViewController?
+//  var dataStore: MainResultsDataStore?
+//    
+//    func goToAccountPage() {
+//        if let tabBarController = UIApplication.shared.keyWindow?.rootViewController as? UITabBarController, let viewControllers = tabBarController.viewControllers {
+//            if let index = viewControllers.index(where: { ($0 as? UINavigationController)?.viewControllers.first?.isKind(of: AccountViewController.self) ?? false}) {
+//                tabBarController.selectedIndex = index
+//            }
+//        }
+//    }
+//
+//}

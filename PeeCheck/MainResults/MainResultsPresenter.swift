@@ -10,27 +10,44 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
-protocol MainResultsPresentationLogic {
-  func presentFetchUserData(response: MainResults.FetchUserData.Response)
-}
-
-class MainResultsPresenter: MainResultsPresentationLogic {
-  weak var viewController: MainResultsDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentFetchUserData(response: MainResults.FetchUserData.Response) {
-    let displayedInformation = MainResults.FetchUserData.ViewModel.DisplayedInformation(
-        longestMicturition: " longest mixtion is: \(response.longestMicturition)",
-        shortestMicturition: " shortes mixtion is: \(response.shortestMicturition)",
-        averageMicturitionTime: "Average micturition time is \(response.averageMicturitionTime)",
-        totalNumberOfMicturition: "Total number of micturitions recorded is \(response.totalNumberOfMicturition)",
-        averageNumberOfMicturitionDaily: "Average daily micturitions is \(response.averageNumberOfMicturitionDaily)",
-        averageNumberOfMicturitionAtNight: "Average night micturition is \(response.averageNumberOfMicturitionAtNight)")
-    
-    let viewModel = MainResults.FetchUserData.ViewModel(user: response.user, enoughDaysRecording: response.enoughDaysRecording, informationToDisplay: displayedInformation)
-    viewController?.displayUserData(viewModel: viewModel)
-  }
-}
+//import UIKit
+//
+//protocol MainResultsPresentationLogic {
+//  func presentFetchUserData(response: MainResults.FetchUserData.Response)
+//}
+//
+//class MainResultsPresenter: MainResultsPresentationLogic {
+//  weak var viewController: MainResultsDisplayLogic?
+//  
+//  // MARK: Do something
+//  
+//  func presentFetchUserData(response: MainResults.FetchUserData.Response) {
+//
+//    var displayedInformations: [MainResults.FetchUserData.ViewModel.DisplayedInformation] = []
+//    
+//    for data in response.data {
+//        let displayedInformation = MainResults.FetchUserData.ViewModel.DisplayedInformation(
+//            title: data.isNight ? "Nighting micturions statistics" : "Daytime micturion statistics" ,
+//            shortestMicturition: "Shortest micturition is: \(data.shortestMicturition) seconds",
+//            longestMicturition: "Longtest micturition is: \(data.longestMicturition) seconds",
+//            averageMicturitionTime: "Average micturition time is \(data.averageMicturitionTime) seconds",
+//            averageNumberOfMicturition: "Average micturitions recorded per is \(data.averageNumberOfMicturition)",
+//            maxNumberOfMicturition: "Maximun number of micturition ever recorded in a day is \(data.maxNumberOfMicturition)",
+//            minNumberOfMicturition: "Minimun number of micturition ever recorded in a day is \(data.minNumberOfMicturition)")
+//        displayedInformations.append(displayedInformation)
+//    }
+//    
+//    let displayedConclusion = createDisplayConclusion(response.conclusion)
+//
+//    let viewModel = MainResults.FetchUserData.ViewModel(user: response.user, enoughDaysRecording: response.enoughDaysRecording, informationToDisplay: displayedInformations, conclusion: displayedConclusion)
+//    viewController?.displayUserData(viewModel: viewModel)
+//  }
+//}
+//
+//extension MainResultsPresenter {
+//    private func createDisplayConclusion(_ conclusion: [String: String]) -> MainResults.FetchUserData.ViewModel.DisplayedConclusion {
+//        let helper = conclusion["helper"] ?? ""
+//        let conclusion = conclusion["conclusion"] ?? ""
+//      return  MainResults.FetchUserData.ViewModel.DisplayedConclusion(title: "Conclusion test", helper: helper, conclusion: conclusion)
+//    }
+//}

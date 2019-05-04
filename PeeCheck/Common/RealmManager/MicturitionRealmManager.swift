@@ -24,7 +24,7 @@ extension MicturitionPersistenceInjected {
 
 protocol MicturitionDataManager: class {
     func saveMicturition(micturition: Micturition) -> PersistenceErrors?
-    func getMicturitions() -> (micturitions: Results<Micturition>?, error: PersistenceErrors?)
+    func getMicturitions() -> (micturitions: RealmSwift.Results<Micturition>?, error: PersistenceErrors?)
 }
 
 class MicturitionRealmManager: MicturitionDataManager {
@@ -42,7 +42,7 @@ class MicturitionRealmManager: MicturitionDataManager {
         }
     }
     
-    func getMicturitions() -> (micturitions: Results<Micturition>?, error: PersistenceErrors?) {
+    func getMicturitions() -> (micturitions: RealmSwift.Results<Micturition>?, error: PersistenceErrors?) {
         do {
             let realm = try Realm(configuration: RealmConfig.getConfig())
             let micturitions = realm.objects(Micturition.self)

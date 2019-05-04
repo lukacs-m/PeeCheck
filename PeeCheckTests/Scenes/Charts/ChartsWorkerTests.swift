@@ -37,7 +37,7 @@ class ChartsWorkerTests: QuickSpec {
                 it("Sould return a user if no error occured") {
                     let results = sut.getChartsViews()
                     expect(results.count) == 2
-                    expect(results["main"]).to(beAKindOf(AccountViewController.self))
+                    expect(results["main"]).to(beAKindOf(MainResultsViewController.self))
                     expect(results["charts"]).to(beAKindOf(AccountViewController.self))
                 }
             }

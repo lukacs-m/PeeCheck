@@ -25,4 +25,8 @@ public enum Style {
     public enum Size {
         public static let ButtonInsets = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
     }
+    
+    static func typeOfDevice() -> UIUserInterfaceIdiom {
+        return UIDevice.current.userInterfaceIdiom
+    }
 }

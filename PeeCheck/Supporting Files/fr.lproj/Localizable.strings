@@ -8,7 +8,7 @@
 
 // MARK: - Tab Bar Controllers name
 
-"tab_home"="Enregistrement";
+"tab_record"="Enregistrement";
 "tab_charts"="Statistiques";
 "tab_account"="Votre compte";
 "tab_picto"="picto_tab";

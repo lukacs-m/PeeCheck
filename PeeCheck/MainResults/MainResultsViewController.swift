@@ -13,99 +13,285 @@
 import UIKit
 
 protocol MainResultsDisplayLogic: class {
-  func displayUserData(viewModel: MainResults.FetchUserData.ViewModel)
+    func displayUserData(viewModel: MainResults.FetchUserData.ViewModel)
 }
 
-class MainResultsViewController: UIViewController, MainResultsDisplayLogic {
-    
-    // MARK: - Outlets
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblConclusion: UILabel!
-    @IBOutlet weak var lblTotalNumMiction: UILabel!
-    
-    // MARK: - Variables
-  var interactor: MainResultsBusinessLogic?
-  var router: (NSObjectProtocol & MainResultsRoutingLogic & MainResultsDataPassing)?
-
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup() {
-    let viewController = self
-    let interactor = MainResultsInteractor()
-    let presenter = MainResultsPresenter()
-    let router = MainResultsRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-    
-    private func setUpUI() {
-        self.title = "test"
-    }
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    setUpUI()
-  }
-    
+//class MainResultsViewController: UIViewController, MainResultsDisplayLogic {
+//    
+//    // MARK: - Outlets
+//    @IBOutlet weak var lblTitle: UILabel!
+//    @IBOutlet weak var collectionView: UICollectionView!
+//    
+//    // MARK: - Variables
+//    var interactor: MainResultsBusinessLogic?
+//    var router: (NSObjectProtocol & MainResultsRoutingLogic & MainResultsDataPassing)?
+//    var displayedInformations: [MainResults.FetchUserData.ViewModel.DisplayedInformation] = []
+//    var displayedConclusion: MainResults.FetchUserData.ViewModel.DisplayedConclusion!
+//    
+//    private let mainResultsCellId = "MainResultsCollectionViewCell"
+//    private let mainConclusionCellId = "MainConclusionCollectionViewCell"
+//    
+//    //    let columnLayout = FlowLayout()
+//    
+//    // MARK: Object lifecycle
+//    
+//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//        setup()
+//    }
+//    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        setup()
+//    }
+//    
+//    // MARK: Setup
+//    
+//    private func setup() {
+//        let viewController = self
+//        let interactor = MainResultsInteractor()
+//        let presenter = MainResultsPresenter()
+//        let router = MainResultsRouter()
+//        viewController.interactor = interactor
+//        viewController.router = router
+//        interactor.presenter = presenter
+//        presenter.viewController = viewController
+//        router.viewController = viewController
+//        router.dataStore = interactor
+//    }
+//    
+//    private func setUpUI() {
+//        self.title = "test"
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
+//        collectionView.register(UINib(nibName: "MainResultsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: mainResultsCellId)
+//        collectionView.register(UINib(nibName: "MainConclusionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: mainConclusionCellId)
+//        collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+//        collectionView.backgroundColor = Style.Color.MainBlue
+//    }
+//    
+//    // MARK: View lifecycle
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        setUpUI()
+//    }
+//    
 //    override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
 //        fetchUserData()
 //    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        fetchUserData()
+//    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        
+//    }
+//    
+//    // MARK: Do something
+//    
+//    func fetchUserData() {
+//        let request = MainResults.FetchUserData.Request()
+//        interactor?.fetchUserData(request: request)
+//    }
+//    
+//    func displayUserData(viewModel: MainResults.FetchUserData.ViewModel) {
+//        guard viewModel.user != nil else {
+//            showAlert(title: "Missing user", message: "Please register your informations for us to be able to process the data. WOuld you like to go to the account page", true)
+//            return
+//        }
+//        if !viewModel.enoughDaysRecording {
+//            showAlert(title: "Very few data recorded", message: "The conclusion of your redording will not be accurate because of the lack of data. Please record more of your micturitions")
+//        }
+//        
+//        displayedInformations = viewModel.informationToDisplay
+//        displayedConclusion = viewModel.conclusion
+//        collectionView.reloadData()
+//    }
+//    
+//    // MARK: Error handling
+//    
+//    private func showAlert(title: String, message: String, _ moveToAccountPage: Bool = false) {
+//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//        let alertAction = UIAlertAction(title: "OK", style: .default) { _ in
+//            if moveToAccountPage {
+//                self.router?.goToAccountPage()
+//            }
+//        }
+//        alertController.addAction(cancelAction)
+//        alertController.addAction(alertAction)
+//        self.present(alertController, animated: false, completion: nil)
+//    }
+//}
+//
+//extension MainResultsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return displayedInformations.count + 1
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        if indexPath.row == 0 {
+//            
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: mainConclusionCellId, for: indexPath) as? MainConclusionCollectionViewCell else {
+//                return UICollectionViewCell()
+//            }
+//            cell.update(conclusions: self.displayedConclusion)
+//            
+//            return cell
+//            
+//        } else {
+//            
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: mainResultsCellId, for: indexPath) as? MainResultsCollectionViewCell, !displayedInformations.isEmpty else {
+//                return UICollectionViewCell()
+//            }
+//            let stats = self.displayedInformations[indexPath.row - 1]
+//            cell.update(statistics: stats)
+//            
+//            return cell
+//        }
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        if indexPath.row == 0 {
+//            let cell =  MainConclusionCollectionViewCell.fromMTVNib()
+//            
+//            let width = collectionView.bounds.size.width - 20
+//            
+//            cell.contentView.bounds.size.width = width
+//            cell.update(conclusions: self.displayedConclusion)
+//            cell.contentView.setNeedsLayout()
+//            cell.contentView.layoutIfNeeded()
+//            
+//            let sizeCell = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+//            //        let sizeCell = cell.contentView.systemLayoutSizeFitting(test, withHorizontalFittingPriority: .fittingSizeLevel, verticalFittingPriority: .fittingSizeLevel)
+//            
+//            print("WOOT: height \(sizeCell.height), autre \(cell.intrinsicContentSize.height) ")
+//            
+//            return CGSize(width: width, height: sizeCell.height)
+//        } else {
+//
+//            let cell =  MainResultsCollectionViewCell.fromMTVNib()
+//            
+//            let width = collectionView.bounds.size.width - 20
+//            
+//            cell.contentView.bounds.size.width = width
+//            let stats = self.displayedInformations[indexPath.row - 1]
+//            cell.update(statistics: stats)
+//            cell.contentView.setNeedsLayout()
+//            cell.contentView.layoutIfNeeded()
+//            
+//            let sizeCell = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+//            //        let sizeCell = cell.contentView.systemLayoutSizeFitting(test, withHorizontalFittingPriority: .fittingSizeLevel, verticalFittingPriority: .fittingSizeLevel)
+//            
+//            print("WOOT: height \(sizeCell.height), autre \(cell.intrinsicContentSize.height) ")
+//            
+//            return CGSize(width: width, height: sizeCell.height)
+//            //        return CGSize(width: width, height: 350)
+//        }
+//    }
+//}
 
-    }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func fetchUserData() {
-    let request = MainResults.FetchUserData.Request()
-    interactor?.fetchUserData(request: request)
-  }
-  
-  func displayUserData(viewModel: MainResults.FetchUserData.ViewModel) {
-    guard let user = viewModel.user else {
-        showAlert(title: "Missing user", message: "Please register your informations for us to be able to process the data. WOuld you like to go to the account page")
-        return
-    }
-    if !viewModel.enoughDaysRecording {
-        
-    }
-  }
+public extension UIView {
     
-    // MARK: Error handling
+    class func fromMTVNib() -> Self {
+        return fromNib(nil, type: self, bundle: nil)
+    }
     
-    private func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let alertAction = UIAlertAction(title: "OK", style: .default) { UIAlertAction in
-            self.router?.goToAccountPage()
+    class func fromNib<T: UIView>(_ nibNameOrNil: String? = nil, type: T.Type, bundle: Bundle? = nil) -> T {
+        let view: T? = fromNib(nibNameOrNil, type: T.self, bundle: bundle)
+        return view!
+    }
+    
+    class func fromNib<T: UIView>(_ nibNameOrNil: String? = nil, type: T.Type, bundle: Bundle? = nil) -> T? {
+        var view: T?
+        let name: String
+        if let nibName = nibNameOrNil {
+            name = nibName
+        } else {
+            // Most nibs are demangled by practice, if not, just declare string explicitly
+            name = nibName
         }
-        alertController.addAction(cancelAction)
-        alertController.addAction(alertAction)
-        self.present(alertController, animated: false, completion: nil)
+        var currentBundle: Bundle?
+        if let bundle = bundle {
+            currentBundle = bundle
+        } else {
+            currentBundle = Bundle.main
+        }
+        if let bundle = currentBundle {
+            let nibViews = bundle.loadNibNamed(name, owner: nil, options: nil)
+            for nibView in nibViews! {
+                if let tog = nibView as? T {
+                    view = tog
+                }
+            }
+        }
+        return view
+    }
+    
+    class var nibName: String {
+        let name = "\(self)".components(separatedBy: ".").first ?? ""
+        return name
+    }
+    
+   class var nib: UINib? {
+        if Bundle.main.path(forResource: nibName, ofType: "nib") != nil {
+            return UINib(nibName: nibName, bundle: nil)
+        } else {
+            return nil
+        }
     }
 }
+//
+//let width = collectionView.frame.size.width
+//sizingCell.contentView.bounds.size.width = width
+//
+//// 6.
+//configure(cell: sizingCell)
+//
+//// 7.
+//sizingCell.contentView.setNeedsLayout()
+//sizingCell.contentView.layoutIfNeeded()
+//
+//// 8.
+//let height = sizingCell.contentView.systemLayoutSizeFitting(CGSize(width: width, height: UILayoutFittingCompressedSize.height)).height
+//
+//// 9.
+//sizingCell.prepareForReuse()
+//
+//return CGSize(width: width, height: height)
+
+//
+//class FlowLayout: UICollectionViewFlowLayout {
+//
+//    override init() {
+//        super.init()
+//
+//        self.minimumInteritemSpacing = 10
+//        self.minimumLineSpacing = 10
+//        self.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+//        estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//
+//    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+//        guard let layoutAttributes = super.layoutAttributesForItem(at: indexPath) else { return nil }
+//        guard let collectionView = collectionView else { return nil }
+//        layoutAttributes.bounds.size.width = collectionView.safeAreaLayoutGuide.layoutFrame.width - sectionInset.left - sectionInset.right
+//        return layoutAttributes
+//    }
+//
+//    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+//        guard let superLayoutAttributes = super.layoutAttributesForElements(in: rect) else { return nil }
+//        guard scrollDirection == .vertical else { return superLayoutAttributes }
+//
+//        let computedAttributes = superLayoutAttributes.compactMap { layoutAttribute in
+//            return layoutAttribute.representedElementCategory == .cell ? layoutAttributesForItem(at: layoutAttribute.indexPath) : layoutAttribute
+//        }
+//
+//        return computedAttributes
+//    }
+//
+//}

@@ -10,39 +10,54 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-import RealmSwift
-
-enum MainResults {
-  // MARK: Use cases
-  
-  enum FetchUserData {
-    struct Request {}
-    
-    struct Response {
-        var user: User?
-        var enoughDaysRecording: Bool
-        var longestMicturition: Int
-        var shortestMicturition: Int
-        var averageMicturitionTime: Double
-        var totalNumberOfMicturition: Int
-        var averageNumberOfMicturitionDaily: Double
-        var averageNumberOfMicturitionAtNight: Double
-    }
-    
-    struct ViewModel {
-        struct DisplayedInformation {
-            var longestMicturition: String
-            var shortestMicturition: String
-            var averageMicturitionTime: String
-            var totalNumberOfMicturition: String
-            var averageNumberOfMicturitionDaily: String
-            var averageNumberOfMicturitionAtNight: String
-        }
-        
-        var user: User?
-        var enoughDaysRecording: Bool
-        var informationToDisplay: DisplayedInformation
-    }
-  }
-}
+//import UIKit
+//import RealmSwift
+//
+//enum MainResults {
+//  // MARK: Use cases
+//    
+//    struct MicturitionResults {
+//        var isNight: Bool
+//        var shortestMicturition: Int
+//        var longestMicturition: Int
+//        var averageMicturitionTime: Double
+//        var totalNumberOfMicturition: Int
+//        var averageNumberOfMicturition: Double
+//        var maxNumberOfMicturition: Int
+//        var minNumberOfMicturition: Int
+//    }
+//  
+//  enum FetchUserData {
+//    struct Request {}
+//    
+//    struct Response {
+//        var user: User?
+//        var enoughDaysRecording: Bool
+//        var data: [MicturitionResults]
+//        var conclusion: [String: String]
+//    }
+//    
+//    struct ViewModel {
+//        struct DisplayedInformation {
+//            var title: String
+//            var shortestMicturition: String
+//            var longestMicturition: String
+//            var averageMicturitionTime: String
+//            var averageNumberOfMicturition: String
+//            var maxNumberOfMicturition: String
+//            var minNumberOfMicturition: String
+//        }
+//        
+//        struct DisplayedConclusion {
+//            var title: String
+//            var helper: String
+//            var conclusion: String
+//        }
+//        
+//        var user: User?
+//        var enoughDaysRecording: Bool
+//        var informationToDisplay: [DisplayedInformation]
+//        var conclusion: DisplayedConclusion
+//    }
+//  }
+//}

@@ -10,102 +10,108 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-import RealmSwift
-import SwiftDate
-
-class MainResultsWorker: UserPersistenceInjected, MicturitionPersistenceInjected {
-    
-    func getUser() -> (user: User?, error: PersistenceErrors?) {
-        return userDataManager.getUser()
-    }
-    
-    func getMicturitions() -> (micturitions: Results<Micturition>?, error: PersistenceErrors?) {
-        return micturitionDataManager.getMicturitions()
-    }
-    
-    func getNumberOfDayRecording(_ micturitions: Results<Micturition>?) -> Int {
-        guard let micturitions = micturitions else {
-            return 0
-        }
-//        var previousDate: Date?
-//        var numberOfDays = 0
+//import UIKit
+//import RealmSwift
+//import SwiftDate
 //
-//        for miction in micturitions {
-//            let newDate = miction.timestamp
-//            if previousDate == nil || previousDate != newDate {
-//                previousDate = newDate
-//                numberOfDays += 1
-//            }
-//        }
-         let groupByDayMicturitions = Dictionary(grouping: micturitions, by: { $0.timestamp })
-        
-        return groupByDayMicturitions.count
-    }
-    
-    func getLongestMicturition(_ micturitions: Results<Micturition>?) -> Int {
-        guard let micturitions = micturitions else { return 0 }
-        
-        return micturitions.map { $0.duration }.max() ?? 0
-    }
-    
-    func getShortesttMicturition(_ micturitions: Results<Micturition>?) -> Int {
-        guard let micturitions = micturitions else { return 0 }
-        
-        return micturitions.map { $0.duration }.min() ?? 0
-    }
-    
-    func getAverageMicturitionTime(_ micturitions: Results<Micturition>?) -> Double {
-        guard let micturitions = micturitions else { return 0 }
-        let average = micturitions.reduce(0.0) {
-            return $0 + Double($1.duration/micturitions.count)
-        }
-        return average
-    }
-    
-    func getTotalNumberOfMicturition(_ micturitions: Results<Micturition>?) -> Int {
-        guard let micturitions = micturitions else { return 0 }
-        
-        return micturitions.count
-    }
-    
-    func getAverageNumberOfMicturitionDaily(_ micturitions: Results<Micturition>?) -> Double {
-        guard let micturitions = micturitions else { return 0 }
-        var averageMicturitionPerDay = 0.0
-
-        let groupByDayMicturitions = Dictionary(grouping: micturitions, by: { $0.timestamp })
-
-        for (_, daysMicturitions) in groupByDayMicturitions {
-            let average = Double(daysMicturitions.count / groupByDayMicturitions.count)
-            averageMicturitionPerDay += average
-        }
-        
-        return averageMicturitionPerDay
-    }
-    
-    func getAverageNumberOfMicturitionAtNight(_ micturitions: Results<Micturition>?) -> Double {
-        guard let micturitions = micturitions else { return 0 }
-        var averageMicturitionPerNight = 0.0
-        
-        let groupByDayMicturitions = Dictionary(grouping: micturitions, by: { $0.timestamp })
-        
-        for (_, daysMicturitions) in groupByDayMicturitions {
-            let nightMicturitions = daysMicturitions.filter { $0.isNight }
-            let average = Double(nightMicturitions.count / groupByDayMicturitions.count)
-            averageMicturitionPerNight += average
-        }
-        
-        return averageMicturitionPerNight
-    }
-    
-//    func getDate(timeStamp: TimeInterval) -> String {
-//        let date = Date(timeIntervalSince1970: timeStamp)
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
-//        dateFormatter.locale = NSLocale.current
-//        dateFormatter.dateFormat = "yyyy-MM-dd" //Specify your format that you want
-//        return dateFormatter.string(from: date)
+//class MainResultsWorker: UserPersistenceInjected, MicturitionPersistenceInjected {
+//    
+//    func getUser() -> (user: User?, error: PersistenceErrors?) {
+//        return userDataManager.getUser()
 //    }
-    
-}
-
+//    
+//    func getMicturitions() -> (micturitions: RealmSwift.Results<Micturition>?, error: PersistenceErrors?) {
+//        return micturitionDataManager.getMicturitions()
+//    }
+//    
+//    func getNumberOfDayRecording(_ micturitions: RealmSwift.Results<Micturition>?) -> Int {
+//        guard let micturitions = micturitions else {
+//            return 0
+//        }
+//         let groupByDayMicturitions = Dictionary(grouping: micturitions, by: { $0.timestamp })
+//        
+//        return groupByDayMicturitions.count
+//    }
+//    
+//    func getLongestMicturition(_ micturitions: RealmSwift.Results<Micturition>?, byNight: Bool = false) -> Int {
+//        guard let micturitions = micturitions else { return 0 }
+//        
+//        let micturitionToStudy = byNight ? micturitions.filter { $0.isNight } : micturitions.filter { !$0.isNight }
+//
+//        return micturitionToStudy.map { $0.duration }.max() ?? 0
+//    }
+//    
+//    func getShortesttMicturition(_ micturitions: RealmSwift.Results<Micturition>?, byNight: Bool = false) -> Int {
+//        guard let micturitions = micturitions else { return 0 }
+//        
+//        let micturitionToStudy = byNight ? micturitions.filter { $0.isNight } : micturitions.filter { !$0.isNight }
+//        
+//        return micturitionToStudy.map { $0.duration }.min() ?? 0
+//    }
+//    
+//    func getAverageMicturitionTime(_ micturitions: RealmSwift.Results<Micturition>?, byNight: Bool = false) -> Double {
+//        guard let micturitions = micturitions else { return 0 }
+//        
+//        let micturitionToStudy = byNight ? micturitions.filter { $0.isNight } : micturitions.filter { !$0.isNight }
+//
+//        let average = micturitionToStudy.reduce(0.0) {
+//            return $0 + Double($1.duration/micturitionToStudy.count)
+//        }
+//        return average
+//    }
+//    
+//    func getTotalNumberOfMicturition(_ micturitions: RealmSwift.Results<Micturition>?, byNight: Bool = false) -> Int {
+//        guard let micturitions = micturitions else { return 0 }
+//        
+//        let micturitionToStudy = byNight ? micturitions.filter { $0.isNight } : micturitions.filter { !$0.isNight }
+//
+//        return micturitionToStudy.count
+//    }
+//    
+//    func getAverageNumberOfMicturition(_ micturitions: RealmSwift.Results<Micturition>?, byNight: Bool = false) -> Double {
+//        guard let micturitions = micturitions else { return 0 }
+//        var averageMicturition = 0.0
+//        
+//        let groupByDayMicturitions = Dictionary(grouping: micturitions, by: { $0.timestamp })
+//        
+//        for (_, daysMicturitions) in groupByDayMicturitions {
+//            let micturitions = byNight ? daysMicturitions.filter { $0.isNight } : daysMicturitions.filter { !$0.isNight }
+//
+//            let average = Double(micturitions.count / groupByDayMicturitions.count)
+//            averageMicturition += average
+//        }
+//        
+//        return averageMicturition
+//    }
+//    
+//    func getMaxNumberOfMicturitionForADay(_ micturitions: RealmSwift.Results<Micturition>?, byNight: Bool = false) -> Int {
+//        guard let micturitions = micturitions else { return 0 }
+//        var maxMicForADay = 0
+//        
+//        let groupByDayMicturitions = Dictionary(grouping: micturitions, by: { $0.timestamp })
+//
+//        for (_, daysMicturitions) in groupByDayMicturitions {
+//            let micturitions = byNight ? daysMicturitions.filter { $0.isNight } : daysMicturitions.filter { !$0.isNight }
+//            
+//            maxMicForADay = maxMicForADay > micturitions.count ? maxMicForADay : micturitions.count
+//        }
+//
+//        return maxMicForADay
+//    }
+//    
+//    func getMinNumberOfMicturitionForADay(_ micturitions: RealmSwift.Results<Micturition>?, byNight: Bool = false) -> Int {
+//        guard let micturitions = micturitions else { return 0 }
+//        var minMicForADay = 0
+//        
+//        let groupByDayMicturitions = Dictionary(grouping: micturitions, by: { $0.timestamp })
+//        
+//        for (_, daysMicturitions) in groupByDayMicturitions {
+//            let micturitions = byNight ? daysMicturitions.filter { $0.isNight } : daysMicturitions.filter { !$0.isNight }
+//            
+//            minMicForADay = minMicForADay < micturitions.count ? minMicForADay : micturitions.count
+//        }
+//        
+//        return minMicForADay
+//    }
+//}
+//

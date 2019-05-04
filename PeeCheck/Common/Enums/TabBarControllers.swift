@@ -16,7 +16,7 @@ import ChameleonFramework
 /// - home: Main TabBar page
 /// - chart: User charts
 /// - account: User account controller
-enum TabBarControllers: String {
+enum TabBarControllers: String, CaseIterable {
     case record
     case charts
     case account
@@ -42,11 +42,11 @@ enum TabBarControllers: String {
     func getImage(selected: Bool = false) -> UIImage {
         switch self {
         case .record:
-            return UIImage.init(icon: .fontAwesome(.microphone), size: CGSize(width: 22, height: 22), textColor: selected ? FlatSkyBlue() : FlatGreen())
+            return UIImage(icon: .fontAwesomeSolid(.microphone), size: CGSize(width: 22, height: 22), textColor: selected ? FlatSkyBlue() : FlatGreen())
         case .charts:
-            return UIImage.init(icon: .fontAwesome(.barChart), size: CGSize(width: 22, height: 22), textColor: selected ? FlatSkyBlue() : FlatGreen())
+            return UIImage(icon: .fontAwesomeSolid(.chartBar), size: CGSize(width: 22, height: 22), textColor: selected ? FlatSkyBlue() : FlatGreen())
         case .account:
-            return UIImage.init(icon: .fontAwesome(.user), size: CGSize(width: 22, height: 22), textColor: selected ? FlatSkyBlue() : FlatGreen())
+            return UIImage(icon: .fontAwesomeSolid(.user), size: CGSize(width: 22, height: 22), textColor: selected ? FlatSkyBlue() : FlatGreen())
         }
     }
     
@@ -58,8 +58,9 @@ enum TabBarControllers: String {
         case .record:
             return RecordingViewController()
         case .charts:
-            let storyboard = UIStoryboard(name: "ChartsStoryboard")
-            return storyboard.instantiateInitialViewController() ?? UIViewController()
+//            let storyboard = UIStoryboard(name: "ChartsStoryboard")
+//            return storyboard.instantiateInitialViewController() ?? UIViewController()
+           return ResultsViewController()
         case .account:
             return AccountViewController()
         }
@@ -71,9 +72,9 @@ enum TabBarControllers: String {
     func shouldBeInNavigation() -> Bool {
         switch self {
         case .record:
-            return false
+            return true
         case .charts:
-            return false
+            return true
         case .account:
             return true
         }
@@ -83,19 +84,20 @@ enum TabBarControllers: String {
 // MARK: - Extension to generate arry containing enum information
 // swiftlint:disable fallthrough
 extension TabBarControllers {
-    static var array: [TabBarControllers] {
-        var tabControllers: [TabBarControllers] = []
-        switch self.record {
-        case .record:
-            tabControllers.append(.record)
-            fallthrough
-        case .charts:
-            tabControllers.append(.charts)
-            fallthrough
-        case .account:
-            tabControllers.append(.account)
-        }
-        return tabControllers
-    }
+    
+//    static var array: [TabBarControllers] {
+//        var tabControllers: [TabBarControllers] = []
+//        switch self.record {
+//        case .record:
+//            tabControllers.append(.record)
+//            fallthrough
+//        case .charts:
+//            tabControllers.append(.charts)
+//            fallthrough
+//        case .account:
+//            tabControllers.append(.account)
+//        }
+//        return tabControllers
+//    }
 }
 // swiftlint:enable fallthrough

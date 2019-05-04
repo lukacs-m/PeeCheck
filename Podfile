@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '9.0'
+ platform :ios, '12.0'
 
 # Pods for PeeCheck
 def common_pods
@@ -9,6 +9,9 @@ def common_pods
     pod 'Toast-Swift'
     pod 'RealmSwift'
     pod 'SwiftDate'
+    pod 'Cards'
+    pod 'SnapKit'
+    pod 'MaterialComponents'
 end
 
 # Pods for PeeCheck Testing
@@ -35,12 +38,4 @@ target 'PeeCheck' do
     # Pods for testing
   end
 
-end
-
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '4.2'
-        end
-    end
 end
